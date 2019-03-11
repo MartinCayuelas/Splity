@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         if let nom = self.textFieldContent.text {
             self.titleLabel.text = nom
         }else{
-            self.titleLabel.text = "Projet Swift"
+            self.titleLabel.text = "Splity"
         }
     }
     
