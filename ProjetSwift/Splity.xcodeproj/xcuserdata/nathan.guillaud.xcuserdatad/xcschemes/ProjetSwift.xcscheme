@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BCBF9F922369198002AD627"
-               BuildableName = "ProjetSwift.app"
-               BlueprintName = "ProjetSwift"
-               ReferencedContainer = "container:ProjetSwift.xcodeproj">
+               BuildableName = "Splity.app"
+               BlueprintName = "Splity"
+               ReferencedContainer = "container:Splity.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BCBFA1022369198002AD627"
-               BuildableName = "ProjetSwiftTests.xctest"
-               BlueprintName = "ProjetSwiftTests"
-               ReferencedContainer = "container:ProjetSwift.xcodeproj">
+               BuildableName = "SplityTests.xctest"
+               BlueprintName = "SplityTests"
+               ReferencedContainer = "container:Splity.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BCBFA1B22369198002AD627"
-               BuildableName = "ProjetSwiftUITests.xctest"
-               BlueprintName = "ProjetSwiftUITests"
-               ReferencedContainer = "container:ProjetSwift.xcodeproj">
+               BuildableName = "SplityUITests.xctest"
+               BlueprintName = "SplityUITests"
+               ReferencedContainer = "container:Splity.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BCBF9F922369198002AD627"
-            BuildableName = "ProjetSwift.app"
-            BlueprintName = "ProjetSwift"
-            ReferencedContainer = "container:ProjetSwift.xcodeproj">
+            BuildableName = "Splity.app"
+            BlueprintName = "Splity"
+            ReferencedContainer = "container:Splity.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BCBF9F922369198002AD627"
-            BuildableName = "ProjetSwift.app"
-            BlueprintName = "ProjetSwift"
-            ReferencedContainer = "container:ProjetSwift.xcodeproj">
+            BuildableName = "Splity.app"
+            BlueprintName = "Splity"
+            ReferencedContainer = "container:Splity.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BCBF9F922369198002AD627"
-            BuildableName = "ProjetSwift.app"
-            BlueprintName = "ProjetSwift"
-            ReferencedContainer = "container:ProjetSwift.xcodeproj">
+            BuildableName = "Splity.app"
+            BlueprintName = "Splity"
+            ReferencedContainer = "container:Splity.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

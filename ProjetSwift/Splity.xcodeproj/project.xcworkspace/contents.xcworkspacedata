@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ProjetSwift.xcodeproj">
+      location = "self:/Users/nathan.guillaud/Desktop/ProjetSwift/ProjetSwift/Splity.xcodeproj">
    </FileRef>
 </Workspace>
