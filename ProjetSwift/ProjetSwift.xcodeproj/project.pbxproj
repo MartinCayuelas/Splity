@@ -78,14 +78,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7B656B0822369C73001DF6F7 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				7BCBF9FC22369198002AD627 /* ProjetSwift */,
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
 		7B656B0922369DE3001DF6F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,7 +89,7 @@
 		7BCBF9F122369198002AD627 = {
 			isa = PBXGroup;
 			children = (
-				7B656B0822369C73001DF6F7 /* New Group */,
+				7BCBF9FC22369198002AD627 /* ProjetSwift */,
 				7BCBFA1422369198002AD627 /* ProjetSwiftTests */,
 				7BCBFA1F22369198002AD627 /* ProjetSwiftUITests */,
 				7BCBF9FB22369198002AD627 /* Products */,
