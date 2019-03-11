@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		7B656B0A22369E28001DF6F7 /* MyTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextFieldDelegate.swift; sourceTree = "<group>"; };
-		7BCBF9FA22369198002AD627 /* Splity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCBF9FA22369198002AD627 /* ProjetSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCBF9FD22369198002AD627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BCBF9FF22369198002AD627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7BCBFA0222369198002AD627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,10 +45,10 @@
 		7BCBFA0722369198002AD627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BCBFA0A22369198002AD627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BCBFA0C22369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BCBFA1122369198002AD627 /* SplityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCBFA1122369198002AD627 /* ProjetSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftTests.swift; sourceTree = "<group>"; };
 		7BCBFA1722369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BCBFA1C22369198002AD627 /* SplityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SplityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftUITests.swift; sourceTree = "<group>"; };
 		7BCBFA2222369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,9 +107,9 @@
 		7BCBF9FB22369198002AD627 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7BCBF9FA22369198002AD627 /* Splity.app */,
-				7BCBFA1122369198002AD627 /* SplityTests.xctest */,
-				7BCBFA1C22369198002AD627 /* SplityUITests.xctest */,
+				7BCBF9FA22369198002AD627 /* ProjetSwift.app */,
+				7BCBFA1122369198002AD627 /* ProjetSwiftTests.xctest */,
+				7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7BCBF9F922369198002AD627 /* Splity */ = {
+		7BCBF9F922369198002AD627 /* ProjetSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BCBFA2522369198002AD627 /* Build configuration list for PBXNativeTarget "Splity" */;
+			buildConfigurationList = 7BCBFA2522369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwift" */;
 			buildPhases = (
 				7BCBF9F622369198002AD627 /* Sources */,
 				7BCBF9F722369198002AD627 /* Frameworks */,
@@ -162,14 +162,14 @@
 			);
 			dependencies = (
 			);
-			name = Splity;
+			name = ProjetSwift;
 			productName = ProjetSwift;
-			productReference = 7BCBF9FA22369198002AD627 /* Splity.app */;
+			productReference = 7BCBF9FA22369198002AD627 /* ProjetSwift.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7BCBFA1022369198002AD627 /* SplityTests */ = {
+		7BCBFA1022369198002AD627 /* ProjetSwiftTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BCBFA2822369198002AD627 /* Build configuration list for PBXNativeTarget "SplityTests" */;
+			buildConfigurationList = 7BCBFA2822369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftTests" */;
 			buildPhases = (
 				7BCBFA0D22369198002AD627 /* Sources */,
 				7BCBFA0E22369198002AD627 /* Frameworks */,
@@ -180,14 +180,14 @@
 			dependencies = (
 				7BCBFA1322369198002AD627 /* PBXTargetDependency */,
 			);
-			name = SplityTests;
+			name = ProjetSwiftTests;
 			productName = ProjetSwiftTests;
-			productReference = 7BCBFA1122369198002AD627 /* SplityTests.xctest */;
+			productReference = 7BCBFA1122369198002AD627 /* ProjetSwiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7BCBFA1B22369198002AD627 /* SplityUITests */ = {
+		7BCBFA1B22369198002AD627 /* ProjetSwiftUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BCBFA2B22369198002AD627 /* Build configuration list for PBXNativeTarget "SplityUITests" */;
+			buildConfigurationList = 7BCBFA2B22369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftUITests" */;
 			buildPhases = (
 				7BCBFA1822369198002AD627 /* Sources */,
 				7BCBFA1922369198002AD627 /* Frameworks */,
@@ -198,9 +198,9 @@
 			dependencies = (
 				7BCBFA1E22369198002AD627 /* PBXTargetDependency */,
 			);
-			name = SplityUITests;
+			name = ProjetSwiftUITests;
 			productName = ProjetSwiftUITests;
-			productReference = 7BCBFA1C22369198002AD627 /* SplityUITests.xctest */;
+			productReference = 7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -229,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7BCBF9F522369198002AD627 /* Build configuration list for PBXProject "Splity" */;
+			buildConfigurationList = 7BCBF9F522369198002AD627 /* Build configuration list for PBXProject "ProjetSwift" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -242,9 +242,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7BCBF9F922369198002AD627 /* Splity */,
-				7BCBFA1022369198002AD627 /* SplityTests */,
-				7BCBFA1B22369198002AD627 /* SplityUITests */,
+				7BCBF9F922369198002AD627 /* ProjetSwift */,
+				7BCBFA1022369198002AD627 /* ProjetSwiftTests */,
+				7BCBFA1B22369198002AD627 /* ProjetSwiftUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,12 +309,12 @@
 /* Begin PBXTargetDependency section */
 		7BCBFA1322369198002AD627 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7BCBF9F922369198002AD627 /* Splity */;
+			target = 7BCBF9F922369198002AD627 /* ProjetSwift */;
 			targetProxy = 7BCBFA1222369198002AD627 /* PBXContainerItemProxy */;
 		};
 		7BCBFA1E22369198002AD627 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7BCBF9F922369198002AD627 /* Splity */;
+			target = 7BCBF9F922369198002AD627 /* ProjetSwift */;
 			targetProxy = 7BCBFA1D22369198002AD627 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -468,7 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = NGMC.ProjetSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Splity.app/Splity";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjetSwift.app/ProjetSwift";
 			};
 			name = Debug;
 		};
@@ -482,7 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = NGMC.ProjetSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Splity.app/Splity";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjetSwift.app/ProjetSwift";
 			};
 			name = Release;
 		};
@@ -515,7 +515,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7BCBF9F522369198002AD627 /* Build configuration list for PBXProject "Splity" */ = {
+		7BCBF9F522369198002AD627 /* Build configuration list for PBXProject "ProjetSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BCBFA2322369198002AD627 /* Debug */,
@@ -524,7 +524,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BCBFA2522369198002AD627 /* Build configuration list for PBXNativeTarget "Splity" */ = {
+		7BCBFA2522369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BCBFA2622369198002AD627 /* Debug */,
@@ -533,7 +533,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BCBFA2822369198002AD627 /* Build configuration list for PBXNativeTarget "SplityTests" */ = {
+		7BCBFA2822369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BCBFA2922369198002AD627 /* Debug */,
@@ -542,7 +542,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BCBFA2B22369198002AD627 /* Build configuration list for PBXNativeTarget "SplityUITests" */ = {
+		7BCBFA2B22369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BCBFA2C22369198002AD627 /* Debug */,
