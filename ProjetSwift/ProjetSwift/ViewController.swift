@@ -21,15 +21,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func validate(_ sender: Any) {
+        validateButton.backgroundColor = UIColor.clear
         if let nom = self.textFieldContent.text {
-            self.titleLabel.text = nom
+            if !nom.isEmpty {
+                self.titleLabel.text = nom
+            }
         }else{
-            self.titleLabel.text = "Bonjour"
+            self.titleLabel.text = "Splity"
         }
     }
     
     @IBOutlet weak var textFieldContent: UITextField!
-
+    
     @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var validateButton: UIButton!
 }
 
