@@ -139,7 +139,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="J9U-eo-3ib" id="Mni-Gq-6Kd">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -395,15 +395,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajout dépense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTH-My-ip4">
-                                <rect key="frame" x="132" y="0.0" width="111" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajouter une dépense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTH-My-ip4">
+                                <rect key="frame" x="108" y="15" width="159" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUb-Py-Ves">
-                                <rect key="frame" x="150" y="304" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUb-Py-Ves">
+                                <rect key="frame" x="162.5" y="306" width="50" height="30"/>
                                 <state key="normal" title="Ajouter"/>
                                 <connections>
                                     <segue destination="1PG-mK-wmG" kind="show" id="DaB-fL-5x8"/>
@@ -412,8 +411,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.8606448769569397" green="0.92440921068191528" blue="0.99936455488204956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cTH-My-ip4" firstAttribute="top" secondItem="oXp-0a-6IV" secondAttribute="topMargin" id="gvT-aH-umK"/>
-                            <constraint firstItem="cTH-My-ip4" firstAttribute="centerX" secondItem="oXp-0a-6IV" secondAttribute="centerX" id="yFS-aa-Pif"/>
+                            <constraint firstItem="cTH-My-ip4" firstAttribute="centerX" secondItem="oXp-0a-6IV" secondAttribute="centerX" id="0dp-qU-TCj"/>
+                            <constraint firstItem="ZUb-Py-Ves" firstAttribute="centerX" secondItem="cTH-My-ip4" secondAttribute="centerX" id="Fdc-FR-hGX"/>
+                            <constraint firstItem="ZUb-Py-Ves" firstAttribute="top" secondItem="cTH-My-ip4" secondAttribute="bottom" constant="270" id="cQ2-on-kLu"/>
+                            <constraint firstItem="cTH-My-ip4" firstAttribute="top" secondItem="oXp-0a-6IV" secondAttribute="topMargin" constant="15" id="xUF-5S-V6e"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -541,9 +542,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wr9-c0-of8">
-                                <rect key="frame" x="106" y="250" width="200" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wr9-c0-of8">
+                                <rect key="frame" x="87" y="421" width="200" height="30"/>
                                 <state key="normal" title="Ajouter un nouveau voyageur"/>
                                 <connections>
                                     <segue destination="LIq-o9-6IK" kind="show" id="yaH-Bk-QU7"/>
@@ -552,8 +552,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.8606448769569397" green="0.92440921068191528" blue="0.99936455488204956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wr9-c0-of8" firstAttribute="centerX" secondItem="nYH-x5-62D" secondAttribute="centerX" id="00v-qb-exn"/>
                             <constraint firstItem="nYH-x5-62D" firstAttribute="centerX" secondItem="yhG-CO-UaZ" secondAttribute="centerX" id="1Vs-Mn-pF8"/>
                             <constraint firstItem="nYH-x5-62D" firstAttribute="top" secondItem="5af-WC-s3J" secondAttribute="bottom" id="fgB-vm-WuI"/>
+                            <constraint firstItem="wr9-c0-of8" firstAttribute="top" secondItem="nYH-x5-62D" secondAttribute="bottom" constant="380" id="otC-1C-UJy"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -574,7 +576,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment équilibrer ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vfg-Eh-Pra">
-                                <rect key="frame" x="105.5" y="0.0" width="164" height="21"/>
+                                <rect key="frame" x="105.5" y="15" width="164" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -582,8 +584,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.8606448769569397" green="0.92440921068191528" blue="0.99936455488204956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Vfg-Eh-Pra" firstAttribute="centerX" secondItem="m0i-P4-f9N" secondAttribute="centerX" id="SWX-Yx-yvR"/>
-                            <constraint firstItem="Vfg-Eh-Pra" firstAttribute="top" secondItem="m0i-P4-f9N" secondAttribute="topMargin" id="dQi-TQ-9Bl"/>
+                            <constraint firstItem="Vfg-Eh-Pra" firstAttribute="centerX" secondItem="m0i-P4-f9N" secondAttribute="centerX" id="hwM-aT-l5F"/>
+                            <constraint firstItem="Vfg-Eh-Pra" firstAttribute="top" secondItem="m0i-P4-f9N" secondAttribute="topMargin" constant="15" id="qu9-CP-K9K"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -604,14 +606,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modifier dépense X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5r-qC-MuQ">
-                                <rect key="frame" x="113" y="0.0" width="149" height="21"/>
+                                <rect key="frame" x="113" y="20" width="149" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0d-Ku-Gez">
-                                <rect key="frame" x="146" y="201" width="87" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0d-Ku-Gez">
+                                <rect key="frame" x="144" y="471" width="87" height="30"/>
                                 <state key="normal" title="Sauvegarder"/>
                                 <connections>
                                     <segue destination="1PG-mK-wmG" kind="show" id="pBJ-CD-MqH"/>
@@ -620,8 +621,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.8606448769569397" green="0.92440921068191528" blue="0.99936455488204956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="b5r-qC-MuQ" firstAttribute="top" secondItem="CWS-S6-cUm" secondAttribute="topMargin" id="ijq-EV-2ok"/>
-                            <constraint firstItem="b5r-qC-MuQ" firstAttribute="centerX" secondItem="CWS-S6-cUm" secondAttribute="centerX" id="sXW-oC-SMZ"/>
+                            <constraint firstItem="n0d-Ku-Gez" firstAttribute="top" secondItem="b5r-qC-MuQ" secondAttribute="bottom" constant="430" id="Xc5-Hl-ZNw"/>
+                            <constraint firstItem="b5r-qC-MuQ" firstAttribute="centerX" secondItem="CWS-S6-cUm" secondAttribute="centerX" id="ZdJ-55-sqh"/>
+                            <constraint firstItem="b5r-qC-MuQ" firstAttribute="top" secondItem="CWS-S6-cUm" secondAttribute="topMargin" constant="20" id="adv-10-wm3"/>
+                            <constraint firstItem="n0d-Ku-Gez" firstAttribute="centerX" secondItem="b5r-qC-MuQ" secondAttribute="centerX" id="oHy-O2-fVr"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -642,43 +645,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Création d'un voyageur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="419-aS-1gf">
-                                <rect key="frame" x="99" y="0.0" width="177" height="21"/>
+                                <rect key="frame" x="99" y="15" width="177" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wp-gr-Yel">
-                                <rect key="frame" x="169" y="96" width="37" height="21"/>
+                                <rect key="frame" x="169" y="111" width="37" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Saisir le nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jHA-SG-lDw">
-                                <rect key="frame" x="136" y="137" width="103.5" height="30"/>
+                                <rect key="frame" x="136" y="152" width="103.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prénom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5L-4F-OiX">
-                                <rect key="frame" x="157.5" y="197" width="60" height="21"/>
+                                <rect key="frame" x="157.5" y="212" width="60" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Saisir le prénom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BnJ-LW-OJU">
-                                <rect key="frame" x="125.5" y="238" width="124.5" height="30"/>
+                                <rect key="frame" x="125.5" y="253" width="124.5" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmH-Ol-SfC">
-                                <rect key="frame" x="164" y="343" width="47" height="30"/>
+                                <rect key="frame" x="164" y="358" width="47" height="30"/>
                                 <state key="normal" title="Valider"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8606448769569397" green="0.92440921068191528" blue="0.99936455488204956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="419-aS-1gf" firstAttribute="top" secondItem="2Ef-nt-B5Y" secondAttribute="topMargin" id="34d-15-IpR"/>
+                            <constraint firstItem="419-aS-1gf" firstAttribute="top" secondItem="2Ef-nt-B5Y" secondAttribute="topMargin" constant="15" id="34d-15-IpR"/>
                             <constraint firstItem="P5L-4F-OiX" firstAttribute="centerX" secondItem="419-aS-1gf" secondAttribute="centerX" id="4Sm-fZ-4vA"/>
                             <constraint firstItem="BnJ-LW-OJU" firstAttribute="top" secondItem="P5L-4F-OiX" secondAttribute="bottom" constant="20" id="7RO-O5-BiT"/>
                             <constraint firstItem="419-aS-1gf" firstAttribute="centerX" secondItem="2Ef-nt-B5Y" secondAttribute="centerX" id="CZW-W2-eWN"/>
@@ -699,7 +702,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZAr-2P-A4R"/>
+        <segue reference="jRL-P5-RQc"/>
         <segue reference="gPP-oP-bBa"/>
     </inferredMetricsTieBreakers>
 </document>
