@@ -313,32 +313,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-qv-hJN">
-                                <rect key="frame" x="114" y="538" width="147" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-qv-hJN">
+                                <rect key="frame" x="114" y="537" width="147" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Comment équilibrer ?"/>
                                 <connections>
                                     <segue destination="YLO-gv-Jyj" kind="show" id="Adj-xt-qGN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjO-Bs-YbO">
-                                <rect key="frame" x="11" y="80" width="113" height="28"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="113" id="3hk-jh-n6n"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="Ajouter dépense">
-                                    <color key="titleColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="KWA-P1-u84" kind="show" id="ONO-yp-14S"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-q1-Uea">
-                                <rect key="frame" x="148.5" y="80" width="87" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPK-q1-Uea">
+                                <rect key="frame" x="144" y="79" width="87" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Voir dépenses">
                                     <color key="titleColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -348,8 +332,8 @@
                                     <segue destination="Nx6-U9-Y15" kind="show" id="kRG-sk-JSW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDE-Ox-toV">
-                                <rect key="frame" x="264.5" y="80" width="100" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDE-Ox-toV">
+                                <rect key="frame" x="256" y="80" width="100" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Gérer voyageurs">
                                     <color key="titleColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -359,23 +343,32 @@
                                     <segue destination="ZyB-fs-tXR" kind="show" id="GsG-5b-caK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BjO-Bs-YbO">
+                                <rect key="frame" x="19" y="80" width="100" height="28"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Ajouter dépense">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KWA-P1-u84" kind="show" id="ONO-yp-14S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8606448769569397" green="0.92440921068191528" blue="0.99936455488204956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="BjO-Bs-YbO" firstAttribute="centerX" secondItem="w3X-db-Ee3" secondAttribute="centerX" constant="-120" id="7hr-vW-XmL"/>
-                            <constraint firstItem="RPK-q1-Uea" firstAttribute="centerX" secondItem="w3X-db-Ee3" secondAttribute="centerX" constant="4.5" id="AkC-ub-Lyh"/>
-                            <constraint firstItem="RPK-q1-Uea" firstAttribute="top" secondItem="ael-3z-EXB" secondAttribute="bottom" constant="26" id="BAc-e1-sqt"/>
                             <constraint firstItem="ael-3z-EXB" firstAttribute="centerX" secondItem="w3X-db-Ee3" secondAttribute="centerX" id="HU4-dH-Bxx"/>
-                            <constraint firstItem="CO2-qv-hJN" firstAttribute="top" secondItem="RPK-q1-Uea" secondAttribute="bottom" constant="430" id="Qag-DP-xnC"/>
-                            <constraint firstItem="BjO-Bs-YbO" firstAttribute="top" secondItem="eQG-Ni-S7B" secondAttribute="bottom" constant="60" id="S9K-88-neX"/>
+                            <constraint firstItem="RPK-q1-Uea" firstAttribute="leading" secondItem="BjO-Bs-YbO" secondAttribute="trailing" constant="25" id="QTW-aR-mnT"/>
+                            <constraint firstItem="RPK-q1-Uea" firstAttribute="centerX" secondItem="ael-3z-EXB" secondAttribute="centerX" id="VHI-mT-Cou"/>
                             <constraint firstItem="ael-3z-EXB" firstAttribute="top" secondItem="eQG-Ni-S7B" secondAttribute="bottom" constant="10" id="X9g-vU-7vW"/>
-                            <constraint firstItem="uDE-Ox-toV" firstAttribute="top" secondItem="eQG-Ni-S7B" secondAttribute="bottom" constant="60" id="aEe-Zf-p3h"/>
-                            <constraint firstItem="uDE-Ox-toV" firstAttribute="centerX" secondItem="w3X-db-Ee3" secondAttribute="centerX" constant="127" id="aZx-w5-Sn6"/>
+                            <constraint firstItem="RPK-q1-Uea" firstAttribute="top" secondItem="ael-3z-EXB" secondAttribute="bottom" constant="25" id="Y1G-Eo-Ir5"/>
                             <constraint firstItem="ael-3z-EXB" firstAttribute="centerX" secondItem="w3X-db-Ee3" secondAttribute="centerX" id="bOx-VR-HGf"/>
-                            <constraint firstItem="BjO-Bs-YbO" firstAttribute="top" secondItem="eQG-Ni-S7B" secondAttribute="bottom" constant="60" id="fzX-Rt-cm0"/>
-                            <constraint firstItem="RPK-q1-Uea" firstAttribute="top" secondItem="eQG-Ni-S7B" secondAttribute="bottom" constant="60" id="hiF-ms-C3r"/>
-                            <constraint firstItem="CO2-qv-hJN" firstAttribute="centerX" secondItem="w3X-db-Ee3" secondAttribute="centerX" id="kJ6-94-4os"/>
-                            <constraint firstItem="uDE-Ox-toV" firstAttribute="top" secondItem="eQG-Ni-S7B" secondAttribute="bottom" constant="60" id="pVk-h6-0SS"/>
+                            <constraint firstItem="BjO-Bs-YbO" firstAttribute="top" secondItem="eQG-Ni-S7B" secondAttribute="bottom" constant="60" id="hPP-rX-Xu0"/>
+                            <constraint firstItem="uDE-Ox-toV" firstAttribute="top" secondItem="eQG-Ni-S7B" secondAttribute="bottom" constant="60" id="oey-Jr-GzH"/>
+                            <constraint firstItem="uDE-Ox-toV" firstAttribute="leading" secondItem="RPK-q1-Uea" secondAttribute="trailing" constant="25" id="utC-kF-eqd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -702,7 +695,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jRL-P5-RQc"/>
+        <segue reference="ZAr-2P-A4R"/>
         <segue reference="gPP-oP-bBa"/>
     </inferredMetricsTieBreakers>
 </document>
