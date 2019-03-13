@@ -57,6 +57,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="aVf-Mb-Kwn" id="WLr-u3-6ra"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaV-Uf-Mf6">
                                 <rect key="frame" x="169" y="199" width="37" height="21"/>
@@ -72,12 +75,18 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uk-rX-F7G">
                                 <rect key="frame" x="147.5" y="346" width="80" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.79295506187235987" blue="0.48079392232973239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="7fi-4A-bd6"/>
                                 </constraints>
                                 <state key="normal" title="Valider">
                                     <color key="titleColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="validate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ww8-IS-teY"/>
                                     <segue destination="l1B-oR-Dwc" kind="show" id="qXa-Dy-c1P"/>
@@ -133,20 +142,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mes voyages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33w-ad-GwE">
-                                <rect key="frame" x="137" y="64" width="100" height="21"/>
+                                <rect key="frame" x="137" y="84" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xb-mE-dSd">
-                                <rect key="frame" x="141.5" y="105" width="91" height="30"/>
+                                <rect key="frame" x="141.5" y="125" width="91" height="30"/>
                                 <state key="normal" title="Créer voyage"/>
                                 <connections>
                                     <segue destination="RZt-NH-3NW" kind="show" id="lKa-y2-jZ2"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U2K-pd-Vpd">
-                                <rect key="frame" x="16" y="155" width="343" height="492"/>
+                                <rect key="frame" x="16" y="175" width="343" height="472"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="J9U-eo-3ib">
@@ -337,7 +346,7 @@
                             <constraint firstItem="U2K-pd-Vpd" firstAttribute="top" secondItem="5xb-mE-dSd" secondAttribute="bottom" constant="20" id="A4Y-4A-lq2"/>
                             <constraint firstItem="EiY-K1-XVg" firstAttribute="top" secondItem="U2K-pd-Vpd" secondAttribute="bottom" constant="20" id="DX1-wA-bcz"/>
                             <constraint firstItem="5xb-mE-dSd" firstAttribute="top" secondItem="33w-ad-GwE" secondAttribute="bottom" constant="20" id="HK0-bV-qjq"/>
-                            <constraint firstItem="33w-ad-GwE" firstAttribute="top" secondItem="VI3-BX-fUY" secondAttribute="bottom" id="gQg-EX-NqX"/>
+                            <constraint firstItem="33w-ad-GwE" firstAttribute="top" secondItem="VI3-BX-fUY" secondAttribute="bottom" constant="20" id="gQg-EX-NqX"/>
                             <constraint firstItem="U2K-pd-Vpd" firstAttribute="leading" secondItem="NRO-Xg-GPD" secondAttribute="leadingMargin" id="trz-Qb-MEW"/>
                         </constraints>
                     </view>

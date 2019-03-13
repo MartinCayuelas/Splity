@@ -13,15 +13,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+    
     }
 
+   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     @IBAction func validate(_ sender: Any) {
-        validateButton.backgroundColor = UIColor.clear
+        validateButton.backgroundColor = UIColor.orange
+       /* if (textFieldContent.text?.isEmpty)! || (saisiePrenom.text?.isEmpty)! {
+            validateButton.isEnabled = false
+        }else{
+            validateButton.isEnabled = true
+        }*/
         if let nom = self.textFieldContent.text {
             if !nom.isEmpty {
                 self.titleLabel.text = nom
