@@ -9,15 +9,15 @@
 import Foundation
 
 class Voyageur {
-    var lastName: String
-    var firstName: String
-    var fullName: String {
-        return self.firstName + " " + self.lastName
+    var nom: String
+    var prenom: String
+    var nomComplet: String {
+        return self.prenom + " " + self.nom
     }
     
-    init(lastName : String, firstName : String) {
-        self.firstName = firstName
-        self.lastName = lastName
+    init(nom : String, prenom : String) {
+        self.prenom = prenom
+        self.nom = nom
     }
   
 }
@@ -25,7 +25,7 @@ class Voyageur {
 extension Voyageur : Equatable {
     
     static func == (lhs : Voyageur, rhs : Voyageur) -> Bool {
-        return lhs.firstName == rhs.firstName && lhs.lastName == rhs.lastName
+        return lhs.prenom == rhs.prenom && lhs.nom == rhs.nom
     }
     
     static func != (lhs : Voyageur, rhs : Voyageur) -> Bool {

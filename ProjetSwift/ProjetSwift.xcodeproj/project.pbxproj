@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7B37173A22394646004ACE68 /* Voyageur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37173922394646004ACE68 /* Voyageur.swift */; };
+		7B37173E223949F0004ACE68 /* VoyageurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37173D223949F0004ACE68 /* VoyageurViewController.swift */; };
+		7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */; };
+		7B37174622394B44004ACE68 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174522394B44004ACE68 /* Voyage.swift */; };
 		7B656B0B22369E28001DF6F7 /* MyTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B656B0A22369E28001DF6F7 /* MyTextFieldDelegate.swift */; };
 		7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF9FD22369198002AD627 /* AppDelegate.swift */; };
 		7BCBFA0022369198002AD627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF9FF22369198002AD627 /* ViewController.swift */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		7B37173922394646004ACE68 /* Voyageur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyageur.swift; sourceTree = "<group>"; };
+		7B37173D223949F0004ACE68 /* VoyageurViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoyageurViewController.swift; sourceTree = "<group>"; };
+		7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoyagesTableViewController.swift; sourceTree = "<group>"; };
+		7B37174522394B44004ACE68 /* Voyage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
 		7B656B0A22369E28001DF6F7 /* MyTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextFieldDelegate.swift; sourceTree = "<group>"; };
 		7BCBF9FA22369198002AD627 /* ProjetSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCBF9FD22369198002AD627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				7B37173922394646004ACE68 /* Voyageur.swift */,
+				7B37174522394B44004ACE68 /* Voyage.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -92,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				7B656B0A22369E28001DF6F7 /* MyTextFieldDelegate.swift */,
+				7B37173D223949F0004ACE68 /* VoyageurViewController.swift */,
+				7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -288,7 +297,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B37173E223949F0004ACE68 /* VoyageurViewController.swift in Sources */,
 				7BCBFA0622369198002AD627 /* ProjetSwift.xcdatamodeld in Sources */,
+				7B37174622394B44004ACE68 /* Voyage.swift in Sources */,
+				7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */,
 				7BCBFA0022369198002AD627 /* ViewController.swift in Sources */,
 				7B37173A22394646004ACE68 /* Voyageur.swift in Sources */,
 				7B656B0B22369E28001DF6F7 /* MyTextFieldDelegate.swift in Sources */,
