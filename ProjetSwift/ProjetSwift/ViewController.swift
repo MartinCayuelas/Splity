@@ -31,10 +31,16 @@ class ViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destController = segue.destination as? VoyageurViewController {
+            destController.nomVoyageur = self.textFieldContent.text!
+            destController.prenomVoyageur = self.saisiePrenom.text!
+        }
+    }
+    
     @IBOutlet weak var textFieldContent: UITextField!
-    
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var validateButton: UIButton!
+    @IBOutlet weak var saisiePrenom: UITextField!
 }
 

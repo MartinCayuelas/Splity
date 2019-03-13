@@ -104,6 +104,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="rax-De-wcE"/>
                     <connections>
+                        <outlet property="saisiePrenom" destination="kh9-XS-LGE" id="nfo-CB-Q7Z"/>
                         <outlet property="textFieldContent" destination="CmI-y6-uHG" id="mHU-Sa-nbD"/>
                         <outlet property="titleLabel" destination="YRr-ha-jFK" id="49A-zi-2ME"/>
                         <outlet property="validateButton" destination="6uk-rX-F7G" id="M7t-ap-lRR"/>
@@ -119,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1236" y="-210.04497751124438"/>
         </scene>
-        <!--View Controller-->
+        <!--Voyageur View Controller-->
         <scene sceneID="OVH-ne-Am8">
             <objects>
-                <viewController id="l1B-oR-Dwc" sceneMemberID="viewController">
+                <viewController id="l1B-oR-Dwc" customClass="VoyageurViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VI3-BX-fUY"/>
                         <viewControllerLayoutGuide type="bottom" id="EiY-K1-XVg"/>
@@ -340,6 +341,9 @@
                             <constraint firstItem="U2K-pd-Vpd" firstAttribute="leading" secondItem="NRO-Xg-GPD" secondAttribute="leadingMargin" id="trz-Qb-MEW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titrePageVoyages" destination="33w-ad-GwE" id="Crd-hk-fHy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWz-S8-Dhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
