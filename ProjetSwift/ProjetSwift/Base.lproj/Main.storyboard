@@ -374,7 +374,7 @@
                                 <rect key="frame" x="87.5" y="475" width="200" height="30"/>
                                 <state key="normal" title="Ajouter un nouveau voyageur"/>
                                 <connections>
-                                    <segue destination="LIq-o9-6IK" kind="show" id="gPP-oP-bBa"/>
+                                    <segue destination="LIq-o9-6IK" kind="presentation" id="R8F-b3-VQ8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUU-6n-E6o">
@@ -542,7 +542,7 @@
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KWA-P1-u84" kind="show" id="ONO-yp-14S"/>
+                                    <segue destination="KWA-P1-u84" kind="presentation" id="avp-B1-0sL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -637,9 +637,6 @@
                                                     <rect key="frame" x="303" y="7" width="57" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Modifier"/>
-                                                    <connections>
-                                                        <segue destination="iXe-K1-2JQ" kind="show" id="JlR-Qe-bXe"/>
-                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0f-w2-ArV">
                                                     <rect key="frame" x="224" y="1" width="46" height="41.5"/>
@@ -690,6 +687,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdu-CX-kxZ">
                                 <rect key="frame" x="116.5" y="105" width="142" height="30"/>
                                 <state key="normal" title="Ajouter une dépense"/>
+                                <connections>
+                                    <segue destination="iXe-K1-2JQ" kind="presentation" id="xMo-nv-kFW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85670846700668335" green="0.92040634155273438" blue="0.99950617551803589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -727,7 +727,7 @@
                                 <rect key="frame" x="88" y="487" width="200" height="30"/>
                                 <state key="normal" title="Ajouter un nouveau voyageur"/>
                                 <connections>
-                                    <segue destination="LIq-o9-6IK" kind="show" id="yaH-Bk-QU7"/>
+                                    <segue destination="LIq-o9-6IK" kind="presentation" id="vY4-cr-hbN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -898,7 +898,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gPP-oP-bBa"/>
         <segue reference="jRL-P5-RQc"/>
+        <segue reference="vY4-cr-hbN"/>
     </inferredMetricsTieBreakers>
 </document>
