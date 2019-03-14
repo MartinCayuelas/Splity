@@ -9,12 +9,9 @@
 import UIKit
 
 class VoyageurViewController: UIViewController {
-    var nomVoyageur: String = ""
-    var prenomVoyageur: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.titrePageVoyages.text = "Voyages de " + prenomVoyageur + " " + nomVoyageur
 
         // Do any additional setup after loading the view.
     }
@@ -24,7 +21,6 @@ class VoyageurViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var titrePageVoyages: UILabel!
 
     /*
     // MARK: - Navigation

@@ -9,6 +9,9 @@
 import UIKit
 
 class VoyagesTableViewController: UITableViewController {
+    var nomVoyageur: String = ""
+    var prenomVoyageur: String = ""
+    let voyagesTest : [Voyage] = [Voyage.init(titre: "Bali"), Voyage.init(titre: "Maroc")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,23 +32,27 @@ class VoyagesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return voyagesTest.count
     }
 
-    /*
+    @IBOutlet weak var titreVoyageur: UILabel!
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageCell", for: indexPath) as! VoyageTableViewCell
 
-        // Configure the cell...
-
+        cell.titreVoyage.text = voyagesTest[indexPath.row].titre
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Voyages de " + prenomVoyageur + " " + nomVoyageur
+    }
+ 
 
     /*
     // Override to support conditional editing of the table view.

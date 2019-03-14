@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destController = segue.destination as? VoyageurViewController {
+        if let destController = segue.destination as? VoyagesTableViewController {
             destController.nomVoyageur = self.textFieldContent.text!
             destController.prenomVoyageur = self.saisiePrenom.text!
         }
