@@ -17,8 +17,6 @@ class ViewController: UIViewController {
     
     }
 
-   
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,13 +29,13 @@ class ViewController: UIViewController {
         }else{
             validateButton.isEnabled = true
         }*/
-        if let nom = self.textFieldContent.text {
+        /*if let nom = self.textFieldContent.text {
             if !nom.isEmpty {
                 self.titleLabel.text = nom
             }
-        }else{
+        }else{*/
             self.titleLabel.text = "Splity"
-        }
+        /*}*/
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
