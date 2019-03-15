@@ -9,6 +9,7 @@
 import UIKit
 
 class VoyageTableViewCell: UITableViewCell {
+  
     @IBOutlet weak var titreVoyage: UILabel!
     
     override func awakeFromNib() {
@@ -21,5 +22,7 @@ class VoyageTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }

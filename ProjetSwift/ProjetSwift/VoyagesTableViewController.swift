@@ -8,11 +8,14 @@
 
 import UIKit
 
-class VoyagesTableViewController: UITableViewController {
+class VoyagesTableViewController: UITableViewController{
     var nomVoyageur: String = ""
     var prenomVoyageur: String = ""
-    let voyagesTest : [Voyage] = [Voyage.init(titre: "Bali"), Voyage.init(titre: "Maroc")]
+    let voyagesTest : [Voyage] = [Voyage.init(titre: "Bali", image: "Bali.png"), Voyage.init(titre: "Maroc",image: "Maroc.png")]
 
+   
+    let images : [UIImage] = [#imageLiteral(resourceName: "bali"),#imageLiteral(resourceName: "maroc")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,6 +49,7 @@ class VoyagesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageCell", for: indexPath) as! VoyageTableViewCell
 
         cell.titreVoyage.text = voyagesTest[indexPath.row].titre
+       cell.imageView?.image = images[indexPath.row]
         return cell
     }
     
@@ -89,14 +93,13 @@ class VoyagesTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+ //MARK: - Navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+       
     }
-    */
+ 
 
 }

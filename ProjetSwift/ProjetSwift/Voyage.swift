@@ -10,9 +10,11 @@ import Foundation
 
 class Voyage {
     var titre: String
+    var image: String
     
-    init(titre : String) {
+    init(titre : String, image: String) {
         self.titre = titre
+        self.image = image
     }
     
 }

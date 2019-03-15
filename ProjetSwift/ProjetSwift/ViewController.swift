@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+      
+        validateButton?.isUserInteractionEnabled = false
+        
         
     
     }
@@ -23,7 +27,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func validate(_ sender: Any) {
-        validateButton.backgroundColor = UIColor.orange
+     
        /* if (textFieldContent.text?.isEmpty)! || (saisiePrenom.text?.isEmpty)! {
             validateButton.isEnabled = false
         }else{
@@ -34,7 +38,7 @@ class ViewController: UIViewController {
                 self.titleLabel.text = nom
             }
         }else{*/
-            self.titleLabel.text = "Splity"
+           // self.titleLabel.text = "Splity"
         /*}*/
     }
     
@@ -46,7 +50,6 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet weak var textFieldContent: UITextField!
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var validateButton: UIButton!
     @IBOutlet weak var saisiePrenom: UITextField!
 }
