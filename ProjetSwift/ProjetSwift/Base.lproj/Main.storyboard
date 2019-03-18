@@ -140,27 +140,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03q-Ou-lYB">
-                                <rect key="frame" x="154.5" y="89" width="66" height="35"/>
+                                <rect key="frame" x="154.5" y="89" width="66" height="34.5"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCt-Po-Dkr">
+                                <rect key="frame" x="157.5" y="622" width="60" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.793193519115448" blue="0.48277270793914795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QdR-io-vpp"/>
+                                    <constraint firstAttribute="width" constant="60" id="ag3-Ta-huu"/>
+                                </constraints>
+                                <state key="normal" title="Ajouter"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="49Q-UD-Wi4">
-                                <rect key="frame" x="23" y="147" width="329" height="235"/>
+                                <rect key="frame" x="26" y="147" width="323" height="450"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="235" id="Vo9-wd-SeX"/>
+                                    <constraint firstAttribute="height" constant="450" id="Vo9-wd-SeX"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardVoyageCell" textLabel="i5k-jx-q1f" imageView="7Df-Gd-a5w" style="IBUITableViewCellStyleDefault" id="Zw7-MJ-jiy">
-                                        <rect key="frame" x="0.0" y="28" width="329" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="323" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zw7-MJ-jiy" id="9lN-w0-xsR">
-                                            <rect key="frame" x="0.0" y="0.0" width="329" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i5k-jx-q1f">
-                                                    <rect key="frame" x="95" y="0.0" width="219" height="43.5"/>
+                                                    <rect key="frame" x="95" y="0.0" width="213" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -174,19 +188,25 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8fD-Dn-VVe" id="RPb-QD-4Sq"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.86068046092987061" green="0.92402929067611694" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="49Q-UD-Wi4" firstAttribute="leading" secondItem="fRB-wo-s8n" secondAttribute="leadingMargin" constant="7" id="DlA-tc-qvB"/>
-                            <constraint firstItem="03q-Ou-lYB" firstAttribute="centerX" secondItem="fRB-wo-s8n" secondAttribute="centerX" id="PiU-zn-aDP"/>
-                            <constraint firstItem="03q-Ou-lYB" firstAttribute="top" secondItem="jNB-SY-d7a" secondAttribute="bottom" constant="25" id="VtI-e8-20B"/>
-                            <constraint firstItem="49Q-UD-Wi4" firstAttribute="top" secondItem="03q-Ou-lYB" secondAttribute="bottom" constant="23" id="fvl-gX-IvT"/>
-                            <constraint firstItem="49Q-UD-Wi4" firstAttribute="centerX" secondItem="fRB-wo-s8n" secondAttribute="centerX" id="zlg-YI-0vN"/>
+                            <constraint firstItem="49Q-UD-Wi4" firstAttribute="leading" secondItem="fRB-wo-s8n" secondAttribute="leadingMargin" constant="10" id="1UW-0r-xl8"/>
+                            <constraint firstItem="03q-Ou-lYB" firstAttribute="top" secondItem="jNB-SY-d7a" secondAttribute="bottom" constant="25" id="59b-zs-jyZ"/>
+                            <constraint firstItem="49Q-UD-Wi4" firstAttribute="top" secondItem="03q-Ou-lYB" secondAttribute="bottom" constant="23.5" id="9BS-aj-NFL"/>
+                            <constraint firstItem="z4b-U0-BLl" firstAttribute="top" secondItem="eCt-Po-Dkr" secondAttribute="bottom" constant="15" id="HLE-Qa-kn0"/>
+                            <constraint firstItem="eCt-Po-Dkr" firstAttribute="centerX" secondItem="49Q-UD-Wi4" secondAttribute="centerX" id="R99-3x-vmL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="49Q-UD-Wi4" secondAttribute="trailing" constant="10" id="Re7-kq-OE7"/>
+                            <constraint firstItem="03q-Ou-lYB" firstAttribute="centerX" secondItem="49Q-UD-Wi4" secondAttribute="centerX" id="zn8-3J-Dqz"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEl-Uz-RjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="8fD-Dn-VVe" userLabel="VoyagesTableViewController" customClass="VoyagesTableViewController" customModule="ProjetSwift"/>
             </objects>
             <point key="canvasLocation" x="2056.8000000000002" y="-849.62518740629696"/>
         </scene>

@@ -20,6 +20,7 @@
 		7BCBFA0B22369198002AD627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0922369198002AD627 /* LaunchScreen.storyboard */; };
 		7BCBFA1622369198002AD627 /* ProjetSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */; };
 		7BCBFA2122369198002AD627 /* ProjetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */; };
+		F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */; };
 		FB740469223AC530001A4446 /* VoyageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB740468223AC52F001A4446 /* VoyageSet.swift */; };
 		FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftUITests.swift; sourceTree = "<group>"; };
 		7BCBFA2222369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSetViewModel.swift; sourceTree = "<group>"; };
 		FB740468223AC52F001A4446 /* VoyageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSet.swift; sourceTree = "<group>"; };
 		FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +136,7 @@
 		7BCBF9FC22369198002AD627 /* ProjetSwift */ = {
 			isa = PBXGroup;
 			children = (
+				F091FC39224002420086EA52 /* ViewModels */,
 				7B656B0922369DE3001DF6F7 /* Controllers */,
 				7BCBF9FD22369198002AD627 /* AppDelegate.swift */,
 				7B371738223945E1004ACE68 /* Models */,
@@ -163,6 +166,14 @@
 				7BCBFA2222369198002AD627 /* Info.plist */,
 			);
 			path = ProjetSwiftUITests;
+			sourceTree = "<group>";
+		};
+		F091FC39224002420086EA52 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 				7B37174622394B44004ACE68 /* Voyage.swift in Sources */,
 				7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */,
 				FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */,
+				F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */,
 				FB740469223AC530001A4446 /* VoyageSet.swift in Sources */,
 				7BCBFA0022369198002AD627 /* ViewController.swift in Sources */,
 				7B37173A22394646004ACE68 /* Voyageur.swift in Sources */,

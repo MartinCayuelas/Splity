@@ -8,52 +8,42 @@
 
 import UIKit
 
-class VoyagesTableViewController: UITableViewController{
+class VoyagesTableViewController: NSObject, UITableViewDataSource{
     var nomVoyageur: String = ""
     var prenomVoyageur: String = ""
-    let voyagesTest : [Voyage] = [Voyage.init(titre: "Bali", image: "Bali.png"), Voyage.init(titre: "Maroc",image: "Maroc.png")]
-
-   
-    let images : [UIImage] = [#imageLiteral(resourceName: "bali"),#imageLiteral(resourceName: "maroc")]
+  
+    var voyages : VoyageSetViewModel
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    override init(){
+        self.voyages = VoyageSetViewModel()
+        print(self.voyages.count)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    let images : [UIImage] = [#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali"),#imageLiteral(resourceName: "Maroc"),#imageLiteral(resourceName: "Bali")]
+    
+    
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return voyagesTest.count
+        return self.voyages.count
     }
 
-    @IBOutlet weak var titreVoyageur: UILabel!
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageCell", for: indexPath) as! VoyageTableViewCell
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageCell", for: indexPath) 
 
-        cell.titreVoyage.text = voyagesTest[indexPath.row].titre
+        cell.textLabel?.text = self.voyages.data[indexPath.row].titre
        cell.imageView?.image = images[indexPath.row]
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Voyages de " + prenomVoyageur + " " + nomVoyageur
     }
  
@@ -96,10 +86,10 @@ class VoyagesTableViewController: UITableViewController{
     
 
  //MARK: - Navigation
-
+/*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        
     }
  
-
+*/
 }

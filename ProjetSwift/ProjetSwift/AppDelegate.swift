@@ -14,7 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var voyagesTab : VoyageSet? {
+        return self.loadData()
+    }
+    
 
+    private func loadData() -> VoyageSet {
+        var voyage: [Voyage] = []
+        for i in 1...30{
+            let p = Voyage(titre: "Voyage "+String(i), image: "Image")
+            voyage.append(p)
+        }
+        return VoyageSet(Voyages: voyage)
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         return true
     }
