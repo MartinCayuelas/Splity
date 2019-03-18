@@ -186,6 +186,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vpk-lU-gqQ" kind="show" id="Esr-G9-YLV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -209,6 +212,41 @@
                 <customObject id="8fD-Dn-VVe" userLabel="VoyagesTableViewController" customClass="VoyagesTableViewController" customModule="ProjetSwift"/>
             </objects>
             <point key="canvasLocation" x="2056.8000000000002" y="-849.62518740629696"/>
+        </scene>
+        <!--Detail Voyage View Controller-->
+        <scene sceneID="mRL-Lu-m2n">
+            <objects>
+                <viewController id="vpk-lU-gqQ" customClass="DetailVoyageViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LJL-za-1r6"/>
+                        <viewControllerLayoutGuide type="bottom" id="spU-nF-WXy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hVn-fo-jN8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lbi-xw-Mfh">
+                                <rect key="frame" x="16" y="72" width="102" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bt8-xi-3sz">
+                                <rect key="frame" x="184" y="109" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.86068046092987061" green="0.92402929067611694" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageVoyage" destination="lbi-xw-Mfh" id="G3z-wH-R6t"/>
+                        <outlet property="titreVoyage" destination="bt8-xi-3sz" id="Ec4-lm-dx6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5G-6C-DIT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2832.8000000000002" y="-994.45277361319347"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Du1-Sp-WTF">
