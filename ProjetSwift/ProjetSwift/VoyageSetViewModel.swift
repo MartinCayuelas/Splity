@@ -38,4 +38,9 @@ class VoyageSetViewModel : NSObject {
         return self.data.count
     }
     
+    
+    func getVoyage(at indexPath: IndexPath) -> Voyage? {
+        
+        return self.data[indexPath.row]
+    }
 }

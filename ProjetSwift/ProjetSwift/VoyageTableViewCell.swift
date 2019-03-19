@@ -9,8 +9,6 @@
 import UIKit
 
 class VoyageTableViewCell: UITableViewCell {
-  
-    @IBOutlet weak var titreVoyage: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

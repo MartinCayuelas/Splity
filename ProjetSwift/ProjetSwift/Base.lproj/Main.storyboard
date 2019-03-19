@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="1236" y="-210.04497751124438"/>
         </scene>
-        <!--View Controller-->
+        <!--Voyages View Controller-->
         <scene sceneID="ydf-Pd-DNp">
             <objects>
-                <viewController id="iPP-5Q-4sg" sceneMemberID="viewController">
+                <viewController id="iPP-5Q-4sg" customClass="VoyagesViewController" customModule="ProjetSwift" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jNB-SY-d7a"/>
                         <viewControllerLayoutGuide type="bottom" id="z4b-U0-BLl"/>
@@ -207,6 +207,9 @@
                             <constraint firstItem="03q-Ou-lYB" firstAttribute="centerX" secondItem="49Q-UD-Wi4" secondAttribute="centerX" id="zn8-3J-Dqz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="49Q-UD-Wi4" id="Rtk-lj-bcu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEl-Uz-RjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="8fD-Dn-VVe" userLabel="VoyagesTableViewController" customClass="VoyagesTableViewController" customModule="ProjetSwift"/>
@@ -225,19 +228,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lbi-xw-Mfh">
-                                <rect key="frame" x="16" y="72" width="102" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lbi-xw-Mfh">
+                                <rect key="frame" x="16" y="72" width="107" height="94"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bt8-xi-3sz">
-                                <rect key="frame" x="184" y="109" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bt8-xi-3sz">
+                                <rect key="frame" x="147.5" y="109" width="80" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="6Mj-Nq-fCf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.86068046092987061" green="0.92402929067611694" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lbi-xw-Mfh" firstAttribute="leading" secondItem="hVn-fo-jN8" secondAttribute="leadingMargin" id="6RG-uW-g0q"/>
+                            <constraint firstItem="spU-nF-WXy" firstAttribute="top" secondItem="lbi-xw-Mfh" secondAttribute="bottom" constant="501" id="CwO-5N-9aE"/>
+                            <constraint firstItem="lbi-xw-Mfh" firstAttribute="top" secondItem="LJL-za-1r6" secondAttribute="bottom" constant="8" id="Jqz-di-3xX"/>
+                            <constraint firstItem="bt8-xi-3sz" firstAttribute="leading" secondItem="lbi-xw-Mfh" secondAttribute="trailing" constant="24.5" id="XDI-3K-jdX"/>
+                            <constraint firstItem="bt8-xi-3sz" firstAttribute="centerX" secondItem="hVn-fo-jN8" secondAttribute="centerX" id="khl-8P-hSZ"/>
+                            <constraint firstItem="bt8-xi-3sz" firstAttribute="top" secondItem="LJL-za-1r6" secondAttribute="bottom" constant="45" id="lsl-xr-YIw"/>
+                            <constraint firstItem="bt8-xi-3sz" firstAttribute="leading" secondItem="lbi-xw-Mfh" secondAttribute="trailing" constant="24.5" id="oAd-RV-sYP"/>
+                            <constraint firstItem="lbi-xw-Mfh" firstAttribute="centerY" secondItem="bt8-xi-3sz" secondAttribute="centerY" id="tMe-r2-Xgs"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageVoyage" destination="lbi-xw-Mfh" id="G3z-wH-R6t"/>
@@ -791,6 +805,6 @@
         <image name="Bali" width="900" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vY4-cr-hbN"/>
+        <segue reference="R8F-b3-VQ8"/>
     </inferredMetricsTieBreakers>
 </document>

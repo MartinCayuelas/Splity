@@ -14,7 +14,7 @@ class DetailVoyageViewController: UIViewController{
     @IBOutlet weak var imageVoyage: UIImageView!
     @IBOutlet weak var titreVoyage: UILabel!
     
-    let VoyageViewModel: VoyageSetViewModel = VoyageSetViewModel()
+    let voyageViewModel: VoyageSetViewModel = VoyageSetViewModel()
     
     var voyageSelected : Voyage?
     
