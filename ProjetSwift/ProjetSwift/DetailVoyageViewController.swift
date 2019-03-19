@@ -23,7 +23,7 @@ class DetailVoyageViewController: UIViewController{
         if let avoyage = self.voyageSelected {
             self.titreVoyage
                 .text = avoyage.titre
-         //   self.prenomLabel.text = aperson.firstName
+         self.imageVoyage.image =  UIImage(named: avoyage.image)
             
         } else {
             self.titreVoyage.text = ""

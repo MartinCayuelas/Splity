@@ -158,6 +158,10 @@
                                         <integer key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonAddVoyage:" destination="iPP-5Q-4sg" eventType="touchUpInside" id="gkm-kQ-elD"/>
+                                    <segue destination="RZt-NH-3NW" kind="presentation" id="WWy-IM-T4f"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="49Q-UD-Wi4">
                                 <rect key="frame" x="26" y="147" width="323" height="450"/>
