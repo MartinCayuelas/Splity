@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func loadData() -> VoyageSet {
         var voyage: [Voyage] = []
-        for i in 1...30{
-            let p = Voyage(titre: "Voyage "+String(i), image: "Image")
+        for i in 1...4{
+            let p = Voyage(titre: "Voyage "+String(i), image: "Image"+String(i))
             voyage.append(p)
         }
         return VoyageSet(Voyages: voyage)
