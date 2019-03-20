@@ -13,6 +13,10 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var voyageursTab : VoyageurSet? {
+        return self.loadVoyageurs()
+    }
 
     var voyagesTab : VoyageSet? = VoyageSet()/*{
         return self.loadData()
@@ -27,6 +31,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return VoyageSet(Voyages: voyage)
     }*/
+    
+    private func loadVoyageurs() -> VoyageurSet {
+        var voyageurs: [Voyageur] = []
+        for i in 1...4{
+            let v = Voyageur(nom: "Nom"+String(i), prenom: "Prénom"+String(i))
+            voyageurs.append(v)
+        }
+        return VoyageurSet(voyageurs: voyageurs)
+    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         return true
