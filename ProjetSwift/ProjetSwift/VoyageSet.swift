@@ -18,8 +18,8 @@ class VoyageSet: Sequence {
     }
     
     init(Voyages: [Voyage]) {
-        for p in Voyages {
-            self.VoyageSet.append(p)
+        for v in Voyages {
+            self.VoyageSet.append(v)
         }
     }
     
@@ -27,25 +27,27 @@ class VoyageSet: Sequence {
         return self.VoyageSet.count
     }
     
-    func isEmpty(pSet: VoyageSet) -> Bool {
-        return isEmpty(pSet: pSet)
+    func isEmpty(vSet: VoyageSet) -> Bool {
+        return isEmpty(vSet: vSet)
     }
     
-    func add(p: Voyage) -> VoyageSet {
-        if !self.VoyageSet.contains(p){
-            self.VoyageSet.append(p)
+    func add(v: Voyage) -> VoyageSet {
+        if !self.VoyageSet.contains(v){
+            print("VoyageSet")
+            print(v.titre)
+            self.VoyageSet.append(v)
         }
         return self
     }
     
-    func remove(p: Voyage) -> VoyageSet {
-        if let i = self.VoyageSet.index(of: p) {
+    func remove(v: Voyage) -> VoyageSet {
+        if let i = self.VoyageSet.index(of: v) {
             self.VoyageSet.remove(at: i)
         }
         return self
     }
     
-    func count(pSet: VoyageSet) -> Int {
+    func count(vSet: VoyageSet) -> Int {
         return self.VoyageSet.count
     }
     
@@ -105,8 +107,8 @@ class VoyageSet: Sequence {
     
     //Les méthodes contains
     
-    func contains(p: Voyage) -> Bool {
-        return self.VoyageSet.contains(where: {$0==p})
+    func contains(v: Voyage) -> Bool {
+        return self.VoyageSet.contains(where: {$0==v})
     }
     /*
     func contains(VoyageWithFirstname prenom: String) -> Bool {
@@ -128,16 +130,16 @@ class VoyageSet: Sequence {
     
     
     
-    func indexOf(p: Voyage) -> Int? {
-        guard self.count(pSet: self) > 0 else { return nil }
+    func indexOf(v: Voyage) -> Int? {
+        guard self.count(vSet: self) > 0 else { return nil }
         var index : Int = 0
         var current : Voyage = self.VoyageSet[index]
-        var found : Bool = (current == p)
-        while ((index < self.count(pSet: self)) && !found){
+        var found : Bool = (current == v)
+        while ((index < self.count(vSet: self)) && !found){
             index += 1
-            if (index < self.count(pSet: self)){
+            if (index < self.count(vSet: self)){
                 current = self.VoyageSet[index]
-                found = (current == p)
+                found = (current == v)
             }
         }
         return found ? index : nil

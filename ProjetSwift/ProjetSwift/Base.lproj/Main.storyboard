@@ -159,8 +159,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonAddVoyage:" destination="iPP-5Q-4sg" eventType="touchUpInside" id="gkm-kQ-elD"/>
-                                    <segue destination="RZt-NH-3NW" kind="presentation" id="WWy-IM-T4f"/>
+                                    <segue destination="RZt-NH-3NW" kind="presentation" identifier="voyageAddedSegue" id="V3q-yy-Ivj"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="49Q-UD-Wi4">
@@ -213,10 +212,15 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="49Q-UD-Wi4" id="Rtk-lj-bcu"/>
+                        <outlet property="voyageTableController" destination="8fD-Dn-VVe" id="IQC-A1-AOM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEl-Uz-RjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="8fD-Dn-VVe" userLabel="VoyagesTableViewController" customClass="VoyagesTableViewController" customModule="ProjetSwift"/>
+                <customObject id="8fD-Dn-VVe" userLabel="VoyagesTableViewController" customClass="VoyagesTableViewController" customModule="ProjetSwift">
+                    <connections>
+                        <outlet property="tableView" destination="49Q-UD-Wi4" id="I3K-xv-afy"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="2056.8000000000002" y="-849.62518740629696"/>
         </scene>
@@ -266,10 +270,10 @@
             </objects>
             <point key="canvasLocation" x="2832.8000000000002" y="-994.45277361319347"/>
         </scene>
-        <!--View Controller-->
+        <!--Ajout Voyage View Controller-->
         <scene sceneID="Du1-Sp-WTF">
             <objects>
-                <viewController id="RZt-NH-3NW" sceneMemberID="viewController">
+                <viewController id="RZt-NH-3NW" customClass="AjoutVoyageViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cfe-gr-0Gv"/>
                         <viewControllerLayoutGuide type="bottom" id="Mlh-ab-lNw"/>
@@ -343,14 +347,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYF-ol-2pb">
-                                <rect key="frame" x="161" y="608" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Valider"/>
-                                <connections>
-                                    <segue destination="1PG-mK-wmG" kind="show" id="jRL-P5-RQc"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Création d'un voyage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpG-YA-dub">
                                 <rect key="frame" x="84.5" y="35" width="206.5" height="28"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
@@ -364,6 +360,22 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nv1-Hi-qi3">
                                 <rect key="frame" x="123.5" y="240" width="128" height="30"/>
                                 <state key="normal" title="Prendre une photo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoJ-E2-A2e">
+                                <rect key="frame" x="104" y="604" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Annuler"/>
+                                <connections>
+                                    <segue destination="tzz-TT-LN6" kind="unwind" unwindAction="unwindToMainViewWithSegue:" id="kcy-ow-Bk2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYF-ol-2pb">
+                                <rect key="frame" x="204" y="604" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Valider"/>
+                                <connections>
+                                    <segue destination="tzz-TT-LN6" kind="unwind" identifier="voyageAddedSegue" unwindAction="unwindToMainViewWithSegue:" id="RAn-pj-4B1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8606448769569397" green="0.92440921068191528" blue="0.99936455488204956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -386,8 +398,12 @@
                             <constraint firstItem="UpG-YA-dub" firstAttribute="top" secondItem="cfe-gr-0Gv" secondAttribute="bottom" constant="15" id="wqy-A9-nK0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textFieldTitreVoyage" destination="dF1-0b-HT8" id="9jW-Wf-Zf0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIH-fu-8Jj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tzz-TT-LN6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="476" y="660.71964017991013"/>
         </scene>

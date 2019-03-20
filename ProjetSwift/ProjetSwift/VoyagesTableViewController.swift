@@ -8,15 +8,17 @@
 
 import UIKit
 
-class VoyagesTableViewController: NSObject, UITableViewDataSource{
+class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetViewModelDelegate {
     var nomVoyageur: String = ""
     var prenomVoyageur: String = ""
   
+    @IBOutlet weak var tableView: UITableView!
     var voyages : VoyageSetViewModel
     
     override init(){
         self.voyages = VoyageSetViewModel()
-        print(self.voyages.count)
+        super.init()
+        self.voyages.delegate = self
     }
 
     
@@ -34,15 +36,29 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource{
 
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageCell", for: indexPath) 
-
-        cell.textLabel?.text = self.voyages.data[indexPath.row].titre
-       cell.imageView?.image = UIImage(named: self.voyages.data[indexPath.row].image)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageCell", for: indexPath)
+        
+        guard let voyage = self.voyages.get(voyageAt: indexPath.row) else { return cell }
+        
+        cell.textLabel?.text = voyage.titre
+        cell.imageView?.image = UIImage(named: voyage.image)
+        
         return cell
     }
     
      func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Voyages de " + prenomVoyageur + " " + nomVoyageur
+    }
+    
+    func voyageAdded(at index: IndexPath) {
+        print("VoyageAdded")
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [index], with: UITableView.RowAnimation.middle)
+        self.tableView.endUpdates()
+    }
+    
+    func dataSetChanged() {
+        self.tableView.reloadData()
     }
  
 
