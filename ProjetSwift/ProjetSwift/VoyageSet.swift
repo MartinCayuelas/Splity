@@ -33,8 +33,6 @@ class VoyageSet: Sequence {
     
     func add(v: Voyage) -> VoyageSet {
         if !self.VoyageSet.contains(v){
-            print("VoyageSet")
-            print(v.titre)
             self.VoyageSet.append(v)
         }
         return self

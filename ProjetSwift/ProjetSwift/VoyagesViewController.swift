@@ -37,8 +37,6 @@ class VoyagesViewController: UIViewController {
         if segue.identifier == "voyageAddedSegue" {
             guard let controller = segue.source as? AjoutVoyageViewController else { return }
             if let voyage = controller.newVoyage {
-                print("VoyagesViewController")
-                print(voyage.titre)
                 self.voyageTableController.voyages.add(voyage: voyage)
             }
             

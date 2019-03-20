@@ -51,7 +51,6 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
     }
     
     func voyageAdded(at index: IndexPath) {
-        print("VoyageAdded")
         self.tableView.beginUpdates()
         self.tableView.insertRows(at: [index], with: UITableView.RowAnimation.middle)
         self.tableView.endUpdates()

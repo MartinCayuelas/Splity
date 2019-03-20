@@ -58,9 +58,6 @@ class VoyageSetViewModel : NSObject {
     
     func add(voyage: Voyage){
         if self.modelSet.indexOf(v: voyage) == nil{
-            print("ViewModel")
-            print(voyage.titre)
-            
             self.modelSet.add(v: voyage)
             self.data.append(voyage)
             self.delegate?.voyageAdded(at: IndexPath(row: self.modelSet.count-1, section: 0))
