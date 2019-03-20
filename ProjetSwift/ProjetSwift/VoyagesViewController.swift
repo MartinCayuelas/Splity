@@ -10,15 +10,25 @@ import UIKit
 
 class VoyagesViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
+    @IBOutlet weak var labelNomComplet: UILabel!
     @IBOutlet var voyageTableController: VoyagesTableViewController!
+    
+    let voyageurViewModel: VoyageurSetViewModel = VoyageurSetViewModel()
     
     @IBOutlet weak var tableView: UITableView!
     
+    var voyageurSelected: Voyageur?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let voyageur = self.voyageurSelected {
+            self.labelNomComplet
+                .text = "Voyages de " + voyageur.nomComplet
+        } else {
+            self.labelNomComplet.text = "Voyages"
+        }
+        // Do any additional setup after loading the view.
+    }
 
     // MARK: - Navigation
     

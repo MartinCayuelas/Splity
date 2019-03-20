@@ -10,15 +10,13 @@ import UIKit
 
 class ViewController: UIViewController{
 
+    @IBOutlet var controllerVoyageursTableView: VoyageursTableViewController!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-      
+
         validateButton?.isUserInteractionEnabled = false
-        
-        
-    
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,9 +41,17 @@ class ViewController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destController = segue.destination as? VoyagesTableViewController {
+        /*if let destController = segue.destination as? VoyagesTableViewController {
             destController.nomVoyageur = self.textFieldContent.text!
             destController.prenomVoyageur = self.saisiePrenom.text!
+        }*/
+        if let destController = segue.destination as? VoyagesViewController {
+            if let cell = sender as? UITableViewCell {
+                guard let indexPath = self.controllerVoyageursTableView.voyageursTableView.indexPath(for: cell) else {
+                    return
+                }
+                destController.voyageurSelected = destController.voyageurViewModel.get(voyageurAt: indexPath.row)
+            }
         }
     }
     

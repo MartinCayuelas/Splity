@@ -46,10 +46,6 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         return cell
     }
     
-     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Voyages de " + prenomVoyageur + " " + nomVoyageur
-    }
-    
     func voyageAdded(at index: IndexPath) {
         self.tableView.beginUpdates()
         self.tableView.insertRows(at: [index], with: UITableView.RowAnimation.middle)

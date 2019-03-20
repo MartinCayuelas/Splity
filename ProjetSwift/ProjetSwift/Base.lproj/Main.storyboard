@@ -57,6 +57,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="iPP-5Q-4sg" kind="show" id="Vhn-az-6t6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -82,6 +85,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rax-De-wcE"/>
+                    <connections>
+                        <outlet property="controllerVoyageursTableView" destination="mHO-kt-8c4" id="meY-4n-Hf8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <customObject id="mHO-kt-8c4" customClass="VoyageursTableViewController" customModule="ProjetSwift" customModuleProvider="target">
@@ -104,14 +110,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Splity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03q-Ou-lYB">
-                                <rect key="frame" x="154.5" y="45" width="66" height="34.5"/>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCt-Po-Dkr">
-                                <rect key="frame" x="157.5" y="622" width="60" height="30"/>
+                                <rect key="frame" x="157.5" y="617" width="60" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.793193519115448" blue="0.48277270793914795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QdR-io-vpp"/>
@@ -128,7 +128,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="49Q-UD-Wi4">
-                                <rect key="frame" x="26" y="103" width="323" height="450"/>
+                                <rect key="frame" x="26" y="147" width="323" height="450"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="450" id="Vo9-wd-SeX"/>
@@ -163,19 +163,29 @@
                                     <outlet property="dataSource" destination="8fD-Dn-VVe" id="RPb-QD-4Sq"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voyages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4d9-BK-9a0">
+                                <rect key="frame" x="155" y="84" width="65" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.86068046092987061" green="0.92402929067611694" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="49Q-UD-Wi4" firstAttribute="leading" secondItem="fRB-wo-s8n" secondAttribute="leadingMargin" constant="10" id="1UW-0r-xl8"/>
-                            <constraint firstItem="03q-Ou-lYB" firstAttribute="top" secondItem="jNB-SY-d7a" secondAttribute="bottom" constant="25" id="59b-zs-jyZ"/>
-                            <constraint firstItem="49Q-UD-Wi4" firstAttribute="top" secondItem="03q-Ou-lYB" secondAttribute="bottom" constant="23.5" id="9BS-aj-NFL"/>
-                            <constraint firstItem="z4b-U0-BLl" firstAttribute="top" secondItem="eCt-Po-Dkr" secondAttribute="bottom" constant="15" id="HLE-Qa-kn0"/>
-                            <constraint firstItem="eCt-Po-Dkr" firstAttribute="centerX" secondItem="49Q-UD-Wi4" secondAttribute="centerX" id="R99-3x-vmL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="49Q-UD-Wi4" secondAttribute="trailing" constant="10" id="Re7-kq-OE7"/>
-                            <constraint firstItem="03q-Ou-lYB" firstAttribute="centerX" secondItem="49Q-UD-Wi4" secondAttribute="centerX" id="zn8-3J-Dqz"/>
+                            <constraint firstItem="4d9-BK-9a0" firstAttribute="centerX" secondItem="49Q-UD-Wi4" secondAttribute="centerX" id="2z3-wJ-I7j"/>
+                            <constraint firstItem="eCt-Po-Dkr" firstAttribute="top" secondItem="49Q-UD-Wi4" secondAttribute="bottom" constant="20" id="Bc7-5Q-gav"/>
+                            <constraint firstItem="4d9-BK-9a0" firstAttribute="centerX" secondItem="fRB-wo-s8n" secondAttribute="centerX" id="Hxl-hj-kqm"/>
+                            <constraint firstItem="4d9-BK-9a0" firstAttribute="top" secondItem="jNB-SY-d7a" secondAttribute="bottom" constant="20" id="Q0i-br-IWc"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="49Q-UD-Wi4" secondAttribute="bottom" constant="70" id="Qfa-MA-2OH"/>
+                            <constraint firstItem="49Q-UD-Wi4" firstAttribute="top" secondItem="4d9-BK-9a0" secondAttribute="bottom" constant="20" id="mmy-av-2JO"/>
+                            <constraint firstItem="4d9-BK-9a0" firstAttribute="centerX" secondItem="49Q-UD-Wi4" secondAttribute="centerX" id="nWO-x5-6J1"/>
+                            <constraint firstItem="eCt-Po-Dkr" firstAttribute="centerX" secondItem="49Q-UD-Wi4" secondAttribute="centerX" id="ndn-wb-RYm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="49Q-UD-Wi4" secondAttribute="trailing" constant="10" id="o8I-7s-bjo"/>
+                            <constraint firstItem="49Q-UD-Wi4" firstAttribute="leading" secondItem="fRB-wo-s8n" secondAttribute="leadingMargin" constant="10" id="oCE-KV-yEG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="labelNomComplet" destination="4d9-BK-9a0" id="gUh-I6-0jy"/>
                         <outlet property="tableView" destination="49Q-UD-Wi4" id="Rtk-lj-bcu"/>
                         <outlet property="voyageTableController" destination="8fD-Dn-VVe" id="IQC-A1-AOM"/>
                     </connections>
@@ -202,10 +212,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lbi-xw-Mfh">
-                                <rect key="frame" x="16" y="28" width="107" height="138"/>
+                                <rect key="frame" x="16" y="72" width="107" height="94"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bt8-xi-3sz">
-                                <rect key="frame" x="147.5" y="65" width="80" height="64"/>
+                                <rect key="frame" x="147.5" y="109" width="80" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="6Mj-Nq-fCf"/>
                                 </constraints>
