@@ -15,7 +15,7 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        validateButton?.isUserInteractionEnabled = false
+        //:validateButton?.isUserInteractionEnabled = false
 
     }
 
@@ -55,8 +55,17 @@ class ViewController: UIViewController{
         }
     }
     
-    @IBOutlet weak var textFieldContent: UITextField!
-    @IBOutlet weak var validateButton: UIButton!
-    @IBOutlet weak var saisiePrenom: UITextField!
+    @IBAction func unwindToMainView(segue: UIStoryboardSegue){
+        if segue.identifier == "voyageurAddedSegue" {
+            guard let controller = segue.source as? AjoutVoyageurViewController else { return }
+            if let voyageur = controller.newVoyageur {
+                self.controllerVoyageursTableView.voyageurs.add(voyageur: voyageur)
+            }
+            
+        } else {
+            //cas du cancel
+            print("AJOUT ANNULE")
+        }
+    }
 }
 

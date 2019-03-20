@@ -69,6 +69,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCX-kN-v8q">
                                 <rect key="frame" x="118.5" y="617" width="138" height="30"/>
                                 <state key="normal" title="Ajouter un voyageur"/>
+                                <connections>
+                                    <segue destination="LIq-o9-6IK" kind="presentation" identifier="voyageurAddedSegue" id="cSW-O3-Vgd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8606448769569397" green="0.92440921068191528" blue="0.99936455488204956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -260,9 +263,6 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avF-Dd-Zqe">
                                 <rect key="frame" x="87.5" y="475" width="200" height="30"/>
                                 <state key="normal" title="Ajouter un nouveau voyageur"/>
-                                <connections>
-                                    <segue destination="LIq-o9-6IK" kind="presentation" id="R8F-b3-VQ8"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUU-6n-E6o">
                                 <rect key="frame" x="170" y="93" width="35" height="21"/>
@@ -625,9 +625,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wr9-c0-of8">
                                 <rect key="frame" x="87.5" y="443" width="200" height="30"/>
                                 <state key="normal" title="Ajouter un nouveau voyageur"/>
-                                <connections>
-                                    <segue destination="LIq-o9-6IK" kind="presentation" id="vY4-cr-hbN"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8606448769569397" green="0.92440921068191528" blue="0.99936455488204956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -709,10 +706,10 @@
             </objects>
             <point key="canvasLocation" x="4684" y="-1029"/>
         </scene>
-        <!--View Controller-->
+        <!--Ajout Voyageur View Controller-->
         <scene sceneID="mh6-0i-6ea">
             <objects>
-                <viewController id="LIq-o9-6IK" sceneMemberID="viewController">
+                <viewController id="LIq-o9-6IK" customClass="AjoutVoyageurViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VRD-3t-QT7"/>
                         <viewControllerLayoutGuide type="bottom" id="MAZ-xX-HMe"/>
@@ -754,6 +751,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmH-Ol-SfC">
                                 <rect key="frame" x="164" y="378" width="47" height="30"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <segue destination="1Sv-et-EoB" kind="unwind" identifier="voyageurAddedSegue" unwindAction="unwindToMainViewWithSegue:" id="7xh-rF-gce"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YED-Uo-33w">
+                                <rect key="frame" x="50" y="425" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Annuler"/>
+                                <connections>
+                                    <segue destination="1Sv-et-EoB" kind="unwind" unwindAction="unwindToMainViewWithSegue:" id="NjO-yQ-BuE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8606448769569397" green="0.92440921068191528" blue="0.99936455488204956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -772,8 +780,13 @@
                             <constraint firstItem="P5L-4F-OiX" firstAttribute="top" secondItem="jHA-SG-lDw" secondAttribute="bottom" constant="30" id="y7j-mo-2dm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textFieldNom" destination="jHA-SG-lDw" id="Dg6-z4-aVA"/>
+                        <outlet property="textFieldPrenom" destination="BnJ-LW-OJU" id="Bwb-wh-Con"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aA1-Y0-iUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1Sv-et-EoB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1799" y="887"/>
         </scene>
@@ -799,7 +812,4 @@
     <resources>
         <image name="Bali" width="900" height="600"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="R8F-b3-VQ8"/>
-    </inferredMetricsTieBreakers>
 </document>

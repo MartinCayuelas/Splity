@@ -15,8 +15,8 @@ class VoyageursTableViewController: NSObject, UITableViewDataSource, VoyageurSet
     
     override init(){
         self.voyageurs = VoyageurSetViewModel()
-        //super.init()
-        //self.voyageurs.delegate = self
+        super.init()
+        self.voyageurs.delegate = self
     }
 
     // MARK: - Table view data source
