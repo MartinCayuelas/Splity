@@ -30,12 +30,15 @@ class DepenseTableViewController : NSObject, UITableViewDataSource, DepenseSetVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = depensesTableView.dequeueReusableCell(withIdentifier: "standardDepenseCell", for: indexPath)
+        let cell = depensesTableView.dequeueReusableCell(withIdentifier: "standardDepenseCell", for: indexPath) as! DepenseTableViewCellController
         
         guard let depense = self.depensesModel.get(depenseAt: indexPath.row) else { return cell }
         
-        //cell.textLabel?.text = voyageur.nom
-        //cell.detailTextLabel?.text = voyageur.prenom
+        if(depense.image != nil) {
+            cell.imageDepenseImageView.image = UIImage(named: depense.image!)
+        }
+        cell.titreDepenseLabel.text = depense.titre
+        cell.montantDepenseLabel.text = String(depense.montant) + " €"
         
         return cell
     }

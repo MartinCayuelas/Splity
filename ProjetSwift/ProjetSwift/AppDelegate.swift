@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return self.loadVoyageurs()
     }
 
-    var voyagesTab : VoyageSet? = VoyageSet()/*{
+    var voyagesTab : VoyageSet? { // = VoyageSet()
         return self.loadData()
-    }*/
+    }
     
     var depensesTab : DepenseSet? {
         return self.loadDepenses()

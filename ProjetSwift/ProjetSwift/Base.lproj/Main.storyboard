@@ -458,15 +458,16 @@
                                 <rect key="frame" x="35" y="148" width="305" height="449"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardDepenseCell" id="u75-is-Ha6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardDepenseCell" id="u75-is-Ha6" customClass="DepenseTableViewCellController" customModule="ProjetSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="305" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="u75-is-Ha6" id="SIZ-7h-tjB">
                                             <rect key="frame" x="0.0" y="0.0" width="305" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0f-w2-ArV">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0f-w2-ArV">
                                                     <rect key="frame" x="22" y="0.0" width="46" height="41.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dépense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAF-nJ-LI2">
                                                     <rect key="frame" x="118.5" y="10" width="68" height="21"/>
@@ -474,8 +475,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Montant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cct-el-bu1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Montant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cct-el-bu1">
                                                     <rect key="frame" x="222" y="10" width="64" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -483,11 +485,14 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="lAF-nJ-LI2" firstAttribute="centerX" secondItem="SIZ-7h-tjB" secondAttribute="centerX" id="JCK-nq-lRT"/>
-                                                <constraint firstItem="cct-el-bu1" firstAttribute="centerY" secondItem="lAF-nJ-LI2" secondAttribute="centerY" id="NN3-i9-Utp"/>
-                                                <constraint firstItem="lAF-nJ-LI2" firstAttribute="centerY" secondItem="U0f-w2-ArV" secondAttribute="centerY" id="PhU-yW-3Wd"/>
                                                 <constraint firstItem="lAF-nJ-LI2" firstAttribute="top" secondItem="SIZ-7h-tjB" secondAttribute="top" constant="10" id="cBf-UJ-agA"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageDepenseImageView" destination="U0f-w2-ArV" id="3kQ-yK-nnt"/>
+                                            <outlet property="montantDepenseLabel" destination="cct-el-bu1" id="Rt2-4w-AAd"/>
+                                            <outlet property="titreDepenseLabel" destination="lAF-nJ-LI2" id="N2f-et-mmz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
