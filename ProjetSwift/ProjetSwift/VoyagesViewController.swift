@@ -15,8 +15,6 @@ class VoyagesViewController: UIViewController {
     
     let voyageurViewModel: VoyageurSetViewModel = VoyageurSetViewModel()
     
-    @IBOutlet weak var tableView: UITableView!
-    
     var voyageurSelected: Voyageur?
     
     override func viewDidLoad() {
@@ -35,7 +33,7 @@ class VoyagesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destController = segue.destination as? DetailVoyageViewController {
             if let cell = sender as? UITableViewCell {
-                guard let indexPath = self.tableView.indexPath(for: cell) else {
+                guard let indexPath = self.voyageTableController.tableView.indexPath(for: cell) else {
                     return
                 }
                 destController.voyageSelected = destController.voyageViewModel.get(voyageAt: indexPath.row)
