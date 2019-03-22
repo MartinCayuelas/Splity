@@ -9,11 +9,10 @@
 import UIKit
 
 class VoyagesViewController: UIViewController {
-
+    
     @IBOutlet weak var labelNomComplet: UILabel!
     @IBOutlet var voyageTableController: VoyagesTableViewController!
     
-    let voyageurViewModel: VoyageurSetViewModel = VoyageurSetViewModel()
     
     var voyageurSelected: Voyageur?
     
@@ -27,16 +26,16 @@ class VoyagesViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
-
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destController = segue.destination as? DetailVoyageViewController {
             if let cell = sender as? UITableViewCell {
                 guard let indexPath = self.voyageTableController.tableView.indexPath(for: cell) else {
-                    return
-                }
-                destController.voyageSelected = destController.voyageViewModel.get(voyageAt: indexPath.row)
+                 return
+                 }
+                 destController.voyageSelected = destController.voyageViewModel.get(voyageAt: indexPath.row)
             }
         }
     }
@@ -53,6 +52,6 @@ class VoyagesViewController: UIViewController {
             print("AJOUT ANNULE")
         }
     }
- 
-
+    
+    
 }

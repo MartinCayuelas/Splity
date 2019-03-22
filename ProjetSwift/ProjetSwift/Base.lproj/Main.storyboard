@@ -90,15 +90,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="rax-De-wcE"/>
                     <connections>
-                        <outlet property="controllerVoyageursTableView" destination="mHO-kt-8c4" id="meY-4n-Hf8"/>
+                        <outlet property="voyageursTableView" destination="vCh-eC-qhN" id="d1H-nW-IVl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="mHO-kt-8c4" customClass="VoyageursTableViewController" customModule="ProjetSwift" customModuleProvider="target">
-                    <connections>
-                        <outlet property="voyageursTableView" destination="vCh-eC-qhN" id="YOX-08-fn0"/>
-                    </connections>
-                </customObject>
+                <customObject id="mHO-kt-8c4"/>
             </objects>
             <point key="canvasLocation" x="1236" y="-210.04497751124438"/>
         </scene>
@@ -181,7 +177,7 @@
                     </view>
                     <connections>
                         <outlet property="labelNomComplet" destination="4d9-BK-9a0" id="gUh-I6-0jy"/>
-                        <outlet property="voyageTableController" destination="8fD-Dn-VVe" id="IQC-A1-AOM"/>
+                        <outlet property="voyageTableController" destination="8fD-Dn-VVe" id="kGH-q6-Cso"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEl-Uz-RjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -419,8 +415,8 @@
                                 <rect key="frame" x="162.5" y="333" width="50" height="30"/>
                                 <state key="normal" title="Ajouter"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajouter une dépense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTH-My-ip4">
-                                <rect key="frame" x="85.5" y="35" width="204.5" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ajouter une dépense" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTH-My-ip4">
+                                <rect key="frame" x="84.5" y="35" width="204.5" height="28"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

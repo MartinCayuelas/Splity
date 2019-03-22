@@ -10,12 +10,16 @@ import UIKit
 
 class VoyageursTableViewController: NSObject, UITableViewDataSource, VoyageurSetViewModelDelegate {
 
-    @IBOutlet weak var voyageursTableView: UITableView!
+    var voyageursTableView: UITableView!
     var voyageurs : VoyageurSetViewModel
+    let fetchResultController : VoyageurFetchResultController
     
-    override init(){
-        self.voyageurs = VoyageurSetViewModel()
+    init(tableView: UITableView){
+        self.voyageursTableView = tableView
+        self.fetchResultController = VoyageurFetchResultController(view : tableView)
+        self.voyageurs = VoyageurSetViewModel(data: self.fetchResultController.voyageursFetched)
         super.init()
+        self.voyageursTableView.dataSource = self
         self.voyageurs.delegate = self
     }
 

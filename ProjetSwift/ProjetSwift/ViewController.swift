@@ -10,12 +10,13 @@ import UIKit
 
 class ViewController: UIViewController{
 
-    @IBOutlet var controllerVoyageursTableView: VoyageursTableViewController!
+    var controllerVoyageursTableView: VoyageursTableViewController!
+    @IBOutlet weak var voyageursTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        self.controllerVoyageursTableView = VoyageursTableViewController(tableView: voyageursTableView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +30,7 @@ class ViewController: UIViewController{
                 guard let indexPath = self.controllerVoyageursTableView.voyageursTableView.indexPath(for: cell) else {
                     return
                 }
-                destController.voyageurSelected = destController.voyageurViewModel.get(voyageurAt: indexPath.row)
+                destController.voyageurSelected = self.controllerVoyageursTableView.voyageurs.get(voyageurAt: indexPath.row)
             }
         }
     }

@@ -14,13 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    var voyageursTab : VoyageurSet? {
+    var voyageursTab : VoyageurSet? = VoyageurSet() /*{
         return self.loadVoyageurs()
-    }
+    }*/
 
-    var voyagesTab : VoyageSet? {
+    var voyagesTab : VoyageSet? = VoyageSet() /*{
         return self.loadData()
-    }
+    }*/
     
     var depensesTab : DepenseSet? = DepenseSet() /* {
         return self.loadDepenses()

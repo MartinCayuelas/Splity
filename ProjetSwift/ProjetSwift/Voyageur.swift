@@ -8,28 +8,25 @@
 
 import Foundation
 
-class Voyageur {
-    var nom: String
-    var prenom: String
-    var nomComplet: String {
+extension Voyageur {
+    
+    public var prenom : String { return self.pPrenom ?? "" }
+    /// prénom du voyageur
+    public var nom  : String { return self.pNom  ?? "" }
+    /// nom du voyageur
+    public var nomComplet: String {
         return self.prenom + " " + self.nom
     }
-    
-    init(nom : String, prenom : String) {
-        self.prenom = prenom
-        self.nom = nom
-    }
-  
-}
 
-extension Voyageur : Equatable {
-    
-    static func == (lhs : Voyageur, rhs : Voyageur) -> Bool {
-        return lhs.prenom == rhs.prenom && lhs.nom == rhs.nom
-    }
-    
-    static func != (lhs : Voyageur, rhs : Voyageur) -> Bool {
-        return !(lhs == rhs)
+    /// initialize a `Voyageur`
+    ///
+    /// - Parameters:
+    ///   - prenom: `String` prénom du voyageur
+    ///   - nom:  `String` nom du voyageur
+    convenience init(nom: String, prenom: String){
+        self.init(context: CoreDataManager.context)
+        self.pPrenom = prenom
+        self.pNom  = nom
     }
     
 }

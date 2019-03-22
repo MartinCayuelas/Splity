@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 protocol VoyageurSetViewModelDelegate {
     // called when a voyage is added to the set
@@ -16,13 +17,18 @@ protocol VoyageurSetViewModelDelegate {
     func dataSetChanged()
 }
 
-class VoyageurSetViewModel : NSObject {
+class VoyageurSetViewModel {//: NSObject {
 
-    var modelSet : VoyageurSet
-    var data : [Voyageur]
+    //var modelSet : VoyageurSet
+    //var data : [Voyageur]
     var delegate : VoyageurSetViewModelDelegate?
+    var voyageursFetched : NSFetchedResultsController<Voyageur>
     
-    override init() {
+    init(data: NSFetchedResultsController<Voyageur>){
+        self.voyageursFetched = data
+    }
+    
+    /*override init() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
             else{
                 fatalError()
@@ -43,24 +49,21 @@ class VoyageurSetViewModel : NSObject {
     
     var iterator : ItVoyageurSet{
         return self.modelSet.makeIterator()
-    }
+    }*/
     
     var count : Int {
-        return self.data.count
+        return self.voyageursFetched.fetchedObjects?.count ?? 0
     }
     
     
     func get(voyageurAt index: Int) -> Voyageur? {
-        guard (index >= 0 ) && (index < self.count) else { return nil }
-        return self.data[index]
+        return self.voyageursFetched.object(at: IndexPath(row: index, section: 0))
     }
     
     
     func add(voyageur: Voyageur){
-        if self.modelSet.indexOf(v: voyageur) == nil{
-            self.modelSet.add(v: voyageur)
-            self.data.append(voyageur)
-            self.delegate?.voyageurAdded(at: IndexPath(row: self.modelSet.count-1, section: 0))
+        if let indexPath = self.voyageursFetched.indexPath(forObject: voyageur){
+            self.delegate?.voyageurAdded(at: indexPath)
         }
     }
     

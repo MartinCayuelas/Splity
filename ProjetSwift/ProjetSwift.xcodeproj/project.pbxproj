@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */; };
+		7B183ED222454A770065B202 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED122454A770065B202 /* CoreDataManager.swift */; };
+		7B183ED522454BE00065B202 /* VoyageurDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED422454BE00065B202 /* VoyageurDAO.swift */; };
+		7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED6224550670065B202 /* VoyageurFetchResultController.swift */; };
+		7B183ED922455C690065B202 /* VoyagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED822455C690065B202 /* VoyagesViewController.swift */; };
 		7B37173A22394646004ACE68 /* Voyageur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37173922394646004ACE68 /* Voyageur.swift */; };
 		7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */; };
 		7B37174622394B44004ACE68 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174522394B44004ACE68 /* Voyage.swift */; };
@@ -24,7 +28,6 @@
 		7BCBFA0B22369198002AD627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0922369198002AD627 /* LaunchScreen.storyboard */; };
 		7BCBFA1622369198002AD627 /* ProjetSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */; };
 		7BCBFA2122369198002AD627 /* ProjetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */; };
-		F031B5DE2241230D00D96C67 /* VoyagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F031B5DD2241230D00D96C67 /* VoyagesViewController.swift */; };
 		F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */; };
 		F091FC3D22400ED70086EA52 /* DetailVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */; };
 		F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */; };
@@ -58,6 +61,10 @@
 
 /* Begin PBXFileReference section */
 		7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutDepenseViewController.swift; sourceTree = "<group>"; };
+		7B183ED122454A770065B202 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		7B183ED422454BE00065B202 /* VoyageurDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurDAO.swift; sourceTree = "<group>"; };
+		7B183ED6224550670065B202 /* VoyageurFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurFetchResultController.swift; sourceTree = "<group>"; };
+		7B183ED822455C690065B202 /* VoyagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyagesViewController.swift; sourceTree = "<group>"; };
 		7B37173922394646004ACE68 /* Voyageur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyageur.swift; sourceTree = "<group>"; };
 		7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoyagesTableViewController.swift; sourceTree = "<group>"; };
 		7B37174522394B44004ACE68 /* Voyage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
@@ -80,7 +87,6 @@
 		7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftUITests.swift; sourceTree = "<group>"; };
 		7BCBFA2222369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F031B5DD2241230D00D96C67 /* VoyagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyagesViewController.swift; sourceTree = "<group>"; };
 		F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSetViewModel.swift; sourceTree = "<group>"; };
 		F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVoyageViewController.swift; sourceTree = "<group>"; };
 		F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +126,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B183ED022454A630065B202 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7BCBF9FD22369198002AD627 /* AppDelegate.swift */,
+				7B183ED122454A770065B202 /* CoreDataManager.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		7B183ED322454BD30065B202 /* DAOs */ = {
+			isa = PBXGroup;
+			children = (
+				7B183ED422454BE00065B202 /* VoyageurDAO.swift */,
+			);
+			name = DAOs;
+			sourceTree = "<group>";
+		};
 		7B371738223945E1004ACE68 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +200,8 @@
 		7BCBF9FC22369198002AD627 /* ProjetSwift */ = {
 			isa = PBXGroup;
 			children = (
-				7BCBF9FD22369198002AD627 /* AppDelegate.swift */,
+				7B183ED322454BD30065B202 /* DAOs */,
+				7B183ED022454A630065B202 /* Helpers */,
 				F091FC39224002420086EA52 /* ViewModels */,
 				7B656B0922369DE3001DF6F7 /* Controllers */,
 				7B371738223945E1004ACE68 /* Models */,
@@ -224,10 +248,10 @@
 			isa = PBXGroup;
 			children = (
 				F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */,
-				F031B5DD2241230D00D96C67 /* VoyagesViewController.swift */,
 				F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */,
 				FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */,
 				7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */,
+				7B183ED822455C690065B202 /* VoyagesViewController.swift */,
 			);
 			name = Voyage;
 			sourceTree = "<group>";
@@ -238,6 +262,7 @@
 				7BCBF9FF22369198002AD627 /* ViewController.swift */,
 				F0CD862F2242AD6200E73581 /* VoyageursTableViewController.swift */,
 				F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */,
+				7B183ED6224550670065B202 /* VoyageurFetchResultController.swift */,
 			);
 			name = Voyageur;
 			sourceTree = "<group>";
@@ -380,15 +405,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B183ED522454BE00065B202 /* VoyageurDAO.swift in Sources */,
 				FBC445582244D781002CFCE2 /* Depense.swift in Sources */,
 				F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */,
 				7B73B3642244F9990023E002 /* DepensesTableViewCellController.swift in Sources */,
 				7BCBFA0622369198002AD627 /* ProjetSwift.xcdatamodeld in Sources */,
 				7B37174622394B44004ACE68 /* Voyage.swift in Sources */,
 				7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */,
+				7B183ED222454A770065B202 /* CoreDataManager.swift in Sources */,
 				7B73B3572244DB200023E002 /* DepenseSet.swift in Sources */,
 				F0CD86302242AD6200E73581 /* VoyageursTableViewController.swift in Sources */,
 				7B73B35E2244ED5C0023E002 /* DepenseSetViewModel.swift in Sources */,
+				7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */,
 				FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */,
 				F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */,
 				F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */,
@@ -398,11 +426,11 @@
 				7BCBFA0022369198002AD627 /* ViewController.swift in Sources */,
 				7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */,
 				7B37173A22394646004ACE68 /* Voyageur.swift in Sources */,
+				7B183ED922455C690065B202 /* VoyagesViewController.swift in Sources */,
 				F0CD862422423F3500E73581 /* VoyageurSet.swift in Sources */,
 				7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */,
 				7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */,
 				7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */,
-				F031B5DE2241230D00D96C67 /* VoyagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
