@@ -30,6 +30,7 @@
 		F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */; };
 		FB740469223AC530001A4446 /* VoyageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB740468223AC52F001A4446 /* VoyageSet.swift */; };
 		FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */; };
+		FBC445582244D781002CFCE2 /* Depense.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC445572244D781002CFCE2 /* Depense.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageurViewController.swift; sourceTree = "<group>"; };
 		FB740468223AC52F001A4446 /* VoyageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSet.swift; sourceTree = "<group>"; };
 		FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageTableViewCell.swift; sourceTree = "<group>"; };
+		FBC445572244D781002CFCE2 /* Depense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depense.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				7B37174522394B44004ACE68 /* Voyage.swift */,
 				FB740468223AC52F001A4446 /* VoyageSet.swift */,
 				F0CD862322423F3500E73581 /* VoyageurSet.swift */,
+				FBC445572244D781002CFCE2 /* Depense.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBC445582244D781002CFCE2 /* Depense.swift in Sources */,
 				F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */,
 				7BCBFA0622369198002AD627 /* ProjetSwift.xcdatamodeld in Sources */,
 				7B37174622394B44004ACE68 /* Voyage.swift in Sources */,
