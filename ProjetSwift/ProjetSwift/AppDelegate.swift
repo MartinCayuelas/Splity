@@ -22,15 +22,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return self.loadData()
     }*/
     
+    var depensesTab : DepenseSet? {
+        return self.loadDepenses()
+    } //= DepenseSet()
+    
 
-    /*private func loadData() -> VoyageSet {
+    private func loadData() -> VoyageSet {
         var voyage: [Voyage] = []
         for i in 1...4{
             let p = Voyage(titre: "Voyage "+String(i), image: "Image"+String(i))
             voyage.append(p)
         }
         return VoyageSet(Voyages: voyage)
-    }*/
+    }
+    
+    private func loadDepenses() -> DepenseSet {
+        var depenses: [Depense] = []
+        for i in 1...4{
+            let d = Depense(titre: "Dépense " + String(i), montant: Double(i), image: "Image"+String(i))
+            depenses.append(d)
+        }
+        return DepenseSet(depenses: depenses)
+    }
     
     private func loadVoyageurs() -> VoyageurSet {
         var voyageurs: [Voyageur] = []

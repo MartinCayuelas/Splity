@@ -436,10 +436,10 @@
             </objects>
             <point key="canvasLocation" x="2938" y="803"/>
         </scene>
-        <!--View Controller-->
+        <!--Depenses View Controller-->
         <scene sceneID="COE-gD-XgQ">
             <objects>
-                <viewController id="Nx6-U9-Y15" sceneMemberID="viewController">
+                <viewController id="Nx6-U9-Y15" customClass="DepensesViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZXm-NC-KXZ"/>
                         <viewControllerLayoutGuide type="bottom" id="vHB-dz-Qr0"/>
@@ -458,7 +458,7 @@
                                 <rect key="frame" x="35" y="148" width="305" height="449"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="u75-is-Ha6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardDepenseCell" id="u75-is-Ha6">
                                         <rect key="frame" x="0.0" y="28" width="305" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="u75-is-Ha6" id="SIZ-7h-tjB">
@@ -490,6 +490,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="E2g-OJ-K2z" id="88A-Ak-lvL"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbs-bK-j9h">
                                 <rect key="frame" x="116.5" y="617" width="142" height="30"/>
@@ -509,8 +512,16 @@
                             <constraint firstAttribute="trailing" secondItem="w6g-L8-mVL" secondAttribute="trailing" constant="35" id="y6u-zO-RmD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="depensesTableViewController" destination="E2g-OJ-K2z" id="iw2-y9-VWe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffm-yu-zwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="E2g-OJ-K2z" userLabel="DepensesTableViewController" customClass="DepenseTableViewController" customModule="ProjetSwift" customModuleProvider="target">
+                    <connections>
+                        <outlet property="depensesTableView" destination="w6g-L8-mVL" id="RqF-Dg-U2l"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="3640.8000000000002" y="-1028.6356821589206"/>
         </scene>

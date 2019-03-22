@@ -10,10 +10,12 @@ import Foundation
 
 class Depense {
     var titre: String
+    var montant: Double
     var image: String?
     
-    init(titre : String, image: String?) {
+    init(titre : String, montant : Double, image: String?) {
         self.titre = titre
+        self.montant = montant
         self.image = image
     }
     

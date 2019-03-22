@@ -11,11 +11,10 @@ import UIKit
 class ViewController: UIViewController{
 
     @IBOutlet var controllerVoyageursTableView: VoyageursTableViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
-        //:validateButton?.isUserInteractionEnabled = false
 
     }
 
@@ -23,28 +22,8 @@ class ViewController: UIViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func validate(_ sender: Any) {
-     
-       /* if (textFieldContent.text?.isEmpty)! || (saisiePrenom.text?.isEmpty)! {
-            validateButton.isEnabled = false
-        }else{
-            validateButton.isEnabled = true
-        }*/
-        /*if let nom = self.textFieldContent.text {
-            if !nom.isEmpty {
-                self.titleLabel.text = nom
-            }
-        }else{*/
-           // self.titleLabel.text = "Splity"
-        /*}*/
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        /*if let destController = segue.destination as? VoyagesTableViewController {
-            destController.nomVoyageur = self.textFieldContent.text!
-            destController.prenomVoyageur = self.saisiePrenom.text!
-        }*/
         if let destController = segue.destination as? VoyagesViewController {
             if let cell = sender as? UITableViewCell {
                 guard let indexPath = self.controllerVoyageursTableView.voyageursTableView.indexPath(for: cell) else {
