@@ -10,6 +10,7 @@
 		7B37173A22394646004ACE68 /* Voyageur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37173922394646004ACE68 /* Voyageur.swift */; };
 		7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */; };
 		7B37174622394B44004ACE68 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174522394B44004ACE68 /* Voyage.swift */; };
+		7B73B3572244DB200023E002 /* DepenseSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B3562244DB200023E002 /* DepenseSet.swift */; };
 		7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF9FD22369198002AD627 /* AppDelegate.swift */; };
 		7BCBFA0022369198002AD627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF9FF22369198002AD627 /* ViewController.swift */; };
 		7BCBFA0322369198002AD627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0122369198002AD627 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		7B37173922394646004ACE68 /* Voyageur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyageur.swift; sourceTree = "<group>"; };
 		7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoyagesTableViewController.swift; sourceTree = "<group>"; };
 		7B37174522394B44004ACE68 /* Voyage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
+		7B73B3562244DB200023E002 /* DepenseSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseSet.swift; sourceTree = "<group>"; };
 		7BCBF9FA22369198002AD627 /* ProjetSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCBF9FD22369198002AD627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BCBF9FF22369198002AD627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				FB740468223AC52F001A4446 /* VoyageSet.swift */,
 				F0CD862322423F3500E73581 /* VoyageurSet.swift */,
 				FBC445572244D781002CFCE2 /* Depense.swift */,
+				7B73B3562244DB200023E002 /* DepenseSet.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				7BCBFA0622369198002AD627 /* ProjetSwift.xcdatamodeld in Sources */,
 				7B37174622394B44004ACE68 /* Voyage.swift in Sources */,
 				7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */,
+				7B73B3572244DB200023E002 /* DepenseSet.swift in Sources */,
 				F0CD86302242AD6200E73581 /* VoyageursTableViewController.swift in Sources */,
 				FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */,
 				F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */,
