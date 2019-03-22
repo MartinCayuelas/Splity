@@ -18,13 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return self.loadVoyageurs()
     }
 
-    var voyagesTab : VoyageSet? { // = VoyageSet()
+    var voyagesTab : VoyageSet? {
         return self.loadData()
     }
     
-    var depensesTab : DepenseSet? {
+    var depensesTab : DepenseSet? = DepenseSet() /* {
         return self.loadDepenses()
-    } //= DepenseSet()
+    } */
     
 
     private func loadData() -> VoyageSet {

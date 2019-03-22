@@ -18,7 +18,20 @@ class DepensesViewController : UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        //affichage des détails
+    }
+    
+    @IBAction func unwindToDepensesView(segue: UIStoryboardSegue){
+        if segue.identifier == "depenseAddedSegue" {
+            guard let controller = segue.source as? AjoutDepenseViewController else { return }
+            if let depense = controller.newDepense {
+                print(depense.titre)
+                self.depensesTableViewController.depensesModel.add(depense: depense)
+            }
+        } else {
+            //cas du cancel
+            print("AJOUT ANNULE")
+        }
     }
     
 }

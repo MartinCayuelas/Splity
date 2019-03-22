@@ -34,7 +34,7 @@ class ViewController: UIViewController{
         }
     }
     
-    @IBAction func unwindToMainView(segue: UIStoryboardSegue){
+    @IBAction func unwindToVoyageursView(segue: UIStoryboardSegue){
         if segue.identifier == "voyageurAddedSegue" {
             guard let controller = segue.source as? AjoutVoyageurViewController else { return }
             if let voyageur = controller.newVoyageur {

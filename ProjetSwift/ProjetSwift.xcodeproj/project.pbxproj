@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */; };
 		7B37173A22394646004ACE68 /* Voyageur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37173922394646004ACE68 /* Voyageur.swift */; };
 		7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */; };
 		7B37174622394B44004ACE68 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174522394B44004ACE68 /* Voyage.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutDepenseViewController.swift; sourceTree = "<group>"; };
 		7B37173922394646004ACE68 /* Voyageur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyageur.swift; sourceTree = "<group>"; };
 		7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoyagesTableViewController.swift; sourceTree = "<group>"; };
 		7B37174522394B44004ACE68 /* Voyage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */,
 				7B73B35B2244DF550023E002 /* DepensesViewController.swift */,
 				7B73B3632244F9990023E002 /* DepensesTableViewCellController.swift */,
+				7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */,
 			);
 			name = Depense;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */,
 				FB740469223AC530001A4446 /* VoyageSet.swift in Sources */,
 				7BCBFA0022369198002AD627 /* ViewController.swift in Sources */,
+				7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */,
 				7B37173A22394646004ACE68 /* Voyageur.swift in Sources */,
 				F0CD862422423F3500E73581 /* VoyageurSet.swift in Sources */,
 				7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */,
