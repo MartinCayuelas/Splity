@@ -51,16 +51,24 @@ class VoyageurSetViewModel {//: NSObject {
         return self.modelSet.makeIterator()
     }*/
     
+    
+  /// Retourne le nombre de voyageurs
+ /// 
+ /// - Parameters: none
     var count : Int {
         return self.voyageursFetched.fetchedObjects?.count ?? 0
     }
     
-    
+    /// Retourne le voyageur à l'index i
+ /// 
+ /// - Parameters: index 'Int'
     func get(voyageurAt index: Int) -> Voyageur? {
         return self.voyageursFetched.object(at: IndexPath(row: index, section: 0))
     }
     
-    
+    /// Ajoute un voyageur dans liste des voyageurs
+ /// 
+ /// - Parameters: voyageur 'Voyageur'
     func add(voyageur: Voyageur){
         if let indexPath = self.voyageursFetched.indexPath(forObject: voyageur){
             self.delegate?.voyageurAdded(at: indexPath)
