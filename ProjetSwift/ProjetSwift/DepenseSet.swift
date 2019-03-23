@@ -13,30 +13,54 @@ class DepenseSet : Sequence {
     
     fileprivate var depenseSet : [Depense] = []
     
+    /// Initialise un DepenseSet vide
     init(){
         self.depenseSet = []
     }
     
+
+    /// Initialise un DepenseSet
+    ///
+    /// - Parameter depenses: un tableau de dépenses
+    ///
     init(depenses: [Depense]) {
         for d in depenses {
             self.depenseSet.append(d)
         }
     }
     
+     /// Compte le nombre d'élément dans le DepenseSet
+    ///
+    /// 
+    ///
     var count : Int {
         return self.depenseSet.count
     }
     
+     /// Verifie si le depenseSet est vide
+    ///
+    /// - Parameter dSet: un depenseSet
+    /// - return un booleen: vrai si vide, faux sinon
     func isEmpty(dSet: DepenseSet) -> Bool {
         return isEmpty(dSet: dSet)
     }
     
+    /// Ajoute une depense au depenseSet
+    ///
+    /// - Parameter:  d: une depense
+    /// - returns : le depenseSet avec la depense ajoutee
+
     func add(d: Depense) -> DepenseSet {
         if !self.depenseSet.contains(d){
             self.depenseSet.append(d)
         }
         return self
     }
+
+    /// Supprime une depense au depenseSet
+    ///
+    /// - Parameter:  d: une depense
+    /// - returns : le depenseSet avec la depense supprimee
     
     func remove(d: Depense) -> DepenseSet {
         if let i = self.depenseSet.index(of: d) {
@@ -45,6 +69,10 @@ class DepenseSet : Sequence {
         return self
     }
     
+    /// Compte le nombre de depenses contenu dans le depenseSet
+    ///
+    /// - Parameter:  dSet: un depenseSet
+    /// - returns : un entier correspondand au nombre d'éléments contenus 
     func count(dSet: DepenseSet) -> Int {
         return self.depenseSet.count
     }

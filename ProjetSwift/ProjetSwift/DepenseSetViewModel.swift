@@ -45,15 +45,29 @@ class DepenseSetViewModel : NSObject {
         return self.modelSet.makeIterator()
     }
     
+
+    /// Compte le nombre de depense dans la variable data -> Tableau de depenses
+    ///
+    /// - Parameter:  none
+    /// - returns : un entier
     var count : Int {
         return self.data.count
     }
     
+    /// Recupere une depense au tableau des depenses (data)
+    ///
+    /// - Parameter:  index: un entier
+    /// - returns : la depense dans le tableau de data à la indexieme place
     
     func get(depenseAt index: Int) -> Depense? {
         guard (index >= 0 ) && (index < self.count) else { return nil }
         return self.data[index]
     }
+    
+    /// Ajoute une depense au tableau des depenses (data)
+    ///
+    /// - Parameter:  depense: une depense
+    /// - returns : 
     
     
     func add(depense: Depense){

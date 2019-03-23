@@ -44,16 +44,33 @@ class VoyageSetViewModel : NSObject {
     var iterator : ItVoyageSet{
         return self.modelSet.makeIterator()
     }
+
+    /// Compte le nombre de voyages dans la variable data -> Tableau de voyages
+    ///
+    /// - Parameter:  none
+    /// - returns : un entier
     
     var count : Int {
         return self.data.count
     }
     
     
+    /// Recupere un voyage au tableau des voyages (data)
+    ///
+    /// - Parameter:  index: un entier
+    /// - returns : le voyage dans le tableau de data à la indexieme place
+    
     func get(voyageAt index: Int) -> Voyage? {
         guard (index >= 0 ) && (index < self.count) else { return nil }
         return self.data[index]
     }
+    
+        
+    /// Ajoute une voyage au tableau des voyages (data)
+    ///
+    /// - Parameter:  voyage: un voyage
+    /// - returns : 
+    
     
     
     func add(voyage: Voyage){
