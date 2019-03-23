@@ -24,6 +24,10 @@ class ViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
+ /// Appelé lorsqu'un que l'on clique sur la une cellule de la liste des voyageurs
+ ///
+ /// - Parameters: segue et sender
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destController = segue.destination as? VoyagesViewController {
             if let cell = sender as? UITableViewCell {
@@ -34,6 +38,10 @@ class ViewController: UIViewController{
             }
         }
     }
+    
+ /// Appelé lorsqu'un que l'on ajoute un voyageur à la liste
+ /// - Permet de retourner à la liste de voyageurs avec le nouveau voyageur ajouté
+ /// - Parameters: segue 
     
     @IBAction func unwindToVoyageursView(segue: UIStoryboardSegue){
         if segue.identifier == "voyageurAddedSegue" {
