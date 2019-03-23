@@ -29,6 +29,10 @@ class VoyagesViewController: UIViewController {
     
     // MARK: - Navigation
     
+    /// Appelé lorsque l'on clique sur une cellule de la liste des voyages
+ /// Recupere le voyage de la cellule
+ /// - Parameters: segue 'UIStoryboardSegue', sender 'UITableViewCell'
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destController = segue.destination as? DetailVoyageViewController {
             if let cell = sender as? UITableViewCell {
@@ -39,6 +43,10 @@ class VoyagesViewController: UIViewController {
             }
         }
     }
+    
+     /// Appelé lorsque l'on ajoute un voyage à la liste des voyages
+ /// Ajoute le voyage et revient à la liste des voyages mise à jour
+ /// - Parameters: segue 'UIStoryboardSegue'
     
     @IBAction func unwindToVoyagesView(segue: UIStoryboardSegue){
         if segue.identifier == "voyageAddedSegue" {
