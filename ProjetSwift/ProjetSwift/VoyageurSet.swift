@@ -13,23 +13,42 @@ class VoyageurSet: Sequence {
 
     fileprivate var voyageurSet : [Voyageur] = []
     
+    /// Initialise un voyageurSet Vide
+    ///
+    ///
     init(){
         self.voyageurSet = []
     }
     
+    /// Initialise un voyageurSet
+    ///
+    /// - Parameter voyageurs: un tableau de voyageurs
+    ///
     init(voyageurs: [Voyageur]) {
         for v in voyageurs {
             self.voyageurSet.append(v)
         }
     }
     
+    /// Compte le nombre d'élément dans le voyageurSet
+    ///
+    /// 
     var count : Int {
         return self.voyageurSet.count
     }
     
+    /// Verifie si le voyageurSet est vide
+    ///
+    /// -
+    /// -
     func isEmpty() -> Bool {
         return self.voyageurSet.isEmpty
     }
+
+     /// Ajoute un voyage au voyageurSet
+    ///
+    /// - Parameter:  v: un voyageur
+    /// - returns : le voyageurSet avec le voyageur ajoute
     
     @discardableResult
     func add(v: Voyageur) -> VoyageurSet {
@@ -39,6 +58,11 @@ class VoyageurSet: Sequence {
         return self
     }
     
+    /// Supprime un voyageur au voyageurSet
+    ///
+    /// - Parameter:  v: un voyageur
+    /// - returns : le voyageurSet avec le voyageur supprime
+    
     @discardableResult
     func remove(v: Voyageur) -> VoyageurSet {
         if let i = self.voyageurSet.index(of: v) {
@@ -46,6 +70,13 @@ class VoyageurSet: Sequence {
         }
         return self
     }
+
+    
+    /// Compte le nombre de voyageurs contenu dans le voyageurSet
+    ///
+    /// - Parameter:  vSet: un voyageurSet
+    /// - returns : un entier correspondand au nombre d'éléments contenus 
+    
     
     func count(pSet: VoyageurSet) -> Int {
         return self.voyageurSet.count
