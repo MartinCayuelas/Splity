@@ -12,12 +12,21 @@ import CoreData
 
 class VoyageurDAO{
     static let request : NSFetchRequest<Voyageur> = Voyageur.fetchRequest()
+    
     static func save(){
         CoreDataManager.save()
     }
+    
+ /// Appelé lorsqu'un que l'on supprime un voyageur dans les données persistantes
+ /// 
+ /// - Parameters: Voyageur
     static func delete(voyageur: Voyageur){
         CoreDataManager.context.delete(voyageur)
     }
+    
+     /// Appelé pour récuprer tous les voyegeurs dans la base de données
+ /// 
+ /// - Parameters: none
     static func fetchAll() -> [Voyageur]?{
         self.request.predicate = nil
         do{
@@ -26,6 +35,7 @@ class VoyageurDAO{
         catch{
             return nil
         } }
+    
     /// number of elements
     static var count: Int{
         self.request.predicate = nil
