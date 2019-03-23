@@ -12,6 +12,11 @@ class Depense {
     var titre: String
     var montant: Double
     var image: String?
+
+    /// Initialise une depense
+    ///
+    /// - Parameter titre: titre de la depense, montant : le montant de la depense, image: le titre de l'image de la depense
+    /// 
     
     init(titre : String, montant : Double, image: String?) {
         self.titre = titre

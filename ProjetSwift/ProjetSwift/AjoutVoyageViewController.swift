@@ -18,6 +18,9 @@ class AjoutVoyageViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
+    // Declenché lors de l'ajout d'un voyage
+    // Ajoute une nouveau voyage
+    // Parameters : segue 'UIStoryboardSegue'
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "voyageAddedSegue" {
             let titreVoyage : String  = self.textFieldTitreVoyage.text!

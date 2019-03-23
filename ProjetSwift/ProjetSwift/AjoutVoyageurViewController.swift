@@ -15,6 +15,10 @@ class AjoutVoyageurViewController: UIViewController {
     @IBOutlet weak var textFieldPrenom: UITextField!
     var newVoyageur: Voyageur?
     
+    // Declenché lors de l'ajout d'un voyageur
+    // Ajoute une nouveau voyageur
+    // Parameters : segue 'UIStoryboardSegue'
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "voyageurAddedSegue" {
             let prenomVoyageur : String  = self.textFieldPrenom.text!

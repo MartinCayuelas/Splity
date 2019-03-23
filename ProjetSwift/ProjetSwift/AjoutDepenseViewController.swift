@@ -14,6 +14,10 @@ class AjoutDepenseViewController : UIViewController {
     @IBOutlet weak var titreDepenseTextField: UITextField!
     var newDepense: Depense?
     
+
+    // Declenché lors de l'ajout d'une depense
+    // Ajoute une nouvelle depense
+    // Parameters : segue 'UIStoryboardSegue'
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "depenseAddedSegue" {
             let titreDepense : String  = self.titreDepenseTextField.text!
