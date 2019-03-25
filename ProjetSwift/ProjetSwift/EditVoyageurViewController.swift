@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class EditVoyageurViewController: UIViewController {
+    
     var editedVoyageur: Voyageur?
     
     override func viewDidLoad() {
@@ -17,8 +18,6 @@ class EditVoyageurViewController: UIViewController {
         // get the Split given by the previous view and init the components
         //self.editSplitName.text = self.editedVoyageur?.nom
         //self.editSplitDescr.text = self.editedVoyageur?.prenom
-     
-        
     }
     
 }
