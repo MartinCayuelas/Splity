@@ -15,6 +15,16 @@ class AjoutVoyageurViewController: UIViewController {
     @IBOutlet weak var textFieldPrenom: UITextField!
     var newVoyageur: Voyageur?
     
+    @IBOutlet weak var validateButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //self.validateButton.isEnabled = false
+        
+       
+    }
+
     // Declenché lors de l'ajout d'un voyageur
     // Ajoute une nouveau voyageur
     // Parameters : segue 'UIStoryboardSegue'
