@@ -42,4 +42,11 @@ class CoreDataManager{
         catch let error as NSError{
             return error
         }
-    } }
+    }
+    
+    //Delete entity in context from CoreData
+    class func delete(object: NSManagedObject) throws {
+        CoreDataManager.context.delete(object)
+    }
+    
+}
