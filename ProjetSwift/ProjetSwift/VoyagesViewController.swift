@@ -11,13 +11,15 @@ import UIKit
 class VoyagesViewController: UIViewController {
     
     @IBOutlet weak var labelNomComplet: UILabel!
-    @IBOutlet var voyageTableController: VoyagesTableViewController!
+    @IBOutlet weak var voyagesTableView: UITableView!
+    var controllerVoyagesTableView: VoyagesTableViewController!
     
     
     var voyageurSelected: Voyageur?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.controllerVoyagesTableView = VoyagesTableViewController(tableView: voyagesTableView)
         if let voyageur = self.voyageurSelected {
             self.labelNomComplet
                 .text = "Voyages de " + voyageur.nomComplet
@@ -36,10 +38,10 @@ class VoyagesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destController = segue.destination as? DetailVoyageViewController {
             if let cell = sender as? UITableViewCell {
-                guard let indexPath = self.voyageTableController.tableView.indexPath(for: cell) else {
+                guard let indexPath = self.controllerVoyagesTableView.tableView.indexPath(for: cell) else {
                  return
                  }
-                 destController.voyageSelected = destController.voyageViewModel.get(voyageAt: indexPath.row)
+                 destController.voyageSelected = self.controllerVoyagesTableView.voyages.get(voyageAt: indexPath.row)
             }
         }
     }
@@ -52,7 +54,7 @@ class VoyagesViewController: UIViewController {
         if segue.identifier == "voyageAddedSegue" {
             guard let controller = segue.source as? AjoutVoyageViewController else { return }
             if let voyage = controller.newVoyage {
-                self.voyageTableController.voyages.add(voyage: voyage)
+                self.controllerVoyagesTableView.voyages.add(voyage: voyage)
             }
             
         } else {

@@ -14,8 +14,6 @@ class DetailVoyageViewController: UIViewController{
     @IBOutlet weak var imageVoyage: UIImageView!
     @IBOutlet weak var titreVoyage: UILabel!
     
-    let voyageViewModel: VoyageSetViewModel = VoyageSetViewModel()
-    
     var voyageSelected : Voyage?
     
     override func viewDidLoad() {
@@ -23,7 +21,7 @@ class DetailVoyageViewController: UIViewController{
         if let avoyage = self.voyageSelected {
             self.titreVoyage
                 .text = avoyage.titre
-         self.imageVoyage.image =  UIImage(named: avoyage.image)
+         self.imageVoyage.image =  UIImage(named: avoyage.photo)
             
         } else {
             self.titreVoyage.text = ""
