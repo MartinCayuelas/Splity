@@ -25,7 +25,7 @@ class AjoutVoyageViewController: UIViewController {
         if segue.identifier == "voyageAddedSegue" {
             let titreVoyage : String  = self.textFieldTitreVoyage.text!
             let imageVoyage  : String  = "Image1"
-            self.newVoyage  = Voyage(titre: titreVoyage, image: imageVoyage)
+            self.newVoyage  = Voyage(titre: titreVoyage, photo: imageVoyage)
         }
     }
     

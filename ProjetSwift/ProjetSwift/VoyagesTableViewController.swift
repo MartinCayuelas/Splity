@@ -12,12 +12,16 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
     var nomVoyageur: String = ""
     var prenomVoyageur: String = ""
   
-    @IBOutlet weak var tableView: UITableView!
+    var tableView: UITableView!
     var voyages : VoyageSetViewModel
+    let fetchResultController : VoyageFetchResultController
     
-    override init(){
-        self.voyages = VoyageSetViewModel()
+    init(tableView: UITableView){
+        self.tableView = tableView
+        self.fetchResultController = VoyageFetchResultController(view : tableView)
+        self.voyages = VoyageSetViewModel(data: self.fetchResultController.voyagesFetched)
         super.init()
+        self.tableView.dataSource = self
         self.voyages.delegate = self
     }
 
@@ -41,7 +45,7 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         guard let voyage = self.voyages.get(voyageAt: indexPath.row) else { return cell }
         
         cell.textLabel?.text = voyage.titre
-        cell.imageView?.image = UIImage(named: voyage.image)
+        cell.imageView?.image = UIImage(named: voyage.photo)
         cell.textLabel?.textColor = UIColor(red:0.15, green:0.50, blue:0.75, alpha:1.0)
         
         

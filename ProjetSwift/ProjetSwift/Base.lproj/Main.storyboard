@@ -201,15 +201,11 @@
                     </view>
                     <connections>
                         <outlet property="labelNomComplet" destination="4d9-BK-9a0" id="gUh-I6-0jy"/>
-                        <outlet property="voyageTableController" destination="8fD-Dn-VVe" id="kGH-q6-Cso"/>
+                        <outlet property="voyagesTableView" destination="49Q-UD-Wi4" id="3ob-Ab-0st"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEl-Uz-RjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="8fD-Dn-VVe" userLabel="VoyagesTableViewController" customClass="VoyagesTableViewController" customModule="ProjetSwift">
-                    <connections>
-                        <outlet property="tableView" destination="49Q-UD-Wi4" id="I3K-xv-afy"/>
-                    </connections>
-                </customObject>
+                <customObject id="8fD-Dn-VVe" userLabel="VoyagesTableViewController"/>
             </objects>
             <point key="canvasLocation" x="2056.8000000000002" y="-849.62518740629696"/>
         </scene>

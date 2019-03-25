@@ -8,25 +8,22 @@
 
 import Foundation
 
-class Voyage {
-    var titre: String
-    var image: String
+extension Voyage {
     
-    init(titre : String, image: String) {
-        self.titre = titre
-        self.image = image
-    }
+    public var titre : String { return self.pTitreVoyage ?? "" }
+    /// titre du voyage
+    public var photo  : String { return self.pPhotoVoyage  ?? "" }
+    /// image du voyage
     
-}
-
-extension Voyage : Equatable {
-    
-    static func == (v1 : Voyage, v2 : Voyage) -> Bool {
-        return v1.titre == v2.titre
-    }
-    
-    static func != (v1 : Voyage, v2 : Voyage) -> Bool {
-        return !(v1 == v2)
+    /// initialize a `Voyage`
+    ///
+    /// - Parameters:
+    ///   - titre: `String` titre du voyage
+    ///   - photo:  `String` photo du voyage
+    convenience init(titre: String, photo: String){
+        self.init(context: CoreDataManager.context)
+        self.pTitreVoyage = titre
+        self.pPhotoVoyage  = photo
     }
     
 }
