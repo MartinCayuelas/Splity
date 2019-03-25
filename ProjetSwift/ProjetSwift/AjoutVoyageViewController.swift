@@ -11,8 +11,19 @@ import UIKit
 
 class AjoutVoyageViewController: UIViewController {
 
+    var controllerVoyageursTableView: AjoutVoyageurTableViewController!
+    
+    @IBOutlet weak var tableVoyageurs: UITableView!
+    
     @IBOutlet weak var textFieldTitreVoyage: UITextField!
     var newVoyage : Voyage?
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        self.controllerVoyageursTableView = AjoutVoyageurTableViewController(tableView: tableVoyageurs)
+    }
     
     // MARK: - Navigation
 
