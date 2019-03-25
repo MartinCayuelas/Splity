@@ -20,6 +20,7 @@
 		7B37174622394B44004ACE68 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174522394B44004ACE68 /* Voyage.swift */; };
 		7B3AB98A224946350003A620 /* VoyageDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB989224946350003A620 /* VoyageDAO.swift */; };
 		7B3AB98C224947900003A620 /* VoyageFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */; };
+		7B3AB990224957490003A620 /* Participer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB98F224957490003A620 /* Participer.swift */; };
 		7B73B3572244DB200023E002 /* DepenseSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B3562244DB200023E002 /* DepenseSet.swift */; };
 		7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */; };
 		7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B35B2244DF550023E002 /* DepensesViewController.swift */; };
@@ -78,6 +79,7 @@
 		7B37174522394B44004ACE68 /* Voyage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
 		7B3AB989224946350003A620 /* VoyageDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageDAO.swift; sourceTree = "<group>"; };
 		7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageFetchResultController.swift; sourceTree = "<group>"; };
+		7B3AB98F224957490003A620 /* Participer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participer.swift; sourceTree = "<group>"; };
 		7B73B3562244DB200023E002 /* DepenseSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseSet.swift; sourceTree = "<group>"; };
 		7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesTableViewController.swift; sourceTree = "<group>"; };
 		7B73B35B2244DF550023E002 /* DepensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				F0CD862322423F3500E73581 /* VoyageurSet.swift */,
 				FBC445572244D781002CFCE2 /* Depense.swift */,
 				7B73B3562244DB200023E002 /* DepenseSet.swift */,
+				7B3AB98F224957490003A620 /* Participer.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				F0CD862422423F3500E73581 /* VoyageurSet.swift in Sources */,
 				7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */,
 				7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */,
+				7B3AB990224957490003A620 /* Participer.swift in Sources */,
 				7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
