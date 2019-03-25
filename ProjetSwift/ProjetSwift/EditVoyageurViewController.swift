@@ -15,8 +15,8 @@ class EditVoyageurViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // get the Split given by the previous view and init the components
-        self.editSplitName.text = self.editedVoyageur?.nom
-        self.editSplitDescr.text = self.editedVoyageur?.prenom
+        //self.editSplitName.text = self.editedVoyageur?.nom
+        //self.editSplitDescr.text = self.editedVoyageur?.prenom
      
         
     }
