@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 protocol VoyageSetViewModelDelegate {
     // called when a voyage is added to the set
@@ -18,11 +19,16 @@ protocol VoyageSetViewModelDelegate {
 
 class VoyageSetViewModel : NSObject {
     
-    var modelSet : VoyageSet
-    var data : [Voyage]
+    //var modelSet : VoyageSet
+    //var data : [Voyage]
     var delegate : VoyageSetViewModelDelegate?
+    var voyagesFetched : NSFetchedResultsController<Voyage>
     
-    override init() {
+    init(data: NSFetchedResultsController<Voyage>){
+        self.voyagesFetched = data
+    }
+    
+    /*override init() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
             else{
                 fatalError()
@@ -43,7 +49,7 @@ class VoyageSetViewModel : NSObject {
     
     var iterator : ItVoyageSet{
         return self.modelSet.makeIterator()
-    }
+    }*/
 
     /// Compte le nombre de voyages dans la variable data -> Tableau de voyages
     ///
@@ -51,7 +57,7 @@ class VoyageSetViewModel : NSObject {
     /// - returns : un entier
     
     var count : Int {
-        return self.data.count
+        return self.voyagesFetched.fetchedObjects?.count ?? 0
     }
     
     
@@ -61,8 +67,7 @@ class VoyageSetViewModel : NSObject {
     /// - returns : le voyage dans le tableau de data à la indexieme place
     
     func get(voyageAt index: Int) -> Voyage? {
-        guard (index >= 0 ) && (index < self.count) else { return nil }
-        return self.data[index]
+        return self.voyagesFetched.object(at: IndexPath(row: index, section: 0))
     }
     
         
@@ -74,10 +79,8 @@ class VoyageSetViewModel : NSObject {
     
     
     func add(voyage: Voyage){
-        if self.modelSet.indexOf(v: voyage) == nil{
-            self.modelSet.add(v: voyage)
-            self.data.append(voyage)
-            self.delegate?.voyageAdded(at: IndexPath(row: self.modelSet.count-1, section: 0))
+        if let indexPath = self.voyagesFetched.indexPath(forObject: voyage){
+            self.delegate?.voyageAdded(at: indexPath)
         }
     }
 }
