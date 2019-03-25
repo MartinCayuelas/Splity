@@ -80,6 +80,11 @@
                                 <rect key="frame" x="118.5" y="617" width="138" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.793193519115448" blue="0.48277270793914795" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Ajouter un voyageur"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="LIq-o9-6IK" kind="presentation" identifier="voyageurAddedSegue" id="cSW-O3-Vgd"/>
                                 </connections>
@@ -766,7 +771,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Saisir le nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jHA-SG-lDw">
-                                <rect key="frame" x="136" y="172" width="103.5" height="30"/>
+                                <rect key="frame" x="135.5" y="172" width="104" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -778,42 +783,49 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Saisir le prénom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BnJ-LW-OJU">
-                                <rect key="frame" x="125.5" y="273" width="124.5" height="30"/>
+                                <rect key="frame" x="125" y="273" width="125" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YED-Uo-33w">
-                                <rect key="frame" x="76" y="378" width="53" height="30"/>
-                                <state key="normal" title="Annuler"/>
-                                <connections>
-                                    <segue destination="1Sv-et-EoB" kind="unwind" unwindAction="unwindToVoyageursViewWithSegue:" id="U4i-2g-o2X"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmH-Ol-SfC">
-                                <rect key="frame" x="76" y="378" width="223" height="30"/>
-                                <state key="normal" title="Valider"/>
+                                <rect key="frame" x="211" y="378" width="65" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="Lik-v1-ofG"/>
+                                </constraints>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="1Sv-et-EoB" kind="unwind" identifier="voyageurAddedSegue" unwindAction="unwindToVoyageursViewWithSegue:" id="ZX2-5b-lTt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YED-Uo-33w">
+                                <rect key="frame" x="108" y="378" width="53" height="30"/>
+                                <state key="normal" title="Annuler">
+                                    <color key="titleColor" red="1" green="0.1117138454" blue="0.1381127704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1Sv-et-EoB" kind="unwind" unwindAction="unwindToVoyageursViewWithSegue:" id="U4i-2g-o2X"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.8606448769569397" green="0.92440921068191528" blue="0.99936455488204956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="AmH-Ol-SfC" firstAttribute="trailing" secondItem="419-aS-1gf" secondAttribute="trailing" id="16w-5D-KAT"/>
                             <constraint firstItem="419-aS-1gf" firstAttribute="top" secondItem="2Ef-nt-B5Y" secondAttribute="topMargin" constant="15" id="34d-15-IpR"/>
                             <constraint firstItem="P5L-4F-OiX" firstAttribute="centerX" secondItem="419-aS-1gf" secondAttribute="centerX" id="4Sm-fZ-4vA"/>
                             <constraint firstItem="BnJ-LW-OJU" firstAttribute="top" secondItem="P5L-4F-OiX" secondAttribute="bottom" constant="20" id="7RO-O5-BiT"/>
+                            <constraint firstItem="YED-Uo-33w" firstAttribute="top" secondItem="BnJ-LW-OJU" secondAttribute="bottom" constant="75" id="A1T-Wk-rXx"/>
                             <constraint firstItem="419-aS-1gf" firstAttribute="centerX" secondItem="2Ef-nt-B5Y" secondAttribute="centerX" id="CZW-W2-eWN"/>
                             <constraint firstItem="3Wp-gr-Yel" firstAttribute="centerX" secondItem="419-aS-1gf" secondAttribute="centerX" id="DhC-SO-fpk"/>
                             <constraint firstItem="3Wp-gr-Yel" firstAttribute="top" secondItem="419-aS-1gf" secondAttribute="bottom" constant="75" id="Dky-Ud-6eE"/>
-                            <constraint firstItem="AmH-Ol-SfC" firstAttribute="top" secondItem="BnJ-LW-OJU" secondAttribute="bottom" constant="75" id="Dy6-rD-hat"/>
                             <constraint firstItem="jHA-SG-lDw" firstAttribute="top" secondItem="3Wp-gr-Yel" secondAttribute="bottom" constant="20" id="QUG-0S-94v"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AmH-Ol-SfC" secondAttribute="trailing" constant="60" id="S70-40-AWC"/>
+                            <constraint firstItem="AmH-Ol-SfC" firstAttribute="leading" secondItem="YED-Uo-33w" secondAttribute="trailing" constant="50" id="WRJ-gT-HCb"/>
                             <constraint firstItem="jHA-SG-lDw" firstAttribute="centerX" secondItem="419-aS-1gf" secondAttribute="centerX" id="Xes-3R-CQt"/>
-                            <constraint firstItem="AmH-Ol-SfC" firstAttribute="centerX" secondItem="419-aS-1gf" secondAttribute="centerX" id="a4A-i9-pJp"/>
-                            <constraint firstItem="YED-Uo-33w" firstAttribute="leading" secondItem="2Ef-nt-B5Y" secondAttribute="leadingMargin" constant="60" id="a5e-Ac-BhZ"/>
+                            <constraint firstItem="AmH-Ol-SfC" firstAttribute="leading" secondItem="YED-Uo-33w" secondAttribute="trailing" constant="50" id="av1-PW-xu7"/>
                             <constraint firstItem="BnJ-LW-OJU" firstAttribute="centerX" secondItem="419-aS-1gf" secondAttribute="centerX" id="eSx-PC-Gki"/>
-                            <constraint firstItem="AmH-Ol-SfC" firstAttribute="centerY" secondItem="YED-Uo-33w" secondAttribute="centerY" id="kYZ-Eq-s4p"/>
+                            <constraint firstItem="AmH-Ol-SfC" firstAttribute="top" secondItem="BnJ-LW-OJU" secondAttribute="bottom" constant="75" id="hyf-9j-4Nh"/>
                             <constraint firstItem="P5L-4F-OiX" firstAttribute="top" secondItem="jHA-SG-lDw" secondAttribute="bottom" constant="30" id="y7j-mo-2dm"/>
                         </constraints>
                     </view>
@@ -825,7 +837,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aA1-Y0-iUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="1Sv-et-EoB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1799" y="887"/>
+            <point key="canvasLocation" x="1797.5999999999999" y="886.50674662668678"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pz3-wp-qR3">
