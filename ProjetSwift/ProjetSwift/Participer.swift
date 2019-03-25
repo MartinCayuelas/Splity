@@ -17,7 +17,7 @@ extension Participer{
     
     public var voyage : String{
         get{ return self.pVoyage?.pTitreVoyage ?? "" }
-        }
+    }
     public var voyageur : String {
         get { return (self.pVoyageur?.pPrenom)! + " " + (self.pVoyageur?.pNom)! }
     }
