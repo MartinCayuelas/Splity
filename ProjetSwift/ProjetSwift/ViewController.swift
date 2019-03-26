@@ -37,6 +37,10 @@ class ViewController: UIViewController{
                 destController.voyageurSelected = self.controllerVoyageursTableView.voyageurs.get(voyageurAt: indexPath.row)
             }
         }
+        if segue.identifier == "voyageurAddedSegue" {
+            guard let controller = segue.destination as? AjoutVoyageurViewController else { return }
+            controller.pagePrecedente = "Accueil"
+        }
     }
     
  /// Appelé lorsqu'un que l'on ajoute un voyageur à la liste

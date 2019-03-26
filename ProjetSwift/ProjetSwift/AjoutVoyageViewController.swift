@@ -38,6 +38,24 @@ class AjoutVoyageViewController: UIViewController {
             let imageVoyage  : String  = "Image1"
             self.newVoyage  = Voyage(titre: titreVoyage, photo: imageVoyage)
         }
+        if segue.identifier == "voyageurAddedSegue" {
+            guard let controller = segue.destination as? AjoutVoyageurViewController else { return }
+            controller.pagePrecedente = "Voyage"
+        }
+    }
+    
+    @IBAction func unwindToAddVoyageView(segue: UIStoryboardSegue){
+        if segue.identifier == "voyageurAddedSegue" {
+            guard let controller = segue.source as? AjoutVoyageurViewController else { return }
+            if let voyageur = controller.newVoyageur {
+                self.controllerVoyageursTableView.voyageurs.add(voyageur: voyageur)
+                self.controllerVoyageursTableView.voyageurs = VoyageurSetViewModel(data: self.controllerVoyageursTableView.fetchResultController.voyageursFetched)
+            }
+            
+        } else {
+            //cas du cancel
+            print("AJOUT ANNULE")
+        }
     }
     
 

@@ -34,6 +34,7 @@ class DepensesViewController : UIViewController {
             guard let controller = segue.source as? AjoutDepenseViewController else { return }
             if let depense = controller.newDepense {
                 self.depensesTableViewController.depensesModel.add(depense: depense)
+                self.depensesTableViewController.depensesModel = DepenseSetViewModel(data: self.depensesTableViewController.fetchResultController.depensesFetched)
             }
         } else {
             //cas du cancel

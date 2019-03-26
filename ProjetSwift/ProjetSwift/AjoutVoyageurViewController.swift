@@ -10,17 +10,27 @@ import Foundation
 import UIKit
 
 class AjoutVoyageurViewController: UIViewController {
+    @IBOutlet weak var boutonValiderDepuisAccueil: UIButton!
+    @IBOutlet weak var boutonAnnulerDepuisVoyage: UIButton!
+    @IBOutlet weak var boutonValiderDepuisVoyage: UIButton!
+    @IBOutlet weak var boutonAnnulerDepuisAccueil: UIButton!
     
     @IBOutlet weak var textFieldNom: UITextField!
     @IBOutlet weak var textFieldPrenom: UITextField!
     var newVoyageur: Voyageur?
+    var pagePrecedente: String = ""
     
     @IBOutlet weak var validateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //self.validateButton.isEnabled = false
+        if(pagePrecedente == "Voyage"){
+            self.boutonValiderDepuisAccueil.isHidden = true
+            self.boutonAnnulerDepuisAccueil.isHidden = true
+        }else{
+            self.boutonAnnulerDepuisVoyage.isHidden = true
+            self.boutonValiderDepuisVoyage.isHidden = true
+        }
         
        
     }

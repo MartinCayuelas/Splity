@@ -374,6 +374,9 @@
                                 <state key="normal" title="Ajouter un nouveau voyageur">
                                     <color key="titleColor" red="0.057553611695766449" green="0.49303704500198364" blue="0.97089630365371704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="LIq-o9-6IK" kind="presentation" identifier="voyageurAddedSegue" id="aA2-IJ-aF1"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mD4-lZ-SzO">
                                 <rect key="frame" x="71" y="348" width="233" height="128"/>
@@ -1000,6 +1003,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmH-Ol-SfC">
                                 <rect key="frame" x="211" y="378" width="65" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="validerDepuisAccueil"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="Lik-v1-ofG"/>
                                 </constraints>
@@ -1012,11 +1016,32 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YED-Uo-33w">
                                 <rect key="frame" x="108" y="378" width="53" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="annulerDepuisAccueil"/>
                                 <state key="normal" title="Annuler">
                                     <color key="titleColor" red="1" green="0.1117138454" blue="0.1381127704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="1Sv-et-EoB" kind="unwind" unwindAction="unwindToVoyageursViewWithSegue:" id="U4i-2g-o2X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIi-9w-QSx">
+                                <rect key="frame" x="108" y="378" width="53" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="annulerDepuisVoyage"/>
+                                <state key="normal" title="Annuler">
+                                    <color key="titleColor" red="1" green="0.1117138454" blue="0.1381127704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1Sv-et-EoB" kind="unwind" unwindAction="unwindToAddVoyageViewWithSegue:" id="f8U-tS-XRl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX4-oj-CTg">
+                                <rect key="frame" x="211" y="378" width="47" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="validerDepuisVoyage"/>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" red="0.0" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1Sv-et-EoB" kind="unwind" identifier="voyageurAddedSegue" unwindAction="unwindToAddVoyageViewWithSegue:" id="PLv-rG-dzV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1033,13 +1058,21 @@
                             <constraint firstItem="jHA-SG-lDw" firstAttribute="top" secondItem="3Wp-gr-Yel" secondAttribute="bottom" constant="20" id="QUG-0S-94v"/>
                             <constraint firstItem="AmH-Ol-SfC" firstAttribute="leading" secondItem="YED-Uo-33w" secondAttribute="trailing" constant="50" id="WRJ-gT-HCb"/>
                             <constraint firstItem="jHA-SG-lDw" firstAttribute="centerX" secondItem="419-aS-1gf" secondAttribute="centerX" id="Xes-3R-CQt"/>
+                            <constraint firstItem="OIi-9w-QSx" firstAttribute="top" secondItem="BnJ-LW-OJU" secondAttribute="bottom" constant="75" id="Zac-74-cjm"/>
                             <constraint firstItem="AmH-Ol-SfC" firstAttribute="leading" secondItem="YED-Uo-33w" secondAttribute="trailing" constant="50" id="av1-PW-xu7"/>
                             <constraint firstItem="BnJ-LW-OJU" firstAttribute="centerX" secondItem="419-aS-1gf" secondAttribute="centerX" id="eSx-PC-Gki"/>
+                            <constraint firstItem="qX4-oj-CTg" firstAttribute="top" secondItem="BnJ-LW-OJU" secondAttribute="bottom" constant="75" id="erx-wh-QEz"/>
                             <constraint firstItem="AmH-Ol-SfC" firstAttribute="top" secondItem="BnJ-LW-OJU" secondAttribute="bottom" constant="75" id="hyf-9j-4Nh"/>
+                            <constraint firstItem="qX4-oj-CTg" firstAttribute="leading" secondItem="YED-Uo-33w" secondAttribute="trailing" constant="50" id="p0S-6w-ZSA"/>
+                            <constraint firstItem="AmH-Ol-SfC" firstAttribute="leading" secondItem="OIi-9w-QSx" secondAttribute="trailing" constant="50" id="qU0-HG-ABB"/>
                             <constraint firstItem="P5L-4F-OiX" firstAttribute="top" secondItem="jHA-SG-lDw" secondAttribute="bottom" constant="30" id="y7j-mo-2dm"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="boutonAnnulerDepuisAccueil" destination="YED-Uo-33w" id="plv-9X-y3o"/>
+                        <outlet property="boutonAnnulerDepuisVoyage" destination="OIi-9w-QSx" id="PzM-fM-sCr"/>
+                        <outlet property="boutonValiderDepuisAccueil" destination="AmH-Ol-SfC" id="e50-f4-bSJ"/>
+                        <outlet property="boutonValiderDepuisVoyage" destination="qX4-oj-CTg" id="teD-Sd-y7s"/>
                         <outlet property="textFieldNom" destination="jHA-SG-lDw" id="Dg6-z4-aVA"/>
                         <outlet property="textFieldPrenom" destination="BnJ-LW-OJU" id="Bwb-wh-Con"/>
                         <outlet property="validateButton" destination="AmH-Ol-SfC" id="htr-gP-8Dx"/>
@@ -1075,4 +1108,7 @@
         <image name="cancel" width="16" height="16"/>
         <image name="edit" width="12" height="12"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cSW-O3-Vgd"/>
+    </inferredMetricsTieBreakers>
 </document>

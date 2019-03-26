@@ -55,6 +55,7 @@ class VoyagesViewController: UIViewController {
             guard let controller = segue.source as? AjoutVoyageViewController else { return }
             if let voyage = controller.newVoyage {
                 self.controllerVoyagesTableView.voyages.add(voyage: voyage)
+                self.controllerVoyagesTableView.voyages = VoyageSetViewModel(data: self.controllerVoyagesTableView.fetchResultController.voyagesFetched)
             }
             
         } else {
