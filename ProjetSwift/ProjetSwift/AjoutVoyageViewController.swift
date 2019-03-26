@@ -58,5 +58,10 @@ class AjoutVoyageViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func ajoutVoyageurToVoyage(_ sender: ButtonCheckBox) {
+    }
+    
+    
 
 }

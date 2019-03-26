@@ -403,10 +403,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WPE-4z-z7o">
-                                                    <rect key="frame" x="171" y="6" width="49" height="31"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPx-ka-vcC" customClass="ButtonCheckBox" customModule="ProjetSwift" customModuleProvider="target">
+                                                    <rect key="frame" x="178" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </switch>
+                                                    <connections>
+                                                        <action selector="ajoutVoyageurToVoyage:" destination="RZt-NH-3NW" eventType="touchUpInside" id="kEa-qM-IGf"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1109,6 +1112,6 @@
         <image name="edit" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cSW-O3-Vgd"/>
+        <segue reference="aA2-IJ-aF1"/>
     </inferredMetricsTieBreakers>
 </document>

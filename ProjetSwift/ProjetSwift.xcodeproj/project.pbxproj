@@ -39,6 +39,7 @@
 		7BCBFA0B22369198002AD627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0922369198002AD627 /* LaunchScreen.storyboard */; };
 		7BCBFA1622369198002AD627 /* ProjetSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */; };
 		7BCBFA2122369198002AD627 /* ProjetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */; };
+		E9FA220D224A83F1001777CB /* ButtonCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA220C224A83F1001777CB /* ButtonCheckBox.swift */; };
 		F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */; };
 		F091FC3D22400ED70086EA52 /* DetailVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */; };
 		F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */; };
@@ -109,6 +110,7 @@
 		7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftUITests.swift; sourceTree = "<group>"; };
 		7BCBFA2222369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9FA220C224A83F1001777CB /* ButtonCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCheckBox.swift; sourceTree = "<group>"; };
 		F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSetViewModel.swift; sourceTree = "<group>"; };
 		F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVoyageViewController.swift; sourceTree = "<group>"; };
 		F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		7BCBF9FC22369198002AD627 /* ProjetSwift */ = {
 			isa = PBXGroup;
 			children = (
+				E9FA220E224A83FD001777CB /* Ressources */,
 				7B183ED322454BD30065B202 /* DAOs */,
 				7B183ED022454A630065B202 /* Helpers */,
 				F091FC39224002420086EA52 /* ViewModels */,
@@ -268,6 +271,14 @@
 				7BCBFA2222369198002AD627 /* Info.plist */,
 			);
 			path = ProjetSwiftUITests;
+			sourceTree = "<group>";
+		};
+		E9FA220E224A83FD001777CB /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				E9FA220C224A83F1001777CB /* ButtonCheckBox.swift */,
+			);
+			name = Ressources;
 			sourceTree = "<group>";
 		};
 		F091FC39224002420086EA52 /* ViewModels */ = {
@@ -460,6 +471,7 @@
 				7B73B3572244DB200023E002 /* DepenseSet.swift in Sources */,
 				F0CD86302242AD6200E73581 /* VoyageursTableViewController.swift in Sources */,
 				7B786921224A2A810087F0DB /* Depense.swift in Sources */,
+				E9FA220D224A83F1001777CB /* ButtonCheckBox.swift in Sources */,
 				7B73B35E2244ED5C0023E002 /* DepenseSetViewModel.swift in Sources */,
 				7B0F8D3722491794003869F9 /* AjourVoyageurTextFieldDelegate.swift in Sources */,
 				7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */,
