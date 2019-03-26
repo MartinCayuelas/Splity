@@ -35,17 +35,4 @@ class DetailVoyageViewController: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func unwindToDepensesView(segue: UIStoryboardSegue){
-        if segue.identifier == "depenseAddedSegue" {
-            guard let controller = segue.source as? AjoutDepenseViewController else { return }
-            if let depense = controller.newDepense {
-                //AJOUTER LA DEPENSE
-                //self.depensesTableViewController.depensesModel.add(depense: depense)
-            }
-        } else {
-            //cas du cancel
-            print("AJOUT ANNULE")
-        }
-    }
-    
 }
