@@ -69,6 +69,27 @@ class VoyageDAO{
         
     }
     
+    static func count(forActif actif: Bool) -> Int{
+        self.request.predicate = NSPredicate(format: "actif == %@", actif)
+        do{
+            return try CoreDataManager.context.count(for: self.request)
+        }
+        catch let error as NSError{
+            fatalError(error.description)
+        }
+        
+    }
+    static func search(forActif actif: Bool) -> [Voyage]?{
+        self.request.predicate = NSPredicate(format: "actif == %@", actif)
+        do{
+            return try CoreDataManager.context.fetch(request) as [Voyage]
+        }
+        catch{
+            return nil
+        }
+        
+    }
+    
     static func count(voyage: Voyage) -> Int{
         
         self.request.predicate = NSPredicate(format: "titre == %@ AND photo == %@",

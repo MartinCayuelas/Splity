@@ -14,6 +14,7 @@ extension Voyage {
     /// titre du voyage
     public var photo  : String { return self.pPhotoVoyage  ?? "" }
     /// image du voyage
+    public var actif : Bool { return self.pActif}
     
     /// initialize a `Voyage`
     ///
@@ -24,6 +25,7 @@ extension Voyage {
         self.init(context: CoreDataManager.context)
         self.pTitreVoyage = titre
         self.pPhotoVoyage  = photo
+        self.pActif = true
     }
     
 }

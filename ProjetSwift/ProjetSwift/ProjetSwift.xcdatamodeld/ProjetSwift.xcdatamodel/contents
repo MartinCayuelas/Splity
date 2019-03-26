@@ -7,6 +7,7 @@
         <relationship name="pVoyageur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyageur" inverseName="pVoyages" inverseEntity="Voyageur" syncable="YES"/>
     </entity>
     <entity name="Voyage" representedClassName="Voyage" syncable="YES" codeGenerationType="class">
+        <attribute name="pActif" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pPhotoVoyage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pTitreVoyage" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pVoyageurs" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participer" inverseName="pVoyage" inverseEntity="Participer" syncable="YES"/>
@@ -17,8 +18,8 @@
         <relationship name="pVoyages" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Participer" inverseName="pVoyageur" inverseEntity="Participer" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Voyageur" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="Voyage" positionX="115.15625" positionY="84.8671875" width="128" height="88"/>
         <element name="Participer" positionX="123.54296875" positionY="-75.46875" width="128" height="103"/>
+        <element name="Voyage" positionX="115.15625" positionY="84.8671875" width="128" height="105"/>
+        <element name="Voyageur" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>
