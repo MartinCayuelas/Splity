@@ -10,13 +10,16 @@ import Foundation
 import UIKit
 
 class AjoutVoyageViewController: UIViewController {
-
+    
     var controllerVoyageursTableView: AjoutVoyageurTableViewController!
     
     @IBOutlet weak var tableVoyageurs: UITableView!
     
     @IBOutlet weak var textFieldTitreVoyage: UITextField!
     var newVoyage : Voyage?
+    
+    var listVoyageurSelectionnes : [Voyageur] = []
+    
     
     
     override func viewDidLoad() {
@@ -26,7 +29,7 @@ class AjoutVoyageViewController: UIViewController {
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
     // Declenché lors de l'ajout d'un voyage
@@ -60,8 +63,23 @@ class AjoutVoyageViewController: UIViewController {
     
     
     @IBAction func ajoutVoyageurToVoyage(_ sender: ButtonCheckBox) {
+        
+        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableVoyageurs)
+        if let indexPath = self.tableVoyageurs.indexPathForRow(at: buttonPosition){
+            let voyageurCoche = self.controllerVoyageursTableView.voyageurs.get(voyageurAt: indexPath.row)
+            
+            if self.listVoyageurSelectionnes.contains(voyageurCoche!){ // Si deja dans le tableau
+                let index = self.listVoyageurSelectionnes.firstIndex(of: voyageurCoche!)
+                
+                self.listVoyageurSelectionnes.remove(at: index!)
+            }else{// Ajout dans le tableau
+                
+                self.listVoyageurSelectionnes.append(voyageurCoche!)
+            }
+        }
+        
     }
     
     
-
+    
 }
