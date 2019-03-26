@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 protocol DepenseSetViewModelDelegate {
     // called when a depense is added to the set
@@ -18,10 +19,15 @@ protocol DepenseSetViewModelDelegate {
 
 class DepenseSetViewModel : NSObject {
     
-    var modelSet : DepenseSet
-    var data : [Depense]
+    //var modelSet : DepenseSet
+    //var data : [Depense]
     var delegate : DepenseSetViewModelDelegate?
+    var depensesFetched : NSFetchedResultsController<Depense>
     
+    init(data: NSFetchedResultsController<Depense>){
+        self.depensesFetched = data
+    }
+    /*
     override init() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
             else{
@@ -44,14 +50,14 @@ class DepenseSetViewModel : NSObject {
     var iterator : ItDepenseSet{
         return self.modelSet.makeIterator()
     }
-    
+    */
 
     /// Compte le nombre de depense dans la variable data -> Tableau de depenses
     ///
     /// - Parameter:  none
     /// - returns : un entier
     var count : Int {
-        return self.data.count
+        return self.depensesFetched.fetchedObjects?.count ?? 0
     }
     
     /// Recupere une depense au tableau des depenses (data)
@@ -60,8 +66,7 @@ class DepenseSetViewModel : NSObject {
     /// - returns : la depense dans le tableau de data à la indexieme place
     
     func get(depenseAt index: Int) -> Depense? {
-        guard (index >= 0 ) && (index < self.count) else { return nil }
-        return self.data[index]
+        return self.depensesFetched.object(at: IndexPath(row: index, section: 0))
     }
     
     /// Ajoute une depense au tableau des depenses (data)
@@ -71,10 +76,8 @@ class DepenseSetViewModel : NSObject {
     
     
     func add(depense: Depense){
-        if self.modelSet.indexOf(d: depense) == nil{
-            self.modelSet.add(d: depense)
-            self.data.append(depense)
-            self.delegate?.depenseAdded(at: IndexPath(row: self.modelSet.count-1, section: 0))
+        if let indexPath = self.depensesFetched.indexPath(forObject: depense){
+            self.delegate?.depenseAdded(at: indexPath)
         }
     }
     

@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func loadDepenses() -> DepenseSet {
         var depenses: [Depense] = []
         for i in 1...4{
-            let d = Depense(titre: "Dépense " + String(i), montant: Double(i), image: "Image"+String(i))
+            let d = Depense(titre: "Dépense " + String(i), photo: "Image"+String(i), date: Date())
             depenses.append(d)
         }
         return DepenseSet(depenses: depenses)

@@ -21,9 +21,9 @@ class AjoutDepenseViewController : UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "depenseAddedSegue" {
             let titreDepense : String  = self.titreDepenseTextField.text!
-            let montantDepense : Double = 10.5
+            let dateDepense : Date = Date()
             let imageDepense  : String  = "Image2"
-            self.newDepense  = Depense(titre: titreDepense, montant: montantDepense, image: imageDepense)
+            self.newDepense  = Depense(titre: titreDepense, photo: imageDepense, date: dateDepense)
             print(self.newDepense?.titre)
         }
     }

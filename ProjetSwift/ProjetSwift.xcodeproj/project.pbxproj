@@ -1,772 +1,784 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 46;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        7B0F8D3722491794003869F9 /* AjourVoyageurTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F8D3622491794003869F9 /* AjourVoyageurTextFieldDelegate.swift */; };
-        7B0F8D3B2249232A003869F9 /* VoyageControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */; };
-        7B0F8D3D22493647003869F9 /* CommentEquilibrerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F8D3C22493647003869F9 /* CommentEquilibrerViewController.swift */; };
-        7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */; };
-        7B183ED222454A770065B202 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED122454A770065B202 /* CoreDataManager.swift */; };
-        7B183ED522454BE00065B202 /* VoyageurDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED422454BE00065B202 /* VoyageurDAO.swift */; };
-        7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED6224550670065B202 /* VoyageurFetchResultController.swift */; };
-        7B183ED922455C690065B202 /* VoyagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED822455C690065B202 /* VoyagesViewController.swift */; };
-        7B37173A22394646004ACE68 /* Voyageur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37173922394646004ACE68 /* Voyageur.swift */; };
-        7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */; };
-        7B37174622394B44004ACE68 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174522394B44004ACE68 /* Voyage.swift */; };
-        7B3AB98A224946350003A620 /* VoyageDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB989224946350003A620 /* VoyageDAO.swift */; };
-        7B3AB98C224947900003A620 /* VoyageFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */; };
-        7B3AB99222495EB90003A620 /* Participer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB99122495EB90003A620 /* Participer.swift */; };
-        7B3C5DBC22494B2D0059E346 /* EditVoyageurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C5DBB22494B2D0059E346 /* EditVoyageurViewController.swift */; };
-        7B3C5DBE22495E7E0059E346 /* AjoutVoyageurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C5DBD22495E7E0059E346 /* AjoutVoyageurTableViewController.swift */; };
-        7B73B3572244DB200023E002 /* DepenseSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B3562244DB200023E002 /* DepenseSet.swift */; };
-        7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */; };
-        7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B35B2244DF550023E002 /* DepensesViewController.swift */; };
-        7B73B35E2244ED5C0023E002 /* DepenseSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B35D2244ED5C0023E002 /* DepenseSetViewModel.swift */; };
-        7B73B3642244F9990023E002 /* DepensesTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B3632244F9990023E002 /* DepensesTableViewCellController.swift */; };
-        7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF9FD22369198002AD627 /* AppDelegate.swift */; };
-        7BCBFA0022369198002AD627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF9FF22369198002AD627 /* ViewController.swift */; };
-        7BCBFA0322369198002AD627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0122369198002AD627 /* Main.storyboard */; };
-        7BCBFA0622369198002AD627 /* ProjetSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0422369198002AD627 /* ProjetSwift.xcdatamodeld */; };
-        7BCBFA0822369198002AD627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0722369198002AD627 /* Assets.xcassets */; };
-        7BCBFA0B22369198002AD627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0922369198002AD627 /* LaunchScreen.storyboard */; };
-        7BCBFA1622369198002AD627 /* ProjetSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */; };
-        7BCBFA2122369198002AD627 /* ProjetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */; };
-        F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */; };
-        F091FC3D22400ED70086EA52 /* DetailVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */; };
-        F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */; };
-        F0CD862422423F3500E73581 /* VoyageurSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD862322423F3500E73581 /* VoyageurSet.swift */; };
-        F0CD86282242A26700E73581 /* VoyageurTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD86252242A0B100E73581 /* VoyageurTest.swift */; };
-        F0CD862C2242A69D00E73581 /* VoyageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD862B2242A69D00E73581 /* VoyageTest.swift */; };
-        F0CD86302242AD6200E73581 /* VoyageursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD862F2242AD6200E73581 /* VoyageursTableViewController.swift */; };
-        F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD86312242AF1100E73581 /* VoyageurSetViewModel.swift */; };
-        F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */; };
-        FB740469223AC530001A4446 /* VoyageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB740468223AC52F001A4446 /* VoyageSet.swift */; };
-        FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */; };
-        FBC445582244D781002CFCE2 /* Depense.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC445572244D781002CFCE2 /* Depense.swift */; };
+		7B0F8D3722491794003869F9 /* AjourVoyageurTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F8D3622491794003869F9 /* AjourVoyageurTextFieldDelegate.swift */; };
+		7B0F8D3B2249232A003869F9 /* VoyageControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */; };
+		7B0F8D3D22493647003869F9 /* CommentEquilibrerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F8D3C22493647003869F9 /* CommentEquilibrerViewController.swift */; };
+		7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */; };
+		7B183ED222454A770065B202 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED122454A770065B202 /* CoreDataManager.swift */; };
+		7B183ED522454BE00065B202 /* VoyageurDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED422454BE00065B202 /* VoyageurDAO.swift */; };
+		7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED6224550670065B202 /* VoyageurFetchResultController.swift */; };
+		7B183ED922455C690065B202 /* VoyagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED822455C690065B202 /* VoyagesViewController.swift */; };
+		7B37173A22394646004ACE68 /* Voyageur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37173922394646004ACE68 /* Voyageur.swift */; };
+		7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */; };
+		7B37174622394B44004ACE68 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174522394B44004ACE68 /* Voyage.swift */; };
+		7B3AB98A224946350003A620 /* VoyageDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB989224946350003A620 /* VoyageDAO.swift */; };
+		7B3AB98C224947900003A620 /* VoyageFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */; };
+		7B3AB99222495EB90003A620 /* Participer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3AB99122495EB90003A620 /* Participer.swift */; };
+		7B3C5DBC22494B2D0059E346 /* EditVoyageurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C5DBB22494B2D0059E346 /* EditVoyageurViewController.swift */; };
+		7B3C5DBE22495E7E0059E346 /* AjoutVoyageurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C5DBD22495E7E0059E346 /* AjoutVoyageurTableViewController.swift */; };
+		7B73B3572244DB200023E002 /* DepenseSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B3562244DB200023E002 /* DepenseSet.swift */; };
+		7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */; };
+		7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B35B2244DF550023E002 /* DepensesViewController.swift */; };
+		7B73B35E2244ED5C0023E002 /* DepenseSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B35D2244ED5C0023E002 /* DepenseSetViewModel.swift */; };
+		7B73B3642244F9990023E002 /* DepensesTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B3632244F9990023E002 /* DepensesTableViewCellController.swift */; };
+		7B786921224A2A810087F0DB /* Depense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786920224A2A810087F0DB /* Depense.swift */; };
+		7B786923224A2AF00087F0DB /* DepenseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786922224A2AF00087F0DB /* DepenseDAO.swift */; };
+		7B786925224A2BCC0087F0DB /* DepenseFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786924224A2BCC0087F0DB /* DepenseFetchResultController.swift */; };
+		7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF9FD22369198002AD627 /* AppDelegate.swift */; };
+		7BCBFA0022369198002AD627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF9FF22369198002AD627 /* ViewController.swift */; };
+		7BCBFA0322369198002AD627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0122369198002AD627 /* Main.storyboard */; };
+		7BCBFA0622369198002AD627 /* ProjetSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0422369198002AD627 /* ProjetSwift.xcdatamodeld */; };
+		7BCBFA0822369198002AD627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0722369198002AD627 /* Assets.xcassets */; };
+		7BCBFA0B22369198002AD627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0922369198002AD627 /* LaunchScreen.storyboard */; };
+		7BCBFA1622369198002AD627 /* ProjetSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */; };
+		7BCBFA2122369198002AD627 /* ProjetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */; };
+		F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */; };
+		F091FC3D22400ED70086EA52 /* DetailVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */; };
+		F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */; };
+		F0CD862422423F3500E73581 /* VoyageurSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD862322423F3500E73581 /* VoyageurSet.swift */; };
+		F0CD86282242A26700E73581 /* VoyageurTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD86252242A0B100E73581 /* VoyageurTest.swift */; };
+		F0CD862C2242A69D00E73581 /* VoyageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD862B2242A69D00E73581 /* VoyageTest.swift */; };
+		F0CD86302242AD6200E73581 /* VoyageursTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD862F2242AD6200E73581 /* VoyageursTableViewController.swift */; };
+		F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD86312242AF1100E73581 /* VoyageurSetViewModel.swift */; };
+		F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */; };
+		FB740469223AC530001A4446 /* VoyageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB740468223AC52F001A4446 /* VoyageSet.swift */; };
+		FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */; };
+		FBC445582244D781002CFCE2 /* DepenseTMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC445572244D781002CFCE2 /* DepenseTMP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-        7BCBFA1222369198002AD627 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 7BCBF9F222369198002AD627 /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 7BCBF9F922369198002AD627;
-            remoteInfo = ProjetSwift;
-        };
-        7BCBFA1D22369198002AD627 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 7BCBF9F222369198002AD627 /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 7BCBF9F922369198002AD627;
-            remoteInfo = ProjetSwift;
-        };
+		7BCBFA1222369198002AD627 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BCBF9F222369198002AD627 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BCBF9F922369198002AD627;
+			remoteInfo = ProjetSwift;
+		};
+		7BCBFA1D22369198002AD627 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BCBF9F222369198002AD627 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BCBF9F922369198002AD627;
+			remoteInfo = ProjetSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-        7B0F8D3622491794003869F9 /* AjourVoyageurTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjourVoyageurTextFieldDelegate.swift; sourceTree = "<group>"; };
-        7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageControllerTableViewCell.swift; sourceTree = "<group>"; };
-        7B0F8D3C22493647003869F9 /* CommentEquilibrerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEquilibrerViewController.swift; sourceTree = "<group>"; };
-        7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutDepenseViewController.swift; sourceTree = "<group>"; };
-        7B183ED122454A770065B202 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-        7B183ED422454BE00065B202 /* VoyageurDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurDAO.swift; sourceTree = "<group>"; };
-        7B183ED6224550670065B202 /* VoyageurFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurFetchResultController.swift; sourceTree = "<group>"; };
-        7B183ED822455C690065B202 /* VoyagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyagesViewController.swift; sourceTree = "<group>"; };
-        7B37173922394646004ACE68 /* Voyageur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyageur.swift; sourceTree = "<group>"; };
-        7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoyagesTableViewController.swift; sourceTree = "<group>"; };
-        7B37174522394B44004ACE68 /* Voyage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
-        7B3AB989224946350003A620 /* VoyageDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageDAO.swift; sourceTree = "<group>"; };
-        7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageFetchResultController.swift; sourceTree = "<group>"; };
-        7B3AB99122495EB90003A620 /* Participer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participer.swift; sourceTree = "<group>"; };
-        7B3C5DBB22494B2D0059E346 /* EditVoyageurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVoyageurViewController.swift; sourceTree = "<group>"; };
-        7B3C5DBD22495E7E0059E346 /* AjoutVoyageurTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageurTableViewController.swift; sourceTree = "<group>"; };
-        7B73B3562244DB200023E002 /* DepenseSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseSet.swift; sourceTree = "<group>"; };
-        7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesTableViewController.swift; sourceTree = "<group>"; };
-        7B73B35B2244DF550023E002 /* DepensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesViewController.swift; sourceTree = "<group>"; };
-        7B73B35D2244ED5C0023E002 /* DepenseSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseSetViewModel.swift; sourceTree = "<group>"; };
-        7B73B3632244F9990023E002 /* DepensesTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesTableViewCellController.swift; sourceTree = "<group>"; };
-        7BCBF9FA22369198002AD627 /* ProjetSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-        7BCBF9FD22369198002AD627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-        7BCBF9FF22369198002AD627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-        7BCBFA0222369198002AD627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-        7BCBFA0522369198002AD627 /* ProjetSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjetSwift.xcdatamodel; sourceTree = "<group>"; };
-        7BCBFA0722369198002AD627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-        7BCBFA0A22369198002AD627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-        7BCBFA0C22369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        7BCBFA1122369198002AD627 /* ProjetSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftTests.swift; sourceTree = "<group>"; };
-        7BCBFA1722369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftUITests.swift; sourceTree = "<group>"; };
-        7BCBFA2222369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSetViewModel.swift; sourceTree = "<group>"; };
-        F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVoyageViewController.swift; sourceTree = "<group>"; };
-        F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageViewController.swift; sourceTree = "<group>"; };
-        F0CD862322423F3500E73581 /* VoyageurSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurSet.swift; sourceTree = "<group>"; };
-        F0CD86252242A0B100E73581 /* VoyageurTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurTest.swift; sourceTree = "<group>"; };
-        F0CD862B2242A69D00E73581 /* VoyageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageTest.swift; sourceTree = "<group>"; };
-        F0CD862F2242AD6200E73581 /* VoyageursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageursTableViewController.swift; sourceTree = "<group>"; };
-        F0CD86312242AF1100E73581 /* VoyageurSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurSetViewModel.swift; sourceTree = "<group>"; };
-        F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageurViewController.swift; sourceTree = "<group>"; };
-        FB740468223AC52F001A4446 /* VoyageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSet.swift; sourceTree = "<group>"; };
-        FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageTableViewCell.swift; sourceTree = "<group>"; };
-        FBC445572244D781002CFCE2 /* Depense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depense.swift; sourceTree = "<group>"; };
+		7B0F8D3622491794003869F9 /* AjourVoyageurTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjourVoyageurTextFieldDelegate.swift; sourceTree = "<group>"; };
+		7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageControllerTableViewCell.swift; sourceTree = "<group>"; };
+		7B0F8D3C22493647003869F9 /* CommentEquilibrerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEquilibrerViewController.swift; sourceTree = "<group>"; };
+		7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutDepenseViewController.swift; sourceTree = "<group>"; };
+		7B183ED122454A770065B202 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		7B183ED422454BE00065B202 /* VoyageurDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurDAO.swift; sourceTree = "<group>"; };
+		7B183ED6224550670065B202 /* VoyageurFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurFetchResultController.swift; sourceTree = "<group>"; };
+		7B183ED822455C690065B202 /* VoyagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyagesViewController.swift; sourceTree = "<group>"; };
+		7B37173922394646004ACE68 /* Voyageur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyageur.swift; sourceTree = "<group>"; };
+		7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoyagesTableViewController.swift; sourceTree = "<group>"; };
+		7B37174522394B44004ACE68 /* Voyage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
+		7B3AB989224946350003A620 /* VoyageDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageDAO.swift; sourceTree = "<group>"; };
+		7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageFetchResultController.swift; sourceTree = "<group>"; };
+		7B3AB99122495EB90003A620 /* Participer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Participer.swift; sourceTree = "<group>"; };
+		7B3C5DBB22494B2D0059E346 /* EditVoyageurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVoyageurViewController.swift; sourceTree = "<group>"; };
+		7B3C5DBD22495E7E0059E346 /* AjoutVoyageurTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageurTableViewController.swift; sourceTree = "<group>"; };
+		7B73B3562244DB200023E002 /* DepenseSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseSet.swift; sourceTree = "<group>"; };
+		7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesTableViewController.swift; sourceTree = "<group>"; };
+		7B73B35B2244DF550023E002 /* DepensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesViewController.swift; sourceTree = "<group>"; };
+		7B73B35D2244ED5C0023E002 /* DepenseSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseSetViewModel.swift; sourceTree = "<group>"; };
+		7B73B3632244F9990023E002 /* DepensesTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesTableViewCellController.swift; sourceTree = "<group>"; };
+		7B786920224A2A810087F0DB /* Depense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depense.swift; sourceTree = "<group>"; };
+		7B786922224A2AF00087F0DB /* DepenseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseDAO.swift; sourceTree = "<group>"; };
+		7B786924224A2BCC0087F0DB /* DepenseFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseFetchResultController.swift; sourceTree = "<group>"; };
+		7BCBF9FA22369198002AD627 /* ProjetSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCBF9FD22369198002AD627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BCBF9FF22369198002AD627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7BCBFA0222369198002AD627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7BCBFA0522369198002AD627 /* ProjetSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjetSwift.xcdatamodel; sourceTree = "<group>"; };
+		7BCBFA0722369198002AD627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BCBFA0A22369198002AD627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BCBFA0C22369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BCBFA1122369198002AD627 /* ProjetSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftTests.swift; sourceTree = "<group>"; };
+		7BCBFA1722369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftUITests.swift; sourceTree = "<group>"; };
+		7BCBFA2222369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSetViewModel.swift; sourceTree = "<group>"; };
+		F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVoyageViewController.swift; sourceTree = "<group>"; };
+		F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageViewController.swift; sourceTree = "<group>"; };
+		F0CD862322423F3500E73581 /* VoyageurSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurSet.swift; sourceTree = "<group>"; };
+		F0CD86252242A0B100E73581 /* VoyageurTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurTest.swift; sourceTree = "<group>"; };
+		F0CD862B2242A69D00E73581 /* VoyageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageTest.swift; sourceTree = "<group>"; };
+		F0CD862F2242AD6200E73581 /* VoyageursTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageursTableViewController.swift; sourceTree = "<group>"; };
+		F0CD86312242AF1100E73581 /* VoyageurSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurSetViewModel.swift; sourceTree = "<group>"; };
+		F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageurViewController.swift; sourceTree = "<group>"; };
+		FB740468223AC52F001A4446 /* VoyageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSet.swift; sourceTree = "<group>"; };
+		FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageTableViewCell.swift; sourceTree = "<group>"; };
+		FBC445572244D781002CFCE2 /* DepenseTMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseTMP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        7BCBF9F722369198002AD627 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        7BCBFA0E22369198002AD627 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        7BCBFA1922369198002AD627 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		7BCBF9F722369198002AD627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCBFA0E22369198002AD627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCBFA1922369198002AD627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        7B0F8D3E2249364C003869F9 /* CommentEquilibrer */ = {
-            isa = PBXGroup;
-            children = (
-                7B0F8D3C22493647003869F9 /* CommentEquilibrerViewController.swift */,
-            );
-            name = CommentEquilibrer;
-            sourceTree = "<group>";
-        };
-        7B183ED022454A630065B202 /* Helpers */ = {
-            isa = PBXGroup;
-            children = (
-                7BCBF9FD22369198002AD627 /* AppDelegate.swift */,
-                7B183ED122454A770065B202 /* CoreDataManager.swift */,
-            );
-            name = Helpers;
-            sourceTree = "<group>";
-        };
-        7B183ED322454BD30065B202 /* DAOs */ = {
-            isa = PBXGroup;
-            children = (
-                7B183ED422454BE00065B202 /* VoyageurDAO.swift */,
-                7B3AB989224946350003A620 /* VoyageDAO.swift */,
-            );
-            name = DAOs;
-            sourceTree = "<group>";
-        };
-        7B371738223945E1004ACE68 /* Models */ = {
-            isa = PBXGroup;
-            children = (
-                7B37173922394646004ACE68 /* Voyageur.swift */,
-                7B37174522394B44004ACE68 /* Voyage.swift */,
-                FB740468223AC52F001A4446 /* VoyageSet.swift */,
-                F0CD862322423F3500E73581 /* VoyageurSet.swift */,
-                FBC445572244D781002CFCE2 /* Depense.swift */,
-                7B73B3562244DB200023E002 /* DepenseSet.swift */,
-                7B3AB99122495EB90003A620 /* Participer.swift */,
-            );
-            name = Models;
-            sourceTree = "<group>";
-        };
-        7B656B0922369DE3001DF6F7 /* Controllers */ = {
-            isa = PBXGroup;
-            children = (
-                7B0F8D3E2249364C003869F9 /* CommentEquilibrer */,
-                7B73B3582244DEB10023E002 /* Depense */,
-                F0CD862E2242AA0200E73581 /* Voyageur */,
-                F0CD862D2242A9CA00E73581 /* Voyage */,
-            );
-            name = Controllers;
-            sourceTree = "<group>";
-        };
-        7B73B3582244DEB10023E002 /* Depense */ = {
-            isa = PBXGroup;
-            children = (
-                7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */,
-                7B73B35B2244DF550023E002 /* DepensesViewController.swift */,
-                7B73B3632244F9990023E002 /* DepensesTableViewCellController.swift */,
-                7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */,
-            );
-            name = Depense;
-            sourceTree = "<group>";
-        };
-        7BCBF9F122369198002AD627 = {
-            isa = PBXGroup;
-            children = (
-                7BCBF9FC22369198002AD627 /* ProjetSwift */,
-                7BCBFA1422369198002AD627 /* ProjetSwiftTests */,
-                7BCBFA1F22369198002AD627 /* ProjetSwiftUITests */,
-                7BCBF9FB22369198002AD627 /* Products */,
-            );
-            sourceTree = "<group>";
-        };
-        7BCBF9FB22369198002AD627 /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                7BCBF9FA22369198002AD627 /* ProjetSwift.app */,
-                7BCBFA1122369198002AD627 /* ProjetSwiftTests.xctest */,
-                7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        7BCBF9FC22369198002AD627 /* ProjetSwift */ = {
-            isa = PBXGroup;
-            children = (
-                7B183ED322454BD30065B202 /* DAOs */,
-                7B183ED022454A630065B202 /* Helpers */,
-                F091FC39224002420086EA52 /* ViewModels */,
-                7B656B0922369DE3001DF6F7 /* Controllers */,
-                7B371738223945E1004ACE68 /* Models */,
-                7BCBFA0122369198002AD627 /* Main.storyboard */,
-                7BCBFA0722369198002AD627 /* Assets.xcassets */,
-                7BCBFA0922369198002AD627 /* LaunchScreen.storyboard */,
-                7BCBFA0C22369198002AD627 /* Info.plist */,
-                7BCBFA0422369198002AD627 /* ProjetSwift.xcdatamodeld */,
-            );
-            path = ProjetSwift;
-            sourceTree = "<group>";
-        };
-        7BCBFA1422369198002AD627 /* ProjetSwiftTests */ = {
-            isa = PBXGroup;
-            children = (
-                7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */,
-                7BCBFA1722369198002AD627 /* Info.plist */,
-                F0CD86252242A0B100E73581 /* VoyageurTest.swift */,
-                F0CD862B2242A69D00E73581 /* VoyageTest.swift */,
-            );
-            path = ProjetSwiftTests;
-            sourceTree = "<group>";
-        };
-        7BCBFA1F22369198002AD627 /* ProjetSwiftUITests */ = {
-            isa = PBXGroup;
-            children = (
-                7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */,
-                7BCBFA2222369198002AD627 /* Info.plist */,
-            );
-            path = ProjetSwiftUITests;
-            sourceTree = "<group>";
-        };
-        F091FC39224002420086EA52 /* ViewModels */ = {
-            isa = PBXGroup;
-            children = (
-                F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */,
-                F0CD86312242AF1100E73581 /* VoyageurSetViewModel.swift */,
-                7B73B35D2244ED5C0023E002 /* DepenseSetViewModel.swift */,
-            );
-            name = ViewModels;
-            sourceTree = "<group>";
-        };
-        F0CD862D2242A9CA00E73581 /* Voyage */ = {
-            isa = PBXGroup;
-            children = (
-                F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */,
-                F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */,
-                FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */,
-                7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */,
-                7B183ED822455C690065B202 /* VoyagesViewController.swift */,
-                7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */,
-                7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */,
-                7B3C5DBD22495E7E0059E346 /* AjoutVoyageurTableViewController.swift */,
-            );
-            name = Voyage;
-            sourceTree = "<group>";
-        };
-        F0CD862E2242AA0200E73581 /* Voyageur */ = {
-            isa = PBXGroup;
-            children = (
-                7BCBF9FF22369198002AD627 /* ViewController.swift */,
-                F0CD862F2242AD6200E73581 /* VoyageursTableViewController.swift */,
-                F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */,
-                7B183ED6224550670065B202 /* VoyageurFetchResultController.swift */,
-                7B0F8D3622491794003869F9 /* AjourVoyageurTextFieldDelegate.swift */,
-                7B3C5DBB22494B2D0059E346 /* EditVoyageurViewController.swift */,
-            );
-            name = Voyageur;
-            sourceTree = "<group>";
-        };
+		7B0F8D3E2249364C003869F9 /* CommentEquilibrer */ = {
+			isa = PBXGroup;
+			children = (
+				7B0F8D3C22493647003869F9 /* CommentEquilibrerViewController.swift */,
+			);
+			name = CommentEquilibrer;
+			sourceTree = "<group>";
+		};
+		7B183ED022454A630065B202 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7BCBF9FD22369198002AD627 /* AppDelegate.swift */,
+				7B183ED122454A770065B202 /* CoreDataManager.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		7B183ED322454BD30065B202 /* DAOs */ = {
+			isa = PBXGroup;
+			children = (
+				7B183ED422454BE00065B202 /* VoyageurDAO.swift */,
+				7B3AB989224946350003A620 /* VoyageDAO.swift */,
+				7B786922224A2AF00087F0DB /* DepenseDAO.swift */,
+			);
+			name = DAOs;
+			sourceTree = "<group>";
+		};
+		7B371738223945E1004ACE68 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7B37173922394646004ACE68 /* Voyageur.swift */,
+				7B37174522394B44004ACE68 /* Voyage.swift */,
+				FB740468223AC52F001A4446 /* VoyageSet.swift */,
+				F0CD862322423F3500E73581 /* VoyageurSet.swift */,
+				FBC445572244D781002CFCE2 /* DepenseTMP.swift */,
+				7B73B3562244DB200023E002 /* DepenseSet.swift */,
+				7B3AB99122495EB90003A620 /* Participer.swift */,
+				7B786920224A2A810087F0DB /* Depense.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7B656B0922369DE3001DF6F7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7B0F8D3E2249364C003869F9 /* CommentEquilibrer */,
+				7B73B3582244DEB10023E002 /* Depense */,
+				F0CD862E2242AA0200E73581 /* Voyageur */,
+				F0CD862D2242A9CA00E73581 /* Voyage */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7B73B3582244DEB10023E002 /* Depense */ = {
+			isa = PBXGroup;
+			children = (
+				7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */,
+				7B73B35B2244DF550023E002 /* DepensesViewController.swift */,
+				7B73B3632244F9990023E002 /* DepensesTableViewCellController.swift */,
+				7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */,
+				7B786924224A2BCC0087F0DB /* DepenseFetchResultController.swift */,
+			);
+			name = Depense;
+			sourceTree = "<group>";
+		};
+		7BCBF9F122369198002AD627 = {
+			isa = PBXGroup;
+			children = (
+				7BCBF9FC22369198002AD627 /* ProjetSwift */,
+				7BCBFA1422369198002AD627 /* ProjetSwiftTests */,
+				7BCBFA1F22369198002AD627 /* ProjetSwiftUITests */,
+				7BCBF9FB22369198002AD627 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BCBF9FB22369198002AD627 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BCBF9FA22369198002AD627 /* ProjetSwift.app */,
+				7BCBFA1122369198002AD627 /* ProjetSwiftTests.xctest */,
+				7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BCBF9FC22369198002AD627 /* ProjetSwift */ = {
+			isa = PBXGroup;
+			children = (
+				7B183ED322454BD30065B202 /* DAOs */,
+				7B183ED022454A630065B202 /* Helpers */,
+				F091FC39224002420086EA52 /* ViewModels */,
+				7B656B0922369DE3001DF6F7 /* Controllers */,
+				7B371738223945E1004ACE68 /* Models */,
+				7BCBFA0122369198002AD627 /* Main.storyboard */,
+				7BCBFA0722369198002AD627 /* Assets.xcassets */,
+				7BCBFA0922369198002AD627 /* LaunchScreen.storyboard */,
+				7BCBFA0C22369198002AD627 /* Info.plist */,
+				7BCBFA0422369198002AD627 /* ProjetSwift.xcdatamodeld */,
+			);
+			path = ProjetSwift;
+			sourceTree = "<group>";
+		};
+		7BCBFA1422369198002AD627 /* ProjetSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */,
+				7BCBFA1722369198002AD627 /* Info.plist */,
+				F0CD86252242A0B100E73581 /* VoyageurTest.swift */,
+				F0CD862B2242A69D00E73581 /* VoyageTest.swift */,
+			);
+			path = ProjetSwiftTests;
+			sourceTree = "<group>";
+		};
+		7BCBFA1F22369198002AD627 /* ProjetSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */,
+				7BCBFA2222369198002AD627 /* Info.plist */,
+			);
+			path = ProjetSwiftUITests;
+			sourceTree = "<group>";
+		};
+		F091FC39224002420086EA52 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */,
+				F0CD86312242AF1100E73581 /* VoyageurSetViewModel.swift */,
+				7B73B35D2244ED5C0023E002 /* DepenseSetViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		F0CD862D2242A9CA00E73581 /* Voyage */ = {
+			isa = PBXGroup;
+			children = (
+				F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */,
+				F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */,
+				FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */,
+				7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */,
+				7B183ED822455C690065B202 /* VoyagesViewController.swift */,
+				7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */,
+				7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */,
+				7B3C5DBD22495E7E0059E346 /* AjoutVoyageurTableViewController.swift */,
+			);
+			name = Voyage;
+			sourceTree = "<group>";
+		};
+		F0CD862E2242AA0200E73581 /* Voyageur */ = {
+			isa = PBXGroup;
+			children = (
+				7BCBF9FF22369198002AD627 /* ViewController.swift */,
+				F0CD862F2242AD6200E73581 /* VoyageursTableViewController.swift */,
+				F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */,
+				7B183ED6224550670065B202 /* VoyageurFetchResultController.swift */,
+				7B0F8D3622491794003869F9 /* AjourVoyageurTextFieldDelegate.swift */,
+				7B3C5DBB22494B2D0059E346 /* EditVoyageurViewController.swift */,
+			);
+			name = Voyageur;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        7BCBF9F922369198002AD627 /* ProjetSwift */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 7BCBFA2522369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwift" */;
-            buildPhases = (
-                7BCBF9F622369198002AD627 /* Sources */,
-                7BCBF9F722369198002AD627 /* Frameworks */,
-                7BCBF9F822369198002AD627 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = ProjetSwift;
-            productName = ProjetSwift;
-            productReference = 7BCBF9FA22369198002AD627 /* ProjetSwift.app */;
-            productType = "com.apple.product-type.application";
-        };
-        7BCBFA1022369198002AD627 /* ProjetSwiftTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 7BCBFA2822369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftTests" */;
-            buildPhases = (
-                7BCBFA0D22369198002AD627 /* Sources */,
-                7BCBFA0E22369198002AD627 /* Frameworks */,
-                7BCBFA0F22369198002AD627 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                7BCBFA1322369198002AD627 /* PBXTargetDependency */,
-            );
-            name = ProjetSwiftTests;
-            productName = ProjetSwiftTests;
-            productReference = 7BCBFA1122369198002AD627 /* ProjetSwiftTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
-        7BCBFA1B22369198002AD627 /* ProjetSwiftUITests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 7BCBFA2B22369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftUITests" */;
-            buildPhases = (
-                7BCBFA1822369198002AD627 /* Sources */,
-                7BCBFA1922369198002AD627 /* Frameworks */,
-                7BCBFA1A22369198002AD627 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                7BCBFA1E22369198002AD627 /* PBXTargetDependency */,
-            );
-            name = ProjetSwiftUITests;
-            productName = ProjetSwiftUITests;
-            productReference = 7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */;
-            productType = "com.apple.product-type.bundle.ui-testing";
-        };
+		7BCBF9F922369198002AD627 /* ProjetSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BCBFA2522369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwift" */;
+			buildPhases = (
+				7BCBF9F622369198002AD627 /* Sources */,
+				7BCBF9F722369198002AD627 /* Frameworks */,
+				7BCBF9F822369198002AD627 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProjetSwift;
+			productName = ProjetSwift;
+			productReference = 7BCBF9FA22369198002AD627 /* ProjetSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7BCBFA1022369198002AD627 /* ProjetSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BCBFA2822369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftTests" */;
+			buildPhases = (
+				7BCBFA0D22369198002AD627 /* Sources */,
+				7BCBFA0E22369198002AD627 /* Frameworks */,
+				7BCBFA0F22369198002AD627 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BCBFA1322369198002AD627 /* PBXTargetDependency */,
+			);
+			name = ProjetSwiftTests;
+			productName = ProjetSwiftTests;
+			productReference = 7BCBFA1122369198002AD627 /* ProjetSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7BCBFA1B22369198002AD627 /* ProjetSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BCBFA2B22369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftUITests" */;
+			buildPhases = (
+				7BCBFA1822369198002AD627 /* Sources */,
+				7BCBFA1922369198002AD627 /* Frameworks */,
+				7BCBFA1A22369198002AD627 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BCBFA1E22369198002AD627 /* PBXTargetDependency */,
+			);
+			name = ProjetSwiftUITests;
+			productName = ProjetSwiftUITests;
+			productReference = 7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        7BCBF9F222369198002AD627 /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastSwiftUpdateCheck = 0830;
-                LastUpgradeCheck = 0830;
-                ORGANIZATIONNAME = "Nathan GUILLAUD et Martin CAYUELAS";
-                TargetAttributes = {
-                    7BCBF9F922369198002AD627 = {
-                        CreatedOnToolsVersion = 8.3.3;
-                        DevelopmentTeam = KCLVW3VURZ;
-                        LastSwiftMigration = 1010;
-                        ProvisioningStyle = Automatic;
-                    };
-                    7BCBFA1022369198002AD627 = {
-                        CreatedOnToolsVersion = 8.3.3;
-                        LastSwiftMigration = 1010;
-                        ProvisioningStyle = Automatic;
-                        TestTargetID = 7BCBF9F922369198002AD627;
-                    };
-                    7BCBFA1B22369198002AD627 = {
-                        CreatedOnToolsVersion = 8.3.3;
-                        LastSwiftMigration = 1010;
-                        ProvisioningStyle = Automatic;
-                        TestTargetID = 7BCBF9F922369198002AD627;
-                    };
-                };
-            };
-            buildConfigurationList = 7BCBF9F522369198002AD627 /* Build configuration list for PBXProject "ProjetSwift" */;
-            compatibilityVersion = "Xcode 3.2";
-            developmentRegion = English;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 7BCBF9F122369198002AD627;
-            productRefGroup = 7BCBF9FB22369198002AD627 /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                7BCBF9F922369198002AD627 /* ProjetSwift */,
-                7BCBFA1022369198002AD627 /* ProjetSwiftTests */,
-                7BCBFA1B22369198002AD627 /* ProjetSwiftUITests */,
-            );
-        };
+		7BCBF9F222369198002AD627 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Nathan GUILLAUD et Martin CAYUELAS";
+				TargetAttributes = {
+					7BCBF9F922369198002AD627 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = KCLVW3VURZ;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+					};
+					7BCBFA1022369198002AD627 = {
+						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7BCBF9F922369198002AD627;
+					};
+					7BCBFA1B22369198002AD627 = {
+						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7BCBF9F922369198002AD627;
+					};
+				};
+			};
+			buildConfigurationList = 7BCBF9F522369198002AD627 /* Build configuration list for PBXProject "ProjetSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BCBF9F122369198002AD627;
+			productRefGroup = 7BCBF9FB22369198002AD627 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BCBF9F922369198002AD627 /* ProjetSwift */,
+				7BCBFA1022369198002AD627 /* ProjetSwiftTests */,
+				7BCBFA1B22369198002AD627 /* ProjetSwiftUITests */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        7BCBF9F822369198002AD627 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                7BCBFA0B22369198002AD627 /* LaunchScreen.storyboard in Resources */,
-                7BCBFA0822369198002AD627 /* Assets.xcassets in Resources */,
-                7BCBFA0322369198002AD627 /* Main.storyboard in Resources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        7BCBFA0F22369198002AD627 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        7BCBFA1A22369198002AD627 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		7BCBF9F822369198002AD627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BCBFA0B22369198002AD627 /* LaunchScreen.storyboard in Resources */,
+				7BCBFA0822369198002AD627 /* Assets.xcassets in Resources */,
+				7BCBFA0322369198002AD627 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCBFA0F22369198002AD627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCBFA1A22369198002AD627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        7BCBF9F622369198002AD627 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                7B183ED522454BE00065B202 /* VoyageurDAO.swift in Sources */,
-                FBC445582244D781002CFCE2 /* Depense.swift in Sources */,
-                7B3C5DBC22494B2D0059E346 /* EditVoyageurViewController.swift in Sources */,
-                F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */,
-                7B73B3642244F9990023E002 /* DepensesTableViewCellController.swift in Sources */,
-                7BCBFA0622369198002AD627 /* ProjetSwift.xcdatamodeld in Sources */,
-                7B37174622394B44004ACE68 /* Voyage.swift in Sources */,
-                7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */,
-                7B3C5DBE22495E7E0059E346 /* AjoutVoyageurTableViewController.swift in Sources */,
-                7B183ED222454A770065B202 /* CoreDataManager.swift in Sources */,
-                7B73B3572244DB200023E002 /* DepenseSet.swift in Sources */,
-                F0CD86302242AD6200E73581 /* VoyageursTableViewController.swift in Sources */,
-                7B73B35E2244ED5C0023E002 /* DepenseSetViewModel.swift in Sources */,
-                7B0F8D3722491794003869F9 /* AjourVoyageurTextFieldDelegate.swift in Sources */,
-                7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */,
-                FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */,
-                F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */,
-                F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */,
-                7B0F8D3D22493647003869F9 /* CommentEquilibrerViewController.swift in Sources */,
-                7B3AB98C224947900003A620 /* VoyageFetchResultController.swift in Sources */,
-                7B0F8D3B2249232A003869F9 /* VoyageControllerTableViewCell.swift in Sources */,
-                F091FC3D22400ED70086EA52 /* DetailVoyageViewController.swift in Sources */,
-                F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */,
-                FB740469223AC530001A4446 /* VoyageSet.swift in Sources */,
-                7BCBFA0022369198002AD627 /* ViewController.swift in Sources */,
-                7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */,
-                7B3AB98A224946350003A620 /* VoyageDAO.swift in Sources */,
-                7B37173A22394646004ACE68 /* Voyageur.swift in Sources */,
-                7B183ED922455C690065B202 /* VoyagesViewController.swift in Sources */,
-                F0CD862422423F3500E73581 /* VoyageurSet.swift in Sources */,
-                7B3AB99222495EB90003A620 /* Participer.swift in Sources */,
-                7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */,
-                7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */,
-                7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        7BCBFA0D22369198002AD627 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                F0CD862C2242A69D00E73581 /* VoyageTest.swift in Sources */,
-                7BCBFA1622369198002AD627 /* ProjetSwiftTests.swift in Sources */,
-                F0CD86282242A26700E73581 /* VoyageurTest.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        7BCBFA1822369198002AD627 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                7BCBFA2122369198002AD627 /* ProjetSwiftUITests.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		7BCBF9F622369198002AD627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B183ED522454BE00065B202 /* VoyageurDAO.swift in Sources */,
+				FBC445582244D781002CFCE2 /* DepenseTMP.swift in Sources */,
+				7B3C5DBC22494B2D0059E346 /* EditVoyageurViewController.swift in Sources */,
+				F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */,
+				7B73B3642244F9990023E002 /* DepensesTableViewCellController.swift in Sources */,
+				7BCBFA0622369198002AD627 /* ProjetSwift.xcdatamodeld in Sources */,
+				7B37174622394B44004ACE68 /* Voyage.swift in Sources */,
+				7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */,
+				7B3C5DBE22495E7E0059E346 /* AjoutVoyageurTableViewController.swift in Sources */,
+				7B183ED222454A770065B202 /* CoreDataManager.swift in Sources */,
+				7B786925224A2BCC0087F0DB /* DepenseFetchResultController.swift in Sources */,
+				7B73B3572244DB200023E002 /* DepenseSet.swift in Sources */,
+				F0CD86302242AD6200E73581 /* VoyageursTableViewController.swift in Sources */,
+				7B786921224A2A810087F0DB /* Depense.swift in Sources */,
+				7B73B35E2244ED5C0023E002 /* DepenseSetViewModel.swift in Sources */,
+				7B0F8D3722491794003869F9 /* AjourVoyageurTextFieldDelegate.swift in Sources */,
+				7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */,
+				FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */,
+				F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */,
+				F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */,
+				7B0F8D3D22493647003869F9 /* CommentEquilibrerViewController.swift in Sources */,
+				7B3AB98C224947900003A620 /* VoyageFetchResultController.swift in Sources */,
+				7B0F8D3B2249232A003869F9 /* VoyageControllerTableViewCell.swift in Sources */,
+				F091FC3D22400ED70086EA52 /* DetailVoyageViewController.swift in Sources */,
+				F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */,
+				FB740469223AC530001A4446 /* VoyageSet.swift in Sources */,
+				7BCBFA0022369198002AD627 /* ViewController.swift in Sources */,
+				7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */,
+				7B3AB98A224946350003A620 /* VoyageDAO.swift in Sources */,
+				7B37173A22394646004ACE68 /* Voyageur.swift in Sources */,
+				7B183ED922455C690065B202 /* VoyagesViewController.swift in Sources */,
+				F0CD862422423F3500E73581 /* VoyageurSet.swift in Sources */,
+				7B3AB99222495EB90003A620 /* Participer.swift in Sources */,
+				7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */,
+				7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */,
+				7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */,
+				7B786923224A2AF00087F0DB /* DepenseDAO.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCBFA0D22369198002AD627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0CD862C2242A69D00E73581 /* VoyageTest.swift in Sources */,
+				7BCBFA1622369198002AD627 /* ProjetSwiftTests.swift in Sources */,
+				F0CD86282242A26700E73581 /* VoyageurTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BCBFA1822369198002AD627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BCBFA2122369198002AD627 /* ProjetSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        7BCBFA1322369198002AD627 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 7BCBF9F922369198002AD627 /* ProjetSwift */;
-            targetProxy = 7BCBFA1222369198002AD627 /* PBXContainerItemProxy */;
-        };
-        7BCBFA1E22369198002AD627 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 7BCBF9F922369198002AD627 /* ProjetSwift */;
-            targetProxy = 7BCBFA1D22369198002AD627 /* PBXContainerItemProxy */;
-        };
+		7BCBFA1322369198002AD627 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BCBF9F922369198002AD627 /* ProjetSwift */;
+			targetProxy = 7BCBFA1222369198002AD627 /* PBXContainerItemProxy */;
+		};
+		7BCBFA1E22369198002AD627 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BCBF9F922369198002AD627 /* ProjetSwift */;
+			targetProxy = 7BCBFA1D22369198002AD627 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-        7BCBFA0122369198002AD627 /* Main.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                7BCBFA0222369198002AD627 /* Base */,
-            );
-            name = Main.storyboard;
-            sourceTree = "<group>";
-        };
-        7BCBFA0922369198002AD627 /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                7BCBFA0A22369198002AD627 /* Base */,
-            );
-            name = LaunchScreen.storyboard;
-            sourceTree = "<group>";
-        };
+		7BCBFA0122369198002AD627 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BCBFA0222369198002AD627 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7BCBFA0922369198002AD627 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BCBFA0A22369198002AD627 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        7BCBFA2322369198002AD627 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu99;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-                MTL_ENABLE_DEBUG_INFO = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        7BCBFA2422369198002AD627 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu99;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                SDKROOT = iphoneos;
-                SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-                TARGETED_DEVICE_FAMILY = "1,2";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        7BCBFA2622369198002AD627 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = KCLVW3VURZ;
-                INFOPLIST_FILE = ProjetSwift/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                PROVISIONING_PROFILE_SPECIFIER = "";
-                SWIFT_SWIFT3_OBJC_INFERENCE = On;
-                SWIFT_VERSION = 3.0;
-            };
-            name = Debug;
-        };
-        7BCBFA2722369198002AD627 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = KCLVW3VURZ;
-                INFOPLIST_FILE = ProjetSwift/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                PROVISIONING_PROFILE_SPECIFIER = "";
-                SWIFT_SWIFT3_OBJC_INFERENCE = On;
-                SWIFT_VERSION = 3.0;
-            };
-            name = Release;
-        };
-        7BCBFA2922369198002AD627 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                INFOPLIST_FILE = ProjetSwiftTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = NGMC.ProjetSwiftTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_SWIFT3_OBJC_INFERENCE = On;
-                SWIFT_VERSION = 4.2;
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjetSwift.app/ProjetSwift";
-            };
-            name = Debug;
-        };
-        7BCBFA2A22369198002AD627 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                INFOPLIST_FILE = ProjetSwiftTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = NGMC.ProjetSwiftTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_SWIFT3_OBJC_INFERENCE = On;
-                SWIFT_VERSION = 4.2;
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjetSwift.app/ProjetSwift";
-            };
-            name = Release;
-        };
-        7BCBFA2C22369198002AD627 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                INFOPLIST_FILE = ProjetSwiftUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = NGMC.ProjetSwiftUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_SWIFT3_OBJC_INFERENCE = On;
-                SWIFT_VERSION = 4.2;
-                TEST_TARGET_NAME = ProjetSwift;
-            };
-            name = Debug;
-        };
-        7BCBFA2D22369198002AD627 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                INFOPLIST_FILE = ProjetSwiftUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = NGMC.ProjetSwiftUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_SWIFT3_OBJC_INFERENCE = On;
-                SWIFT_VERSION = 4.2;
-                TEST_TARGET_NAME = ProjetSwift;
-            };
-            name = Release;
-        };
+		7BCBFA2322369198002AD627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BCBFA2422369198002AD627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BCBFA2622369198002AD627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCLVW3VURZ;
+				INFOPLIST_FILE = ProjetSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		7BCBFA2722369198002AD627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KCLVW3VURZ;
+				INFOPLIST_FILE = ProjetSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		7BCBFA2922369198002AD627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ProjetSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NGMC.ProjetSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjetSwift.app/ProjetSwift";
+			};
+			name = Debug;
+		};
+		7BCBFA2A22369198002AD627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ProjetSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NGMC.ProjetSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjetSwift.app/ProjetSwift";
+			};
+			name = Release;
+		};
+		7BCBFA2C22369198002AD627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ProjetSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NGMC.ProjetSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = ProjetSwift;
+			};
+			name = Debug;
+		};
+		7BCBFA2D22369198002AD627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = ProjetSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NGMC.ProjetSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = ProjetSwift;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        7BCBF9F522369198002AD627 /* Build configuration list for PBXProject "ProjetSwift" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                7BCBFA2322369198002AD627 /* Debug */,
-                7BCBFA2422369198002AD627 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        7BCBFA2522369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwift" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                7BCBFA2622369198002AD627 /* Debug */,
-                7BCBFA2722369198002AD627 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        7BCBFA2822369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                7BCBFA2922369198002AD627 /* Debug */,
-                7BCBFA2A22369198002AD627 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        7BCBFA2B22369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftUITests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                7BCBFA2C22369198002AD627 /* Debug */,
-                7BCBFA2D22369198002AD627 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		7BCBF9F522369198002AD627 /* Build configuration list for PBXProject "ProjetSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BCBFA2322369198002AD627 /* Debug */,
+				7BCBFA2422369198002AD627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BCBFA2522369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BCBFA2622369198002AD627 /* Debug */,
+				7BCBFA2722369198002AD627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BCBFA2822369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BCBFA2922369198002AD627 /* Debug */,
+				7BCBFA2A22369198002AD627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BCBFA2B22369198002AD627 /* Build configuration list for PBXNativeTarget "ProjetSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BCBFA2C22369198002AD627 /* Debug */,
+				7BCBFA2D22369198002AD627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-        7BCBFA0422369198002AD627 /* ProjetSwift.xcdatamodeld */ = {
-            isa = XCVersionGroup;
-            children = (
-                7BCBFA0522369198002AD627 /* ProjetSwift.xcdatamodel */,
-            );
-            currentVersion = 7BCBFA0522369198002AD627 /* ProjetSwift.xcdatamodel */;
-            path = ProjetSwift.xcdatamodeld;
-            sourceTree = "<group>";
-            versionGroupType = wrapper.xcdatamodel;
-        };
+		7BCBFA0422369198002AD627 /* ProjetSwift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7BCBFA0522369198002AD627 /* ProjetSwift.xcdatamodel */,
+			);
+			currentVersion = 7BCBFA0522369198002AD627 /* ProjetSwift.xcdatamodel */;
+			path = ProjetSwift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 /* End XCVersionGroup section */
-    };
-    rootObject = 7BCBF9F222369198002AD627 /* Project object */;
+	};
+	rootObject = 7BCBF9F222369198002AD627 /* Project object */;
 }

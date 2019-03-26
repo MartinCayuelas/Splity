@@ -625,15 +625,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="depensesTableViewController" destination="E2g-OJ-K2z" id="iw2-y9-VWe"/>
+                        <outlet property="depensesTableView" destination="w6g-L8-mVL" id="Ui5-4w-kAK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffm-yu-zwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="E2g-OJ-K2z" userLabel="DepensesTableViewController" customClass="DepenseTableViewController" customModule="ProjetSwift" customModuleProvider="target">
-                    <connections>
-                        <outlet property="depensesTableView" destination="w6g-L8-mVL" id="RqF-Dg-U2l"/>
-                    </connections>
-                </customObject>
+                <customObject id="E2g-OJ-K2z" userLabel="DepensesTableViewController"/>
             </objects>
             <point key="canvasLocation" x="3674" y="-639"/>
         </scene>

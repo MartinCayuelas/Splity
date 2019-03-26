@@ -9,14 +9,18 @@
 import Foundation
 import UIKit
 
-class DepenseTableViewController : NSObject, UITableViewDataSource, DepenseSetViewModelDelegate {
+class DepensesTableViewController : NSObject, UITableViewDataSource, DepenseSetViewModelDelegate {
     
-    @IBOutlet weak var depensesTableView: UITableView!
+    var depensesTableView: UITableView!
     var depensesModel : DepenseSetViewModel
+    let fetchResultController : DepenseFetchResultController
     
-    override init() {
-        self.depensesModel = DepenseSetViewModel()
+    init(tableView: UITableView) {
+        self.depensesTableView = tableView
+        self.fetchResultController = DepenseFetchResultController(view : tableView)
+        self.depensesModel = DepenseSetViewModel(data: self.fetchResultController.depensesFetched)
         super.init()
+        self.depensesTableView.dataSource = self
         self.depensesModel.delegate = self
     }
     
@@ -34,11 +38,16 @@ class DepenseTableViewController : NSObject, UITableViewDataSource, DepenseSetVi
         
         guard let depense = self.depensesModel.get(depenseAt: indexPath.row) else { return cell }
         
-        if(depense.image != nil) {
-            cell.imageDepenseImageView.image = UIImage(named: depense.image!)
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "fr_FR")
+        df.dateFormat = "dd/MM/yyyy"
+        let stringDate = df.string(from: depense.date)
+        
+        if(depense.photo != nil) {
+            cell.imageDepenseImageView.image = UIImage(named: depense.photo!)
         }
         cell.titreDepenseLabel.text = depense.titre
-        cell.montantDepenseLabel.text = String(depense.montant) + " €"
+        cell.montantDepenseLabel.text = stringDate
         
         return cell
     }

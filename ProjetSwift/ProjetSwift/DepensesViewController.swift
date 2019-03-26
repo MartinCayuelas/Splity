@@ -11,10 +11,12 @@ import UIKit
 
 class DepensesViewController : UIViewController {
     
-    @IBOutlet var depensesTableViewController: DepenseTableViewController!
+    var depensesTableViewController: DepensesTableViewController!
+    @IBOutlet weak var depensesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.depensesTableViewController = DepensesTableViewController(tableView: depensesTableView)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,7 +33,6 @@ class DepensesViewController : UIViewController {
         if segue.identifier == "depenseAddedSegue" {
             guard let controller = segue.source as? AjoutDepenseViewController else { return }
             if let depense = controller.newDepense {
-                print(depense.titre)
                 self.depensesTableViewController.depensesModel.add(depense: depense)
             }
         } else {

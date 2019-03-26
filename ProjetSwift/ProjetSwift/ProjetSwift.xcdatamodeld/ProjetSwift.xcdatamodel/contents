@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C54" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Depense" representedClassName="Depense" syncable="YES" codeGenerationType="class">
+        <attribute name="pDateDepense" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="pPhotoDepense" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pTitreDepense" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Participer" representedClassName="Participer" syncable="YES" codeGenerationType="class">
         <attribute name="pDateArrivee" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pDateDepart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -21,5 +26,6 @@
         <element name="Participer" positionX="123.54296875" positionY="-75.46875" width="128" height="103"/>
         <element name="Voyage" positionX="115.15625" positionY="84.8671875" width="128" height="105"/>
         <element name="Voyageur" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Depense" positionX="27" positionY="36" width="128" height="90"/>
     </elements>
 </model>
