@@ -55,18 +55,17 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7U-an-48b" userLabel="Editer">
-                                                    <rect key="frame" x="133" y="5" width="43" height="32"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7U-an-48b" userLabel="Editer">
+                                                    <rect key="frame" x="150" y="11" width="12" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <state key="normal" title="Editer">
+                                                    <state key="normal" image="edit">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNQ-OV-hyw">
-                                                    <rect key="frame" x="190" y="6" width="72" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNQ-OV-hyw">
+                                                    <rect key="frame" x="207" y="11" width="16" height="22"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Supprimer">
+                                                    <state key="normal" image="cancel">
                                                         <color key="titleColor" red="1" green="0.11171384541353713" blue="0.13811277039497816" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                     <connections>
@@ -1073,5 +1072,7 @@
     </scenes>
     <resources>
         <image name="Image1" width="279" height="181"/>
+        <image name="cancel" width="16" height="16"/>
+        <image name="edit" width="12" height="12"/>
     </resources>
 </document>
