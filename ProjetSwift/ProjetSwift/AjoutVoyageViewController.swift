@@ -38,7 +38,7 @@ class AjoutVoyageViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "voyageAddedSegue" {
             let titreVoyage : String  = self.textFieldTitreVoyage.text!
-            let imageVoyage  : String  = "Image1"
+            let imageVoyage  : String  = "beach"
             self.newVoyage  = Voyage(titre: titreVoyage, photo: imageVoyage)
         }
         if segue.identifier == "voyageurAddedSegue" {
