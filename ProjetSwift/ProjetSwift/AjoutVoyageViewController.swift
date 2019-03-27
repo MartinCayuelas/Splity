@@ -40,6 +40,12 @@ class AjoutVoyageViewController: UIViewController {
             let titreVoyage : String  = self.textFieldTitreVoyage.text!
             let imageVoyage  : String  = "beach"
             self.newVoyage  = Voyage(titre: titreVoyage, photo: imageVoyage)
+            
+            //Pour insérer les instances dans la table 'Participer'
+            for v in self.listVoyageurSelectionnes {
+                var participation = Participer(dateArrivee: Date(), dateDepart: nil, voyage: self.newVoyage!, voyageur: v)
+            }
+            
         }
         if segue.identifier == "voyageurAddedSegue" {
             guard let controller = segue.destination as? AjoutVoyageurViewController else { return }

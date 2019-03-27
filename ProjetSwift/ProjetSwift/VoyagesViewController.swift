@@ -20,6 +20,7 @@ class VoyagesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.controllerVoyagesTableView = VoyagesTableViewController(tableView: voyagesTableView)
+        self.controllerVoyagesTableView.voyageur = self.voyageurSelected
         if let voyageur = self.voyageurSelected {
             self.labelNomComplet
                 .text = "Voyages de " + voyageur.nomComplet
@@ -55,7 +56,6 @@ class VoyagesViewController: UIViewController {
             guard let controller = segue.source as? AjoutVoyageViewController else { return }
             if let voyage = controller.newVoyage {
                 self.controllerVoyagesTableView.voyages.add(voyage: voyage)
-                self.controllerVoyagesTableView.voyages = VoyageSetViewModel(data: self.controllerVoyagesTableView.fetchResultController.voyagesFetched)
             }
             
         } else {

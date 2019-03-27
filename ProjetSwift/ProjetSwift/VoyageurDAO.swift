@@ -132,4 +132,10 @@ class VoyageurDAO{
         }
         
     }
+    
+    /*static func getAllVoyage(forVoyageur voyageur: Voyageur) -> [Voyage?] {
+        self.request.predicate = NSPredicate(format: "%K == %@",
+                                             voyageur.participations, ??? as CVarArg)
+    }*/
+    
 }

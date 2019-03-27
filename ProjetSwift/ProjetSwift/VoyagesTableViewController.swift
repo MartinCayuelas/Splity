@@ -9,8 +9,7 @@
 import UIKit
 
 class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetViewModelDelegate {
-    var nomVoyageur: String = ""
-    var prenomVoyageur: String = ""
+    var voyageur: Voyageur?
   
     var tableView: UITableView!
     var voyages : VoyageSetViewModel

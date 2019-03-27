@@ -17,6 +17,17 @@ extension Voyageur {
     public var nomComplet: String {
         return self.prenom + " " + self.nom
     }
+    /// nom complet du voyageur
+    public var participations : [Participer] {
+        get{
+            if let p = self.pVoyages?.allObjects as? [Participer] {
+                return p
+            } else {
+                return[]
+            }
+        }
+    }
+    /// liste des voyageurs du voyage
 
     /// initialize a `Voyageur`
     ///

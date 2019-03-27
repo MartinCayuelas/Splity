@@ -15,6 +15,17 @@ extension Voyage {
     public var photo  : String { return self.pPhotoVoyage  ?? "" }
     /// image du voyage
     public var actif : Bool { return self.pActif}
+    /// pour savoir si le voyage est archivé ou actif
+    public var participants : [Participer] {
+        get{
+            if let p = self.pVoyageurs?.allObjects as? [Participer] {
+                return p
+            } else {
+                return[]
+            }
+        }
+    }
+    /// liste des voyageurs du voyage
     
     /// initialize a `Voyage`
     ///
