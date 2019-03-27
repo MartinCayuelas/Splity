@@ -58,7 +58,8 @@ class AjoutVoyageViewController: UIViewController {
             guard let controller = segue.source as? AjoutVoyageurViewController else { return }
             if let voyageur = controller.newVoyageur {
                 self.controllerVoyageursTableView.voyageurs.add(voyageur: voyageur)
-                self.controllerVoyageursTableView.voyageurs = VoyageurSetViewModel(data: self.controllerVoyageursTableView.fetchResultController.voyageursFetched)
+                CoreDataManager.save()
+              //  self.controllerVoyageursTableView.voyageurs = VoyageurSetViewModel(data: self.controllerVoyageursTableView.fetchResultController.voyageursFetched)
             }
             
         } else {
