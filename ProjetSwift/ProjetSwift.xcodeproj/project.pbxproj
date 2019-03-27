@@ -281,6 +281,15 @@
 			name = Ressources;
 			sourceTree = "<group>";
 		};
+		E9FDC8F3224C00340036F365 /* Ajout */ = {
+			isa = PBXGroup;
+			children = (
+				F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */,
+				7B3C5DBD22495E7E0059E346 /* AjoutVoyageurTableViewController.swift */,
+			);
+			name = Ajout;
+			sourceTree = "<group>";
+		};
 		F091FC39224002420086EA52 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,14 +303,13 @@
 		F0CD862D2242A9CA00E73581 /* Voyage */ = {
 			isa = PBXGroup;
 			children = (
-				F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */,
+				E9FDC8F3224C00340036F365 /* Ajout */,
 				F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */,
 				FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */,
 				7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */,
 				7B183ED822455C690065B202 /* VoyagesViewController.swift */,
 				7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */,
 				7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */,
-				7B3C5DBD22495E7E0059E346 /* AjoutVoyageurTableViewController.swift */,
 			);
 			name = Voyage;
 			sourceTree = "<group>";
