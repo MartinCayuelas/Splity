@@ -18,7 +18,7 @@ class GestionVoyageursInactifsTableViewController : NSObject, UITableViewDataSou
     init(tableView: UITableView, voyageSelected: Voyage) {
         self.voyageSelected = voyageSelected
         self.voyageursInactifsTableView = tableView
-        self.voyageurModel = VoyageurSetViewModel(voyageurs: VoyageDAO.getAllVoyageurs(forVoyage: voyageSelected))
+        self.voyageurModel = VoyageurSetViewModel(voyageurs: VoyageDAO.getAllVoyageursAbsents(forVoyage: voyageSelected))
         
         super.init()
         self.voyageursInactifsTableView.dataSource = self

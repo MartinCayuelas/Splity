@@ -147,4 +147,32 @@ class VoyageDAO{
         }
     }
     
+    static func getAllVoyageursAbsents(forVoyage voyage: Voyage) -> [Voyageur] {
+        var voyageursPresents: [Voyageur] = self.getAllVoyageurs(forVoyage: voyage)
+        //On ne veut que les voyageurs non archivés
+        var voyageurs: [Voyageur] = VoyageurDAO.getAllVoyageursNonArchives()
+        
+        var voyageursAbsents: [Voyageur]? = []
+        
+        //on parcourt l'ensemble des voyageurs
+        for case let v as Voyageur in voyageurs {
+            var trouve: Bool = false
+            var i: Int = 0
+            //On s'arrête dans l'un de ces 2 cas
+            //lorsqu'on a parcouru l'ensemble des voyageurs présents
+            //lorsqu'on trouve le voyageur courant dans la liste des voyageurs présents au voyage
+            while(!trouve && i < (voyageursPresents.count)){
+                if(v.isEqual(voyageursPresents[i])){
+                    trouve = true
+                }
+                i = i + 1
+            }
+            //si le voyageur n'a pas été trouvé dans la liste des voyageurs présents
+            if(trouve == false){
+                voyageursAbsents?.append(v)
+            }
+        }
+        return voyageursAbsents!
+    }
+    
 }
