@@ -36,4 +36,11 @@ extension Depense {
         self.pVoyage = voyage
     }
     
+    convenience init(titre: String, photo: String, date: Date){
+        self.init(context: CoreDataManager.context)
+        self.pTitreDepense = titre
+        self.pPhotoDepense  = photo
+        self.pDateDepense = date as NSDate
+    }
+    
 }
