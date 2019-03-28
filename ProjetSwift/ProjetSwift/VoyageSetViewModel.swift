@@ -22,10 +22,15 @@ class VoyageSetViewModel : NSObject {
     //var modelSet : VoyageSet
     //var data : [Voyage]
     var delegate : VoyageSetViewModelDelegate?
-    var voyagesFetched : NSFetchedResultsController<Voyage>
+    var voyagesConcernes : [Voyage]
+    /*var voyagesFetched : NSFetchedResultsController<Voyage>
     
     init(data: NSFetchedResultsController<Voyage>){
         self.voyagesFetched = data
+    }*/
+    
+    init(voyages: [Voyage]){
+        self.voyagesConcernes = voyages
     }
     
     /*override init() {
@@ -57,7 +62,8 @@ class VoyageSetViewModel : NSObject {
     /// - returns : un entier
     
     var count : Int {
-        return self.voyagesFetched.fetchedObjects?.count ?? 0
+        //return self.voyagesFetched.fetchedObjects?.count ?? 0
+        return self.voyagesConcernes.count
     }
     
     
@@ -67,7 +73,9 @@ class VoyageSetViewModel : NSObject {
     /// - returns : le voyage dans le tableau de data à la indexieme place
     
     func get(voyageAt index: Int) -> Voyage? {
-        return self.voyagesFetched.object(at: IndexPath(row: index, section: 0))
+        //return self.voyagesFetched.object(at: IndexPath(row: index, section: 0))
+        guard (index >= 0 ) && (index < self.count) else { return nil }
+        return self.voyagesConcernes[index]
     }
     
         
@@ -79,8 +87,10 @@ class VoyageSetViewModel : NSObject {
     
     
     func add(voyage: Voyage){
-        if let indexPath = self.voyagesFetched.indexPath(forObject: voyage){
-            self.delegate?.voyageAdded(at: indexPath)
-        }
+        /*if let indexPath = self.voyagesFetched.indexPath(forObject: voyage){
+         self.delegate?.voyageAdded(at: indexPath)
+         }*/
+        self.voyagesConcernes.append(voyage)
+        self.delegate?.voyageAdded(at: IndexPath(row: self.voyagesConcernes.count-1, section: 0))
     }
 }

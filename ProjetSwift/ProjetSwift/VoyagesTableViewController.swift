@@ -13,13 +13,14 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
   
     var tableView: UITableView!
     var voyages : VoyageSetViewModel
-    let fetchResultController : VoyageFetchResultController
+    //let fetchResultController : VoyageFetchResultController
     
     init(tableView: UITableView, voyageurSelected: Voyageur){
         self.voyageurSelected = voyageurSelected
         self.tableView = tableView
-        self.fetchResultController = VoyageFetchResultController(view : tableView)
-        self.voyages = VoyageSetViewModel(data: self.fetchResultController.voyagesFetched)
+        //self.fetchResultController = VoyageFetchResultController(view : tableView)
+        //self.voyages = VoyageSetViewModel(data: self.fetchResultController.voyagesFetched)
+        self.voyages = VoyageSetViewModel(voyages: VoyageurDAO.getAllVoyages(forVoyageur: self.voyageurSelected!))
         print(VoyageurDAO.getAllVoyages(forVoyageur: self.voyageurSelected!))
         super.init()
         self.tableView.dataSource = self
