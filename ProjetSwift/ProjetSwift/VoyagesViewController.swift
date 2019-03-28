@@ -19,8 +19,7 @@ class VoyagesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.controllerVoyagesTableView = VoyagesTableViewController(tableView: voyagesTableView)
-        self.controllerVoyagesTableView.voyageur = self.voyageurSelected
+        self.controllerVoyagesTableView = VoyagesTableViewController(tableView: voyagesTableView, voyageurSelected: self.voyageurSelected!)
         if let voyageur = self.voyageurSelected {
             self.labelNomComplet
                 .text = "Voyages de " + voyageur.nomComplet

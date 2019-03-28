@@ -9,16 +9,18 @@
 import UIKit
 
 class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetViewModelDelegate {
-    var voyageur: Voyageur?
+    var voyageurSelected: Voyageur?
   
     var tableView: UITableView!
     var voyages : VoyageSetViewModel
     let fetchResultController : VoyageFetchResultController
     
-    init(tableView: UITableView){
+    init(tableView: UITableView, voyageurSelected: Voyageur){
+        self.voyageurSelected = voyageurSelected
         self.tableView = tableView
         self.fetchResultController = VoyageFetchResultController(view : tableView)
         self.voyages = VoyageSetViewModel(data: self.fetchResultController.voyagesFetched)
+        print(VoyageurDAO.getAllVoyages(forVoyageur: self.voyageurSelected!))
         super.init()
         self.tableView.dataSource = self
         self.voyages.delegate = self

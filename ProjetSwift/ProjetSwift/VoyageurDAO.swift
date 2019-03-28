@@ -12,6 +12,7 @@ import CoreData
 
 class VoyageurDAO{
     static let request : NSFetchRequest<Voyageur> = Voyageur.fetchRequest()
+    static let requestParticiper : NSFetchRequest<Participer> = Participer.fetchRequest()
     
     static func save(){
         CoreDataManager.save()
@@ -133,9 +134,15 @@ class VoyageurDAO{
         
     }
     
-    /*static func getAllVoyage(forVoyageur voyageur: Voyageur) -> [Voyage?] {
-        self.request.predicate = NSPredicate(format: "%K == %@",
-                                             voyageur.participations, ??? as CVarArg)
-    }*/
+    static func getAllVoyages(forVoyageur voyageur: Voyageur) -> [Participer?] {
+        self.requestParticiper.predicate = NSPredicate(format: "pVoyageur == %@",
+                                                       voyageur)
+        do{
+            return try CoreDataManager.context.fetch(requestParticiper) as [Participer]
+        }
+        catch{
+            return []
+        }
+    }
     
 }
