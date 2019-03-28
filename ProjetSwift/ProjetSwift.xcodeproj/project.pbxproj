@@ -50,7 +50,6 @@
 		F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */; };
 		FB740469223AC530001A4446 /* VoyageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB740468223AC52F001A4446 /* VoyageSet.swift */; };
 		FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */; };
-		FBC445582244D781002CFCE2 /* DepenseTMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC445572244D781002CFCE2 /* DepenseTMP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,7 +119,6 @@
 		F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageurViewController.swift; sourceTree = "<group>"; };
 		FB740468223AC52F001A4446 /* VoyageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSet.swift; sourceTree = "<group>"; };
 		FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageTableViewCell.swift; sourceTree = "<group>"; };
-		FBC445572244D781002CFCE2 /* DepenseTMP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseTMP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +180,6 @@
 				7B37174522394B44004ACE68 /* Voyage.swift */,
 				FB740468223AC52F001A4446 /* VoyageSet.swift */,
 				F0CD862322423F3500E73581 /* VoyageurSet.swift */,
-				FBC445572244D781002CFCE2 /* DepenseTMP.swift */,
 				7B73B3562244DB200023E002 /* DepenseSet.swift */,
 				7B3AB99122495EB90003A620 /* Participer.swift */,
 				7B786920224A2A810087F0DB /* Depense.swift */,
@@ -463,7 +460,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B183ED522454BE00065B202 /* VoyageurDAO.swift in Sources */,
-				FBC445582244D781002CFCE2 /* DepenseTMP.swift in Sources */,
 				7B3C5DBC22494B2D0059E346 /* EditVoyageurViewController.swift in Sources */,
 				F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */,
 				7BCBFA0622369198002AD627 /* ProjetSwift.xcdatamodeld in Sources */,

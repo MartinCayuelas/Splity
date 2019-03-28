@@ -118,5 +118,17 @@ class VoyageDAO{
         
     }
     
+    static func getAllDepenses(forVoyage voyage: Voyage) -> [Depense] {
+        let requestDepense : NSFetchRequest<Depense> = Depense.fetchRequest()
+        requestDepense.predicate = NSPredicate(format: "pVoyage == %@",
+                                                  voyage)
+        do{
+            return try CoreDataManager.context.fetch(requestDepense) as [Depense]
+        }
+        catch{
+            return []
+        }
+    }
+    
     
 }
