@@ -129,6 +129,22 @@ class VoyageDAO{
             return []
         }
     }
-    
+
+    static func getAllVoyageurs(forVoyage voyage: Voyage) -> [Voyageur] {
+        let requestParticiper : NSFetchRequest<Participer> = Participer.fetchRequest()
+        requestParticiper.predicate = NSPredicate(format: "pVoyage == %@",
+                                                  voyage)
+        do{
+            var participations = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
+            var voyageurs: [Voyageur] = []
+            for case let participation as Participer in participations  {
+                voyageurs.append(participation.voyageur)
+            }
+            return voyageurs
+        }
+        catch{
+            return []
+        }
+    }
     
 }

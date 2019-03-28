@@ -35,6 +35,10 @@ class DetailVoyageViewController: UIViewController{
         if let destController = segue.destination as? DepensesViewController {
             destController.voyageSelected = self.voyageSelected
         }
+        if let destController = segue.destination as? GestionVoyageursViewController {
+            destController.voyageSelected = self.voyageSelected
+        }
+
     }
     
     override func didReceiveMemoryWarning() {

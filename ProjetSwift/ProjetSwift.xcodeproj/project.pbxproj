@@ -15,6 +15,8 @@
 		7B183ED522454BE00065B202 /* VoyageurDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED422454BE00065B202 /* VoyageurDAO.swift */; };
 		7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED6224550670065B202 /* VoyageurFetchResultController.swift */; };
 		7B183ED922455C690065B202 /* VoyagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED822455C690065B202 /* VoyagesViewController.swift */; };
+		7B2E0AEF224D3731000BEB5D /* GestionVoyageursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E0AEE224D3731000BEB5D /* GestionVoyageursViewController.swift */; };
+		7B2E0AF1224D37A2000BEB5D /* GestionVoyageursActifsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2E0AF0224D37A2000BEB5D /* GestionVoyageursActifsTableViewController.swift */; };
 		7B37173A22394646004ACE68 /* Voyageur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37173922394646004ACE68 /* Voyageur.swift */; };
 		7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */; };
 		7B37174622394B44004ACE68 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37174522394B44004ACE68 /* Voyage.swift */; };
@@ -78,6 +80,8 @@
 		7B183ED422454BE00065B202 /* VoyageurDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurDAO.swift; sourceTree = "<group>"; };
 		7B183ED6224550670065B202 /* VoyageurFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurFetchResultController.swift; sourceTree = "<group>"; };
 		7B183ED822455C690065B202 /* VoyagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyagesViewController.swift; sourceTree = "<group>"; };
+		7B2E0AEE224D3731000BEB5D /* GestionVoyageursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursViewController.swift; sourceTree = "<group>"; };
+		7B2E0AF0224D37A2000BEB5D /* GestionVoyageursActifsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursActifsTableViewController.swift; sourceTree = "<group>"; };
 		7B37173922394646004ACE68 /* Voyageur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyageur.swift; sourceTree = "<group>"; };
 		7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoyagesTableViewController.swift; sourceTree = "<group>"; };
 		7B37174522394B44004ACE68 /* Voyage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
@@ -173,6 +177,15 @@
 			name = DAOs;
 			sourceTree = "<group>";
 		};
+		7B2E0AED224D3710000BEB5D /* GestionVoyageurs */ = {
+			isa = PBXGroup;
+			children = (
+				7B2E0AEE224D3731000BEB5D /* GestionVoyageursViewController.swift */,
+				7B2E0AF0224D37A2000BEB5D /* GestionVoyageursActifsTableViewController.swift */,
+			);
+			name = GestionVoyageurs;
+			sourceTree = "<group>";
+		};
 		7B371738223945E1004ACE68 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +203,7 @@
 		7B656B0922369DE3001DF6F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7B2E0AED224D3710000BEB5D /* GestionVoyageurs */,
 				7B0F8D3E2249364C003869F9 /* CommentEquilibrer */,
 				7B73B3582244DEB10023E002 /* Depense */,
 				F0CD862E2242AA0200E73581 /* Voyageur */,
@@ -478,11 +492,13 @@
 				FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */,
 				F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */,
 				F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */,
+				7B2E0AF1224D37A2000BEB5D /* GestionVoyageursActifsTableViewController.swift in Sources */,
 				7B0F8D3D22493647003869F9 /* CommentEquilibrerViewController.swift in Sources */,
 				7B3AB98C224947900003A620 /* VoyageFetchResultController.swift in Sources */,
 				7B0F8D3B2249232A003869F9 /* VoyageControllerTableViewCell.swift in Sources */,
 				F091FC3D22400ED70086EA52 /* DetailVoyageViewController.swift in Sources */,
 				F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */,
+				7B2E0AEF224D3731000BEB5D /* GestionVoyageursViewController.swift in Sources */,
 				FB740469223AC530001A4446 /* VoyageSet.swift in Sources */,
 				7BCBFA0022369198002AD627 /* ViewController.swift in Sources */,
 				7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */,

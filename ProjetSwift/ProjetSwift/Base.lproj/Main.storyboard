@@ -730,10 +730,10 @@
             </objects>
             <point key="canvasLocation" x="3672.8000000000002" y="-639.13043478260875"/>
         </scene>
-        <!--View Controller-->
+        <!--Gestion Voyageurs View Controller-->
         <scene sceneID="2sW-mW-tL1">
             <objects>
-                <viewController id="ZyB-fs-tXR" sceneMemberID="viewController">
+                <viewController id="ZyB-fs-tXR" customClass="GestionVoyageursViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5af-WC-s3J"/>
                         <viewControllerLayoutGuide type="bottom" id="dVv-uf-RXG"/>
@@ -756,7 +756,7 @@
                                 <rect key="frame" x="46" y="415" width="290" height="160"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uA1-ma-Ihb" detailTextLabel="ok4-7P-1fX" style="IBUITableViewCellStyleSubtitle" id="Mqw-dC-zVY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardVoyageursInactifsCell" textLabel="uA1-ma-Ihb" detailTextLabel="ok4-7P-1fX" style="IBUITableViewCellStyleSubtitle" id="Mqw-dC-zVY">
                                         <rect key="frame" x="0.0" y="28" width="290" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mqw-dC-zVY" id="anv-Jd-mpi">
@@ -820,7 +820,7 @@
                                     <constraint firstAttribute="width" constant="290" id="Q82-DQ-deN"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="S2a-JO-Jqn" detailTextLabel="U57-hk-Qwo" style="IBUITableViewCellStyleSubtitle" id="beV-HT-R4K">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardVoyageursActifsCell" textLabel="S2a-JO-Jqn" detailTextLabel="U57-hk-Qwo" style="IBUITableViewCellStyleSubtitle" id="beV-HT-R4K">
                                         <rect key="frame" x="0.0" y="28" width="290" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beV-HT-R4K" id="fER-IV-lfA">
@@ -880,8 +880,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="oqb-z3-Sda" secondAttribute="trailing" constant="23" id="ylL-8f-KMD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="voyageursActifsTableView" destination="qOf-AA-F4X" id="elj-GW-xdi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3KW-0J-NkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Me6-QL-ZGt"/>
             </objects>
             <point key="canvasLocation" x="3672.8000000000002" y="-1617.8410794602701"/>
         </scene>
