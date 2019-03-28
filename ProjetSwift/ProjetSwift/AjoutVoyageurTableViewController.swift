@@ -31,7 +31,7 @@ class AjoutVoyageurTableViewController: NSObject, UITableViewDataSource, Voyageu
         self.voyageurs = VoyageurSetViewModel(data: self.fetchResultController.voyageursFetched)
         super.init()
         self.tableView.dataSource = self
-        self.voyageurs.delegate = self
+        self.voyageurs.delegate = self//
     }
     
     
