@@ -26,6 +26,16 @@ extension Voyage {
         }
     }
     /// liste des voyageurs du voyage
+    public var depenses : [Depense] {
+        get{
+            if let d = self.pDepenses?.allObjects as? [Depense] {
+                return d
+            } else {
+                return[]
+            }
+        }
+    }
+    /// liste des dépenses du voyage
     
     /// initialize a `Voyage`
     ///

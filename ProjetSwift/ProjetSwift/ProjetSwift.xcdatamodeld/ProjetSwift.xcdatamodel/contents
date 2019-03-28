@@ -17,7 +17,7 @@
         <attribute name="pActif" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pPhotoVoyage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pTitreVoyage" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="pDepenses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Depense" inverseName="pVoyage" inverseEntity="Depense" syncable="YES"/>
+        <relationship name="pDepenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="pVoyage" inverseEntity="Depense" syncable="YES"/>
         <relationship name="pVoyageurs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participer" inverseName="pVoyage" inverseEntity="Participer" syncable="YES"/>
     </entity>
     <entity name="Voyageur" representedClassName="Voyageur" syncable="YES" codeGenerationType="class">

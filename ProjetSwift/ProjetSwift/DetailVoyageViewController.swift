@@ -30,6 +30,13 @@ class DetailVoyageViewController: UIViewController{
         
     }
     
+    //Pour donner le voyage sélectionné à la page suivante (liste des dépenses)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destController = segue.destination as? DepensesViewController {
+            destController.voyageSelected = self.voyageSelected
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

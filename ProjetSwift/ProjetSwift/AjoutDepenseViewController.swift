@@ -13,6 +13,7 @@ class AjoutDepenseViewController : UIViewController {
     
     @IBOutlet weak var titreDepenseTextField: UITextField!
     var newDepense: Depense?
+    var voyageSelected: Voyage?
     
 
     // Declenché lors de l'ajout d'une depense
@@ -23,8 +24,7 @@ class AjoutDepenseViewController : UIViewController {
             let titreDepense : String  = self.titreDepenseTextField.text!
             let dateDepense : Date = Date()
             let imageDepense  : String  = "Image2"
-            self.newDepense  = Depense(titre: titreDepense, photo: imageDepense, date: dateDepense)
-            print(self.newDepense?.titre)
+            self.newDepense  = Depense(titre: titreDepense, photo: imageDepense, date: dateDepense, voyage: self.voyageSelected!)
         }
     }
     

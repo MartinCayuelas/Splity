@@ -48,8 +48,6 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         
         cell.textLabel?.text = voyage.titre
         cell.imageView?.image = UIImage(named: voyage.photo)
-        cell.textLabel?.textColor = UIColor(red:0.15, green:0.50, blue:0.75, alpha:1.0)
-        
         
         return cell
     }
