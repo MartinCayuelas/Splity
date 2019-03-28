@@ -22,11 +22,18 @@ class DepenseSetViewModel : NSObject {
     //var modelSet : DepenseSet
     //var data : [Depense]
     var delegate : DepenseSetViewModelDelegate?
-    var depensesFetched : NSFetchedResultsController<Depense>
+    /*var depensesFetched : NSFetchedResultsController<Depense>
     
     init(data: NSFetchedResultsController<Depense>){
         self.depensesFetched = data
+    }*/
+    
+    var depensesConcernees : [Depense]
+    
+    init(depenses: [Depense]){
+        self.depensesConcernees = depenses
     }
+    
     /*
     override init() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -57,7 +64,8 @@ class DepenseSetViewModel : NSObject {
     /// - Parameter:  none
     /// - returns : un entier
     var count : Int {
-        return self.depensesFetched.fetchedObjects?.count ?? 0
+        //return self.depensesFetched.fetchedObjects?.count ?? 0
+        return self.depensesConcernees.count
     }
     
     /// Recupere une depense au tableau des depenses (data)
@@ -66,7 +74,9 @@ class DepenseSetViewModel : NSObject {
     /// - returns : la depense dans le tableau de data à la indexieme place
     
     func get(depenseAt index: Int) -> Depense? {
-        return self.depensesFetched.object(at: IndexPath(row: index, section: 0))
+        //return self.depensesFetched.object(at: IndexPath(row: index, section: 0))
+        guard (index >= 0 ) && (index < self.count) else { return nil }
+        return self.depensesConcernees[index]
     }
     
     /// Ajoute une depense au tableau des depenses (data)
@@ -76,9 +86,11 @@ class DepenseSetViewModel : NSObject {
     
     
     func add(depense: Depense){
-        if let indexPath = self.depensesFetched.indexPath(forObject: depense){
+       /* if let indexPath = self.depensesFetched.indexPath(forObject: depense){
             self.delegate?.depenseAdded(at: indexPath)
-        }
+        }*/
+        self.depensesConcernees.append(depense)
+        self.delegate?.depenseAdded(at: IndexPath(row: self.depensesConcernees.count-1, section: 0))
     }
     
 }

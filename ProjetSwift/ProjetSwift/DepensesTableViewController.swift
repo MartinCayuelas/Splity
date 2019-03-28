@@ -13,12 +13,16 @@ class DepensesTableViewController : NSObject, UITableViewDataSource, DepenseSetV
     
     var depensesTableView: UITableView!
     var depensesModel : DepenseSetViewModel
-    let fetchResultController : DepenseFetchResultController
+    //let fetchResultController : DepenseFetchResultController
+    var voyageSelected: Voyage?
     
-    init(tableView: UITableView) {
+    init(tableView: UITableView, voyageSelected: Voyage) {
+        self.voyageSelected = voyageSelected
         self.depensesTableView = tableView
-        self.fetchResultController = DepenseFetchResultController(view : tableView)
-        self.depensesModel = DepenseSetViewModel(data: self.fetchResultController.depensesFetched)
+        //self.fetchResultController = DepenseFetchResultController(view : tableView)
+        //self.depensesModel = DepenseSetViewModel(data: self.fetchResultController.depensesFetched)
+        self.depensesModel = DepenseSetViewModel(depenses: VoyageDAO.getAllDepenses(forVoyage: voyageSelected))
+        
         super.init()
         self.depensesTableView.dataSource = self
         self.depensesModel.delegate = self

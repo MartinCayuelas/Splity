@@ -17,9 +17,11 @@ class DepensesViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.depensesTableViewController = DepensesTableViewController(tableView: depensesTableView)
+        self.depensesTableViewController = DepensesTableViewController(tableView: depensesTableView, voyageSelected: self.voyageSelected!)
     }
     
+    // Pour donner le voyage courant à la page suivante (ajout d'une dépense)
+    // Pour affecter à la nouvelle dépense le voyage courant
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destController = segue.destination as? AjoutDepenseViewController {
             destController.voyageSelected = self.voyageSelected
@@ -37,7 +39,7 @@ class DepensesViewController : UIViewController {
             guard let controller = segue.source as? AjoutDepenseViewController else { return }
             if let depense = controller.newDepense {
                 self.depensesTableViewController.depensesModel.add(depense: depense)
-                self.depensesTableViewController.depensesModel = DepenseSetViewModel(data: self.depensesTableViewController.fetchResultController.depensesFetched)
+                //self.depensesTableViewController.depensesModel = DepenseSetViewModel(data: self.depensesTableViewController.fetchResultController.depensesFetched)
             }
         } else {
             //cas du cancel
