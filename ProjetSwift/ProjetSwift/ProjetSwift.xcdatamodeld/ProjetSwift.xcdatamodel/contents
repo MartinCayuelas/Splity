@@ -5,6 +5,7 @@
         <attribute name="pMontantDepense" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pPhotoDepense" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pTitreDepense" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pVoyage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyage" inverseName="pDepenses" inverseEntity="Voyage" syncable="YES"/>
     </entity>
     <entity name="Participer" representedClassName="Participer" syncable="YES" codeGenerationType="class">
         <attribute name="pDateArrivee" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -16,6 +17,7 @@
         <attribute name="pActif" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pPhotoVoyage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pTitreVoyage" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pDepenses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Depense" inverseName="pVoyage" inverseEntity="Depense" syncable="YES"/>
         <relationship name="pVoyageurs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participer" inverseName="pVoyage" inverseEntity="Participer" syncable="YES"/>
     </entity>
     <entity name="Voyageur" representedClassName="Voyageur" syncable="YES" codeGenerationType="class">
@@ -24,9 +26,9 @@
         <relationship name="pVoyages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participer" inverseName="pVoyageur" inverseEntity="Participer" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Depense" positionX="-89.734375" positionY="63.22265625" width="128" height="105"/>
+        <element name="Depense" positionX="-89.734375" positionY="63.22265625" width="128" height="118"/>
         <element name="Participer" positionX="123.54296875" positionY="-75.46875" width="128" height="103"/>
-        <element name="Voyage" positionX="182.94140625" positionY="127.56640625" width="128" height="105"/>
+        <element name="Voyage" positionX="109.8671875" positionY="89.0234375" width="128" height="118"/>
         <element name="Voyageur" positionX="-248.171875" positionY="-63.16796875" width="128" height="90"/>
     </elements>
 </model>
