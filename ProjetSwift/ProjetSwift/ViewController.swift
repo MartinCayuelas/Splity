@@ -61,18 +61,6 @@ class ViewController: UIViewController{
     }
     
     
-    @IBAction func supprimerVoyageur(_ sender: UIButton) {
-        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.voyageursTableView)
-        if let indexPath = self.voyageursTableView.indexPathForRow(at: buttonPosition){
-            voyageursTableView.beginUpdates()
-            VoyageurDAO.delete(voyageur: self.controllerVoyageursTableView.voyageurs.get(voyageurAt: indexPath.row)!)
-            VoyageurDAO.save()
-            voyageursTableView.deleteRows(at: [indexPath], with: .fade)
-           
-            voyageursTableView.endUpdates()
-        }
-    }
-    
     
     
 }
