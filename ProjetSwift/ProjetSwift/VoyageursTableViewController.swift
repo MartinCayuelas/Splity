@@ -9,6 +9,8 @@
 import UIKit
 
 class VoyageursTableViewController: NSObject, UITableViewDataSource, VoyageurSetViewModelDelegate {
+    
+    
 
     var voyageursTableView: UITableView!
     var voyageurs : VoyageurSetViewModel
@@ -46,10 +48,33 @@ class VoyageursTableViewController: NSObject, UITableViewDataSource, VoyageurSet
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+           self.voyageursTableView.beginUpdates()
+            let v = self.voyageurs.get(voyageurAt: indexPath.row)!
+            VoyageurDAO.delete(voyageur: v)
+    
+            do {
+                try VoyageurDAO.save()
+            } catch {
+                fatalError("Erreur à la suppression du programme.")
+            }
+            self.voyageursTableView.deleteRows(at: [indexPath], with: .fade)
+            self.voyageurs.remove(voyageur: v)
+            //voyageurs.remove(at: indexPath.row)
+            self.voyageursTableView.endUpdates()
+        }
+    }
+    
     func voyageurAdded(at index: IndexPath) {
         self.voyageursTableView.beginUpdates()
         self.voyageursTableView.insertRows(at: [index], with: UITableView.RowAnimation.middle)
         self.voyageursTableView.endUpdates()
+    }
+    
+    func voyageurDeleted(at index: IndexPath) {
+        
     }
     
     func dataSetChanged() {

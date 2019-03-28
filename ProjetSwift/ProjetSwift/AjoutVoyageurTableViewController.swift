@@ -10,6 +10,10 @@ import Foundation
 import UIKit
 
 class AjoutVoyageurTableViewController: NSObject, UITableViewDataSource, VoyageurSetViewModelDelegate {
+    func voyageurDeleted(at index: IndexPath) {
+       
+    }
+    
     func voyageurAdded(at index: IndexPath) {
        
     }
