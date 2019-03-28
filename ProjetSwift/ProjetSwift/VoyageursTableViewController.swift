@@ -14,12 +14,16 @@ class VoyageursTableViewController: NSObject, UITableViewDataSource, VoyageurSet
 
     var voyageursTableView: UITableView!
     var voyageurs : VoyageurSetViewModel
-    let fetchResultController : VoyageurFetchResultController
+    //let fetchResultController : VoyageurFetchResultController
+    
     
     init(tableView: UITableView){
         self.voyageursTableView = tableView
-        self.fetchResultController = VoyageurFetchResultController(view : tableView)
-        self.voyageurs = VoyageurSetViewModel(data: self.fetchResultController.voyageursFetched)
+      //  self.fetchResultController = VoyageurFetchResultController(view : tableView)
+    
+     // self.voyageurs = VoyageurSetViewModel(data: self.fetchResultController.voyageursFetched)
+        self.voyageurs = VoyageurSetViewModel(voyageurs: VoyageurDAO.getAllVoyageursNonArchives())
+        
         super.init()
         self.voyageursTableView.dataSource = self
         self.voyageurs.delegate = self
@@ -53,7 +57,9 @@ class VoyageursTableViewController: NSObject, UITableViewDataSource, VoyageurSet
         if editingStyle == .delete {
            self.voyageursTableView.beginUpdates()
             let v = self.voyageurs.get(voyageurAt: indexPath.row)!
-            VoyageurDAO.delete(voyageur: v)
+            VoyageurDAO.terminerParticipations(forVoyageur: v)
+            VoyageurDAO.archiver(forVoyageur: v)
+           // VoyageurDAO.delete(voyageur: v)
     
             do {
                 try VoyageurDAO.save()

@@ -17,16 +17,16 @@ class VoyageurDAO{
         CoreDataManager.save()
     }
     
- /// Appelé lorsqu'un que l'on supprime un voyageur dans les données persistantes
- /// 
- /// - Parameters: Voyageur
+    /// Appelé lorsqu'un que l'on supprime un voyageur dans les données persistantes
+    /// 
+    /// - Parameters: Voyageur
     static func delete(voyageur: Voyageur){
         CoreDataManager.context.delete(voyageur)
     }
     
-     /// Appelé pour récuprer tous les voyegeurs dans la base de données
- /// 
- /// - Parameters: none
+    /// Appelé pour récuprer tous les voyegeurs dans la base de données
+    /// 
+    /// - Parameters: none
     static func fetchAll() -> [Voyageur]?{
         self.request.predicate = nil
         do{
@@ -104,12 +104,12 @@ class VoyageurDAO{
         catch{
             return nil
         } }
-
+    
     static func count(voyageur: Voyageur) -> Int{
-
-            self.request.predicate = NSPredicate(format: "prenom == %@ AND nom == %@",
-                                                 voyageur.prenom, voyageur.nom as CVarArg)
- do{
+        
+        self.request.predicate = NSPredicate(format: "prenom == %@ AND nom == %@",
+                                             voyageur.prenom, voyageur.nom as CVarArg)
+        do{
             return try CoreDataManager.context.count(for: self.request)
         }
         catch let error as NSError{
@@ -119,8 +119,8 @@ class VoyageurDAO{
     }
     
     static func search(forVoyageur voyageur: Voyageur) -> Voyageur?{
-            self.request.predicate = NSPredicate(format: "prenom == %@ AND nom == %@",
-                                                 voyageur.prenom, voyageur.nom as CVarArg)
+        self.request.predicate = NSPredicate(format: "prenom == %@ AND nom == %@",
+                                             voyageur.prenom, voyageur.nom as CVarArg)
         do{
             let result = try CoreDataManager.context.fetch(request) as [Voyageur]
             guard result.count != 0 else { return nil }
@@ -136,7 +136,7 @@ class VoyageurDAO{
     static func getAllVoyages(forVoyageur voyageur: Voyageur) -> [Voyage] {
         let requestParticiper : NSFetchRequest<Participer> = Participer.fetchRequest()
         requestParticiper.predicate = NSPredicate(format: "pVoyageur == %@",
-                                                       voyageur)
+                                                  voyageur)
         do{
             var participations = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
             var voyages: [Voyage] = []
@@ -148,6 +148,51 @@ class VoyageurDAO{
         catch{
             return []
         }
+    }
+    
+    
+    static func getAllParticipations(forVoyageur voyageur: Voyageur) -> [Participer] {
+        let requestParticiper : NSFetchRequest<Participer> = Participer.fetchRequest()
+        requestParticiper.predicate = NSPredicate(format: "pVoyageur == %@",
+                                                  voyageur)
+        do{
+            return try CoreDataManager.context.fetch(requestParticiper) as [Participer]
+        }
+        catch{
+            return []
+        }
+    }
+    
+    static func terminerParticipations(forVoyageur voyageur: Voyageur){
+        let participations : [Participer] = getAllParticipations(forVoyageur: voyageur)
+        
+        for case let participation as Participer in participations  {
+            
+            let p = participation as NSManagedObject
+            p.setValue(Date(), forKey: "pDateDepart")
+            do{
+                try CoreDataManager.save()
+            }
+            
+        }
+    }
+    
+    
+    //GET Voyageurs non archives
+    static func getAllVoyageursNonArchives() -> [Voyageur] {
+       
+       // self.request.predicate = NSPredicate(format: "pArchive == false")
+        do{
+            return try CoreDataManager.context.fetch(self.request) as [Voyageur]
+        }
+        catch{
+            return []
+        }
+    }
+    
+    static func archiver(forVoyageur voyageur: Voyageur){
+        let v = voyageur as NSManagedObject
+        v.setValue(true, forKey: "pArchive")
     }
     
 }

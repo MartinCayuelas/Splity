@@ -91,6 +91,7 @@ class DepenseSetViewModel : NSObject {
         }*/
         self.depensesConcernees.append(depense)
         self.delegate?.depenseAdded(at: IndexPath(row: self.depensesConcernees.count-1, section: 0))
+        CoreDataManager.save()
     }
     
 }

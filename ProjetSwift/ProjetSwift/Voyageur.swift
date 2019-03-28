@@ -14,6 +14,10 @@ extension Voyageur {
     /// prénom du voyageur
     public var nom  : String { return self.pNom  ?? "" }
     /// nom du voyageur
+    
+    ///Booleen pour savoir si le voyageur est Actif ou non
+    public var archive  : Bool { return self.pArchive}
+    
     public var nomComplet: String {
         return self.prenom + " " + self.nom
     }
@@ -38,6 +42,7 @@ extension Voyageur {
         self.init(context: CoreDataManager.context)
         self.pPrenom = prenom
         self.pNom  = nom
+        self.pArchive = false
     }
     
 }
