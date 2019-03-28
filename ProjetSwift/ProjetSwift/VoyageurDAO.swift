@@ -181,7 +181,7 @@ class VoyageurDAO{
     //GET Voyageurs non archives
     static func getAllVoyageursNonArchives() -> [Voyageur] {
        
-       // self.request.predicate = NSPredicate(format: "pArchive == false")
+       self.request.predicate = NSPredicate(format: "pArchive == false")
         do{
             return try CoreDataManager.context.fetch(self.request) as [Voyageur]
         }

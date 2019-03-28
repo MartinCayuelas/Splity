@@ -882,6 +882,7 @@
                     </view>
                     <connections>
                         <outlet property="voyageursActifsTableView" destination="qOf-AA-F4X" id="elj-GW-xdi"/>
+                        <outlet property="voyageursInactifsTableView" destination="oqb-z3-Sda" id="fpN-KN-bmj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3KW-0J-NkH" userLabel="First Responder" sceneMemberID="firstResponder"/>
