@@ -15,6 +15,11 @@ extension Voyage {
     public var photo  : String { return self.pPhotoVoyage  ?? "" }
     /// image du voyage
     public var actif : Bool { return self.pActif}
+    
+    public var dateDebut : Date { return self.pDateDebut! as Date}
+    
+    public var dateFin : Date? { return self.pDateFin as Date?}
+    
     /// pour savoir si le voyage est archivé ou actif
     public var participants : [Participer] {
         get{
@@ -47,6 +52,8 @@ extension Voyage {
         self.pTitreVoyage = titre
         self.pPhotoVoyage  = photo
         self.pActif = true
+        self.pDateDebut = Date() as NSDate
+        self.pDateFin = nil
     }
     
 }

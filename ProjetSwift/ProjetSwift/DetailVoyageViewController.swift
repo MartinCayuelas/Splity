@@ -13,6 +13,7 @@ class DetailVoyageViewController: UIViewController{
     
     @IBOutlet weak var imageVoyage: UIImageView!
     @IBOutlet weak var titreVoyage: UILabel!
+    @IBOutlet weak var labelDateVoyage: UILabel!
     
     var voyageSelected : Voyage?
     
@@ -22,6 +23,25 @@ class DetailVoyageViewController: UIViewController{
             self.titreVoyage
                 .text = avoyage.titre
          self.imageVoyage.image =  UIImage(named: avoyage.photo)
+            
+            let df = DateFormatter()
+            df.locale = Locale(identifier: "fr_FR")
+            df.dateFormat = "dd/MM/yyyy"
+            let stringDate = df.string(from: avoyage.dateDebut)
+           
+            
+            if(avoyage.dateFin == nil){
+                
+                self.labelDateVoyage.text = "Commencé le \(stringDate)"
+            }else{
+                let df2 = DateFormatter()
+                df2.locale = Locale(identifier: "fr_FR")
+                df2.dateFormat = "dd/MM/yyyy"
+                let stringDate2 = df2.string(from: avoyage.dateFin!)
+                self.labelDateVoyage.text = "Du \(stringDate) au \(stringDate2)"
+            }
+            
+            
             
         } else {
             self.titreVoyage.text = ""

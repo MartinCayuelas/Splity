@@ -342,6 +342,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSB-Zo-Y76">
+                                <rect key="frame" x="62.5" y="121" width="250" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="B6O-ae-aL4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cyan="0.091624930926731657" magenta="0.061557866632938385" yellow="0.011185072362422943" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
@@ -350,10 +359,12 @@
                             <constraint firstItem="bt8-xi-3sz" firstAttribute="top" secondItem="LJL-za-1r6" secondAttribute="bottom" constant="25" id="M00-hb-M9E"/>
                             <constraint firstItem="lbi-xw-Mfh" firstAttribute="top" secondItem="LJL-za-1r6" secondAttribute="bottom" constant="85" id="M19-tQ-trZ"/>
                             <constraint firstAttribute="trailing" secondItem="yOq-jX-yfz" secondAttribute="trailing" id="Nae-tK-5f0"/>
+                            <constraint firstItem="TSB-Zo-Y76" firstAttribute="centerX" secondItem="bt8-xi-3sz" secondAttribute="centerX" id="SHU-1N-DIg"/>
                             <constraint firstItem="YRP-6k-ZtV" firstAttribute="top" secondItem="bt8-xi-3sz" secondAttribute="bottom" constant="40" id="TnD-Q0-HAL"/>
                             <constraint firstItem="J7p-ml-WAd" firstAttribute="top" secondItem="Uy7-Po-xly" secondAttribute="bottom" constant="85" id="UPw-Fn-nly"/>
                             <constraint firstItem="i5f-A4-c38" firstAttribute="top" secondItem="yOq-jX-yfz" secondAttribute="bottom" constant="13" id="Ux3-eR-Fyw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uy7-Po-xly" secondAttribute="trailing" constant="30" id="WMO-2H-goF"/>
+                            <constraint firstItem="TSB-Zo-Y76" firstAttribute="top" secondItem="bt8-xi-3sz" secondAttribute="bottom" constant="2" id="WuZ-W7-rlo"/>
                             <constraint firstItem="bt8-xi-3sz" firstAttribute="centerX" secondItem="hVn-fo-jN8" secondAttribute="centerX" id="XbR-KD-Zs1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YRP-6k-ZtV" secondAttribute="trailing" constant="30" id="YzS-03-KCC"/>
                             <constraint firstItem="J7p-ml-WAd" firstAttribute="centerX" secondItem="bt8-xi-3sz" secondAttribute="centerX" id="cne-8a-rWW"/>
@@ -365,6 +376,7 @@
                     </view>
                     <connections>
                         <outlet property="imageVoyage" destination="lbi-xw-Mfh" id="G3z-wH-R6t"/>
+                        <outlet property="labelDateVoyage" destination="TSB-Zo-Y76" id="JkG-Mu-7Rh"/>
                         <outlet property="titreVoyage" destination="bt8-xi-3sz" id="Ec4-lm-dx6"/>
                     </connections>
                 </viewController>
@@ -482,7 +494,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPx-ka-vcC" customClass="ButtonCheckBox" customModule="ProjetSwift" customModuleProvider="target">
-                                                    <rect key="frame" x="178" y="6" width="30" height="30"/>
+                                                    <rect key="frame" x="317" y="6" width="30" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="ajoutVoyageurToVoyage:" destination="RZt-NH-3NW" eventType="touchUpInside" id="kEa-qM-IGf"/>
@@ -800,14 +812,14 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voyageurs Actifs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbn-4Q-FJ4">
-                                <rect key="frame" x="123" y="137" width="129" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voyageurs Présents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbn-4Q-FJ4">
+                                <rect key="frame" x="111.5" y="137" width="152" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voyageurs Inactifs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khg-5b-vDr">
-                                <rect key="frame" x="117" y="358" width="141" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voyageurs Absents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khg-5b-vDr">
+                                <rect key="frame" x="113.5" y="358" width="148" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1254,6 +1266,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aA2-IJ-aF1"/>
+        <segue reference="cSW-O3-Vgd"/>
     </inferredMetricsTieBreakers>
 </document>
