@@ -32,7 +32,7 @@ class AjoutVoyageurTableViewController: NSObject, UITableViewDataSource, Voyageu
         self.voyageurs = VoyageurSetViewModel(voyageurs: VoyageurDAO.getAllVoyageursNonArchives())
         super.init()
         self.tableView.dataSource = self
-        self.voyageurs.delegate = self//
+        self.voyageurs.delegate = self
     }
     
     
