@@ -34,7 +34,7 @@ class DepensesTableViewController : NSObject, UITableViewDataSource, DepenseSetV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = depensesTableView.dequeueReusableCell(withIdentifier: "standardDepenseCell", for: indexPath) as! DepenseTableViewCellController
+        let cell = depensesTableView.dequeueReusableCell(withIdentifier: "standardDepenseCell", for: indexPath)
         
         guard let depense = self.depensesModel.get(depenseAt: indexPath.row) else { return cell }
         
@@ -43,11 +43,16 @@ class DepensesTableViewController : NSObject, UITableViewDataSource, DepenseSetV
         df.dateFormat = "dd/MM/yyyy"
         let stringDate = df.string(from: depense.date)
         
-        if(depense.photo != nil) {
-            cell.imageDepenseImageView.image = UIImage(named: depense.photo!)
+        cell.textLabel?.text = depense.titre
+        cell.detailTextLabel?.text = String(depense.montant)+" €"
+        
+        if(depense.montant > 100.0){
+            cell.detailTextLabel?.textColor = UIColor(red:0.99, green:0.00, blue:0.00, alpha:1.0)
+        } else{
+            cell.detailTextLabel?.textColor = UIColor(red:0.22, green:0.46, blue:0.09, alpha:1.0)
         }
-        cell.titreDepenseLabel.text = depense.titre
-        cell.montantDepenseLabel.text = stringDate
+        
+        
         
         return cell
     }

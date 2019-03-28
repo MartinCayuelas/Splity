@@ -9,12 +9,14 @@
 import Foundation
 
 extension Depense {
-    
+    /// titre de la depense
     public var titre : String { return self.pTitreDepense ?? "" }
-    /// titre du voyage
+     /// image de la depense
     public var photo  : String? { return self.pPhotoDepense  ?? "" }
-    /// image du voyage
+    /// date de la depense
     public var date : Date { return self.pDateDepense! as Date}
+     ///montant de la depense
+     public var montant  : Double { return self.pMontantDepense  ?? 0}
     
     /// initialize a `Voyage`
     ///

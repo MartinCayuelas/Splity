@@ -27,7 +27,6 @@
 		7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */; };
 		7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B35B2244DF550023E002 /* DepensesViewController.swift */; };
 		7B73B35E2244ED5C0023E002 /* DepenseSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B35D2244ED5C0023E002 /* DepenseSetViewModel.swift */; };
-		7B73B3642244F9990023E002 /* DepensesTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B73B3632244F9990023E002 /* DepensesTableViewCellController.swift */; };
 		7B786921224A2A810087F0DB /* Depense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786920224A2A810087F0DB /* Depense.swift */; };
 		7B786923224A2AF00087F0DB /* DepenseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786922224A2AF00087F0DB /* DepenseDAO.swift */; };
 		7B786925224A2BCC0087F0DB /* DepenseFetchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786924224A2BCC0087F0DB /* DepenseFetchResultController.swift */; };
@@ -92,7 +91,6 @@
 		7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesTableViewController.swift; sourceTree = "<group>"; };
 		7B73B35B2244DF550023E002 /* DepensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesViewController.swift; sourceTree = "<group>"; };
 		7B73B35D2244ED5C0023E002 /* DepenseSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseSetViewModel.swift; sourceTree = "<group>"; };
-		7B73B3632244F9990023E002 /* DepensesTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepensesTableViewCellController.swift; sourceTree = "<group>"; };
 		7B786920224A2A810087F0DB /* Depense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depense.swift; sourceTree = "<group>"; };
 		7B786922224A2AF00087F0DB /* DepenseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseDAO.swift; sourceTree = "<group>"; };
 		7B786924224A2BCC0087F0DB /* DepenseFetchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseFetchResultController.swift; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 			children = (
 				7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */,
 				7B73B35B2244DF550023E002 /* DepensesViewController.swift */,
-				7B73B3632244F9990023E002 /* DepensesTableViewCellController.swift */,
 				7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */,
 				7B786924224A2BCC0087F0DB /* DepenseFetchResultController.swift */,
 			);
@@ -469,7 +466,6 @@
 				FBC445582244D781002CFCE2 /* DepenseTMP.swift in Sources */,
 				7B3C5DBC22494B2D0059E346 /* EditVoyageurViewController.swift in Sources */,
 				F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */,
-				7B73B3642244F9990023E002 /* DepensesTableViewCellController.swift in Sources */,
 				7BCBFA0622369198002AD627 /* ProjetSwift.xcdatamodeld in Sources */,
 				7B37174622394B44004ACE68 /* Voyage.swift in Sources */,
 				7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */,
