@@ -16,7 +16,7 @@ extension Depense {
     /// date de la depense
     public var date : Date { return self.pDateDepense! as Date}
      ///montant de la depense
-     public var montant  : Double { return self.pMontantDepense  ?? 0}
+    public var montant  : Double { return self.pMontantDepense  }
     
     /// initialize a `Voyage`
     ///
