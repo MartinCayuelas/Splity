@@ -54,7 +54,6 @@
 		F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD86312242AF1100E73581 /* VoyageurSetViewModel.swift */; };
 		F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */; };
 		FB740469223AC530001A4446 /* VoyageSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB740468223AC52F001A4446 /* VoyageSet.swift */; };
-		FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,7 +127,6 @@
 		F0CD86312242AF1100E73581 /* VoyageurSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurSetViewModel.swift; sourceTree = "<group>"; };
 		F0CD86332242C21800E73581 /* AjoutVoyageurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageurViewController.swift; sourceTree = "<group>"; };
 		FB740468223AC52F001A4446 /* VoyageSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSet.swift; sourceTree = "<group>"; };
-		FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,7 +320,6 @@
 			children = (
 				E9FDC8F3224C00340036F365 /* Ajout */,
 				F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */,
-				FB74046A223ACBB8001A4446 /* VoyageTableViewCell.swift */,
 				7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */,
 				7B183ED822455C690065B202 /* VoyagesViewController.swift */,
 				7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */,
@@ -499,7 +496,6 @@
 				7B73B35E2244ED5C0023E002 /* DepenseSetViewModel.swift in Sources */,
 				7B0F8D3722491794003869F9 /* AjourVoyageurTextFieldDelegate.swift in Sources */,
 				7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */,
-				FB74046B223ACBB8001A4446 /* VoyageTableViewCell.swift in Sources */,
 				F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */,
 				7B897A8A224E15B7001FB80D /* Rembourser.swift in Sources */,
 				F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */,

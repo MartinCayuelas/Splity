@@ -52,10 +52,30 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.tableView.beginUpdates()
+            let voyage = self.voyages.get(voyageAt: indexPath.row)
+            VoyageurDAO.quitterVoyage(forVoyageur: self.voyageurSelected!, andVoyage: voyage!)
+            do {
+                try VoyageurDAO.save()
+            } catch {
+                fatalError("Erreur à la suppression du programme.")
+            }
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            self.voyages.remove(voyage: voyage!)
+            self.tableView.endUpdates()
+        }
+    }
+    
     func voyageAdded(at index: IndexPath) {
         self.tableView.beginUpdates()
         self.tableView.insertRows(at: [index], with: UITableView.RowAnimation.middle)
         self.tableView.endUpdates()
+    }
+    
+    func voyageDeleted(at index: IndexPath) {
+        
     }
     
     func dataSetChanged() {

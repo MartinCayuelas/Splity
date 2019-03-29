@@ -195,4 +195,18 @@ class VoyageurDAO{
         v.setValue(true, forKey: "pArchive")
     }
     
+    static func quitterVoyage(forVoyageur voyageur: Voyageur, andVoyage voyage: Voyage) {
+        let requestParticiper : NSFetchRequest<Participer> = Participer.fetchRequest()
+        requestParticiper.predicate = NSPredicate(format: "pVoyageur == %@ AND pVoyage == %@", voyageur, voyage)
+        do{
+            let result = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
+            guard result.count == 1 else { fatalError("duplicate entries") }
+            print(result[0])
+            CoreDataManager.context.delete(result[0])
+        }
+        catch{
+            
+        }
+    }
+    
 }

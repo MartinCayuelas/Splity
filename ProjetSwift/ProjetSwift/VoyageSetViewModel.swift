@@ -13,6 +13,8 @@ import CoreData
 protocol VoyageSetViewModelDelegate {
     // called when a voyage is added to the set
     func voyageAdded(at index: IndexPath)
+    // called when a voyage is removed to the set
+    func voyageDeleted(at index: IndexPath)
     // called when set globally changes
     func dataSetChanged()
 }
@@ -94,4 +96,15 @@ class VoyageSetViewModel : NSObject {
         self.delegate?.voyageAdded(at: IndexPath(row: self.voyagesConcernes.count-1, section: 0))
         CoreDataManager.save()
     }
+    
+    func remove(voyage: Voyage){
+        /*if let indexPath = self.voyageursFetched.indexPath(forObject: voyageur){
+         self.delegate?.voyageurDeleted(at: indexPath)
+         }*/
+        var index = self.voyagesConcernes.lastIndex(of: voyage)
+        self.voyagesConcernes.remove(at: index!)
+        self.delegate?.voyageDeleted(at: IndexPath(row: self.voyagesConcernes.count-1, section: 0))
+        CoreDataManager.save()
+    }
+    
 }
