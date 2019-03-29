@@ -11,6 +11,8 @@ import UIKit
 
 class DepensesTableViewController : NSObject, UITableViewDataSource, DepenseSetViewModelDelegate {
     
+    
+    
     var depensesTableView: UITableView!
     var depensesModel : DepenseSetViewModel
     //let fetchResultController : DepenseFetchResultController
@@ -61,14 +63,37 @@ class DepensesTableViewController : NSObject, UITableViewDataSource, DepenseSetV
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.depensesTableView.beginUpdates()
+            let d = self.depensesModel.get(depenseAt: indexPath.row)!
+            DepenseDAO.delete(depense: d)
+            
+            do {
+                try DepenseDAO.save()
+            } catch {
+                fatalError("Erreur à la suppression du programme.")
+            }
+            self.depensesTableView.deleteRows(at: [indexPath], with: .fade)
+            self.depensesModel.remove(depense: d)
+            //voyageurs.remove(at: indexPath.row)
+            self.depensesTableView.endUpdates()
+        }
+    }
+    
+    
     func depenseAdded(at index: IndexPath) {
         self.depensesTableView.beginUpdates()
         self.depensesTableView.insertRows(at: [index], with: UITableView.RowAnimation.middle)
         self.depensesTableView.endUpdates()
     }
+    func depenseDeleted(at index: IndexPath) {
+        
+    }
     
     func dataSetChanged() {
         self.depensesTableView.reloadData()
     }
-
+    
 }

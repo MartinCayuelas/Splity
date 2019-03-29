@@ -13,6 +13,8 @@ import CoreData
 protocol DepenseSetViewModelDelegate {
     // called when a depense is added to the set
     func depenseAdded(at index: IndexPath)
+    // called when a depense is deleted to the set
+    func depenseDeleted(at index: IndexPath)
     // called when set globally changes
     func dataSetChanged()
 }
@@ -91,6 +93,16 @@ class DepenseSetViewModel : NSObject {
         }*/
         self.depensesConcernees.append(depense)
         self.delegate?.depenseAdded(at: IndexPath(row: self.depensesConcernees.count-1, section: 0))
+        CoreDataManager.save()
+    }
+    
+    func remove(depense: Depense){
+        /*if let indexPath = self.voyageursFetched.indexPath(forObject: voyageur){
+         self.delegate?.voyageurDeleted(at: indexPath)
+         }*/
+        var index = self.depensesConcernees.lastIndex(of: depense)
+        self.depensesConcernees.remove(at: index!)
+        self.delegate?.depenseDeleted(at: IndexPath(row: self.depensesConcernees.count-1, section: 0))
         CoreDataManager.save()
     }
     
