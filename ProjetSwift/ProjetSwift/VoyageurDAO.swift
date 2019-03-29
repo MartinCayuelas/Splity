@@ -201,8 +201,11 @@ class VoyageurDAO{
         do{
             let result = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
             guard result.count == 1 else { fatalError("duplicate entries") }
-            print(result[0])
-            CoreDataManager.context.delete(result[0])
+            
+            result[0].setValue(Date(), forKey: "pDateDepart")
+            do{
+                try CoreDataManager.save()
+            }
         }
         catch{
             
