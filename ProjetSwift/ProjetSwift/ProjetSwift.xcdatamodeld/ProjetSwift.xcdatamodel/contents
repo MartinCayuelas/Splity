@@ -5,6 +5,8 @@
         <attribute name="pMontantDepense" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pPhotoDepense" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pTitreDepense" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pPaiements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payer" inverseName="pDepense" inverseEntity="Payer" syncable="YES"/>
+        <relationship name="pRemboursements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rembourser" inverseName="pDepense" inverseEntity="Rembourser" syncable="YES"/>
         <relationship name="pVoyage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyage" inverseName="pDepenses" inverseEntity="Voyage" syncable="YES"/>
     </entity>
     <entity name="Participer" representedClassName="Participer" syncable="YES" codeGenerationType="class">
@@ -12,6 +14,16 @@
         <attribute name="pDateDepart" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="pVoyage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyage" inverseName="pVoyageurs" inverseEntity="Voyage" syncable="YES"/>
         <relationship name="pVoyageur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyageur" inverseName="pVoyages" inverseEntity="Voyageur" syncable="YES"/>
+    </entity>
+    <entity name="Payer" representedClassName="Payer" syncable="YES" codeGenerationType="class">
+        <attribute name="pMontantPaye" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="pDepense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Depense" inverseName="pPaiements" inverseEntity="Depense" syncable="YES"/>
+        <relationship name="pVoyageur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyageur" inverseName="pPaiements" inverseEntity="Voyageur" syncable="YES"/>
+    </entity>
+    <entity name="Rembourser" representedClassName="Rembourser" syncable="YES" codeGenerationType="class">
+        <attribute name="pMontantRembourse" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="pDepense" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Depense" inverseName="pRemboursements" inverseEntity="Depense" syncable="YES"/>
+        <relationship name="pVoyageur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Voyageur" inverseName="pRemboursements" inverseEntity="Voyageur" syncable="YES"/>
     </entity>
     <entity name="Voyage" representedClassName="Voyage" syncable="YES" codeGenerationType="class">
         <attribute name="pActif" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -26,12 +38,16 @@
         <attribute name="pArchive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pNom" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pPrenom" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pPaiements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payer" inverseName="pVoyageur" inverseEntity="Payer" syncable="YES"/>
+        <relationship name="pRemboursements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rembourser" inverseName="pVoyageur" inverseEntity="Rembourser" syncable="YES"/>
         <relationship name="pVoyages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participer" inverseName="pVoyageur" inverseEntity="Participer" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Depense" positionX="-89.734375" positionY="63.22265625" width="128" height="118"/>
+        <element name="Depense" positionX="-38.52734375" positionY="209.10546875" width="128" height="148"/>
         <element name="Participer" positionX="123.54296875" positionY="-75.46875" width="128" height="103"/>
         <element name="Voyage" positionX="109.8671875" positionY="89.0234375" width="128" height="150"/>
-        <element name="Voyageur" positionX="-248.171875" positionY="-63.16796875" width="128" height="105"/>
+        <element name="Voyageur" positionX="-248.171875" positionY="-63.16796875" width="128" height="133"/>
+        <element name="Payer" positionX="-333.6875" positionY="188.77734375" width="128" height="88"/>
+        <element name="Rembourser" positionX="-67.48828125" positionY="100.2109375" width="128" height="88"/>
     </elements>
 </model>
