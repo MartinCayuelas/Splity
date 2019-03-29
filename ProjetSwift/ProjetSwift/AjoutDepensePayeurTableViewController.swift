@@ -1,36 +1,31 @@
 //
-//  AjoutVoyageurTableViewController.swift
+//  AjoutDepensePayeurTableViewController.swift
 //  ProjetSwift
 //
-//  Created by Nathan GUILLAUD on 25/03/2019.
+//  Created by Martin CAYUELAS on 29/03/2019.
 //  Copyright © 2019 Nathan GUILLAUD et Martin CAYUELAS. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class AjoutVoyageurTableViewController: NSObject, UITableViewDataSource, VoyageurSetViewModelDelegate {
-    func voyageurDeleted(at index: IndexPath) {
-       
-    }
+class AjoutDepensePayeurTableViewController: NSObject, UITableViewDataSource {
     
-    func voyageurAdded(at index: IndexPath) {
-       
-    }
+    func dataSetChanged() {}
     
+    func voyageurDeleted(at index: IndexPath) {}
+    
+    func voyageurAdded(at index: IndexPath) {}
     
     var tableView: UITableView!
     var voyageurs : VoyageurSetViewModel
-   // let fetchResultController : VoyageurFetchResultController
+    // let fetchResultController : VoyageurFetchResultController
     
     init(tableView: UITableView){
         self.tableView = tableView
-       // self.fetchResultController = VoyageurFetchResultController(view : tableView)
-       // self.voyageurs = VoyageurSetViewModel(data: self.fetchResultController.voyageursFetched)
         self.voyageurs = VoyageurSetViewModel(voyageurs: VoyageurDAO.getAllVoyageursNonArchives())
         super.init()
         self.tableView.dataSource = self
-        self.voyageurs.delegate = self
     }
     
     
@@ -48,33 +43,18 @@ class AjoutVoyageurTableViewController: NSObject, UITableViewDataSource, Voyageu
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageurCell", for: indexPath) as! AjoutVoyageurTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "standardPayeurCell", for: indexPath) as! AjoutDepensePayeurCell
         
         guard let voyageur = self.voyageurs.get(voyageurAt: indexPath.row) else { return cell }
         
-        cell.nomVoyageur.text = voyageur.nom
-        cell.prenomVoyageur.text = voyageur.prenom
-        //cell.textLabel?.text = voyageur.nom
-        //cell.detailTextLabel?.text = voyageur.prenom
-
         
+        cell.nomVoyageur.text = voyageur.nomComplet
+        //cell.montantDepense.text = " 0 €"
         
         return cell
     }
     
-    func voyageAdded(at index: IndexPath) {
-        self.tableView.beginUpdates()
-        self.tableView.insertRows(at: [index], with: UITableView.RowAnimation.middle)
-        self.tableView.endUpdates()
-    }
-    
-    func dataSetChanged() {
-        self.tableView.reloadData()
-    }
-    
-    
-    
-    
+
     
     /*
      // Override to support conditional editing of the table view.

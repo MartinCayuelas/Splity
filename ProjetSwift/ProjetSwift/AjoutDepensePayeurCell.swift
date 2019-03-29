@@ -1,5 +1,5 @@
 //
-//  AjoutVoyageurTableViewCell.swift
+//  AjoutDepensePayeurCell.swift
 //  ProjetSwift
 //
 //  Created by Martin CAYUELAS on 29/03/2019.
@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-class AjoutVoyageurTableViewCell: UITableViewCell {
+class AjoutDepensePayeurCell: UITableViewCell {
     
     
-   
     @IBOutlet weak var nomVoyageur: UILabel!
-    @IBOutlet weak var prenomVoyageur: UILabel!
-    @IBOutlet weak var boutonAdd: ButtonCheckBox!
+    
+    @IBOutlet weak var montantDepense: UITextField!
+    
+    @IBOutlet weak var checkButton: ButtonCheckBox!
     
 }
