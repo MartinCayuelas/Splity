@@ -27,32 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     } */
     
 
-    private func loadData() -> VoyageSet {
-        var voyage: [Voyage] = []
-        for i in 1...4{
-            let p = Voyage(titre: "Voyage "+String(i), photo: "Image"+String(i))
-            voyage.append(p)
-        }
-        return VoyageSet(Voyages: voyage)
-    }
-    
-    private func loadDepenses() -> DepenseSet {
-        var depenses: [Depense] = []
-        for i in 1...4{
-            let d = Depense(titre: "Dépense " + String(i), photo: "Image"+String(i), date: Date())
-            depenses.append(d)
-        }
-        return DepenseSet(depenses: depenses)
-    }
-    
-    private func loadVoyageurs() -> VoyageurSet {
-        var voyageurs: [Voyageur] = []
-        for i in 1...4{
-            let v = Voyageur(nom: "Nom"+String(i), prenom: "Prénom"+String(i))
-            voyageurs.append(v)
-        }
-        return VoyageurSet(voyageurs: voyageurs)
-    }
+ 
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)

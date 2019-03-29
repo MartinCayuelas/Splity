@@ -12,7 +12,7 @@ extension Voyage {
     
     public var titre : String { return self.pTitreVoyage ?? "" }
     /// titre du voyage
-    public var photo  : String { return self.pPhotoVoyage  ?? "" }
+    public var photo  : NSData { return self.pPhotoVoyage!}
     /// image du voyage
     public var actif : Bool { return self.pActif}
     
@@ -47,7 +47,7 @@ extension Voyage {
     /// - Parameters:
     ///   - titre: `String` titre du voyage
     ///   - photo:  `String` photo du voyage
-    convenience init(titre: String, photo: String){
+    convenience init(titre: String, photo: NSData){
         self.init(context: CoreDataManager.context)
         self.pTitreVoyage = titre
         self.pPhotoVoyage  = photo

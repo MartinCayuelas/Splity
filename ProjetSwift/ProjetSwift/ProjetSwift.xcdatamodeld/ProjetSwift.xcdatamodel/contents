@@ -29,7 +29,7 @@
         <attribute name="pActif" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="pDateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pDateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="pPhotoVoyage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pPhotoVoyage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="pTitreVoyage" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pDepenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Depense" inverseName="pVoyage" inverseEntity="Depense" syncable="YES"/>
         <relationship name="pVoyageurs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participer" inverseName="pVoyage" inverseEntity="Participer" syncable="YES"/>
@@ -45,9 +45,9 @@
     <elements>
         <element name="Depense" positionX="-38.52734375" positionY="209.10546875" width="128" height="148"/>
         <element name="Participer" positionX="123.54296875" positionY="-75.46875" width="128" height="103"/>
-        <element name="Voyage" positionX="109.8671875" positionY="89.0234375" width="128" height="150"/>
-        <element name="Voyageur" positionX="-248.171875" positionY="-63.16796875" width="128" height="133"/>
         <element name="Payer" positionX="-333.6875" positionY="188.77734375" width="128" height="88"/>
         <element name="Rembourser" positionX="-67.48828125" positionY="100.2109375" width="128" height="88"/>
+        <element name="Voyage" positionX="109.8671875" positionY="89.0234375" width="128" height="148"/>
+        <element name="Voyageur" positionX="-248.171875" positionY="-63.16796875" width="128" height="133"/>
     </elements>
 </model>

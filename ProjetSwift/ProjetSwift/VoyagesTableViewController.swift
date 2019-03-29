@@ -47,7 +47,8 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         guard let voyage = self.voyages.get(voyageAt: indexPath.row) else { return cell }
         
         cell.textLabel?.text = voyage.titre
-        cell.imageView?.image = UIImage(named: voyage.photo)
+        let photoVoyage = UIImage(data: voyage.photo as! Data)
+        cell.imageView?.image = photoVoyage
         
         return cell
     }

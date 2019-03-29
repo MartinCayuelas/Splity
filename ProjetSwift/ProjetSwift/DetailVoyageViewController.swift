@@ -22,7 +22,11 @@ class DetailVoyageViewController: UIViewController{
         if let avoyage = self.voyageSelected {
             self.titreVoyage
                 .text = avoyage.titre
-         self.imageVoyage.image =  UIImage(named: avoyage.photo)
+            
+            let photoVoyage = UIImage(data: avoyage.photo as! Data)
+          
+            
+         self.imageVoyage.image =  photoVoyage
             
             let df = DateFormatter()
             df.locale = Locale(identifier: "fr_FR")

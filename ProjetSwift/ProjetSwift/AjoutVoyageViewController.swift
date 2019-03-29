@@ -22,10 +22,37 @@ class AjoutVoyageViewController: UIViewController {
     
     
     
+    
+    //Photos
+    
+    @IBOutlet weak var imageViewVoyage: UIImageView!
+    @IBOutlet weak var cameraBouton: UIButton!
+    @IBOutlet weak var parcourirBouton: UIButton!
+    
+    
+    @IBAction func camera(_ sender: Any) {
+         presentUIImagePicker(sourceType: .camera)
+    }
+    
+    @IBAction func librairie(_ sender: Any) {
+         presentUIImagePicker(sourceType: .photoLibrary)
+    }
+    
+    // MARK: Helper MethodsPhotosCameras
+    private func presentUIImagePicker(sourceType: UIImagePickerControllerSourceType) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = sourceType
+        present(picker, animated: true, completion: nil)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.controllerVoyageursTableView = AjoutVoyageurTableViewController(tableView: tableVoyageurs)
+        self.imageViewVoyage.image = UIImage(named: "travel")
     }
     
     // MARK: - Navigation
@@ -38,8 +65,12 @@ class AjoutVoyageViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "voyageAddedSegue" {
             let titreVoyage : String  = self.textFieldTitreVoyage.text!
-            let imageVoyage  : String  = "beach"
-            self.newVoyage  = Voyage(titre: titreVoyage, photo: imageVoyage)
+            
+            
+            
+            let voyageImage = self.imageViewVoyage.image
+            let imageData = UIImagePNGRepresentation(voyageImage!)
+            self.newVoyage  = Voyage(titre: titreVoyage, photo: imageData as! NSData)
             
             //Pour insérer les instances dans la table 'Participer'
             for v in self.listVoyageurSelectionnes {
@@ -89,4 +120,20 @@ class AjoutVoyageViewController: UIViewController {
     
     
     
+}
+
+// MARK: UIImagePickerControllerDelegate and UINavigationControllerDelegate
+extension AjoutVoyageViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+        guard let chosenImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+            dismiss(animated: true, completion: nil)
+            return
+        }
+        self.imageViewVoyage.image = chosenImage
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
 }
