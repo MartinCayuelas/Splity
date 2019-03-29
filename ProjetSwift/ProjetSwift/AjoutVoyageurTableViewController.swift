@@ -50,12 +50,14 @@ class AjoutVoyageurTableViewController: NSObject, UITableViewDataSource, Voyageu
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageurCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageurCell", for: indexPath) as! AjoutVoyageurTableViewCell
         
         guard let voyageur = self.voyageurs.get(voyageurAt: indexPath.row) else { return cell }
         
-        cell.textLabel?.text = voyageur.nom
-        cell.detailTextLabel?.text = voyageur.prenom
+        cell.nomVoyageur.text = voyageur.nom
+        cell.prenomVoyageur.text = voyageur.prenom
+        //cell.textLabel?.text = voyageur.nom
+        //cell.detailTextLabel?.text = voyageur.prenom
 
         
         
