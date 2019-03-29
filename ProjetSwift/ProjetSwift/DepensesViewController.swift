@@ -13,7 +13,8 @@ class DepensesViewController : UIViewController {
     
     var depensesTableViewController: DepensesTableViewController!
     @IBOutlet weak var depensesTableView: UITableView!
-    var voyageSelected: Voyage?
+    var depenseSelected: Depense?
+     var voyageSelected: Voyage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,16 @@ class DepensesViewController : UIViewController {
         if let destController = segue.destination as? AjoutDepenseViewController {
             destController.voyageSelected = self.voyageSelected
         }
-    }
+            if let destController = segue.destination as? DetailDepenseViewController {
+                if let cell = sender as? UITableViewCell {
+                    guard let indexPath = self.depensesTableViewController.depensesTableView.indexPath(for: cell) else {
+                        return
+                    }
+                    destController.depenseCourante = self.depensesTableViewController.depensesModel.get(depenseAt: indexPath.row)
+                }
+            }
+        }
+    
 
     /// Ajoute la depense à la liste des dépenses et revient à la page de toutes les depenses avec la liste mise à jour
     ///
