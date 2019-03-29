@@ -445,11 +445,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avF-Dd-Zqe">
-                                <rect key="frame" x="77.5" y="567" width="220" height="30"/>
+                                <rect key="frame" x="77.5" y="567" width="220" height="33"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="gvi-x3-Bey"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
                                 <state key="normal" title="Ajouter un nouveau voyageur">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
