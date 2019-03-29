@@ -12,7 +12,7 @@ extension Depense {
     /// titre de la depense
     public var titre : String { return self.pTitreDepense ?? "" }
      /// image de la depense
-    public var photo  : String? { return self.pPhotoDepense  ?? "" }
+    public var photo  : NSData { return self.pPhotoDepense! }
     /// date de la depense
     public var date : Date { return self.pDateDepense! as Date}
      ///montant de la depense
@@ -28,7 +28,7 @@ extension Depense {
     /// - Parameters:
     ///   - titre: `String` titre du voyage
     ///   - photo:  `String` photo du voyage
-    convenience init(titre: String, photo: String, date: Date, voyage: Voyage){
+    convenience init(titre: String, photo: NSData, date: Date, voyage: Voyage){
         self.init(context: CoreDataManager.context)
         self.pTitreDepense = titre
         self.pPhotoDepense  = photo
@@ -36,7 +36,7 @@ extension Depense {
         self.pVoyage = voyage
     }
     
-    convenience init(titre: String, photo: String, date: Date){
+    convenience init(titre: String, photo: NSData, date: Date){
         self.init(context: CoreDataManager.context)
         self.pTitreDepense = titre
         self.pPhotoDepense  = photo

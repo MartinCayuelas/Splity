@@ -1033,10 +1033,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1l-0f-Znv">
-                                                    <rect key="frame" x="258" y="7" width="49" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NomComplet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfG-OP-TOi">
                                                     <rect key="frame" x="17" y="11" width="102" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1068,10 +1064,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Yi-ya-xzt">
-                                                    <rect key="frame" x="262" y="7" width="49" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </switch>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1081,11 +1073,17 @@
                                 <rect key="frame" x="45" y="192" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Prendre une photo"/>
+                                <connections>
+                                    <action selector="camera:" destination="iXe-K1-2JQ" eventType="touchUpInside" id="bKl-em-3Cc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9F-mw-fkk">
                                 <rect key="frame" x="214" y="192" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Parcourir"/>
+                                <connections>
+                                    <action selector="librairie:" destination="iXe-K1-2JQ" eventType="touchUpInside" id="BNL-q2-p36"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIr-uZ-2Ht">
                                 <rect key="frame" x="97" y="618" width="56" height="32"/>
@@ -1121,6 +1119,10 @@
                                     <segue destination="ghJ-3p-MwD" kind="unwind" identifier="depenseAddedSegue" unwindAction="unwindToDepensesViewWithSegue:" id="PVQ-Mv-g3t"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N8a-cs-rne">
+                                <rect key="frame" x="285" y="138" width="76" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.88575249910354614" green="0.89766126871109009" blue="0.92290103435516357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1135,13 +1137,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraBouton" destination="AlG-W3-C03" id="Go8-Li-3nW"/>
+                        <outlet property="imageDepenseView" destination="N8a-cs-rne" id="rou-gQ-ebL"/>
+                        <outlet property="librairieBouton" destination="E9F-mw-fkk" id="Tln-Pf-CO4"/>
                         <outlet property="titreDepenseTextField" destination="Czy-Zk-SOX" id="YKd-N2-hwK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKW-o8-HA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ghJ-3p-MwD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4118" y="199"/>
+            <point key="canvasLocation" x="4117.6000000000004" y="198.35082458770617"/>
         </scene>
         <!--Ajout Voyageur View Controller-->
         <scene sceneID="mh6-0i-6ea">

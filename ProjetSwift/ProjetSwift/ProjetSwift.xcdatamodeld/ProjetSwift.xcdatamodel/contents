@@ -3,7 +3,7 @@
     <entity name="Depense" representedClassName="Depense" syncable="YES" codeGenerationType="class">
         <attribute name="pDateDepense" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="pMontantDepense" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="pPhotoDepense" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pPhotoDepense" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="pTitreDepense" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="pPaiements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Payer" inverseName="pDepense" inverseEntity="Payer" syncable="YES"/>
         <relationship name="pRemboursements" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Rembourser" inverseName="pDepense" inverseEntity="Rembourser" syncable="YES"/>
@@ -43,7 +43,7 @@
         <relationship name="pVoyages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participer" inverseName="pVoyageur" inverseEntity="Participer" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Depense" positionX="-38.52734375" positionY="209.10546875" width="128" height="148"/>
+        <element name="Depense" positionX="-38.52734375" positionY="209.10546875" width="128" height="150"/>
         <element name="Participer" positionX="123.54296875" positionY="-75.46875" width="128" height="103"/>
         <element name="Payer" positionX="-333.6875" positionY="188.77734375" width="128" height="88"/>
         <element name="Rembourser" positionX="-67.48828125" positionY="100.2109375" width="128" height="88"/>
