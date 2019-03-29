@@ -17,6 +17,8 @@ class GestionVoyageursViewController : UIViewController {
     @IBOutlet weak var voyageursActifsTableView: UITableView!
     @IBOutlet weak var voyageursInactifsTableView: UITableView!
     
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.gestionVoyageursActifsTableViewController = GestionVoyageursActifsTableViewController(tableView: self.voyageursActifsTableView, voyageSelected: self.voyageSelected!)

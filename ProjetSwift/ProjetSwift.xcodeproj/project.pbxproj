@@ -43,6 +43,8 @@
 		7BCBFA0B22369198002AD627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0922369198002AD627 /* LaunchScreen.storyboard */; };
 		7BCBFA1622369198002AD627 /* ProjetSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */; };
 		7BCBFA2122369198002AD627 /* ProjetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */; };
+		E92F6EA0224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */; };
+		E92F6EA2224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */; };
 		E9FA220D224A83F1001777CB /* ButtonCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA220C224A83F1001777CB /* ButtonCheckBox.swift */; };
 		F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */; };
 		F091FC3D22400ED70086EA52 /* DetailVoyageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */; };
@@ -116,6 +118,8 @@
 		7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftUITests.swift; sourceTree = "<group>"; };
 		7BCBFA2222369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursActifsTableViewCell.swift; sourceTree = "<group>"; };
+		E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursInactifsTableViewCell.swift; sourceTree = "<group>"; };
 		E9FA220C224A83F1001777CB /* ButtonCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCheckBox.swift; sourceTree = "<group>"; };
 		F091FC3A2240026C0086EA52 /* VoyageSetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageSetViewModel.swift; sourceTree = "<group>"; };
 		F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVoyageViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 		7B2E0AED224D3710000BEB5D /* GestionVoyageurs */ = {
 			isa = PBXGroup;
 			children = (
+				E92F6E9E224E2CB100CED4A9 /* Cells */,
 				7B2E0AEE224D3731000BEB5D /* GestionVoyageursViewController.swift */,
 				7B2E0AF0224D37A2000BEB5D /* GestionVoyageursActifsTableViewController.swift */,
 				7B2E0AF2224D3A3A000BEB5D /* GestionVoyageursInactifsTableViewController.swift */,
@@ -286,6 +291,15 @@
 				7BCBFA2222369198002AD627 /* Info.plist */,
 			);
 			path = ProjetSwiftUITests;
+			sourceTree = "<group>";
+		};
+		E92F6E9E224E2CB100CED4A9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */,
+				E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		E9FA220E224A83FD001777CB /* Ressources */ = {
@@ -479,6 +493,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92F6EA2224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift in Sources */,
 				7B183ED522454BE00065B202 /* VoyageurDAO.swift in Sources */,
 				7B3C5DBC22494B2D0059E346 /* EditVoyageurViewController.swift in Sources */,
 				F0CD86342242C21800E73581 /* AjoutVoyageurViewController.swift in Sources */,
@@ -498,6 +513,7 @@
 				7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */,
 				F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */,
 				7B897A8A224E15B7001FB80D /* Rembourser.swift in Sources */,
+				E92F6EA0224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift in Sources */,
 				F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */,
 				7B2E0AF1224D37A2000BEB5D /* GestionVoyageursActifsTableViewController.swift in Sources */,
 				7B0F8D3D22493647003869F9 /* CommentEquilibrerViewController.swift in Sources */,

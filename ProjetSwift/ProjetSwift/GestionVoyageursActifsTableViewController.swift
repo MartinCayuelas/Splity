@@ -15,6 +15,9 @@ class GestionVoyageursActifsTableViewController : NSObject, UITableViewDataSourc
     var voyageurModel : VoyageurSetViewModel
     var voyageSelected: Voyage?
     
+    
+    
+    
     init(tableView: UITableView, voyageSelected: Voyage) {
         self.voyageSelected = voyageSelected
         self.voyageursActifsTableView = tableView
@@ -35,12 +38,14 @@ class GestionVoyageursActifsTableViewController : NSObject, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageursActifsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageursActifsCell", for: indexPath) as! GestionVoyageursActifsTableViewCell
         
+        print("AvantRecup")
         guard let voyageur = self.voyageurModel.get(voyageurAt: indexPath.row) else { return cell }
+    print("ApresRecup")
+       cell.nomVoyageur?.text = voyageur.nom
+        cell.prenomVoyageur?.text = voyageur.prenom
         
-        cell.textLabel?.text = voyageur.nom
-        cell.detailTextLabel?.text = voyageur.prenom
         
         return cell
     }
