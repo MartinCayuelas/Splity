@@ -780,11 +780,11 @@
                                 <rect key="frame" x="0.0" y="174" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardVoyageursActifsCell" rowHeight="62" id="beV-HT-R4K" customClass="GestionVoyageursActifsTableViewCell" customModule="ProjetSwift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="62"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardVoyageursActifsCell" rowHeight="70" id="beV-HT-R4K" customClass="GestionVoyageursActifsTableViewCell" customModule="ProjetSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beV-HT-R4K" id="fER-IV-lfA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcu-ik-xWq" userLabel="Prenom">
@@ -830,6 +830,7 @@
                                                 <constraint firstItem="eGe-X1-zy7" firstAttribute="top" secondItem="fER-IV-lfA" secondAttribute="topMargin" constant="10" id="PLP-vx-8BD"/>
                                                 <constraint firstItem="xYe-EK-Lgf" firstAttribute="top" secondItem="fER-IV-lfA" secondAttribute="topMargin" constant="7" id="Xx4-6a-FNf"/>
                                                 <constraint firstItem="dcu-ik-xWq" firstAttribute="top" secondItem="fER-IV-lfA" secondAttribute="topMargin" constant="7" id="bBC-Oh-t6c"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eGe-X1-zy7" secondAttribute="bottom" constant="8" id="iyJ-3Y-FR5"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="eGe-X1-zy7" secondAttribute="trailing" constant="25" id="mZh-OQ-7L0"/>
                                             </constraints>
                                         </tableViewCellContentView>
