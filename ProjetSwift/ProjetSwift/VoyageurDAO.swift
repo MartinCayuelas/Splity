@@ -209,4 +209,22 @@ class VoyageurDAO{
         }
     }
     
+    static func isActif(forVoyageur voyageur: Voyageur, andVoyage voyage: Voyage) -> Bool {
+        let requestParticiper : NSFetchRequest<Participer> = Participer.fetchRequest()
+        requestParticiper.predicate = NSPredicate(format: "pVoyageur == %@ AND pVoyage == %@", voyageur, voyage)
+        do{
+            let result = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
+            guard result.count != 0 else { return false }
+            guard result.count == 1 else { fatalError("duplicate entries") }
+            if(result[0].dateDepart == nil){
+                return true
+            } else {
+                return false
+            }
+        }
+        catch{
+            return false
+        }
+    }
+    
 }
