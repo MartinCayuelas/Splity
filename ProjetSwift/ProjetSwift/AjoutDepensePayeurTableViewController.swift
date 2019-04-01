@@ -21,9 +21,11 @@ class AjoutDepensePayeurTableViewController: NSObject, UITableViewDataSource {
     var voyageurs : VoyageurSetViewModel
     // let fetchResultController : VoyageurFetchResultController
     
-    init(tableView: UITableView){
+    var voyageSelected : Voyage?
+    
+    init(tableView: UITableView, voyageSelected: Voyage){
         self.tableView = tableView
-        self.voyageurs = VoyageurSetViewModel(voyageurs: VoyageurDAO.getAllVoyageursNonArchives())
+        self.voyageurs = VoyageurSetViewModel(voyageurs: VoyageDAO.getAllVoyageurs(forVoyage: voyageSelected))
         super.init()
         self.tableView.dataSource = self
     }

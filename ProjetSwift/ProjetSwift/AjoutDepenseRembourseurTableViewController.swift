@@ -11,6 +11,8 @@ import UIKit
 
 class AjoutDepenseRembourseurTableViewController: NSObject, UITableViewDataSource {
     
+    var voyageSelected : Voyage?
+    
     func dataSetChanged() {}
     
     func voyageurDeleted(at index: IndexPath) {}
@@ -21,9 +23,9 @@ class AjoutDepenseRembourseurTableViewController: NSObject, UITableViewDataSourc
     var voyageurs : VoyageurSetViewModel
     // let fetchResultController : VoyageurFetchResultController
     
-    init(tableView: UITableView){
+    init(tableView: UITableView, voyageSelected : Voyage){
         self.tableView = tableView
-        self.voyageurs = VoyageurSetViewModel(voyageurs: VoyageurDAO.getAllVoyageursNonArchives())
+        self.voyageurs = VoyageurSetViewModel(voyageurs: VoyageDAO.getAllVoyageurs(forVoyage: voyageSelected))
         super.init()
         self.tableView.dataSource = self
     }
