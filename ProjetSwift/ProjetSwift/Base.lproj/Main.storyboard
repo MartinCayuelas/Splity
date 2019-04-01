@@ -407,6 +407,8 @@
                     </view>
                     <connections>
                         <outlet property="imageVoyage" destination="lbi-xw-Mfh" id="G3z-wH-R6t"/>
+                        <outlet property="labelBalance" destination="rbx-R3-bOf" id="xw3-Gn-rNl"/>
+                        <outlet property="labelCoutTotal" destination="ont-Oi-4l2" id="xOP-h3-lcs"/>
                         <outlet property="labelDateVoyage" destination="TSB-Zo-Y76" id="JkG-Mu-7Rh"/>
                         <outlet property="titreVoyage" destination="bt8-xi-3sz" id="Ec4-lm-dx6"/>
                     </connections>

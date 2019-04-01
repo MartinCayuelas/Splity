@@ -14,6 +14,8 @@ class DetailVoyageViewController: UIViewController{
     @IBOutlet weak var imageVoyage: UIImageView!
     @IBOutlet weak var titreVoyage: UILabel!
     @IBOutlet weak var labelDateVoyage: UILabel!
+    @IBOutlet weak var labelBalance: UILabel!
+    @IBOutlet weak var labelCoutTotal: UILabel!
     
     var voyageSelected : Voyage?
     var voyageurSelected : Voyageur?
@@ -21,14 +23,8 @@ class DetailVoyageViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("TOTAL VOYAGE")
-        print(VoyageDAO.getMontant(forVoyage: self.voyageSelected!))
-        print("TOTAL PAYE")
-        print(VoyageDAO.getTotalPaye(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!))
-        print("TOTAL REMBOURSE")
-        print(VoyageDAO.getTotalRembourse(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!))
-        print("BALANCE")
-        print(VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!))
+        var balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!)
+        labelBalance.text = String(balance)
         
         if let avoyage = self.voyageSelected {
             self.titreVoyage
