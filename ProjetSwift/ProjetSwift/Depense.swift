@@ -22,6 +22,30 @@ extension Depense {
         get { return self.pVoyage!  }
         set { self.pVoyage = newValue }
     }
+    /// liste des paiements
+    public var paiements : [Payer] {
+        get{
+            if let p = self.pPaiements?.allObjects as? [Payer] {
+                return p
+            } else {
+                return[]
+            }
+        }
+    }
+    
+    /// liste des remboursements
+    public var remboursements : [Rembourser] {
+        get{
+            if let p = self.pRemboursements?.allObjects as? [Rembourser] {
+                return p
+            } else {
+                return[]
+            }
+        }
+    }
+    
+  
+    
     
     /// initialize a `Voyage`
     ///

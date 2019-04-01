@@ -15,6 +15,11 @@ class AjoutDepenseViewController : UIViewController {
     var newDepense: Depense?
     var voyageSelected: Voyage?
     
+    var listePayeurs : [Voyageur] = []
+    var listePayeursMontant : [Double] = []
+    var listeRembourseurs : [Voyageur] = []
+    var listeRembourseursMontant : [Double] = []
+    
      var controllerVoyageursPayeursTableView: AjoutDepensePayeurTableViewController!
     var controllerVoyageursRembourseursTableView : AjoutDepenseRembourseurTableViewController!
     
@@ -62,9 +67,93 @@ class AjoutDepenseViewController : UIViewController {
             
             let depImage = self.imageDepenseView.image
             let imageData = UIImagePNGRepresentation(depImage!)
-            self.newDepense  = Depense(titre: titreDepense, photo: imageData as! NSData, date: dateDepense, voyage: self.voyageSelected!)
+            self.newDepense  = DepenseDAO.ajouterDepense(fortitre: titreDepense, andPhoto: imageData! as NSData, andDate: dateDepense, andVoyage: self.voyageSelected!)
+            
+            
+            
+            for p in self.listePayeurs {
+                let index = self.listePayeurs.firstIndex(of: p)
+                let montant = self.listePayeursMontant[index!]
+                
+                DepenseDAO.ajouterPaiement(forDepense: self.newDepense!, andVoyageur: p, andMontant: montant)
+                
+                
+            }
+            
+            for r in self.listeRembourseurs {
+                let index = self.listeRembourseurs.firstIndex(of: r)
+                let montant = self.listeRembourseursMontant[index!]
+               
+                DepenseDAO.ajouterRemboursement(forDepense: self.newDepense!, andVoyageur: r, andMontant: montant)
+                
+                
+                
+            }
+            
+            DepenseDAO.insererMontantDepense(forDepense: self.newDepense!)
+            
+            
+            
         }
     }
+    
+    @IBAction func ajoutPayeurToDepense(_ sender: ButtonCheckBox) {
+        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableviewPayeurs)
+        
+        
+        if let indexPath = self.tableviewPayeurs.indexPathForRow(at: buttonPosition){
+            let voyageurCoche = self.controllerVoyageursPayeursTableView.voyageurs.get(voyageurAt: indexPath.row)
+            
+            let cell =
+                self.controllerVoyageursPayeursTableView.tableView.cellForRow(at: indexPath) as! AjoutDepensePayeurCell
+        
+            var montant = cell.montantDepense.text!
+            
+            if self.listePayeurs.contains(voyageurCoche!){ // Si deja dans le tableau
+                let index = self.listePayeurs.firstIndex(of: voyageurCoche!)
+                self.listePayeursMontant.remove(at: index!)
+                
+                self.listePayeurs.remove(at: index!)
+            }else{// Ajout dans le tableau
+                
+                self.listePayeurs.append(voyageurCoche!)
+                self.listePayeursMontant.append(Double(montant) ?? 0)
+            }
+        }
+        
+    }
+        
+    @IBAction func ajouterRembourseurToDepense(_ sender: ButtonCheckBox) {
+        
+        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableviewRembourseurs)
+        if let indexPath = self.tableviewRembourseurs.indexPathForRow(at: buttonPosition){
+            let voyageurCoche = self.controllerVoyageursRembourseursTableView.voyageurs.get(voyageurAt: indexPath.row)
+            
+            let cell =
+                self.controllerVoyageursRembourseursTableView.tableView.cellForRow(at: indexPath) as! AjoutDepenseRembourseurCell
+            
+            var montant = cell.montantDepense.text!
+            
+            
+            if self.listeRembourseurs.contains(voyageurCoche!){ // Si deja dans le tableau
+                let index = self.listeRembourseurs.firstIndex(of: voyageurCoche!)
+                self.listeRembourseursMontant.remove(at: index!)
+                self.listeRembourseurs.remove(at: index!)
+            }else{// Ajout dans le tableau
+                
+                self.listeRembourseurs.append(voyageurCoche!)
+                 self.listeRembourseursMontant.append(Double(montant) ?? 0)
+            }
+        }
+        
+    }
+    
+    
+    
+
+    
+
+    
     
 }
 

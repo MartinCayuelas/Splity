@@ -123,7 +123,7 @@ class DepenseDAO{
     }
     
     static func ajouterRemboursement(forDepense depense: Depense, andVoyageur voyageur: Voyageur, andMontant montant: Double) {
-        let paiement = Rembourser(montant: montant, depense: depense, voyageur: voyageur)
+        let remboursement = Rembourser(montant: montant, depense: depense, voyageur: voyageur)
     }
     
     static func ajouterDepense(fortitre titre: String, andPhoto photo: NSData, andDate date: Date, andVoyage voyage: Voyage) -> Depense{
@@ -131,7 +131,7 @@ class DepenseDAO{
         return depense
     }
     
-    static func insererMontantDepense(forDepense depense: Depense, andMontant montant: Double) {
+    static func insererMontantDepense(forDepense depense: Depense) {
         let requestPayer : NSFetchRequest<Payer> = Payer.fetchRequest()
         requestPayer.predicate = NSPredicate(format: "pDepense == %@", depense)
         do{
