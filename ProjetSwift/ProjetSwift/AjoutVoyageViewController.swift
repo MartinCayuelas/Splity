@@ -17,6 +17,7 @@ class AjoutVoyageViewController: UIViewController {
     
     @IBOutlet weak var textFieldTitreVoyage: UITextField!
     var newVoyage : Voyage?
+    var voyageurSelected : Voyageur?
     
     var listVoyageurSelectionnes : [Voyageur] = []
     
@@ -51,7 +52,7 @@ class AjoutVoyageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.controllerVoyageursTableView = AjoutVoyageurTableViewController(tableView: tableVoyageurs)
+        self.controllerVoyageursTableView = AjoutVoyageurTableViewController(tableView: tableVoyageurs, voyageur: self.voyageurSelected!)
         self.imageViewVoyage.image = UIImage(named: "travel")
     }
     
@@ -76,6 +77,7 @@ class AjoutVoyageViewController: UIViewController {
             for v in self.listVoyageurSelectionnes {
                 VoyageurDAO.rejoindreVoyage(forVoyageur: v, andVoyage: self.newVoyage!)
             }
+            VoyageurDAO.rejoindreVoyage(forVoyageur: self.voyageurSelected!, andVoyage: self.newVoyage!)
             
         }
         if segue.identifier == "voyageurAddedSegue" {
