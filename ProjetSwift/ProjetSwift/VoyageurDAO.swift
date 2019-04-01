@@ -212,6 +212,10 @@ class VoyageurDAO{
         }
     }
     
+    static func rejoindreVoyage(forVoyageur voyageur: Voyageur, andVoyage voyage: Voyage) {
+        let participation = Participer(dateArrivee: Date(), dateDepart: nil, voyage: voyage, voyageur: voyageur)
+    }
+    
     static func isActif(forVoyageur voyageur: Voyageur, andVoyage voyage: Voyage) -> Bool {
         let requestParticiper : NSFetchRequest<Participer> = Participer.fetchRequest()
         requestParticiper.predicate = NSPredicate(format: "pVoyageur == %@ AND pVoyage == %@", voyageur, voyage)
