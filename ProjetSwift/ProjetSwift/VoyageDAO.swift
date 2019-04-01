@@ -175,4 +175,20 @@ class VoyageDAO{
         return voyageursAbsents!
     }
     
+    static func getMontant(forVoyage voyage: Voyage) -> Double {
+        let requestPayer : NSFetchRequest<Payer> = Payer.fetchRequest()
+        requestPayer.predicate = NSPredicate(format: "pVoyage == %@",voyage)
+        do{
+            var paiements = try CoreDataManager.context.fetch(requestPayer) as [Payer]
+            var montantTotal: Double = 0
+            for case let p as Payer in paiements {
+                montantTotal = montantTotal + p.montant
+            }
+            return montantTotal
+        }
+        catch{
+            return 0
+        }
+    }
+    
 }
