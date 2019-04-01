@@ -45,6 +45,8 @@
 		7BCBFA2122369198002AD627 /* ProjetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */; };
 		E92F6EA0224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */; };
 		E92F6EA2224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */; };
+		E98C3FFF22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C3FFE22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift */; };
+		E98C400322522E4E00C33685 /* AjoutDepenseRembourseurCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C400222522E4E00C33685 /* AjoutDepenseRembourseurCell.swift */; };
 		E9FA220D224A83F1001777CB /* ButtonCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA220C224A83F1001777CB /* ButtonCheckBox.swift */; };
 		E9FDEAF3224E7EA20002D70D /* AjoutVoyageurTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDEAF2224E7EA10002D70D /* AjoutVoyageurTableViewCell.swift */; };
 		E9FDEAF6224E80B50002D70D /* DetailDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDEAF5224E80B50002D70D /* DetailDepenseViewController.swift */; };
@@ -124,6 +126,8 @@
 		7BCBFA2222369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursActifsTableViewCell.swift; sourceTree = "<group>"; };
 		E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursInactifsTableViewCell.swift; sourceTree = "<group>"; };
+		E98C3FFE22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutDepenseRembourseurTableViewController.swift; sourceTree = "<group>"; };
+		E98C400222522E4E00C33685 /* AjoutDepenseRembourseurCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutDepenseRembourseurCell.swift; sourceTree = "<group>"; };
 		E9FA220C224A83F1001777CB /* ButtonCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCheckBox.swift; sourceTree = "<group>"; };
 		E9FDEAF2224E7EA10002D70D /* AjoutVoyageurTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageurTableViewCell.swift; sourceTree = "<group>"; };
 		E9FDEAF5224E80B50002D70D /* DetailDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDepenseViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 				7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */,
 				7B786924224A2BCC0087F0DB /* DepenseFetchResultController.swift */,
 				E9FDEAF9224E8E100002D70D /* AjoutDepensePayeurCell.swift */,
+				E98C3FFE22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift */,
+				E98C400222522E4E00C33685 /* AjoutDepenseRembourseurCell.swift */,
 			);
 			name = Depense;
 			sourceTree = "<group>";
@@ -551,9 +557,11 @@
 				7B2E0AF3224D3A3A000BEB5D /* GestionVoyageursInactifsTableViewController.swift in Sources */,
 				7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */,
 				7B3AB98A224946350003A620 /* VoyageDAO.swift in Sources */,
+				E98C3FFF22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift in Sources */,
 				7B37173A22394646004ACE68 /* Voyageur.swift in Sources */,
 				7B183ED922455C690065B202 /* VoyagesViewController.swift in Sources */,
 				F0CD862422423F3500E73581 /* VoyageurSet.swift in Sources */,
+				E98C400322522E4E00C33685 /* AjoutDepenseRembourseurCell.swift in Sources */,
 				7B3AB99222495EB90003A620 /* Participer.swift in Sources */,
 				7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */,
 				7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */,

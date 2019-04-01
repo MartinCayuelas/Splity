@@ -15,18 +15,21 @@ class AjoutDepenseViewController : UIViewController {
     var newDepense: Depense?
     var voyageSelected: Voyage?
     
-     var controllerVoyageursTableView: AjoutDepensePayeurTableViewController!
+     var controllerVoyageursPayeursTableView: AjoutDepensePayeurTableViewController!
+    var controllerVoyageursRembourseursTableView : AjoutDepenseRembourseurTableViewController!
     
     @IBOutlet weak var imageDepenseView: UIImageView!
     @IBOutlet weak var librairieBouton: UIButton!
     @IBOutlet weak var cameraBouton: UIButton!
     
     @IBOutlet weak var tableviewPayeurs: UITableView!
+    @IBOutlet weak var tableviewRembourseurs: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-         self.controllerVoyageursTableView = AjoutDepensePayeurTableViewController(tableView: tableviewPayeurs)
+         self.controllerVoyageursPayeursTableView = AjoutDepensePayeurTableViewController(tableView: tableviewPayeurs)
+        self.controllerVoyageursRembourseursTableView = AjoutDepenseRembourseurTableViewController(tableView: tableviewRembourseurs)
         self.imageDepenseView.image = UIImage(named: "money")
     }
     

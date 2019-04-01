@@ -1180,7 +1180,7 @@
                                                         <constraint firstAttribute="width" constant="46" id="Cxd-6n-wLy"/>
                                                     </constraints>
                                                 </button>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0€" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYM-PI-Fyu">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0€" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYM-PI-Fyu">
                                                     <rect key="frame" x="222.5" y="13" width="70" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="Kq9-xE-CGw"/>
@@ -1213,13 +1213,54 @@
                                 <rect key="frame" x="0.0" y="442" width="375" height="157"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="standardCellReceveur" rowHeight="50" id="D1q-hy-TJd">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="standardRembourseurCell" rowHeight="65" id="D1q-hy-TJd" customClass="AjoutDepenseRembourseurCell" customModule="ProjetSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D1q-hy-TJd" id="T6e-Fo-4n4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gga-gW-Mz6">
+                                                    <rect key="frame" x="7.5" y="17" width="200" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="68A-Gj-ubw"/>
+                                                        <constraint firstAttribute="width" constant="200" id="vEA-oY-N7I"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0€" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9uC-YZ-lcS">
+                                                    <rect key="frame" x="227.5" y="17" width="70" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="TNm-sq-idI"/>
+                                                        <constraint firstAttribute="height" constant="30" id="q0I-Xj-19s"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-b0-ZsG" customClass="ButtonCheckBox" customModule="ProjetSwift" customModuleProvider="target">
+                                                    <rect key="frame" x="322.5" y="17" width="30" height="30"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3vx-b0-ZsG" firstAttribute="leading" secondItem="9uC-YZ-lcS" secondAttribute="trailing" constant="25" id="8BP-PA-48v"/>
+                                                <constraint firstItem="9uC-YZ-lcS" firstAttribute="leading" secondItem="gga-gW-Mz6" secondAttribute="trailing" constant="20" id="9XY-Cg-C2w"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="9uC-YZ-lcS" secondAttribute="bottom" constant="6" id="9iJ-tv-kAp"/>
+                                                <constraint firstItem="9uC-YZ-lcS" firstAttribute="top" secondItem="T6e-Fo-4n4" secondAttribute="topMargin" constant="6" id="DdH-fa-aQv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="3vx-b0-ZsG" secondAttribute="bottom" constant="6" id="Vva-Ow-Lna"/>
+                                                <constraint firstItem="3vx-b0-ZsG" firstAttribute="top" secondItem="T6e-Fo-4n4" secondAttribute="topMargin" constant="6" id="nUO-BP-tYS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gga-gW-Mz6" secondAttribute="bottom" constant="6" id="wV5-Yt-xNm"/>
+                                                <constraint firstItem="gga-gW-Mz6" firstAttribute="top" secondItem="T6e-Fo-4n4" secondAttribute="topMargin" constant="6" id="xGe-up-6YF"/>
+                                                <constraint firstItem="9uC-YZ-lcS" firstAttribute="centerX" secondItem="T6e-Fo-4n4" secondAttribute="centerX" constant="75" id="xaD-6b-EK2"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="buttonCheck" destination="3vx-b0-ZsG" id="vhw-Of-aVq"/>
+                                            <outlet property="montantDepense" destination="9uC-YZ-lcS" id="8QS-7l-uoe"/>
+                                            <outlet property="nomVoyageur" destination="gga-gW-Mz6" id="xK0-nf-LTS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1336,6 +1377,7 @@
                         <outlet property="imageDepenseView" destination="N8a-cs-rne" id="rou-gQ-ebL"/>
                         <outlet property="librairieBouton" destination="E9F-mw-fkk" id="Tln-Pf-CO4"/>
                         <outlet property="tableviewPayeurs" destination="QdD-9J-oVH" id="6c3-n9-bZL"/>
+                        <outlet property="tableviewRembourseurs" destination="uGN-bg-HNu" id="P7A-Px-M1q"/>
                         <outlet property="titreDepenseTextField" destination="Czy-Zk-SOX" id="YKd-N2-hwK"/>
                     </connections>
                 </viewController>
