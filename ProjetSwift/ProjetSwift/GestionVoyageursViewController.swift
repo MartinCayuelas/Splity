@@ -17,7 +17,27 @@ class GestionVoyageursViewController : UIViewController {
     @IBOutlet weak var voyageursActifsTableView: UITableView!
     @IBOutlet weak var voyageursInactifsTableView: UITableView!
     
-  
+    @IBAction func integrerVoyageur(_ sender: Any) {
+        let buttonPosition:CGPoint = (sender as AnyObject).convert(CGPoint.zero, to:self.voyageursInactifsTableView)
+        if let indexPath = self.voyageursInactifsTableView.indexPathForRow(at: buttonPosition){
+            voyageursInactifsTableView.beginUpdates()
+            let voyageur = self.gestionVoyageursInactifsTableViewController.voyageurModel.get(voyageurAt: indexPath.row)
+            VoyageurDAO.rejoindreVoyage(forVoyageur: voyageur!, andVoyage: self.voyageSelected!)
+            self.gestionVoyageursInactifsTableViewController.voyageurModel.remove(voyageur: voyageur!)
+            self.gestionVoyageursActifsTableViewController.voyageurActifsModel.add(voyageur: voyageur!)
+            
+            self.viewDidLoad()
+            self.voyageursActifsTableView.reloadData()
+            do {
+                try VoyageurDAO.save()
+            } catch {
+                fatalError("Erreur à l'ajout dans le voyage.")
+            }
+            voyageursInactifsTableView.deleteRows(at: [indexPath], with: .fade)
+            
+            voyageursInactifsTableView.endUpdates()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

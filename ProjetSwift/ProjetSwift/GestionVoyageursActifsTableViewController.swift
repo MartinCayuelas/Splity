@@ -12,7 +12,7 @@ import UIKit
 class GestionVoyageursActifsTableViewController : NSObject, UITableViewDataSource {
     
     var voyageursActifsTableView: UITableView!
-    var voyageurModel : VoyageurSetViewModel
+    var voyageurActifsModel : VoyageurSetViewModel
     var voyageSelected: Voyage?
     var voyageursTries: [[Voyageur]] = [[], []]
     
@@ -24,7 +24,7 @@ class GestionVoyageursActifsTableViewController : NSObject, UITableViewDataSourc
         
         //On récupère les voyageurs actifs du voyage (participants ou ayant quittés)
         var voyageursActifs: [Voyageur] = VoyageDAO.getAllVoyageurs(forVoyage: voyageSelected)
-        self.voyageurModel = VoyageurSetViewModel(voyageurs: voyageursActifs)
+        self.voyageurActifsModel = VoyageurSetViewModel(voyageurs: voyageursActifs)
         
         //On trie ces voyageurs en fonction de ceux qui sont actifs et ceux qui ont quittés
         for case let v as Voyageur in voyageursActifs  {
@@ -62,10 +62,8 @@ class GestionVoyageursActifsTableViewController : NSObject, UITableViewDataSourc
         
         
         
-        guard let voyageur = self.voyageurModel.get(voyageurAt: indexPath.row) else { return cell }
-        if(indexPath.section == 1){
-            cell.quitterVoyageBouton.isHidden = true
-        }
+        guard let voyageur = self.voyageurActifsModel.get(voyageurAt: indexPath.row) else { return cell }
+        cell.quitterVoyageBouton.isHidden = true
         cell.nomVoyageur?.text = self.voyageursTries[indexPath.section][indexPath.row].nom
         cell.prenomVoyageur?.text = self.voyageursTries[indexPath.section][indexPath.row].prenom
         return cell

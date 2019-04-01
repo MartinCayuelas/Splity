@@ -234,4 +234,21 @@ class VoyageurDAO{
         }
     }
     
+    static func getAllVoyagesActifs(forVoyageur voyageur: Voyageur) -> [Voyage] {
+        let requestParticiper : NSFetchRequest<Participer> = Participer.fetchRequest()
+        requestParticiper.predicate = NSPredicate(format: "pVoyageur == %@ AND pDateDepart == nil",
+                                                  voyageur)
+        do{
+            var participations = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
+            var voyages: [Voyage] = []
+            for case let participation as Participer in participations  {
+                voyages.append(participation.voyage)
+            }
+            return voyages
+        }
+        catch{
+            return []
+        }
+    }
+    
 }
