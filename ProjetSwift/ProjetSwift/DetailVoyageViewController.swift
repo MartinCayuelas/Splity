@@ -23,8 +23,18 @@ class DetailVoyageViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Affichage de la balance pour le voyageur courant et le voyage courant
         var balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!)
-        labelBalance.text = String(balance)
+        labelBalance.text = String(balance) + " €"
+        if(balance < 0){
+            labelBalance.textColor = UIColor(red:0.99, green:0.00, blue:0.00, alpha:1.0)
+        } else {
+            labelBalance.textColor = UIColor(red:0.22, green:0.46, blue:0.09, alpha:1.0)
+        }
+        
+        //Affichage du coût total pour le voyageur courant et le voyage courant
+        var coutTotal = VoyageDAO.getTotalRembourse(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!)
+        labelCoutTotal.text = String(coutTotal) + " €"
         
         if let avoyage = self.voyageSelected {
             self.titreVoyage
