@@ -47,6 +47,8 @@
 		E92F6EA2224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */; };
 		E98C3FFF22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C3FFE22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift */; };
 		E98C400322522E4E00C33685 /* AjoutDepenseRembourseurCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C400222522E4E00C33685 /* AjoutDepenseRembourseurCell.swift */; };
+		E99FA87922527DD100ED550C /* BalanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FA87822527DD100ED550C /* BalanceTableViewController.swift */; };
+		E99FA87B22527E2800ED550C /* BalanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FA87A22527E2800ED550C /* BalanceTableViewCell.swift */; };
 		E9FA220D224A83F1001777CB /* ButtonCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FA220C224A83F1001777CB /* ButtonCheckBox.swift */; };
 		E9FDEAF3224E7EA20002D70D /* AjoutVoyageurTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDEAF2224E7EA10002D70D /* AjoutVoyageurTableViewCell.swift */; };
 		E9FDEAF6224E80B50002D70D /* DetailDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDEAF5224E80B50002D70D /* DetailDepenseViewController.swift */; };
@@ -128,6 +130,8 @@
 		E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursInactifsTableViewCell.swift; sourceTree = "<group>"; };
 		E98C3FFE22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutDepenseRembourseurTableViewController.swift; sourceTree = "<group>"; };
 		E98C400222522E4E00C33685 /* AjoutDepenseRembourseurCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutDepenseRembourseurCell.swift; sourceTree = "<group>"; };
+		E99FA87822527DD100ED550C /* BalanceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableViewController.swift; sourceTree = "<group>"; };
+		E99FA87A22527E2800ED550C /* BalanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableViewCell.swift; sourceTree = "<group>"; };
 		E9FA220C224A83F1001777CB /* ButtonCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCheckBox.swift; sourceTree = "<group>"; };
 		E9FDEAF2224E7EA10002D70D /* AjoutVoyageurTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutVoyageurTableViewCell.swift; sourceTree = "<group>"; };
 		E9FDEAF5224E80B50002D70D /* DetailDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDepenseViewController.swift; sourceTree = "<group>"; };
@@ -364,6 +368,8 @@
 				7B183ED822455C690065B202 /* VoyagesViewController.swift */,
 				7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */,
 				7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */,
+				E99FA87822527DD100ED550C /* BalanceTableViewController.swift */,
+				E99FA87A22527E2800ED550C /* BalanceTableViewCell.swift */,
 			);
 			name = Voyage;
 			sourceTree = "<group>";
@@ -541,6 +547,7 @@
 				7B0F8D3722491794003869F9 /* AjourVoyageurTextFieldDelegate.swift in Sources */,
 				7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */,
 				F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */,
+				E99FA87B22527E2800ED550C /* BalanceTableViewCell.swift in Sources */,
 				7B897A8A224E15B7001FB80D /* Rembourser.swift in Sources */,
 				E92F6EA0224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift in Sources */,
 				F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */,
@@ -564,6 +571,7 @@
 				E98C400322522E4E00C33685 /* AjoutDepenseRembourseurCell.swift in Sources */,
 				7B3AB99222495EB90003A620 /* Participer.swift in Sources */,
 				7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */,
+				E99FA87922527DD100ED550C /* BalanceTableViewController.swift in Sources */,
 				7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */,
 				7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */,
 				7B786923224A2AF00087F0DB /* DepenseDAO.swift in Sources */,

@@ -88,7 +88,7 @@ class VoyageSetViewModel : NSObject {
     
     
     
-    func add(voyage: Voyage){
+    func add(voyage: Voyage){ 
         self.voyagesConcernes.append(voyage)
         self.delegate?.voyageAdded(at: IndexPath(row: self.voyagesConcernes.count-1, section: 0))
         CoreDataManager.save()

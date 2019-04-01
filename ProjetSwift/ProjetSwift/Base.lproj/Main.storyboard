@@ -300,7 +300,7 @@
                                 <rect key="frame" x="0.0" y="361" width="375" height="243"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Sbd-Ts-txG">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardBalanceCell" id="Sbd-Ts-txG" customClass="BalanceTableViewCell" customModule="ProjetSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sbd-Ts-txG" id="3DY-cO-0U2">
@@ -319,6 +319,20 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu2-kb-qDg">
+                                                    <rect key="frame" x="131" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoV-g2-ygt">
+                                                    <rect key="frame" x="217" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0047927885316312313" green="0.47023105621337891" blue="0.26774945855140686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -331,6 +345,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0047927885319999997" green="0.4702310562" blue="0.26774945859999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="labelNegatif" destination="EaQ-hL-O3k" id="k3f-GS-A9W"/>
+                                            <outlet property="labelPositif" destination="0Nt-Q1-FNy" id="Fm8-sl-btp"/>
+                                            <outlet property="montantNegatif" destination="xu2-kb-qDg" id="YKG-ok-Pnb"/>
+                                            <outlet property="montantPositif" destination="HoV-g2-ygt" id="5RT-hr-eQ6"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -406,6 +426,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="balanceTableView" destination="yOq-jX-yfz" id="umB-Gr-mQf"/>
                         <outlet property="imageVoyage" destination="lbi-xw-Mfh" id="G3z-wH-R6t"/>
                         <outlet property="labelBalance" destination="rbx-R3-bOf" id="xw3-Gn-rNl"/>
                         <outlet property="labelCoutTotal" destination="ont-Oi-4l2" id="xOP-h3-lcs"/>

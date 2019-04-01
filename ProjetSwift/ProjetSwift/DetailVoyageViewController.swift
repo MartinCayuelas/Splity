@@ -20,8 +20,13 @@ class DetailVoyageViewController: UIViewController{
     var voyageSelected : Voyage?
     var voyageurSelected : Voyageur?
     
+    var balanceTableViewController: BalanceTableViewController!
+    
+    @IBOutlet weak var balanceTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         //Affichage de la balance pour le voyageur courant et le voyage courant
         var balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!)
