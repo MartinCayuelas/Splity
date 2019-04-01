@@ -18,6 +18,12 @@ class ViewController: UIViewController{
         // Do any additional setup after loading the view, typically from a nib.
         self.controllerVoyageursTableView = VoyageursTableViewController(tableView: voyageursTableView)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.controllerVoyageursTableView.voyageurs = VoyageurSetViewModel(voyageurs: VoyageurDAO.getAllVoyageursNonArchives())
+        self.voyageursTableView.reloadData()
+        print(self.controllerVoyageursTableView.voyageurs.count)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

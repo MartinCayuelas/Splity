@@ -15,7 +15,9 @@ class AjoutVoyageurTableViewController: NSObject, UITableViewDataSource, Voyageu
     }
     
     func voyageurAdded(at index: IndexPath) {
-       
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [index], with: UITableView.RowAnimation.middle)
+        self.tableView.endUpdates()
     }
     
     
