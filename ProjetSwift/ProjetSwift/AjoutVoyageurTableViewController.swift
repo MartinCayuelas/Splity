@@ -21,13 +21,16 @@ class AjoutVoyageurTableViewController: NSObject, UITableViewDataSource, Voyageu
     
     var tableView: UITableView!
     var voyageurs : VoyageurSetViewModel
+    var voyageurSelected : Voyageur?
    // let fetchResultController : VoyageurFetchResultController
     
-    init(tableView: UITableView){
+    init(tableView: UITableView, voyageur : Voyageur){
         self.tableView = tableView
        // self.fetchResultController = VoyageurFetchResultController(view : tableView)
        // self.voyageurs = VoyageurSetViewModel(data: self.fetchResultController.voyageursFetched)
         self.voyageurs = VoyageurSetViewModel(voyageurs: VoyageurDAO.getAllVoyageursNonArchives())
+        self.voyageurSelected = voyageur
+        voyageurs.remove(voyageur: voyageurSelected!)
         super.init()
         self.tableView.dataSource = self
         self.voyageurs.delegate = self
