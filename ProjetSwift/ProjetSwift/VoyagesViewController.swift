@@ -42,6 +42,7 @@ class VoyagesViewController: UIViewController {
                  return
                  }
                  destController.voyageSelected = self.controllerVoyagesTableView.voyages.get(voyageAt: indexPath.row)
+                destController.voyageurSelected = self.voyageurSelected!
             }
         }
         if let destController = segue.destination as? AjoutVoyageViewController {

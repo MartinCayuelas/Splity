@@ -216,7 +216,7 @@ class VoyageDAO{
         do{
             var remboursements = try CoreDataManager.context.fetch(requestRembourser) as [Rembourser]
             var montantTotal: Double = 0
-            for case let r as Payer in remboursements {
+            for case let r as Rembourser in remboursements {
                 montantTotal = montantTotal + r.montant
             }
             return montantTotal
@@ -224,6 +224,11 @@ class VoyageDAO{
         catch{
             return 0
         }
+    }
+    
+    //Retourne la balance d'un voyageur pour un voyage
+    static func getBalance(forVoyage voyage: Voyage, andVoyageur voyageur: Voyageur) -> Double {
+        return getTotalPaye(forVoyage: voyage, andVoyageur: voyageur) - getTotalRembourse(forVoyage: voyage, andVoyageur: voyageur)
     }
     
 }
