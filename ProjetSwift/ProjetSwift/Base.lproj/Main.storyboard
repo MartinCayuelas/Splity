@@ -880,14 +880,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payé par : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFC-Ox-rK0">
+                                <rect key="frame" x="12.5" y="423" width="85" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="mO0-LW-01t"/>
+                                    <constraint firstAttribute="width" constant="85" id="zCG-26-SBe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQO-5M-KFB">
+                                <rect key="frame" x="16" y="456" width="343" height="191"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88578653335571289" green="0.8976973295211792" blue="0.9225429892539978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.88578653335571289" green="0.8976973295211792" blue="0.9225429892539978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wFC-Ox-rK0" firstAttribute="leading" secondItem="3L2-2R-Oe3" secondAttribute="leading" id="3cS-AO-buU"/>
                             <constraint firstItem="yHi-kM-CuR" firstAttribute="top" secondItem="swi-wl-02U" secondAttribute="bottom" constant="20" id="E2N-7I-SaS"/>
                             <constraint firstItem="swi-wl-02U" firstAttribute="centerX" secondItem="Jxa-rL-fkz" secondAttribute="centerX" id="H0N-fp-i02"/>
                             <constraint firstItem="yHi-kM-CuR" firstAttribute="centerX" secondItem="Jxa-rL-fkz" secondAttribute="centerX" id="Q2c-WW-pBn"/>
                             <constraint firstItem="3L2-2R-Oe3" firstAttribute="leading" secondItem="OiD-kk-GVb" secondAttribute="leading" id="SNS-xT-47u"/>
                             <constraint firstItem="3L2-2R-Oe3" firstAttribute="top" secondItem="OiD-kk-GVb" secondAttribute="bottom" constant="15" id="aBq-1p-Kel"/>
+                            <constraint firstItem="wFC-Ox-rK0" firstAttribute="top" secondItem="3L2-2R-Oe3" secondAttribute="bottom" constant="10" id="aZC-PD-wHQ"/>
                             <constraint firstItem="QRo-c9-RvO" firstAttribute="leading" secondItem="OiD-kk-GVb" secondAttribute="trailing" constant="15" id="b2p-rF-JhM"/>
                             <constraint firstItem="OiD-kk-GVb" firstAttribute="centerX" secondItem="Jxa-rL-fkz" secondAttribute="centerX" constant="-90" id="jEG-jJ-oR5"/>
                             <constraint firstItem="OiD-kk-GVb" firstAttribute="top" secondItem="yHi-kM-CuR" secondAttribute="bottom" constant="30" id="nMV-Zz-gHP"/>
@@ -902,11 +921,12 @@
                         <outlet property="dateLabel" destination="QRo-c9-RvO" id="1Q9-Xq-Mae"/>
                         <outlet property="imageViewDepense" destination="yHi-kM-CuR" id="FwR-cQ-trv"/>
                         <outlet property="montantLabel" destination="3Mv-zT-foJ" id="rM2-Pc-Kat"/>
+                        <outlet property="textViewListePayeurs" destination="BQO-5M-KFB" id="vxw-9H-B8M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8MM-hO-vED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4489" y="-639"/>
+            <point key="canvasLocation" x="4488.8000000000002" y="-639.13043478260875"/>
         </scene>
         <!--Gestion Voyageurs View Controller-->
         <scene sceneID="2sW-mW-tL1">

@@ -152,4 +152,41 @@ class DepenseDAO{
         
     }
     
+    static func getPayeursDepense(forDepense depense: Depense) -> [Voyageur]{
+        
+        
+        let requestPayer : NSFetchRequest<Payer> = Payer.fetchRequest()
+        requestPayer.predicate = NSPredicate(format: "pDepense == %@",
+                                                  depense)
+        do{
+            var paiements = try CoreDataManager.context.fetch(requestPayer) as [Payer]
+            var voyageurs: [Voyageur] = []
+            for case let p as Payer in paiements  {
+                voyageurs.append(p.voyageur)
+            }
+            return voyageurs
+        }
+        catch{
+            return []
+        }
+        
+    }
+    
+    static func getMontant(forDepense depense: Depense, andPayeur voyageur: Voyageur) -> Double{
+        
+        let requestPayer : NSFetchRequest<Payer> = Payer.fetchRequest()
+        requestPayer.predicate = NSPredicate(format: "pDepense == %@ AND pVoyageur == %@",depense,voyageur)
+        do{
+            let result = try CoreDataManager.context.fetch(requestPayer) as [Payer]
+            guard result.count != 0 else { return 0 }
+            guard result.count == 1 else { fatalError("duplicate entries") }
+            return result[0].montant
+        }
+        catch{
+            return 0
+        }
+        
+    }
+    
+    
 }

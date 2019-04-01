@@ -13,10 +13,12 @@ class DetailDepenseViewController : UIViewController {
 
 
     var depenseCourante : Depense?
+    var payeurs : [Voyageur] = []
     
     @IBOutlet weak var imageViewDepense: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var montantLabel: UILabel!
+    @IBOutlet weak var textViewListePayeurs: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,16 @@ class DetailDepenseViewController : UIViewController {
             let stringDate = df.string(from: adepense.date)
             
             self.dateLabel.text = stringDate
+            
+            self.payeurs = DepenseDAO.getPayeursDepense(forDepense: self.depenseCourante!)
+            var payeursStr = ""
+            for p in payeurs{
+                
+                let montant = DepenseDAO.getMontant(forDepense: self.depenseCourante!, andPayeur: p)
+                payeursStr += "- \(p.nomComplet) :  \(montant) € \n"
+            }
+            self.textViewListePayeurs.text = payeursStr
+            
             
         }
         
