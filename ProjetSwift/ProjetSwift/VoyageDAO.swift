@@ -175,14 +175,49 @@ class VoyageDAO{
         return voyageursAbsents!
     }
     
+    // Retourne le montant total d'un voyage
     static func getMontant(forVoyage voyage: Voyage) -> Double {
         let requestPayer : NSFetchRequest<Payer> = Payer.fetchRequest()
-        requestPayer.predicate = NSPredicate(format: "pVoyage == %@",voyage)
+        requestPayer.predicate = NSPredicate(format: "pDepense.pVoyage == %@",voyage)
         do{
             var paiements = try CoreDataManager.context.fetch(requestPayer) as [Payer]
             var montantTotal: Double = 0
             for case let p as Payer in paiements {
                 montantTotal = montantTotal + p.montant
+            }
+            return montantTotal
+        }
+        catch{
+            return 0
+        }
+    }
+    
+    //Retourne le montant total payé par un voyageur pour un voyage
+    static func getTotalPaye(forVoyage voyage: Voyage, andVoyageur voyageur: Voyageur) -> Double {
+        let requestPayer : NSFetchRequest<Payer> = Payer.fetchRequest()
+        requestPayer.predicate = NSPredicate(format: "pDepense.pVoyage == %@ AND pVoyageur == %@",voyage,voyageur)
+        do{
+            var paiements = try CoreDataManager.context.fetch(requestPayer) as [Payer]
+            var montantTotal: Double = 0
+            for case let p as Payer in paiements {
+                montantTotal = montantTotal + p.montant
+            }
+            return montantTotal
+        }
+        catch{
+            return 0
+        }
+    }
+    
+    //Retourne le montant total à rembourser par un voyageur pour un voyage
+    static func getTotalRembourse(forVoyage voyage: Voyage, andVoyageur voyageur: Voyageur) -> Double {
+        let requestRembourser : NSFetchRequest<Rembourser> = Rembourser.fetchRequest()
+        requestRembourser.predicate = NSPredicate(format: "pDepense.pVoyage == %@ AND pVoyageur == %@",voyage,voyageur)
+        do{
+            var remboursements = try CoreDataManager.context.fetch(requestRembourser) as [Rembourser]
+            var montantTotal: Double = 0
+            for case let r as Payer in remboursements {
+                montantTotal = montantTotal + r.montant
             }
             return montantTotal
         }
