@@ -19,3 +19,15 @@ class AjoutDepensePayeurCell: UITableViewCell {
     @IBOutlet weak var checkButton: ButtonCheckBox!
     
 }
+
+extension AjoutDepensePayeurCell{
+    
+    var tableView: UITableView? {
+        return next(UITableView.self)
+    }
+    
+    var indexPath: IndexPath? {
+        return tableView?.indexPath(for: self)
+    }
+}
+

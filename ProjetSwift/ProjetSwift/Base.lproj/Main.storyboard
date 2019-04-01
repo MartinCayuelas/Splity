@@ -1202,9 +1202,6 @@
                                                         <constraint firstAttribute="height" constant="42" id="62P-hW-wE7"/>
                                                         <constraint firstAttribute="width" constant="46" id="Cxd-6n-wLy"/>
                                                     </constraints>
-                                                    <connections>
-                                                        <action selector="ajoutPayeurToDepense:" destination="iXe-K1-2JQ" eventType="touchUpInside" id="nCq-0x-uEP"/>
-                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0€" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYM-PI-Fyu">
                                                     <rect key="frame" x="222.5" y="13" width="70" height="30"/>
@@ -1268,9 +1265,6 @@
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-b0-ZsG" customClass="ButtonCheckBox" customModule="ProjetSwift" customModuleProvider="target">
                                                     <rect key="frame" x="322.5" y="17" width="30" height="30"/>
-                                                    <connections>
-                                                        <action selector="ajouterRembourseurToDepense:" destination="iXe-K1-2JQ" eventType="touchUpInside" id="M6V-dr-7V9"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1286,7 +1280,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="buttonCheck" destination="3vx-b0-ZsG" id="vhw-Of-aVq"/>
+                                            <outlet property="checkButton" destination="3vx-b0-ZsG" id="bcB-6x-jMO"/>
                                             <outlet property="montantDepense" destination="9uC-YZ-lcS" id="8QS-7l-uoe"/>
                                             <outlet property="nomVoyageur" destination="gga-gW-Mz6" id="xK0-nf-LTS"/>
                                         </connections>
