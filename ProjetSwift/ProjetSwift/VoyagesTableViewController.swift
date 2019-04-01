@@ -20,8 +20,7 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         self.tableView = tableView
         //self.fetchResultController = VoyageFetchResultController(view : tableView)
         //self.voyages = VoyageSetViewModel(data: self.fetchResultController.voyagesFetched)
-        self.voyages = VoyageSetViewModel(voyages: VoyageurDAO.getAllVoyages(forVoyageur: self.voyageurSelected!))
-        print(VoyageurDAO.getAllVoyages(forVoyageur: self.voyageurSelected!))
+        self.voyages = VoyageSetViewModel(voyages: VoyageurDAO.getAllVoyagesActifs(forVoyageur: self.voyageurSelected!))
         super.init()
         self.tableView.dataSource = self
         self.voyages.delegate = self
