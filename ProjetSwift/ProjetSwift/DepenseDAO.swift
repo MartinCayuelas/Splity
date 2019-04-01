@@ -126,7 +126,30 @@ class DepenseDAO{
         let paiement = Rembourser(montant: montant, depense: depense, voyageur: voyageur)
     }
     
-    static func ajouterDepense(fortitre titre: String, andPhoto photo: NSData, andDate date: Date, andVoyage voyage: Voyage) {
+    static func ajouterDepense(fortitre titre: String, andPhoto photo: NSData, andDate date: Date, andVoyage voyage: Voyage) -> Depense{
         let depense = Depense(titre: titre, photo: photo, date: date, voyage: voyage)
+        return depense
     }
+    
+    static func insererMontantDepense(forDepense depense: Depense, andMontant montant: Double) {
+        let requestPayer : NSFetchRequest<Payer> = Payer.fetchRequest()
+        requestPayer.predicate = NSPredicate(format: "pDepense == %@", depense)
+        do{
+            var payeurs = try CoreDataManager.context.fetch(requestPayer) as [Payer]
+            var montantTotal: Double = 0
+            for case let p as Payer in payeurs  {
+                montantTotal = montantTotal + p.montant
+            }
+            
+            depense.setValue(montantTotal, forKey: "pMontantDepense")
+            do{
+                try CoreDataManager.save()
+            }
+        }
+        catch{
+            
+        }
+        
+    }
+    
 }
