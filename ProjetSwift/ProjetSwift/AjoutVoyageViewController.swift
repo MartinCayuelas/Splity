@@ -74,7 +74,7 @@ class AjoutVoyageViewController: UIViewController {
             
             //Pour insérer les instances dans la table 'Participer'
             for v in self.listVoyageurSelectionnes {
-                var participation = Participer(dateArrivee: Date(), dateDepart: nil, voyage: self.newVoyage!, voyageur: v)
+                VoyageurDAO.rejoindreVoyage(forVoyageur: v, andVoyage: self.newVoyage!)
             }
             
         }
