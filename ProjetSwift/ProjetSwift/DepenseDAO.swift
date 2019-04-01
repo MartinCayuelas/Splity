@@ -117,4 +117,16 @@ class DepenseDAO{
         }
         
     }
+    
+    static func ajouterPaiement(forDepense depense: Depense, andVoyageur voyageur: Voyageur, andMontant montant: Double) {
+        let paiement = Payer(montant: montant, depense: depense, voyageur: voyageur)
+    }
+    
+    static func ajouterRemboursement(forDepense depense: Depense, andVoyageur voyageur: Voyageur, andMontant montant: Double) {
+        let paiement = Rembourser(montant: montant, depense: depense, voyageur: voyageur)
+    }
+    
+    static func ajouterDepense(fortitre titre: String, andPhoto photo: NSData, andDate date: Date, andVoyage voyage: Voyage) {
+        let depense = Depense(titre: titre, photo: photo, date: date, voyage: voyage)
+    }
 }
