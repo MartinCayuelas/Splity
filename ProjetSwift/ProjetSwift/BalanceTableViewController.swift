@@ -52,7 +52,7 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
         var balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: voyageur)
         
         
-        var taille = self.tailleCell(forTailleMaxCell: self.tailleMaxCell(), andBalanceMax: self.balanceMax, andBalanceCourante: balance)
+        var taille = self.tailleCell(forTailleMaxCell: self.getTailleMaxCell(), andBalanceMax: self.balanceMax, andBalanceCourante: balance)
         print(taille)
         //Cas de la balance négative
         if balance < 0.0 {
@@ -63,9 +63,13 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
              cell.negatifLabel.addConstraint(NSLayoutConstraint(item: cell.negatifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(taille)))
             
             cell.negatifLabel.backgroundColor = #colorLiteral(red: 0.9479708076, green: 0.04927965999, blue: 0.08589539677, alpha: 0.7451584507)
+            cell.negatifLabel.text = ""
             //Modification du label positif
+            cell.positifLabel.addConstraint(NSLayoutConstraint(item: cell.positifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.getTailleMaxCell())))
             cell.positifLabel.backgroundColor = UIColor.clear
             cell.positifLabel.text = voyageur.nomComplet
+            cell.montantPositifLabel.text = ""
+            
             
         }
         //Cas de la balance positive
@@ -78,9 +82,13 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
             cell.positifLabel.addConstraint(NSLayoutConstraint(item: cell.positifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(taille)))
             
             cell.positifLabel.backgroundColor = #colorLiteral(red: 0.004792788532, green: 0.4702310562, blue: 0.2677494586, alpha: 0.7521181778)
+            cell.positifLabel.text = ""
             //Modification du label négatif
+            cell.negatifLabel.addConstraint(NSLayoutConstraint(item: cell.negatifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.getTailleMaxCell())))
             cell.negatifLabel.backgroundColor = UIColor.clear
             cell.negatifLabel.text = voyageur.nomComplet
+            cell.montantNegatifLabel.text = ""
+            
         }
         return cell
     }
@@ -88,7 +96,7 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
     
     
     //Calcul de la taille maximale que peut prendre une barre horizontale
-    private func tailleMaxCell() -> Int{
+    private func getTailleMaxCell() -> Int{
         
         var max : Int = 0
         if #available(iOS 12.0, *) {
