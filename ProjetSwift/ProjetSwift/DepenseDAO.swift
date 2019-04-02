@@ -188,5 +188,25 @@ class DepenseDAO{
         
     }
     
+    static func getBalanceMaximale(forVoyage voyage: Voyage) -> Double{
+        
+        let voyageurs = VoyageDAO.getAllVoyageurs(forVoyage: voyage)
+        var max : Double = 0
+        for v in voyageurs{
+            var balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
+            
+            if balance < 0.0{
+                balance = balance * -1
+            }
+            if balance > max{
+                max = balance
+            }
+            
+        }
+        return max
+        
+        
+    }
+    
     
 }
