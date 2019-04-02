@@ -728,28 +728,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dépenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeC-Bo-lTD">
-                                                    <rect key="frame" x="138" y="8" width="98" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dépenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeC-Bo-lTD">
+                                                    <rect key="frame" x="138.5" y="10" width="98" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coût total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BT-xx-PQD">
-                                                    <rect key="frame" x="255" y="8" width="105" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coût total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BT-xx-PQD">
+                                                    <rect key="frame" x="255" y="10" width="105" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voyageur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJU-R5-4xt">
-                                                    <rect key="frame" x="15" y="8" width="103" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voyageur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJU-R5-4xt">
+                                                    <rect key="frame" x="15" y="10" width="96" height="23.5"/>
                                                     <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZJU-R5-4xt" firstAttribute="leading" secondItem="bBP-dY-dYp" secondAttribute="leading" constant="15" id="85A-Rf-xfK"/>
+                                                <constraint firstItem="ZJU-R5-4xt" firstAttribute="top" secondItem="bBP-dY-dYp" secondAttribute="top" constant="10" id="DEG-1v-1B3"/>
+                                                <constraint firstItem="UeC-Bo-lTD" firstAttribute="top" secondItem="bBP-dY-dYp" secondAttribute="top" constant="10" id="XVe-By-ptR"/>
+                                                <constraint firstAttribute="bottom" secondItem="UeC-Bo-lTD" secondAttribute="bottom" constant="10" id="hHA-VR-ZL6"/>
+                                                <constraint firstItem="UeC-Bo-lTD" firstAttribute="centerX" secondItem="bBP-dY-dYp" secondAttribute="centerX" id="lih-0D-uI5"/>
+                                                <constraint firstItem="8BT-xx-PQD" firstAttribute="top" secondItem="bBP-dY-dYp" secondAttribute="top" constant="10" id="mTM-Ys-VTg"/>
+                                                <constraint firstAttribute="trailing" secondItem="8BT-xx-PQD" secondAttribute="trailing" constant="15" id="mmD-8Y-biU"/>
+                                                <constraint firstAttribute="bottom" secondItem="8BT-xx-PQD" secondAttribute="bottom" constant="10" id="nHb-mX-6dA"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZJU-R5-4xt" secondAttribute="bottom" constant="10" id="sgK-cb-xub"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <connections>
@@ -765,28 +773,45 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56m-OK-LIs">
-                                                    <rect key="frame" x="15" y="12" width="94" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56m-OK-LIs">
+                                                    <rect key="frame" x="15" y="11" width="140" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="140" id="uaH-mT-TdY"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQe-G9-uv2">
-                                                    <rect key="frame" x="166" y="11" width="65" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQe-G9-uv2">
+                                                    <rect key="frame" x="167.5" y="11" width="100" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="mOe-6w-AVm"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmK-eO-NrQ">
-                                                    <rect key="frame" x="280" y="10" width="80" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmK-eO-NrQ">
+                                                    <rect key="frame" x="275" y="0.0" width="100" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="LLh-Ib-zZw"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yQe-G9-uv2" firstAttribute="centerX" secondItem="EA9-4w-y64" secondAttribute="centerX" constant="30" id="8uc-4f-26z"/>
+                                                <constraint firstItem="MmK-eO-NrQ" firstAttribute="top" secondItem="EA9-4w-y64" secondAttribute="top" id="EsZ-oF-bHh"/>
+                                                <constraint firstItem="56m-OK-LIs" firstAttribute="bottom" secondItem="EA9-4w-y64" secondAttribute="bottomMargin" id="F5h-KA-Nfz"/>
+                                                <constraint firstItem="56m-OK-LIs" firstAttribute="leading" secondItem="EA9-4w-y64" secondAttribute="leadingMargin" id="ICh-67-m7D"/>
+                                                <constraint firstAttribute="bottom" secondItem="MmK-eO-NrQ" secondAttribute="bottom" id="KBT-wg-GoJ"/>
+                                                <constraint firstItem="56m-OK-LIs" firstAttribute="top" secondItem="EA9-4w-y64" secondAttribute="topMargin" id="SIb-Uc-TA7"/>
+                                                <constraint firstItem="yQe-G9-uv2" firstAttribute="top" secondItem="EA9-4w-y64" secondAttribute="topMargin" id="VOb-yZ-EEi"/>
+                                                <constraint firstAttribute="trailing" secondItem="MmK-eO-NrQ" secondAttribute="trailing" id="mNO-6p-Ywj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="yQe-G9-uv2" secondAttribute="bottom" id="zim-jY-KAN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nomCompletLabel" destination="56m-OK-LIs" id="tid-jA-jKX"/>
