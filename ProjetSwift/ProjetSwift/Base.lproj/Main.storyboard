@@ -910,7 +910,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mv-zT-foJ">
-                                <rect key="frame" x="110.5" y="388" width="42.5" height="25"/>
+                                <rect key="frame" x="110.5" y="388" width="43" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="mkd-P6-nYE"/>
                                 </constraints>
@@ -938,9 +938,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQO-5M-KFB">
-                                <rect key="frame" x="16" y="456" width="343" height="191"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQO-5M-KFB">
+                                <rect key="frame" x="16.5" y="456" width="342" height="191"/>
                                 <color key="backgroundColor" red="0.88578653335571289" green="0.8976973295211792" blue="0.9225429892539978" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -953,10 +952,14 @@
                             <constraint firstItem="swi-wl-02U" firstAttribute="centerX" secondItem="Jxa-rL-fkz" secondAttribute="centerX" id="H0N-fp-i02"/>
                             <constraint firstItem="yHi-kM-CuR" firstAttribute="centerX" secondItem="Jxa-rL-fkz" secondAttribute="centerX" id="Q2c-WW-pBn"/>
                             <constraint firstItem="3L2-2R-Oe3" firstAttribute="leading" secondItem="OiD-kk-GVb" secondAttribute="leading" id="SNS-xT-47u"/>
+                            <constraint firstItem="BQO-5M-KFB" firstAttribute="centerX" secondItem="yHi-kM-CuR" secondAttribute="centerX" id="Xtd-Q0-hu3"/>
                             <constraint firstItem="3L2-2R-Oe3" firstAttribute="top" secondItem="OiD-kk-GVb" secondAttribute="bottom" constant="15" id="aBq-1p-Kel"/>
                             <constraint firstItem="wFC-Ox-rK0" firstAttribute="top" secondItem="3L2-2R-Oe3" secondAttribute="bottom" constant="10" id="aZC-PD-wHQ"/>
                             <constraint firstItem="QRo-c9-RvO" firstAttribute="leading" secondItem="OiD-kk-GVb" secondAttribute="trailing" constant="15" id="b2p-rF-JhM"/>
+                            <constraint firstAttribute="bottom" secondItem="BQO-5M-KFB" secondAttribute="bottom" constant="20" symbolic="YES" id="bLu-3M-B7B"/>
+                            <constraint firstItem="BQO-5M-KFB" firstAttribute="top" secondItem="wFC-Ox-rK0" secondAttribute="bottom" constant="8" symbolic="YES" id="bS3-wh-CfR"/>
                             <constraint firstItem="OiD-kk-GVb" firstAttribute="centerX" secondItem="Jxa-rL-fkz" secondAttribute="centerX" constant="-90" id="jEG-jJ-oR5"/>
+                            <constraint firstItem="BQO-5M-KFB" firstAttribute="leading" secondItem="wFC-Ox-rK0" secondAttribute="leadingMargin" constant="-4" id="lBT-6b-GGE"/>
                             <constraint firstItem="OiD-kk-GVb" firstAttribute="top" secondItem="yHi-kM-CuR" secondAttribute="bottom" constant="30" id="nMV-Zz-gHP"/>
                             <constraint firstItem="OiD-kk-GVb" firstAttribute="top" secondItem="swi-wl-02U" secondAttribute="bottom" constant="230" id="rGP-Uk-1Wm"/>
                             <constraint firstItem="3Mv-zT-foJ" firstAttribute="leading" secondItem="3L2-2R-Oe3" secondAttribute="trailing" constant="15" id="rms-3a-OTF"/>
