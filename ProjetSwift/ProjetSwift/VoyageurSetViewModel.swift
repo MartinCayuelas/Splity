@@ -98,8 +98,6 @@ class VoyageurSetViewModel {//: NSObject {
             self.delegate?.voyageurAdded(at: indexPath)
         }*/
         
-        print(voyageur.nomComplet)
-        print( self.voyageursNonArchives.count-1)
         self.voyageursNonArchives.append(voyageur)
         self.delegate?.voyageurAdded(at: IndexPath(row: self.voyageursNonArchives.count-1, section: 0))
         CoreDataManager.save()

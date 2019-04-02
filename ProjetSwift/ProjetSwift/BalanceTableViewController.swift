@@ -61,9 +61,7 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
             for constraint in cell.negatifLabel.constraints {
                 if constraint.identifier == "negatifLabelConstraint" {
                     constraint.constant = CGFloat(taille)
-                    print("J'ai trouvé la contrainte a modifier")
                 }
-                print("DANS LA BOUCLE")
             }
             
             for constraint in cell.montantNegatifLabel.constraints {
