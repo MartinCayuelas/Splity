@@ -47,10 +47,10 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
         
         
         if balance < 0.0 {
-            cell.montantNegatif.text = Double(balance ?? 0)
+            cell.montantNegatif.text = "\(balance) €"
             cell.labelNegatif.text = voyageur.nomComplet
         } else{
-            cell.montantPositif.text = Double(balance ?? 0)
+            cell.montantPositif.text = "\(balance) €"
             cell.labelPositif.text = voyageur.nomComplet
         }
         
