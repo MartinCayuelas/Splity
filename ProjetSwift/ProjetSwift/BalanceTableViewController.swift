@@ -51,7 +51,9 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
         //Cas de la balance négative
         if balance < 0.0 {
             //Modification du label négatif
-            cell.negatifLabel.text = "   \(balance) €   "
+            cell.montantNegatifLabel.text = "\(balance) €"
+            //Multiplicateur
+            //cell.negatifLabel
             cell.negatifLabel.backgroundColor = #colorLiteral(red: 0.9479708076, green: 0.04927965999, blue: 0.08589539677, alpha: 0.7451584507)
             //Modification du label positif
             cell.positifLabel.backgroundColor = UIColor.clear
@@ -60,7 +62,9 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
         //Cas de la balance positive
         else{
            //Modification du label positif
-            cell.positifLabel.text = "   \(balance) €   "
+            cell.montantPositifLabel.text = "\(balance) €"
+            //Multiplicateur
+            //cell.positifLabel
             cell.positifLabel.backgroundColor = #colorLiteral(red: 0.004792788532, green: 0.4702310562, blue: 0.2677494586, alpha: 0.7521181778)
             //Modification du label négatif
             cell.negatifLabel.backgroundColor = UIColor.clear

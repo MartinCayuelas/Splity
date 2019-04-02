@@ -14,6 +14,8 @@ class BalanceCell : UITableViewCell{
    
     @IBOutlet weak var positifLabel: UILabel!
     
+    @IBOutlet weak var montantNegatifLabel: UILabel!
     
+    @IBOutlet weak var montantPositifLabel: UILabel!
     
 }
