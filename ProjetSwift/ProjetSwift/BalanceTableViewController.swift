@@ -48,22 +48,24 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
         
         var balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: voyageur)
         
+        //Cas de la balance négative
         if balance < 0.0 {
-            
-            cell.negatifLabel.text = "\(balance) €"
-            cell.positifLabel.text = voyageur.nomComplet
-            cell.negatifLabel.textColor = UIColor.white
-           cell.positifLabel.backgroundColor = UIColor.clear
-            
-        } else{
-           
-            cell.positifLabel.text = "\(balance) €"
-            cell.negatifLabel.text = voyageur.nomComplet
-            cell.positifLabel.textColor = UIColor.white
-            cell.negatifLabel.backgroundColor = UIColor.clear
-            
+            //Modification du label négatif
+            cell.negatifLabel.text = "   \(balance) €   "
+            cell.negatifLabel.backgroundColor = #colorLiteral(red: 0.9479708076, green: 0.04927965999, blue: 0.08589539677, alpha: 0.7451584507)
+            //Modification du label positif
+            cell.positifLabel.backgroundColor = UIColor.clear
+            cell.positifLabel.text = "   "+voyageur.nomComplet+"   "
         }
-        
+        //Cas de la balance positive
+        else{
+           //Modification du label positif
+            cell.positifLabel.text = "   \(balance) €   "
+            cell.positifLabel.backgroundColor = #colorLiteral(red: 0.004792788532, green: 0.4702310562, blue: 0.2677494586, alpha: 0.7521181778)
+            //Modification du label négatif
+            cell.negatifLabel.backgroundColor = UIColor.clear
+            cell.negatifLabel.text = "   "+voyageur.nomComplet+"   "
+        }
         return cell
     }
     

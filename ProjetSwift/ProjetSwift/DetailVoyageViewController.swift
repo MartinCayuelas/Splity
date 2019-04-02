@@ -78,7 +78,7 @@ class DetailVoyageViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         self.viewDidLoad()
-        self.balanceTableView.reloadData()
+        //self.balanceTableView.reloadData()
     }
     
     //Pour donner le voyage sélectionné à la page suivante (liste des dépenses)
