@@ -36,11 +36,7 @@ class AjoutDepenseViewController : UIViewController {
         self.controllerVoyageursPayeursTableView = AjoutDepensePayeurTableViewController(tableView: tableviewPayeurs, voyageSelected: self.voyageSelected!)
         self.controllerVoyageursRembourseursTableView = AjoutDepenseRembourseurTableViewController(tableView: tableviewRembourseurs,voyageSelected: self.voyageSelected!)
         
-        self.imageDepenseView.image = UIImage(named: "money")
-        
-        
-        
-        
+        self.imageDepenseView.image = UIImage(named: "money") 
     }
     
     
@@ -71,17 +67,11 @@ class AjoutDepenseViewController : UIViewController {
             
             let depImage = self.imageDepenseView.image
             let imageData = UIImagePNGRepresentation(depImage!)
+            
+            //Ajout dans la table 'Depense' sans montant pour le moment
             self.newDepense  = DepenseDAO.ajouterDepense(fortitre: titreDepense, andPhoto: imageData! as NSData, andDate: dateDepense, andVoyage: self.voyageSelected!)
             
-            
-           
-            
-            
-            
-            
-            
-           
-            
+            //Récupération du montant payé par chaque payeur
             for case let cell as AjoutDepensePayeurCell in self.tableviewPayeurs.visibleCells {
                 if(cell.checkButton.isChecked == true){
                     
@@ -92,6 +82,7 @@ class AjoutDepenseViewController : UIViewController {
                 }
             }
             
+            //Récupération du montant remboursé par chaque rembourseur
             for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
                
                 if(cell.checkButton.isChecked == true){
@@ -103,37 +94,31 @@ class AjoutDepenseViewController : UIViewController {
                 }
             }
             
+            //Ajout des paiements dans la table 'Payer'
+            var totalPaiements: Double = 0
             for p in self.listePayeurs {
                 let index = self.listePayeurs.firstIndex(of: p)
                 let montant = self.listePayeursMontant[index!]
                 
                 DepenseDAO.ajouterPaiement(forDepense: self.newDepense!, andVoyageur: p, andMontant: montant)
-                
-                
+                totalPaiements = totalPaiements + montant
             }
             
+            //Ajout des remboursements dans la table 'Rembourser'
+            var totalRemboursements: Double = 0
             for r in self.listeRembourseurs {
                 let index = self.listeRembourseurs.firstIndex(of: r)
                 let montant = self.listeRembourseursMontant[index!]
                
                 DepenseDAO.ajouterRemboursement(forDepense: self.newDepense!, andVoyageur: r, andMontant: montant)
-                
-                
-                
+                totalRemboursements = totalRemboursements + montant
             }
             
+            //Ajout du montant de la dépense
             DepenseDAO.insererMontantDepense(forDepense: self.newDepense!)
-            
-            
-            
         }
     }
-    
-
-    
-    
 }
-
 
 // MARK: UIImagePickerControllerDelegate and UINavigationControllerDelegate
 extension AjoutDepenseViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

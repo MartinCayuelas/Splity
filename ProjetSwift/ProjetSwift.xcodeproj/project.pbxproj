@@ -241,12 +241,10 @@
 		7B73B3582244DEB10023E002 /* Depense */ = {
 			isa = PBXGroup;
 			children = (
+				7BDA7067225355B500FB9A8C /* Ajout */,
 				E9FDEAF4224E808E0002D70D /* Detail */,
-				E9FDEAF7224E8D040002D70D /* AjoutDepensePayeurTableViewController.swift */,
 				7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */,
 				7B73B35B2244DF550023E002 /* DepensesViewController.swift */,
-				7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */,
-				E98C3FFE22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift */,
 			);
 			name = Depense;
 			sourceTree = "<group>";
@@ -332,6 +330,16 @@
 				E99FA87822527DD100ED550C /* BalanceTableViewController.swift */,
 			);
 			name = Detail;
+			sourceTree = "<group>";
+		};
+		7BDA7067225355B500FB9A8C /* Ajout */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDEAF7224E8D040002D70D /* AjoutDepensePayeurTableViewController.swift */,
+				7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */,
+				E98C3FFE22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift */,
+			);
+			name = Ajout;
 			sourceTree = "<group>";
 		};
 		E9FA220E224A83FD001777CB /* Ressources */ = {
