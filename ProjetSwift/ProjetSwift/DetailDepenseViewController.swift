@@ -19,10 +19,12 @@ class DetailDepenseViewController : UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var montantLabel: UILabel!
     @IBOutlet weak var textViewListePayeurs: UITextView!
+    @IBOutlet weak var titreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let adepense = self.depenseCourante {
+            self.titreLabel.text = "Détails - " + self.depenseCourante!.titre
             self.montantLabel
                 .text = "\(adepense.montant) €"
             

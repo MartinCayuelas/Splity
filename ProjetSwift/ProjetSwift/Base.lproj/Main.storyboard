@@ -1010,6 +1010,7 @@
                         <outlet property="imageViewDepense" destination="yHi-kM-CuR" id="FwR-cQ-trv"/>
                         <outlet property="montantLabel" destination="3Mv-zT-foJ" id="rM2-Pc-Kat"/>
                         <outlet property="textViewListePayeurs" destination="BQO-5M-KFB" id="vxw-9H-B8M"/>
+                        <outlet property="titreLabel" destination="swi-wl-02U" id="grt-OD-bpA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8MM-hO-vED" userLabel="First Responder" sceneMemberID="firstResponder"/>
