@@ -16,10 +16,11 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
     var voyageurs : VoyageurSetViewModel
     //let fetchResultController : VoyageFetchResultController
     
-    init(tableView: UITableView){
+    init(tableView: UITableView, voyageSelected : Voyage){
         self.tableView = tableView
+        self.voyageSelected = voyageSelected
         self.voyageurs = VoyageurSetViewModel(voyageurs: VoyageDAO.getAllVoyageurs(forVoyage: self.voyageSelected!))
-       
+        
         super.init()
         self.tableView.dataSource = self
     }
@@ -31,7 +32,7 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.voyageurs.count
@@ -39,19 +40,24 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "standardBalanceCell", for: indexPath) as! BalanceTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "standardBalanceCell", for: indexPath) as! BalanceCell
+        
         
         guard let voyageur = self.voyageurs.get(voyageurAt: indexPath.row) else { return cell }
         //Affichage de la balance pour le voyageur courant et le voyage courant
+        
         var balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: voyageur)
         
-        
         if balance < 0.0 {
-            cell.montantNegatif.text = "\(balance) €"
-            cell.labelNegatif.text = voyageur.nomComplet
-        } else{
-            cell.montantPositif.text = "\(balance) €"
+            
+            cell.labelNegatif.text = "\(balance) €"
             cell.labelPositif.text = voyageur.nomComplet
+            cell.labelPositif.backgroundColor = UIColor.clear
+            
+        } else{
+            cell.labelPositif.text = "+ \(balance) €"
+            cell.labelNegatif.text = voyageur.nomComplet
+            cell.labelNegatif.backgroundColor = UIColor.clear
         }
         
         return cell
@@ -60,5 +66,5 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
     
     
     
-
+    
 }

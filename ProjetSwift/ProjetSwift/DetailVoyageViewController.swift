@@ -17,6 +17,8 @@ class DetailVoyageViewController: UIViewController{
     @IBOutlet weak var labelBalance: UILabel!
     @IBOutlet weak var labelCoutTotal: UILabel!
     
+    
+    
     var voyageSelected : Voyage?
     var voyageurSelected : Voyageur?
     
@@ -28,6 +30,7 @@ class DetailVoyageViewController: UIViewController{
         super.viewDidLoad()
         
         
+        self.balanceTableViewController = BalanceTableViewController(tableView: balanceTableView, voyageSelected : self.voyageSelected!)
         //Affichage de la balance pour le voyageur courant et le voyage courant
         var balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!)
         labelBalance.text = String(balance) + " €"
@@ -54,8 +57,7 @@ class DetailVoyageViewController: UIViewController{
             df.locale = Locale(identifier: "fr_FR")
             df.dateFormat = "dd/MM/yyyy"
             let stringDate = df.string(from: avoyage.dateDebut)
-           
-            
+  
             if(avoyage.dateFin == nil){
                 
                 self.labelDateVoyage.text = "Commencé le \(stringDate)"
@@ -66,8 +68,6 @@ class DetailVoyageViewController: UIViewController{
                 let stringDate2 = df2.string(from: avoyage.dateFin!)
                 self.labelDateVoyage.text = "Du \(stringDate) au \(stringDate2)"
             }
-            
-            
             
         } else {
             self.titreVoyage.text = ""
