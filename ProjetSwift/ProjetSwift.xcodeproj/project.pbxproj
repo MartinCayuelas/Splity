@@ -183,7 +183,6 @@
 			children = (
 				7B0F8D3C22493647003869F9 /* CommentEquilibrerViewController.swift */,
 				7BDA705F225341D100FB9A8C /* BilanTableViewController.swift */,
-				7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */,
 			);
 			name = CommentEquilibrer;
 			sourceTree = "<group>";
@@ -210,7 +209,6 @@
 		7B2E0AED224D3710000BEB5D /* GestionVoyageurs */ = {
 			isa = PBXGroup;
 			children = (
-				E92F6E9E224E2CB100CED4A9 /* Cells */,
 				7B2E0AEE224D3731000BEB5D /* GestionVoyageursViewController.swift */,
 				7B2E0AF0224D37A2000BEB5D /* GestionVoyageursActifsTableViewController.swift */,
 				7B2E0AF2224D3A3A000BEB5D /* GestionVoyageursInactifsTableViewController.swift */,
@@ -255,9 +253,7 @@
 				7B73B35B2244DF550023E002 /* DepensesViewController.swift */,
 				7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */,
 				7B786924224A2BCC0087F0DB /* DepenseFetchResultController.swift */,
-				E9FDEAF9224E8E100002D70D /* AjoutDepensePayeurCell.swift */,
 				E98C3FFE22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift */,
-				E98C400222522E4E00C33685 /* AjoutDepenseRembourseurCell.swift */,
 			);
 			name = Depense;
 			sourceTree = "<group>";
@@ -289,6 +285,7 @@
 				7B183ED322454BD30065B202 /* DAOs */,
 				7B183ED022454A630065B202 /* Helpers */,
 				F091FC39224002420086EA52 /* ViewModels */,
+				7BDA706522534D7E00FB9A8C /* Views */,
 				7B656B0922369DE3001DF6F7 /* Controllers */,
 				7B371738223945E1004ACE68 /* Models */,
 				7BCBFA0122369198002AD627 /* Main.storyboard */,
@@ -320,13 +317,28 @@
 			path = ProjetSwiftUITests;
 			sourceTree = "<group>";
 		};
-		E92F6E9E224E2CB100CED4A9 /* Cells */ = {
+		7BDA706522534D7E00FB9A8C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */,
 				E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */,
+				7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */,
+				E9FDEAF9224E8E100002D70D /* AjoutDepensePayeurCell.swift */,
+				E98C400222522E4E00C33685 /* AjoutDepenseRembourseurCell.swift */,
+				E9FDEAF2224E7EA10002D70D /* AjoutVoyageurTableViewCell.swift */,
+				E92B308722533BBA00CFF0DF /* BalanceCell.swift */,
+				7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */,
 			);
-			name = Cells;
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7BDA706622534E4000FB9A8C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */,
+				E99FA87822527DD100ED550C /* BalanceTableViewController.swift */,
+			);
+			name = Detail;
 			sourceTree = "<group>";
 		};
 		E9FA220E224A83FD001777CB /* Ressources */ = {
@@ -342,7 +354,6 @@
 			children = (
 				F09FF17522415D9B0034565D /* AjoutVoyageViewController.swift */,
 				7B3C5DBD22495E7E0059E346 /* AjoutVoyageurTableViewController.swift */,
-				E9FDEAF2224E7EA10002D70D /* AjoutVoyageurTableViewCell.swift */,
 			);
 			name = Ajout;
 			sourceTree = "<group>";
@@ -368,14 +379,11 @@
 		F0CD862D2242A9CA00E73581 /* Voyage */ = {
 			isa = PBXGroup;
 			children = (
+				7BDA706622534E4000FB9A8C /* Detail */,
 				E9FDC8F3224C00340036F365 /* Ajout */,
-				F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */,
 				7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */,
 				7B183ED822455C690065B202 /* VoyagesViewController.swift */,
 				7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */,
-				E99FA87822527DD100ED550C /* BalanceTableViewController.swift */,
-				E92B308722533BBA00CFF0DF /* BalanceCell.swift */,
-				7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */,
 			);
 			name = Voyage;
 			sourceTree = "<group>";
