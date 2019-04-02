@@ -35,30 +35,46 @@
                                 <rect key="frame" x="0.0" y="147" width="375" height="450"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="standardVoyageurCell" textLabel="SlZ-EF-Fu4" detailTextLabel="Lgn-Gh-fTQ" style="IBUITableViewCellStyleSubtitle" id="QIq-LQ-PVL">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="standardVoyageurCell" rowHeight="60" id="QIq-LQ-PVL" customClass="VoyageurTableViewCell" customModule="ProjetSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QIq-LQ-PVL" id="6G3-jx-3AX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QIq-LQ-PVL" id="6G3-jx-3AX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SlZ-EF-Fu4">
-                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoJ-MU-yj3">
+                                                    <rect key="frame" x="340" y="10" width="25" height="39.5"/>
+                                                    <state key="normal" image="pen"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDI-LO-Wpp" userLabel="Nom">
+                                                    <rect key="frame" x="15" y="21" width="47" height="18"/>
+                                                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JR-QT-zUJ" userLabel="Prenom">
+                                                    <rect key="frame" x="166.5" y="21" width="42" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lgn-Gh-fTQ">
-                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8JR-QT-zUJ" secondAttribute="bottom" constant="10" id="2I1-Hu-DvZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="RoJ-MU-yj3" secondAttribute="trailing" constant="10" id="56x-bn-Duh"/>
+                                                <constraint firstItem="8JR-QT-zUJ" firstAttribute="top" secondItem="6G3-jx-3AX" secondAttribute="topMargin" constant="10" id="DNV-lT-bGQ"/>
+                                                <constraint firstItem="RoJ-MU-yj3" firstAttribute="top" secondItem="6G3-jx-3AX" secondAttribute="top" constant="10" id="TXx-1e-8Y9"/>
+                                                <constraint firstItem="nDI-LO-Wpp" firstAttribute="leading" secondItem="6G3-jx-3AX" secondAttribute="leadingMargin" id="UB1-Wh-SkN"/>
+                                                <constraint firstAttribute="bottom" secondItem="RoJ-MU-yj3" secondAttribute="bottom" constant="10" id="eKZ-o8-aEm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nDI-LO-Wpp" secondAttribute="bottom" constant="10" id="ocr-cZ-ILj"/>
+                                                <constraint firstItem="nDI-LO-Wpp" firstAttribute="top" secondItem="6G3-jx-3AX" secondAttribute="topMargin" constant="10" id="tc1-Qa-cNc"/>
+                                                <constraint firstItem="8JR-QT-zUJ" firstAttribute="centerX" secondItem="6G3-jx-3AX" secondAttribute="centerX" id="zd8-Yz-9y9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="nomLabel" destination="nDI-LO-Wpp" id="7hh-Pc-EMr"/>
+                                            <outlet property="prenomLabel" destination="8JR-QT-zUJ" id="L1C-LG-bUP"/>
+                                            <outlet property="updateButton" destination="RoJ-MU-yj3" id="Dbn-58-DEC"/>
                                             <segue destination="iPP-5Q-4sg" kind="show" id="Vhn-az-6t6"/>
                                         </connections>
                                     </tableViewCell>
@@ -1795,9 +1811,10 @@
     <resources>
         <image name="blank" width="192" height="192"/>
         <image name="folder" width="96" height="96"/>
+        <image name="pen" width="25.600000381469727" height="25.600000381469727"/>
         <image name="photo-camera" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aA2-IJ-aF1"/>
+        <segue reference="cSW-O3-Vgd"/>
     </inferredMetricsTieBreakers>
 </document>

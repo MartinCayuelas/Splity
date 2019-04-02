@@ -42,6 +42,7 @@
 		7BDA7060225341D100FB9A8C /* BilanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA705F225341D100FB9A8C /* BilanTableViewController.swift */; };
 		7BDA7062225341F400FB9A8C /* BilanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */; };
 		7BDA706422534BB400FB9A8C /* VoyagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */; };
+		E91E5DDE2253CD3600454D4A /* VoyageurTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E5DDD2253CD3600454D4A /* VoyageurTableViewCell.swift */; };
 		E92B308822533BBA00CFF0DF /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92B308722533BBA00CFF0DF /* BalanceCell.swift */; };
 		E92F6EA0224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */; };
 		E92F6EA2224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */; };
@@ -124,6 +125,7 @@
 		7BDA705F225341D100FB9A8C /* BilanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilanTableViewController.swift; sourceTree = "<group>"; };
 		7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilanTableViewCell.swift; sourceTree = "<group>"; };
 		7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyagesTableViewCell.swift; sourceTree = "<group>"; };
+		E91E5DDD2253CD3600454D4A /* VoyageurTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurTableViewCell.swift; sourceTree = "<group>"; };
 		E92B308722533BBA00CFF0DF /* BalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
 		E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursActifsTableViewCell.swift; sourceTree = "<group>"; };
 		E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursInactifsTableViewCell.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				E9FDEAF2224E7EA10002D70D /* AjoutVoyageurTableViewCell.swift */,
 				E92B308722533BBA00CFF0DF /* BalanceCell.swift */,
 				7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */,
+				E91E5DDD2253CD3600454D4A /* VoyageurTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				7BDA706422534BB400FB9A8C /* VoyagesTableViewCell.swift in Sources */,
 				7B3AB99222495EB90003A620 /* Participer.swift in Sources */,
 				7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */,
+				E91E5DDE2253CD3600454D4A /* VoyageurTableViewCell.swift in Sources */,
 				E99FA87922527DD100ED550C /* BalanceTableViewController.swift in Sources */,
 				7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */,
 				7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */,

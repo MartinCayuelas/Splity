@@ -42,12 +42,13 @@ class VoyageursTableViewController: NSObject, UITableViewDataSource, VoyageurSet
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = voyageursTableView.dequeueReusableCell(withIdentifier: "standardVoyageurCell", for: indexPath)
+        let cell = voyageursTableView.dequeueReusableCell(withIdentifier: "standardVoyageurCell", for: indexPath) as! VoyageurTableViewCell
 
         guard let voyageur = self.voyageurs.get(voyageurAt: indexPath.row) else { return cell }
         
-        cell.textLabel?.text = voyageur.nom
-        cell.detailTextLabel?.text = voyageur.prenom
+        cell.nomLabel.text = voyageur.nom
+        cell.prenomLabel.text = voyageur.prenom
+       
 
         return cell
     }
