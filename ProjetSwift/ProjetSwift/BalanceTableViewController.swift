@@ -56,51 +56,92 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
         
         //Cas de la balance négative
         if balance < 0.0 {
-            //Modification du label négatif en rouge
-            //Multiplicateur
-            cell.negatifLabel.addConstraint(NSLayoutConstraint(item: cell.negatifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(taille)))
             
+            //Modification des contraintes (largeur)
+            for constraint in cell.negatifLabel.constraints {
+                if constraint.identifier == "negatifLabelConstraint" {
+                    constraint.constant = CGFloat(taille)
+                    print("J'ai trouvé la contrainte a modifier")
+                }
+                print("DANS LA BOUCLE")
+            }
+            
+            for constraint in cell.montantNegatifLabel.constraints {
+                if constraint.identifier == "montantNegatifLabelConstraint" {
+                    constraint.constant = CGFloat(self.getTailleMaxCell())
+                }
+            }
+            
+            for constraint in cell.positifLabel.constraints {
+                if constraint.identifier == "positifLabelConstraint" {
+                    constraint.constant = CGFloat(self.getTailleMaxCell())
+                }
+            }
+            
+            for constraint in cell.montantPositifLabel.constraints {
+                if constraint.identifier == "montantPositifLabelConstraint" {
+                    constraint.constant = CGFloat(self.getTailleMaxCell())
+                }
+            }
+            
+            //Modification du label négatif en rouge
             cell.negatifLabel.backgroundColor = #colorLiteral(red: 0.9479708076, green: 0.04927965999, blue: 0.08589539677, alpha: 0.7451584507)
             cell.negatifLabel.text = ""
             
             //Modification du label négatif avec le montant
             cell.montantNegatifLabel.text = "\(balance) €"
-            cell.montantNegatifLabel.addConstraint(NSLayoutConstraint(item: cell.montantNegatifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.getTailleMaxCell())))
             cell.montantNegatifLabel.backgroundColor = UIColor.clear
             
             //Modification du label positif (sans couleur)
-            cell.positifLabel.addConstraint(NSLayoutConstraint(item: cell.positifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.getTailleMaxCell())))
             cell.positifLabel.backgroundColor = UIColor.clear
             cell.positifLabel.text = ""
             
             //Modification du label positif avec le nom du voyageur
-            cell.montantPositifLabel.addConstraint(NSLayoutConstraint(item: cell.montantPositifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.getTailleMaxCell())))
             cell.montantPositifLabel.backgroundColor = UIColor.clear
             cell.montantPositifLabel.text = voyageur.nomComplet
         }
             
         //Cas de la balance positive
         else{
-           //Modification du label positif en vert
-            //Multiplicateur
-            // Width constraint
-            cell.positifLabel.addConstraint(NSLayoutConstraint(item: cell.positifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(taille)))
             
+            //Modification des contraintes (largeurs)
+            for constraint in cell.negatifLabel.constraints {
+                if constraint.identifier == "negatifLabelConstraint" {
+                    constraint.constant = CGFloat(self.getTailleMaxCell())
+                }
+            }
+            
+            for constraint in cell.montantNegatifLabel.constraints {
+                if constraint.identifier == "montantNegatifLabelConstraint" {
+                    constraint.constant = CGFloat(self.getTailleMaxCell())
+                }
+            }
+            
+            for constraint in cell.positifLabel.constraints {
+                if constraint.identifier == "positifLabelConstraint" {
+                    constraint.constant = CGFloat(taille)
+                }
+            }
+            
+            for constraint in cell.montantPositifLabel.constraints {
+                if constraint.identifier == "montantPositifLabelConstraint" {
+                    constraint.constant = CGFloat(self.getTailleMaxCell())
+                }
+            }
+            
+           //Modification du label positif en vert
             cell.positifLabel.backgroundColor = #colorLiteral(red: 0.004792788532, green: 0.4702310562, blue: 0.2677494586, alpha: 0.7521181778)
             cell.positifLabel.text = ""
             
             //Modification du label positif avec le montant
             cell.montantPositifLabel.text = "\(balance) €"
-            cell.montantPositifLabel.addConstraint(NSLayoutConstraint(item: cell.montantPositifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.getTailleMaxCell())))
             cell.montantPositifLabel.backgroundColor = UIColor.clear
             
             //Modification du label négatif (sans couleur)
-            cell.negatifLabel.addConstraint(NSLayoutConstraint(item: cell.negatifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.getTailleMaxCell())))
             cell.negatifLabel.backgroundColor = UIColor.clear
             cell.negatifLabel.text = ""
             
             //Modification du label négatif avec le nom du voyageur
-            cell.montantNegatifLabel.addConstraint(NSLayoutConstraint(item: cell.montantNegatifLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: CGFloat(self.getTailleMaxCell())))
             cell.montantNegatifLabel.backgroundColor = UIColor.clear
             cell.montantNegatifLabel.text = voyageur.nomComplet
             

@@ -340,27 +340,39 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YM-IK-kbZ">
-                                                    <rect key="frame" x="187.5" y="10" width="13.5" height="29.5"/>
+                                                    <rect key="frame" x="187.5" y="10" width="10" height="29.5"/>
                                                     <color key="backgroundColor" red="0.0047927885316312313" green="0.47023105621337891" blue="0.26774945855140686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" identifier="positifLabelConstraint" id="Bzk-aA-P2M"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ux3-IT-HIP" userLabel="montantPositifLabel">
-                                                    <rect key="frame" x="197.5" y="10" width="0.0" height="29.5"/>
+                                                    <rect key="frame" x="197.5" y="10" width="10" height="29.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" identifier="montantPositifLabelConstraint" id="php-aa-Kts"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZ1-JX-yRu">
-                                                    <rect key="frame" x="174" y="10" width="13.5" height="29.5"/>
+                                                    <rect key="frame" x="177.5" y="10" width="10" height="29.5"/>
                                                     <color key="backgroundColor" red="0.94797080755233765" green="0.049279659986495972" blue="0.085895396769046783" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" identifier="negatifLabelConstraint" id="E6A-FW-TIU"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrK-vw-L8a" userLabel="montantNegatifLabel">
-                                                    <rect key="frame" x="177.5" y="10" width="0.0" height="29.5"/>
+                                                    <rect key="frame" x="167.5" y="10" width="10" height="29.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" identifier="montantNegatifLabelConstraint" id="D8Q-35-phL"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
