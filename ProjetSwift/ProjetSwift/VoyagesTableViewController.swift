@@ -41,13 +41,17 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
 
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageCell", for: indexPath) as! VoyagesTableViewCell
         
         guard let voyage = self.voyages.get(voyageAt: indexPath.row) else { return cell }
         
-        cell.textLabel?.text = voyage.titre
         let photoVoyage = UIImage(data: voyage.photo as! Data)
-        cell.imageView?.image = photoVoyage
+        cell.imageVoyage.image = photoVoyage
+        
+        cell.titreVoyage.text = voyage.titre
+        
+        let montantVoyage = VoyageDAO.getMontant(forVoyage: voyage)
+        cell.montantVoyage.text = "\(montantVoyage) €"
         
         return cell
     }

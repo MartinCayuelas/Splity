@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7B0F8D3722491794003869F9 /* AjourVoyageurTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F8D3622491794003869F9 /* AjourVoyageurTextFieldDelegate.swift */; };
-		7B0F8D3B2249232A003869F9 /* VoyageControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */; };
 		7B0F8D3D22493647003869F9 /* CommentEquilibrerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F8D3C22493647003869F9 /* CommentEquilibrerViewController.swift */; };
 		7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */; };
 		7B183ED222454A770065B202 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B183ED122454A770065B202 /* CoreDataManager.swift */; };
@@ -45,6 +44,7 @@
 		7BCBFA2122369198002AD627 /* ProjetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */; };
 		7BDA7060225341D100FB9A8C /* BilanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA705F225341D100FB9A8C /* BilanTableViewController.swift */; };
 		7BDA7062225341F400FB9A8C /* BilanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */; };
+		7BDA706422534BB400FB9A8C /* VoyagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */; };
 		E92B308822533BBA00CFF0DF /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92B308722533BBA00CFF0DF /* BalanceCell.swift */; };
 		E92F6EA0224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */; };
 		E92F6EA2224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */; };
@@ -87,7 +87,6 @@
 
 /* Begin PBXFileReference section */
 		7B0F8D3622491794003869F9 /* AjourVoyageurTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjourVoyageurTextFieldDelegate.swift; sourceTree = "<group>"; };
-		7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageControllerTableViewCell.swift; sourceTree = "<group>"; };
 		7B0F8D3C22493647003869F9 /* CommentEquilibrerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentEquilibrerViewController.swift; sourceTree = "<group>"; };
 		7B183ECE2245144A0065B202 /* AjoutDepenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutDepenseViewController.swift; sourceTree = "<group>"; };
 		7B183ED122454A770065B202 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -130,6 +129,7 @@
 		7BCBFA2222369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BDA705F225341D100FB9A8C /* BilanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilanTableViewController.swift; sourceTree = "<group>"; };
 		7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilanTableViewCell.swift; sourceTree = "<group>"; };
+		7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyagesTableViewCell.swift; sourceTree = "<group>"; };
 		E92B308722533BBA00CFF0DF /* BalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
 		E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursActifsTableViewCell.swift; sourceTree = "<group>"; };
 		E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursInactifsTableViewCell.swift; sourceTree = "<group>"; };
@@ -372,10 +372,10 @@
 				F091FC3C22400ED60086EA52 /* DetailVoyageViewController.swift */,
 				7B37174322394B01004ACE68 /* VoyagesTableViewController.swift */,
 				7B183ED822455C690065B202 /* VoyagesViewController.swift */,
-				7B0F8D3A2249232A003869F9 /* VoyageControllerTableViewCell.swift */,
 				7B3AB98B224947900003A620 /* VoyageFetchResultController.swift */,
 				E99FA87822527DD100ED550C /* BalanceTableViewController.swift */,
 				E92B308722533BBA00CFF0DF /* BalanceCell.swift */,
+				7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */,
 			);
 			name = Voyage;
 			sourceTree = "<group>";
@@ -563,7 +563,6 @@
 				7B0F8D3D22493647003869F9 /* CommentEquilibrerViewController.swift in Sources */,
 				7B3AB98C224947900003A620 /* VoyageFetchResultController.swift in Sources */,
 				E9FDEAF3224E7EA20002D70D /* AjoutVoyageurTableViewCell.swift in Sources */,
-				7B0F8D3B2249232A003869F9 /* VoyageControllerTableViewCell.swift in Sources */,
 				F091FC3D22400ED70086EA52 /* DetailVoyageViewController.swift in Sources */,
 				F091FC3B2240026C0086EA52 /* VoyageSetViewModel.swift in Sources */,
 				7B2E0AEF224D3731000BEB5D /* GestionVoyageursViewController.swift in Sources */,
@@ -577,6 +576,7 @@
 				7B183ED922455C690065B202 /* VoyagesViewController.swift in Sources */,
 				F0CD862422423F3500E73581 /* VoyageurSet.swift in Sources */,
 				E98C400322522E4E00C33685 /* AjoutDepenseRembourseurCell.swift in Sources */,
+				7BDA706422534BB400FB9A8C /* VoyagesTableViewCell.swift in Sources */,
 				7B3AB99222495EB90003A620 /* Participer.swift in Sources */,
 				7B73B35A2244DEE50023E002 /* DepensesTableViewController.swift in Sources */,
 				E99FA87922527DD100ED550C /* BalanceTableViewController.swift in Sources */,
