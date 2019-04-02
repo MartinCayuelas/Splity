@@ -76,6 +76,11 @@ class DetailVoyageViewController: UIViewController{
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.viewDidLoad()
+        self.balanceTableView.reloadData()
+    }
+    
     //Pour donner le voyage sélectionné à la page suivante (liste des dépenses)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destController = segue.destination as? DepensesViewController {

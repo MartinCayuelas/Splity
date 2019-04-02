@@ -22,7 +22,6 @@ class ViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         self.controllerVoyageursTableView.voyageurs = VoyageurSetViewModel(voyageurs: VoyageurDAO.getAllVoyageursNonArchives())
         self.voyageursTableView.reloadData()
-        print(self.controllerVoyageursTableView.voyageurs.count)
     }
 
     override func didReceiveMemoryWarning() {

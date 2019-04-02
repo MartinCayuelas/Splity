@@ -29,6 +29,10 @@ class VoyagesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.voyagesTableView.reloadData()
+    }
+    
     // MARK: - Navigation
     
     /// Appelé lorsque l'on clique sur une cellule de la liste des voyages
