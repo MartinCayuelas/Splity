@@ -43,6 +43,8 @@
 		7BCBFA0B22369198002AD627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0922369198002AD627 /* LaunchScreen.storyboard */; };
 		7BCBFA1622369198002AD627 /* ProjetSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA1522369198002AD627 /* ProjetSwiftTests.swift */; };
 		7BCBFA2122369198002AD627 /* ProjetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */; };
+		7BDA7060225341D100FB9A8C /* BilanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA705F225341D100FB9A8C /* BilanTableViewController.swift */; };
+		7BDA7062225341F400FB9A8C /* BilanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */; };
 		E92B308822533BBA00CFF0DF /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92B308722533BBA00CFF0DF /* BalanceCell.swift */; };
 		E92F6EA0224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */; };
 		E92F6EA2224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */; };
@@ -126,6 +128,8 @@
 		7BCBFA1C22369198002AD627 /* ProjetSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCBFA2022369198002AD627 /* ProjetSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetSwiftUITests.swift; sourceTree = "<group>"; };
 		7BCBFA2222369198002AD627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BDA705F225341D100FB9A8C /* BilanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilanTableViewController.swift; sourceTree = "<group>"; };
+		7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilanTableViewCell.swift; sourceTree = "<group>"; };
 		E92B308722533BBA00CFF0DF /* BalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
 		E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursActifsTableViewCell.swift; sourceTree = "<group>"; };
 		E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursInactifsTableViewCell.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				7B0F8D3C22493647003869F9 /* CommentEquilibrerViewController.swift */,
+				7BDA705F225341D100FB9A8C /* BilanTableViewController.swift */,
+				7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */,
 			);
 			name = CommentEquilibrer;
 			sourceTree = "<group>";
@@ -533,6 +539,7 @@
 				7BCBFA0622369198002AD627 /* ProjetSwift.xcdatamodeld in Sources */,
 				7B37174622394B44004ACE68 /* Voyage.swift in Sources */,
 				E9FDEAF6224E80B50002D70D /* DetailDepenseViewController.swift in Sources */,
+				7BDA7062225341F400FB9A8C /* BilanTableViewCell.swift in Sources */,
 				7B37174422394B01004ACE68 /* VoyagesTableViewController.swift in Sources */,
 				7B3C5DBE22495E7E0059E346 /* AjoutVoyageurTableViewController.swift in Sources */,
 				7B897A88224E13D3001FB80D /* Payer.swift in Sources */,
@@ -549,6 +556,7 @@
 				7B183ED7224550670065B202 /* VoyageurFetchResultController.swift in Sources */,
 				F0CD86322242AF1100E73581 /* VoyageurSetViewModel.swift in Sources */,
 				7B897A8A224E15B7001FB80D /* Rembourser.swift in Sources */,
+				7BDA7060225341D100FB9A8C /* BilanTableViewController.swift in Sources */,
 				E92F6EA0224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift in Sources */,
 				F09FF17622415D9C0034565D /* AjoutVoyageViewController.swift in Sources */,
 				7B2E0AF1224D37A2000BEB5D /* GestionVoyageursActifsTableViewController.swift in Sources */,

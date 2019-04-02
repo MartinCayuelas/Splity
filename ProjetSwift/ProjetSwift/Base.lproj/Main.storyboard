@@ -659,10 +659,10 @@
             </objects>
             <point key="canvasLocation" x="1582" y="624"/>
         </scene>
-        <!--View Controller-->
+        <!--Comment Equilibrer View Controller-->
         <scene sceneID="fof-uO-Eyt">
             <objects>
-                <viewController id="9yw-CG-aY7" sceneMemberID="viewController">
+                <viewController id="9yw-CG-aY7" customClass="CommentEquilibrerViewController" customModule="ProjetSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nlq-0X-kLx"/>
                         <viewControllerLayoutGuide type="bottom" id="Csb-3O-53c"/>
@@ -695,13 +695,41 @@
                                 <rect key="frame" x="0.0" y="421" width="375" height="246"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xGa-DW-wbI">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardBilanCell" id="xGa-DW-wbI" customClass="BilanTableViewCell" customModule="ProjetSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xGa-DW-wbI" id="bBP-dY-dYp">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJU-R5-4xt">
+                                                    <rect key="frame" x="15" y="12" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeC-Bo-lTD">
+                                                    <rect key="frame" x="166" y="11" width="65" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BT-xx-PQD">
+                                                    <rect key="frame" x="280" y="10" width="80" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nomCompletLabel" destination="ZJU-R5-4xt" id="p4c-Pc-wN8"/>
+                                            <outlet property="paiementsLabel" destination="UeC-Bo-lTD" id="vF5-nu-eik"/>
+                                            <outlet property="remboursementsLabel" destination="8BT-xx-PQD" id="wMN-4w-irb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -728,6 +756,9 @@
                             <constraint firstItem="vaM-Ne-WeI" firstAttribute="top" secondItem="Nlq-0X-kLx" secondAttribute="bottom" constant="15" id="zt1-s6-Mqv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bilanTableView" destination="Ezw-lr-4CD" id="IRl-cF-DBh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OnR-t3-XgP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
