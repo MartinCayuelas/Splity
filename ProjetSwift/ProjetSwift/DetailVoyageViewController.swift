@@ -77,7 +77,10 @@ class DetailVoyageViewController: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.balanceTableViewController.balanceMax = DepenseDAO.getBalanceMaximale(forVoyage: self.voyageSelected!)
         self.viewDidLoad()
+        
+        print(self.balanceTableViewController.balanceMax)
         //self.balanceTableView.reloadData()
     }
     
