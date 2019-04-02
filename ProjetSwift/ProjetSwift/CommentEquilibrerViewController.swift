@@ -15,9 +15,13 @@ class CommentEquilibrerViewController : UIViewController {
     var bilanTableViewController: BilanTableViewController!
     var voyageSelected: Voyage?
     
+    @IBOutlet weak var dettesTableView: UITableView!
+    var dettesTableViewController: DettesTableViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.bilanTableViewController = BilanTableViewController(tableView: self.bilanTableView, voyageSelected: self.voyageSelected!)
+        self.dettesTableViewController = DettesTableViewController(tableView: self.bilanTableView, voyageSelected: self.voyageSelected!)
     }
     
 }

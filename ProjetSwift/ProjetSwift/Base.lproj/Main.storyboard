@@ -905,6 +905,7 @@
                     </view>
                     <connections>
                         <outlet property="bilanTableView" destination="Ezw-lr-4CD" id="IRl-cF-DBh"/>
+                        <outlet property="dettesTableView" destination="noz-AU-Bzr" id="DP9-wI-r4l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OnR-t3-XgP" userLabel="First Responder" sceneMemberID="firstResponder"/>

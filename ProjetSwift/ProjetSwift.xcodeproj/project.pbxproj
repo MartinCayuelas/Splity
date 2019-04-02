@@ -31,6 +31,7 @@
 		7B786923224A2AF00087F0DB /* DepenseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B786922224A2AF00087F0DB /* DepenseDAO.swift */; };
 		7B897A88224E13D3001FB80D /* Payer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B897A87224E13D3001FB80D /* Payer.swift */; };
 		7B897A8A224E15B7001FB80D /* Rembourser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B897A89224E15B7001FB80D /* Rembourser.swift */; };
+		7B8EDC522253D8B8000EFBED /* DettesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8EDC512253D8B8000EFBED /* DettesTableViewController.swift */; };
 		7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF9FD22369198002AD627 /* AppDelegate.swift */; };
 		7BCBFA0022369198002AD627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCBF9FF22369198002AD627 /* ViewController.swift */; };
 		7BCBFA0322369198002AD627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BCBFA0122369198002AD627 /* Main.storyboard */; };
@@ -108,6 +109,7 @@
 		7B786922224A2AF00087F0DB /* DepenseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepenseDAO.swift; sourceTree = "<group>"; };
 		7B897A87224E13D3001FB80D /* Payer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payer.swift; sourceTree = "<group>"; };
 		7B897A89224E15B7001FB80D /* Rembourser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rembourser.swift; sourceTree = "<group>"; };
+		7B8EDC512253D8B8000EFBED /* DettesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DettesTableViewController.swift; sourceTree = "<group>"; };
 		7BCBF9FA22369198002AD627 /* ProjetSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BCBF9FD22369198002AD627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BCBF9FF22369198002AD627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			children = (
 				7B0F8D3C22493647003869F9 /* CommentEquilibrerViewController.swift */,
 				7BDA705F225341D100FB9A8C /* BilanTableViewController.swift */,
+				7B8EDC512253D8B8000EFBED /* DettesTableViewController.swift */,
 			);
 			name = CommentEquilibrer;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				E91E5DDE2253CD3600454D4A /* VoyageurTableViewCell.swift in Sources */,
 				E99FA87922527DD100ED550C /* BalanceTableViewController.swift in Sources */,
 				7B73B35C2244DF550023E002 /* DepensesViewController.swift in Sources */,
+				7B8EDC522253D8B8000EFBED /* DettesTableViewController.swift in Sources */,
 				7BCBF9FE22369198002AD627 /* AppDelegate.swift in Sources */,
 				7B786923224A2AF00087F0DB /* DepenseDAO.swift in Sources */,
 			);

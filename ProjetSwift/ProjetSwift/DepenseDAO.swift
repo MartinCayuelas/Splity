@@ -189,23 +189,70 @@ class DepenseDAO{
     }
     
     static func getBalanceMaximale(forVoyage voyage: Voyage) -> Double{
-        
         let voyageurs = VoyageDAO.getAllVoyageurs(forVoyage: voyage)
         var max : Double = 0
         for v in voyageurs{
             var balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
-            
             if balance < 0.0{
                 balance = balance * -1
             }
             if balance > max{
                 max = balance
             }
-            
         }
         return max
-        
-        
+    }
+    
+    static func getPlusGrosPayeur(forVoyage voyage: Voyage) -> Voyageur {
+        let voyageurs = VoyageDAO.getAllVoyageurs(forVoyage: voyage)
+        var max: Double = 0
+        var voyageurMax: Voyageur = voyageurs[0]
+        for v in voyageurs{
+            var balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
+            if balance > max{
+                max = balance
+                voyageurMax = v
+            }
+        }
+        return voyageurMax
+    }
+    
+    static func getMontantPlusGrosPayeur(forVoyage voyage: Voyage) -> Double {
+        let voyageurs = VoyageDAO.getAllVoyageurs(forVoyage: voyage)
+        var max : Double = 0
+        for v in voyageurs{
+            var balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
+            if balance > max{
+                max = balance
+            }
+        }
+        return max
+    }
+    
+    static func getPlusGrosRembourseur(forVoyage voyage: Voyage) -> Voyageur {
+        let voyageurs = VoyageDAO.getAllVoyageurs(forVoyage: voyage)
+        var min: Double = 0
+        var voyageurMin: Voyageur = voyageurs[0]
+        for v in voyageurs{
+            var balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
+            if balance < min {
+                min = balance
+                voyageurMin = v
+            }
+        }
+        return voyageurMin
+    }
+    
+    static func getMontantPlusGrosRembourseur(forVoyage voyage: Voyage) -> Double {
+        let voyageurs = VoyageDAO.getAllVoyageurs(forVoyage: voyage)
+        var min : Double = 0
+        for v in voyageurs{
+            var balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
+            if balance < min{
+                min = balance
+            }
+        }
+        return min
     }
     
     
