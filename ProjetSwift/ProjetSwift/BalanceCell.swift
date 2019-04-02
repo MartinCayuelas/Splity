@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 
 class BalanceCell : UITableViewCell{
+    @IBOutlet weak var negatifLabel: UILabel!
+   
+    @IBOutlet weak var positifLabel: UILabel!
     
-    @IBOutlet weak var labelPositif: UILabel!
     
-    @IBOutlet weak var labelNegatif: UILabel!
+    
 }

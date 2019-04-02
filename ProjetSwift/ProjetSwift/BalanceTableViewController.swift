@@ -50,14 +50,18 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
         
         if balance < 0.0 {
             
-            cell.labelNegatif.text = "\(balance) €"
-            cell.labelPositif.text = voyageur.nomComplet
-            cell.labelPositif.backgroundColor = UIColor.clear
+            cell.negatifLabel.text = "\(balance) €"
+            cell.positifLabel.text = voyageur.nomComplet
+            cell.negatifLabel.textColor = UIColor.white
+           cell.positifLabel.backgroundColor = UIColor.clear
             
         } else{
-            cell.labelPositif.text = "+ \(balance) €"
-            cell.labelNegatif.text = voyageur.nomComplet
-            cell.labelNegatif.backgroundColor = UIColor.clear
+           
+            cell.positifLabel.text = "\(balance) €"
+            cell.negatifLabel.text = voyageur.nomComplet
+            cell.positifLabel.textColor = UIColor.white
+            cell.negatifLabel.backgroundColor = UIColor.clear
+            
         }
         
         return cell
