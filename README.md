@@ -36,6 +36,7 @@ Cette application a été créée par **Martin CAYUELAS** et **Nathan GUILLAUD**
     -   Depuis l'appareil photo
     - Visualiser les détails d'une dépense
     - Visualiser une dépense
+    - Empêcher l'ajout de la dépense si les montants payés et à rembourser ne sont pas égaux
 
 - Gestion des voyageurs
     - Visualiser les participants (participants actifs, participants ayant quitté avec la date de départ)
@@ -44,6 +45,7 @@ Cette application a été créée par **Martin CAYUELAS** et **Nathan GUILLAUD**
 
 - Comment équilibrer
     - Visualiser les dettes de chaque voyageur envers les autres afin d'équilibrer la balance
+    - Rembourser une dette d'un voyageur pour un autre
     - Visualiser le bilan de chaque voyageur pour un voyage
         - Dépense totale
         - Coût total
