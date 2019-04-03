@@ -15,6 +15,7 @@ class DepensesViewController : UIViewController {
     @IBOutlet weak var depensesTableView: UITableView!
     var depenseSelected: Depense?
      var voyageSelected: Voyage?
+    var depenseImpossible: Bool? = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,30 @@ class DepensesViewController : UIViewController {
             }
         }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if(self.depenseImpossible!){
+            print("OK")
+            //Affichage d'une popup car la dépense n'a pas été créée
+            let alert = UIAlertController(title: "La dépense n'a pas pu être créée", message: "Le montant total dépensé doit être même que le montant total à rembourser.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                switch action.style{
+                case .default:
+                    print("default")
+                    
+                case .cancel:
+                    print("cancel")
+                    
+                case .destructive:
+                    print("destructive")
+                    
+                    
+                }}))
+            self.present(alert, animated: true, completion: nil)
+            
+            self.depenseImpossible = false
+        }
+    }
+    
 
     /// Ajoute la depense à la liste des dépenses et revient à la page de toutes les depenses avec la liste mise à jour
     ///
@@ -47,6 +72,10 @@ class DepensesViewController : UIViewController {
     @IBAction func unwindToDepensesView(segue: UIStoryboardSegue){
         if segue.identifier == "depenseAddedSegue" {
             guard let controller = segue.source as? AjoutDepenseViewController else { return }
+            print(self.depenseImpossible)
+            //Si la dépense a des montants non égaux
+            
+            //Sinon on ajoute la dépense
             if let depense = controller.newDepense {
                 self.depensesTableViewController.depensesModel.add(depense: depense)
             }
