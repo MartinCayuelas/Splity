@@ -71,66 +71,71 @@ class AjoutDepenseViewController : UIViewController {
     // Parameters : segue 'UIStoryboardSegue'
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "depenseAddedSegue" {
-            let titreDepense : String  = self.titreDepenseTextField.text!
-            let dateDepense : Date = Date()
-            
-            let depImage = self.imageDepenseView.image
-            let imageData = UIImagePNGRepresentation(depImage!)
-            
-            //Ajout dans la table 'Depense' sans montant pour le moment
-            self.newDepense  = DepenseDAO.ajouterDepense(fortitre: titreDepense, andPhoto: imageData! as NSData, andDate: dateDepense, andVoyage: self.voyageSelected!)
-            
-            //Récupération du montant payé par chaque payeur
-            for case let cell as AjoutDepensePayeurCell in self.tableviewPayeurs.visibleCells {
-                if(cell.checkButton.isChecked == true){
-                    
-                    let voyageurCoche = self.controllerVoyageursPayeursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
-                    self.listePayeurs.append(voyageurCoche!)
-                    let montant = cell.montantDepense.text!
-                    self.listePayeursMontant.append(Double(montant)!)
-                }
-            }
-            
-            //Récupération du montant remboursé par chaque rembourseur
-            for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
-               
-                if(cell.checkButton.isChecked == true){
-                    let voyageurCoche = self.controllerVoyageursRembourseursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
-                 
-                    self.listeRembourseurs.append(voyageurCoche!)
-                    let montant = cell.montantDepense.text!
-                    self.listeRembourseursMontant.append(Double(montant)!)
-                }
-            }
-            
-            //Deuxième test pour les montants égaux
-            print("PAIEMENTS")
-            print(getTotalPaiements())
-            print("REMBOURSEMENTS")
-            print(getTotalRemboursements())
-            //Si les montants ne sont pas égaux
-            if(getTotalPaiements() - getTotalRemboursements() >= 0.01 || getTotalPaiements() - getTotalRemboursements() <= -0.01) {
-                print("MONTANTS NON EGAUX")
-            }
-            
-            //Ajout des paiements dans la table 'Payer'
-            for p in self.listePayeurs {
-                let index = self.listePayeurs.firstIndex(of: p)
-                let montant = self.listePayeursMontant[index!]
+            if let destController = segue.destination as? DepensesViewController {
+                let titreDepense : String  = self.titreDepenseTextField.text!
+                let dateDepense : Date = Date()
                 
-                DepenseDAO.ajouterPaiement(forDepense: self.newDepense!, andVoyageur: p, andMontant: montant)
+                let depImage = self.imageDepenseView.image
+                let imageData = UIImagePNGRepresentation(depImage!)
+                
+                //Récupération du montant payé par chaque payeur
+                for case let cell as AjoutDepensePayeurCell in self.tableviewPayeurs.visibleCells {
+                    if(cell.checkButton.isChecked == true){
+                        
+                        let voyageurCoche = self.controllerVoyageursPayeursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
+                        self.listePayeurs.append(voyageurCoche!)
+                        let montant = cell.montantDepense.text!
+                        self.listePayeursMontant.append(Double(montant)!)
+                    }
+                }
+                
+                //Récupération du montant remboursé par chaque rembourseur
+                for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
+                    
+                    if(cell.checkButton.isChecked == true){
+                        let voyageurCoche = self.controllerVoyageursRembourseursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
+                        
+                        self.listeRembourseurs.append(voyageurCoche!)
+                        let montant = cell.montantDepense.text!
+                        self.listeRembourseursMontant.append(Double(montant)!)
+                    }
+                }
+                
+                //Deuxième test pour les montants égaux
+                //Si les montants ne sont pas égaux
+                if(getTotalPaiements() - getTotalRemboursements() >= 0.01 || getTotalPaiements() - getTotalRemboursements() <= -0.01) {
+                    
+                    //Interdire l'ajout de la dépense
+                    destController.depenseImpossible = true
+                    
+                } else {
+                    //Autoriser l'ajout de la dépense
+                    destController.depenseImpossible = false
+                    
+                    //Ajout dans la table 'Depense' sans montant pour le moment
+                    self.newDepense  = DepenseDAO.ajouterDepense(fortitre: titreDepense, andPhoto: imageData! as NSData, andDate: dateDepense, andVoyage: self.voyageSelected!)
+                    
+                    //Ajout des paiements dans la table 'Payer'
+                    for p in self.listePayeurs {
+                        let index = self.listePayeurs.firstIndex(of: p)
+                        let montant = self.listePayeursMontant[index!]
+                        
+                        DepenseDAO.ajouterPaiement(forDepense: self.newDepense!, andVoyageur: p, andMontant: montant)
+                    }
+                    
+                    //Ajout des remboursements dans la table 'Rembourser'
+                    for r in self.listeRembourseurs {
+                        let index = self.listeRembourseurs.firstIndex(of: r)
+                        let montant = self.listeRembourseursMontant[index!]
+                        
+                        DepenseDAO.ajouterRemboursement(forDepense: self.newDepense!, andVoyageur: r, andMontant: montant)
+                    }
+                    
+                    //Ajout du montant de la dépense
+                    DepenseDAO.insererMontantDepense(forDepense: self.newDepense!)
+                }
             }
             
-            //Ajout des remboursements dans la table 'Rembourser'
-            for r in self.listeRembourseurs {
-                let index = self.listeRembourseurs.firstIndex(of: r)
-                let montant = self.listeRembourseursMontant[index!]
-               
-                DepenseDAO.ajouterRemboursement(forDepense: self.newDepense!, andVoyageur: r, andMontant: montant)
-            }
-            
-            //Ajout du montant de la dépense
-            DepenseDAO.insererMontantDepense(forDepense: self.newDepense!)
         }
     }
     
