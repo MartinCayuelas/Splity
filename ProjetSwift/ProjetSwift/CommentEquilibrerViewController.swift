@@ -45,20 +45,24 @@ class CommentEquilibrerViewController : UIViewController {
             let donneur = VoyageurDAO.search(forPrenom: String(prenomDonneur), nom: String(nomDonneur))
             
             //Creation Depense, Payer et Rembourser
-            let titre = "Remboursement de \(prenomDonneur) \(nomDonneur) à \(prenomReceveur) \(nomReceveur)"
+            let titre = "Remboursement \(prenomDonneur) à \(prenomReceveur)"
             
             
             let imageData = UIImagePNGRepresentation(UIImage(named: "cash")!)
-            let depense =  DepenseDAO.ajouterDepense(fortitre: titre, andPhoto: imageData! as NSData, andDate: Date(), andVoyage: self.voyageSelected!)
             
+            let depense = DepenseDAO.ajouterDepense(fortitre: titre, andPhoto: imageData! as NSData, andDate: Date(), andVoyage: self.voyageSelected!)
             
             DepenseDAO.ajouterPaiement(forDepense: depense, andVoyageur: donneur![0], andMontant: Double(montantDepense)!)
             DepenseDAO.ajouterRemboursement(forDepense: depense, andVoyageur: receveur![0], andMontant: Double(montantDepense)!)
             
+            DepenseDAO.insererMontantDepense(forDepense: depense)
+            
+            CoreDataManager.save()
+            
             //Suppression cellule
-            self.dettesTableView.beginUpdates()
+            /*self.dettesTableView.beginUpdates()
             self.dettesTableView.deleteRows(at: [indexPath], with: .fade)
-            self.dettesTableView.endUpdates()
+            self.dettesTableView.endUpdates()*/
             
         }
     }

@@ -777,7 +777,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPG-VC-lUt">
-                                                    <rect key="frame" x="30" y="21.5" width="42" height="20.5"/>
+                                                    <rect key="frame" x="30" y="21.5" width="285" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -800,6 +800,7 @@
                                                 <constraint firstItem="kPG-VC-lUt" firstAttribute="top" secondItem="Z6K-x0-3bb" secondAttribute="topMargin" constant="10" id="SIJ-XQ-FS4"/>
                                                 <constraint firstAttribute="bottom" secondItem="5uM-xN-KpR" secondAttribute="bottom" constant="10" id="YsC-IV-Vfr"/>
                                                 <constraint firstAttribute="trailing" secondItem="5uM-xN-KpR" secondAttribute="trailing" constant="15" id="aZ6-OV-Dt3"/>
+                                                <constraint firstItem="5uM-xN-KpR" firstAttribute="leading" secondItem="kPG-VC-lUt" secondAttribute="trailing" constant="15" id="cht-tr-ohL"/>
                                                 <constraint firstItem="5uM-xN-KpR" firstAttribute="top" secondItem="Z6K-x0-3bb" secondAttribute="top" constant="10" id="wYh-O3-OKv"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -810,7 +811,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ezw-lr-4CD">
+                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ezw-lr-4CD">
                                 <rect key="frame" x="0.0" y="421" width="375" height="246"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -1460,7 +1461,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="iXe-K1-2JQ" id="NCt-Uv-rm5"/>
                                                     </connections>
@@ -1514,7 +1515,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="iXe-K1-2JQ" id="CHf-IM-p6N"/>
                                                     </connections>

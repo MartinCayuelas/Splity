@@ -48,7 +48,7 @@ class VoyageurDAO{
         
     }
     static func count(forPrenom prenom: String) -> Int{
-        self.request.predicate = NSPredicate(format: "prenom == %@", prenom)
+        self.request.predicate = NSPredicate(format: "pPrenom == %@", prenom)
         do{
             return try CoreDataManager.context.count(for: self.request)
         }
@@ -58,7 +58,7 @@ class VoyageurDAO{
         
     }
     static func search(forPrenom prenom: String) -> [Voyageur]?{
-        self.request.predicate = NSPredicate(format: "prenom == %@", prenom)
+        self.request.predicate = NSPredicate(format: "pPrenom == %@", prenom)
         do{
             return try CoreDataManager.context.fetch(request) as [Voyageur]
         }
@@ -68,7 +68,7 @@ class VoyageurDAO{
         
     }
     static func count (forNom nom: String) -> Int{
-        self.request.predicate = NSPredicate(format: "nom == %@", nom)
+        self.request.predicate = NSPredicate(format: "pNom == %@", nom)
         do{
             return try CoreDataManager.context.count(for: self.request)
         }
@@ -78,7 +78,7 @@ class VoyageurDAO{
         
     }
     static func search(forNom nom: String) -> [Voyageur]?{
-        self.request.predicate = NSPredicate(format: "nom == %@", nom)
+        self.request.predicate = NSPredicate(format: "pNom == %@", nom)
         do{
             return try CoreDataManager.context.fetch(request) as [Voyageur]
         }
@@ -88,7 +88,7 @@ class VoyageurDAO{
         
     }
     static func count(forPrenom prenom: String, nom: String) -> Int{
-        self.request.predicate = NSPredicate(format: "prenom == %@ AND nom == %@", prenom, nom)
+        self.request.predicate = NSPredicate(format: "pPrenom == %@ AND pNom == %@", prenom, nom)
         do{
             return try CoreDataManager.context.count(for: self.request)
         }
@@ -97,7 +97,7 @@ class VoyageurDAO{
         }
     }
     static func search(forPrenom prenom: String, nom: String) -> [Voyageur]?{
-        self.request.predicate = NSPredicate(format: "prenom == %@ AND nom == %@", prenom, nom)
+        self.request.predicate = NSPredicate(format: "pPrenom == %@ AND pNom == %@", prenom, nom)
         do{
             return try CoreDataManager.context.fetch(request) as [Voyageur]
         }
@@ -107,7 +107,7 @@ class VoyageurDAO{
     
     static func count(voyageur: Voyageur) -> Int{
         
-        self.request.predicate = NSPredicate(format: "prenom == %@ AND nom == %@",
+        self.request.predicate = NSPredicate(format: "pPrenom == %@ AND pNom == %@",
                                              voyageur.prenom, voyageur.nom as CVarArg)
         do{
             return try CoreDataManager.context.count(for: self.request)
@@ -119,7 +119,7 @@ class VoyageurDAO{
     }
     
     static func search(forVoyageur voyageur: Voyageur) -> Voyageur?{
-        self.request.predicate = NSPredicate(format: "prenom == %@ AND nom == %@",
+        self.request.predicate = NSPredicate(format: "pPrenom == %@ AND pNom == %@",
                                              voyageur.prenom, voyageur.nom as CVarArg)
         do{
             let result = try CoreDataManager.context.fetch(request) as [Voyageur]
