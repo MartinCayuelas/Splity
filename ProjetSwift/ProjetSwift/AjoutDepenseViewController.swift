@@ -31,6 +31,7 @@ class AjoutDepenseViewController : UIViewController {
     @IBOutlet weak var imageDepenseView: UIImageView!
     @IBOutlet weak var librairieBouton: UIButton!
     @IBOutlet weak var cameraBouton: UIButton!
+    @IBOutlet weak var boutonValider: UIButton!
     
     @IBOutlet weak var tableviewPayeurs: UITableView!
     @IBOutlet weak var tableviewRembourseurs: UITableView!
@@ -39,6 +40,8 @@ class AjoutDepenseViewController : UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //Cacher le bouton valider au départ
+        self.boutonValider.isHidden = true
         
         self.controllerVoyageursPayeursTableView = AjoutDepensePayeurTableViewController(tableView: tableviewPayeurs, voyageSelected: self.voyageSelected!)
         self.controllerVoyageursRembourseursTableView = AjoutDepenseRembourseurTableViewController(tableView: tableviewRembourseurs,voyageSelected: self.voyageSelected!)
@@ -101,23 +104,19 @@ class AjoutDepenseViewController : UIViewController {
             }
             
             //Ajout des paiements dans la table 'Payer'
-            var totalPaiements: Double = 0
             for p in self.listePayeurs {
                 let index = self.listePayeurs.firstIndex(of: p)
                 let montant = self.listePayeursMontant[index!]
                 
                 DepenseDAO.ajouterPaiement(forDepense: self.newDepense!, andVoyageur: p, andMontant: montant)
-                totalPaiements = totalPaiements + montant
             }
             
             //Ajout des remboursements dans la table 'Rembourser'
-            var totalRemboursements: Double = 0
             for r in self.listeRembourseurs {
                 let index = self.listeRembourseurs.firstIndex(of: r)
                 let montant = self.listeRembourseursMontant[index!]
                
                 DepenseDAO.ajouterRemboursement(forDepense: self.newDepense!, andVoyageur: r, andMontant: montant)
-                totalRemboursements = totalRemboursements + montant
             }
             
             //Ajout du montant de la dépense
@@ -201,13 +200,57 @@ class AjoutDepenseViewController : UIViewController {
         }
     }
     
+    //Récupération du total des paiements de la dépense
+    private func getTotalPaiements() -> Double {
+        //Récupération du montant payé par chaque payeur
+        var total: Double = 0
+        for case let cell as AjoutDepensePayeurCell in self.tableviewPayeurs.visibleCells {
+            if(cell.checkButton.isChecked == true){
+                let voyageurCoche = self.controllerVoyageursPayeursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
+                let montant = cell.montantDepense.text!
+                total = total + Double(montant)!
+            }
+        }
+        return total
+    }
+    
+    //Récupération du total des remboursements de la dépense
+    private func getTotalRemboursements() -> Double {
+        //Récupération du montant remboursé par chaque payeur
+        var total: Double = 0
+        for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
+            if(cell.checkButton.isChecked == true){
+                let voyageurCoche = self.controllerVoyageursRembourseursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
+                let montant = cell.montantDepense.text!
+                total = total + Double(montant)!
+            }
+        }
+        return total
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         textField.resignFirstResponder()
+        //Cas du qui paie
+        if(textField.accessibilityIdentifier == "quiPaieTextField"){
+            self.setMontantADiviser()
+            self.remplissageRembourseur()
+        } else {
+            //Cas du pour qui
+        }
         
-        self.setMontantADiviser()
-        self.remplissageRembourseur()
+        let totalPaiement: Double = self.getTotalPaiements()
+        let totalRemboursement: Double = self.getTotalRemboursements()
+        
+        //Si les montants de paiements et remboursements ne sont pas égaux
+        if(totalPaiement - totalRemboursement >= 0.01 || totalPaiement - totalRemboursement <= -0.01) {
+            self.boutonValider.isHidden = true
+        }
+        //Si ils sont égaux
+        else {
+            self.boutonValider.isHidden = false
+        }
         
         return true
         

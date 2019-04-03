@@ -1431,6 +1431,7 @@
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0€" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AYM-PI-Fyu">
                                                     <rect key="frame" x="222.5" y="13" width="70" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="quiPaieTextField"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="Kq9-xE-CGw"/>
                                                         <constraint firstAttribute="height" constant="30" id="rk8-ix-TNQ"/>
@@ -1484,6 +1485,7 @@
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0€" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9uC-YZ-lcS">
                                                     <rect key="frame" x="227.5" y="17" width="70" height="30"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="pourQuiTextField"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="70" id="TNm-sq-idI"/>
                                                         <constraint firstAttribute="height" constant="30" id="q0I-Xj-19s"/>
@@ -1491,6 +1493,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="iXe-K1-2JQ" id="CHf-IM-p6N"/>
+                                                    </connections>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-b0-ZsG" customClass="ButtonCheckBoxCheked" customModule="ProjetSwift" customModuleProvider="target">
                                                     <rect key="frame" x="322.5" y="17" width="30" height="30"/>
@@ -1628,6 +1633,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="boutonValider" destination="1Yw-3f-o1q" id="6Cy-9O-9Wr"/>
                         <outlet property="cameraBouton" destination="AlG-W3-C03" id="Go8-Li-3nW"/>
                         <outlet property="imageDepenseView" destination="N8a-cs-rne" id="rou-gQ-ebL"/>
                         <outlet property="librairieBouton" destination="E9F-mw-fkk" id="Tln-Pf-CO4"/>
