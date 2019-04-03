@@ -103,7 +103,7 @@ class DettesTableViewController : NSObject, UITableViewDataSource {
     //Retourne true si toutes les dettes ont été équilibrées, false sinon
     private func estEquilibre(balances : [String : Double]) -> Bool {
         for (_, valeur) in balances{
-            if valeur != 0 {
+            if (valeur >= 0.01 || valeur <= (-0.01)) {
                 return false
             }
         }
@@ -149,6 +149,7 @@ class DettesTableViewController : NSObject, UITableViewDataSource {
                 montantDetteCourante = montantDetteCourante * (-1)
             }
             self.dettes[2].append("\(montantDetteCourante)")
+            
         }
     }
     
