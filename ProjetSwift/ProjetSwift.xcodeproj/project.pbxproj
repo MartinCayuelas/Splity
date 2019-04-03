@@ -44,11 +44,11 @@
 		7BDA7062225341F400FB9A8C /* BilanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */; };
 		7BDA706422534BB400FB9A8C /* VoyagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */; };
 		E91E5DDE2253CD3600454D4A /* VoyageurTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E5DDD2253CD3600454D4A /* VoyageurTableViewCell.swift */; };
-		E9253DCC225493320092B1AA /* CreationDepenseTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9253DCB225493320092B1AA /* CreationDepenseTextFieldDelegate.swift */; };
 		E9253DD02254AED30092B1AA /* ButtonCheckBoxChecked.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9253DCF2254AED30092B1AA /* ButtonCheckBoxChecked.swift */; };
 		E92B308822533BBA00CFF0DF /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92B308722533BBA00CFF0DF /* BalanceCell.swift */; };
 		E92F6EA0224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */; };
 		E92F6EA2224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */; };
+		E9725C1922550E3300609074 /* EquilibreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9725C1822550E3300609074 /* EquilibreTableViewCell.swift */; };
 		E98C3FFF22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C3FFE22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift */; };
 		E98C400322522E4E00C33685 /* AjoutDepenseRembourseurCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98C400222522E4E00C33685 /* AjoutDepenseRembourseurCell.swift */; };
 		E99FA87922527DD100ED550C /* BalanceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99FA87822527DD100ED550C /* BalanceTableViewController.swift */; };
@@ -130,11 +130,11 @@
 		7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilanTableViewCell.swift; sourceTree = "<group>"; };
 		7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyagesTableViewCell.swift; sourceTree = "<group>"; };
 		E91E5DDD2253CD3600454D4A /* VoyageurTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurTableViewCell.swift; sourceTree = "<group>"; };
-		E9253DCB225493320092B1AA /* CreationDepenseTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationDepenseTextFieldDelegate.swift; sourceTree = "<group>"; };
 		E9253DCF2254AED30092B1AA /* ButtonCheckBoxChecked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCheckBoxChecked.swift; sourceTree = "<group>"; };
 		E92B308722533BBA00CFF0DF /* BalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
 		E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursActifsTableViewCell.swift; sourceTree = "<group>"; };
 		E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursInactifsTableViewCell.swift; sourceTree = "<group>"; };
+		E9725C1822550E3300609074 /* EquilibreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquilibreTableViewCell.swift; sourceTree = "<group>"; };
 		E98C3FFE22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutDepenseRembourseurTableViewController.swift; sourceTree = "<group>"; };
 		E98C400222522E4E00C33685 /* AjoutDepenseRembourseurCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutDepenseRembourseurCell.swift; sourceTree = "<group>"; };
 		E99FA87822527DD100ED550C /* BalanceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableViewController.swift; sourceTree = "<group>"; };
@@ -254,7 +254,6 @@
 				E9FDEAF4224E808E0002D70D /* Detail */,
 				7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */,
 				7B73B35B2244DF550023E002 /* DepensesViewController.swift */,
-				E9253DCB225493320092B1AA /* CreationDepenseTextFieldDelegate.swift */,
 			);
 			name = Depense;
 			sourceTree = "<group>";
@@ -330,6 +329,7 @@
 				E92B308722533BBA00CFF0DF /* BalanceCell.swift */,
 				7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */,
 				E91E5DDD2253CD3600454D4A /* VoyageurTableViewCell.swift */,
+				E9725C1822550E3300609074 /* EquilibreTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -480,7 +480,7 @@
 				TargetAttributes = {
 					7BCBF9F922369198002AD627 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = KCLVW3VURZ;
+						DevelopmentTeam = TVCV9MTW6Q;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
@@ -566,6 +566,7 @@
 				E92B308822533BBA00CFF0DF /* BalanceCell.swift in Sources */,
 				7B73B3572244DB200023E002 /* DepenseSet.swift in Sources */,
 				F0CD86302242AD6200E73581 /* VoyageursTableViewController.swift in Sources */,
+				E9725C1922550E3300609074 /* EquilibreTableViewCell.swift in Sources */,
 				7B786921224A2A810087F0DB /* Depense.swift in Sources */,
 				E9FDEAF8224E8D040002D70D /* AjoutDepensePayeurTableViewController.swift in Sources */,
 				E9FA220D224A83F1001777CB /* ButtonCheckBox.swift in Sources */,
@@ -589,7 +590,6 @@
 				7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */,
 				7B3AB98A224946350003A620 /* VoyageDAO.swift in Sources */,
 				E98C3FFF22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift in Sources */,
-				E9253DCC225493320092B1AA /* CreationDepenseTextFieldDelegate.swift in Sources */,
 				7B37173A22394646004ACE68 /* Voyageur.swift in Sources */,
 				7B183ED922455C690065B202 /* VoyagesViewController.swift in Sources */,
 				F0CD862422423F3500E73581 /* VoyageurSet.swift in Sources */,
@@ -760,10 +760,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCLVW3VURZ;
+				DEVELOPMENT_TEAM = TVCV9MTW6Q;
 				INFOPLIST_FILE = ProjetSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -777,10 +777,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCLVW3VURZ;
+				DEVELOPMENT_TEAM = TVCV9MTW6Q;
 				INFOPLIST_FILE = ProjetSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
