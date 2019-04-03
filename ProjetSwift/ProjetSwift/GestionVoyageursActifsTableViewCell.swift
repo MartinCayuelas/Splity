@@ -11,17 +11,12 @@ import UIKit
 
 class GestionVoyageursActifsTableViewCell: UITableViewCell {
     
-    
     @IBOutlet weak var nomVoyageur: UILabel!
     
     @IBOutlet weak var prenomVoyageur: UILabel!
     
     @IBOutlet weak var quitterVoyageBouton: UIButton!
     
-    override func awakeFromNib() {
-      super.awakeFromNib()
-    }
-    
-    
-    
+    @IBOutlet weak var dateDepartLabel: UILabel!
+
 }

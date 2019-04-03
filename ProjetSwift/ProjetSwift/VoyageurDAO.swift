@@ -251,4 +251,18 @@ class VoyageurDAO{
         }
     }
     
+    static func getDateDepart(forVoyageur voyageur: Voyageur, andVoyage voyage : Voyage) -> Date? {
+        let requestParticiper : NSFetchRequest<Participer> = Participer.fetchRequest()
+        requestParticiper.predicate = NSPredicate(format: "pVoyageur == %@ AND pVoyage == %@", voyageur, voyage)
+        do{
+            let result = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
+            guard result.count != 0 else { return nil }
+            guard result.count == 1 else { fatalError("duplicate entries") }
+            return result[0].dateDepart
+        }
+        catch{
+            return nil
+        }
+    }
+    
 }

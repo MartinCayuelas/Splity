@@ -27,7 +27,7 @@ class GestionVoyageursActifsTableViewController : NSObject, UITableViewDataSourc
         self.voyageurActifsModel = VoyageurSetViewModel(voyageurs: voyageursActifs)
         
         //On trie ces voyageurs en fonction de ceux qui sont actifs et ceux qui ont quittés
-        for case let v  in voyageursActifs  {
+        for case let v in voyageursActifs  {
             if(VoyageurDAO.isActif(forVoyageur: v, andVoyage: self.voyageSelected!)) {
                 self.voyageursTries[0].append(v)
             }else{
@@ -60,12 +60,23 @@ class GestionVoyageursActifsTableViewController : NSObject, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "standardVoyageursActifsCell", for: indexPath) as! GestionVoyageursActifsTableViewCell
         
-        
-        
-        //guard let voyageur = self.voyageurActifsModel.get(voyageurAt: indexPath.row) else { return cell }
         cell.quitterVoyageBouton.isHidden = true
         cell.nomVoyageur?.text = self.voyageursTries[indexPath.section][indexPath.row].nom
         cell.prenomVoyageur?.text = self.voyageursTries[indexPath.section][indexPath.row].prenom
+        
+        //Ajouter la date de départ dans le cas où le voyage a quitté le voyage
+        if(indexPath.section == 1) {
+            let df = DateFormatter()
+            df.locale = Locale(identifier: "fr_FR")
+            df.dateFormat = "dd/MM/yyyy"
+            guard let dateDepart = VoyageurDAO.getDateDepart(forVoyageur: self.voyageursTries[indexPath.section][indexPath.row], andVoyage: self.voyageSelected!) else { return cell }
+            let stringDate = df.string(from: dateDepart)
+            
+            cell.dateDepartLabel.text = stringDate
+        } else {
+            cell.dateDepartLabel.text = ""
+        }
+        
         return cell
         
     }

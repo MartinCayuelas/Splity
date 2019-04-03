@@ -1176,7 +1176,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardVoyageursActifsCell" rowHeight="70" id="beV-HT-R4K" customClass="GestionVoyageursActifsTableViewCell" customModule="ProjetSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beV-HT-R4K" id="fER-IV-lfA">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="beV-HT-R4K" id="fER-IV-lfA">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -1190,7 +1190,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-X1-zy7">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-X1-zy7">
                                                     <rect key="frame" x="275" y="21" width="60" height="30"/>
                                                     <color key="backgroundColor" red="0.94797080759999997" green="0.049279659990000002" blue="0.085895396769999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -1216,18 +1216,32 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3L-z7-Uja">
+                                                    <rect key="frame" x="270" y="18" width="100" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="xo6-Y0-9OE"/>
+                                                        <constraint firstAttribute="height" constant="25" id="z0N-QP-jvC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="xYe-EK-Lgf" firstAttribute="leading" secondItem="fER-IV-lfA" secondAttribute="leadingMargin" id="Bxp-81-Vvf"/>
                                                 <constraint firstItem="dcu-ik-xWq" firstAttribute="leading" secondItem="xYe-EK-Lgf" secondAttribute="trailing" constant="15" id="DnY-bN-hOG"/>
+                                                <constraint firstItem="l3L-z7-Uja" firstAttribute="leading" secondItem="dcu-ik-xWq" secondAttribute="trailing" constant="20" id="KUZ-At-K4u"/>
                                                 <constraint firstItem="eGe-X1-zy7" firstAttribute="top" secondItem="fER-IV-lfA" secondAttribute="topMargin" constant="10" id="PLP-vx-8BD"/>
                                                 <constraint firstItem="xYe-EK-Lgf" firstAttribute="top" secondItem="fER-IV-lfA" secondAttribute="topMargin" constant="7" id="Xx4-6a-FNf"/>
                                                 <constraint firstItem="dcu-ik-xWq" firstAttribute="top" secondItem="fER-IV-lfA" secondAttribute="topMargin" constant="7" id="bBC-Oh-t6c"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="l3L-z7-Uja" secondAttribute="trailing" constant="20" id="hT4-nU-Ed3"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="eGe-X1-zy7" secondAttribute="bottom" constant="8" id="iyJ-3Y-FR5"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="eGe-X1-zy7" secondAttribute="trailing" constant="25" id="mZh-OQ-7L0"/>
+                                                <constraint firstItem="l3L-z7-Uja" firstAttribute="top" secondItem="fER-IV-lfA" secondAttribute="topMargin" constant="7" id="qX0-c2-Mye"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateDepartLabel" destination="l3L-z7-Uja" id="Whw-Tn-kJR"/>
                                             <outlet property="nomVoyageur" destination="xYe-EK-Lgf" id="GVA-hX-0iT"/>
                                             <outlet property="prenomVoyageur" destination="dcu-ik-xWq" id="c2j-L8-HiS"/>
                                             <outlet property="quitterVoyageBouton" destination="eGe-X1-zy7" id="jyr-cl-euC"/>
