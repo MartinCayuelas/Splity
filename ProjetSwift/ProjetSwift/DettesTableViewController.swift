@@ -116,7 +116,6 @@ class DettesTableViewController : NSObject, UITableViewDataSource {
         for v in voyageurs {
             balances[v.nomComplet] = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
         }
-        print(balances)
         
         //Tant que la balance n'est pas équilibrée
         while(!estEquilibre(balances: balances)){
