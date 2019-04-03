@@ -44,6 +44,7 @@
 		7BDA7062225341F400FB9A8C /* BilanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */; };
 		7BDA706422534BB400FB9A8C /* VoyagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */; };
 		E91E5DDE2253CD3600454D4A /* VoyageurTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E5DDD2253CD3600454D4A /* VoyageurTableViewCell.swift */; };
+		E9253DCC225493320092B1AA /* CreationDepenseTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9253DCB225493320092B1AA /* CreationDepenseTextFieldDelegate.swift */; };
 		E92B308822533BBA00CFF0DF /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92B308722533BBA00CFF0DF /* BalanceCell.swift */; };
 		E92F6EA0224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */; };
 		E92F6EA2224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */; };
@@ -128,6 +129,7 @@
 		7BDA7061225341F400FB9A8C /* BilanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilanTableViewCell.swift; sourceTree = "<group>"; };
 		7BDA706322534BB400FB9A8C /* VoyagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyagesTableViewCell.swift; sourceTree = "<group>"; };
 		E91E5DDD2253CD3600454D4A /* VoyageurTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoyageurTableViewCell.swift; sourceTree = "<group>"; };
+		E9253DCB225493320092B1AA /* CreationDepenseTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationDepenseTextFieldDelegate.swift; sourceTree = "<group>"; };
 		E92B308722533BBA00CFF0DF /* BalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
 		E92F6E9F224E2CD700CED4A9 /* GestionVoyageursActifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursActifsTableViewCell.swift; sourceTree = "<group>"; };
 		E92F6EA1224E32BE00CED4A9 /* GestionVoyageursInactifsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionVoyageursInactifsTableViewCell.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				E9FDEAF4224E808E0002D70D /* Detail */,
 				7B73B3592244DEE50023E002 /* DepensesTableViewController.swift */,
 				7B73B35B2244DF550023E002 /* DepensesViewController.swift */,
+				E9253DCB225493320092B1AA /* CreationDepenseTextFieldDelegate.swift */,
 			);
 			name = Depense;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				7B183ECF2245144A0065B202 /* AjoutDepenseViewController.swift in Sources */,
 				7B3AB98A224946350003A620 /* VoyageDAO.swift in Sources */,
 				E98C3FFF22522E0A00C33685 /* AjoutDepenseRembourseurTableViewController.swift in Sources */,
+				E9253DCC225493320092B1AA /* CreationDepenseTextFieldDelegate.swift in Sources */,
 				7B37173A22394646004ACE68 /* Voyageur.swift in Sources */,
 				7B183ED922455C690065B202 /* VoyagesViewController.swift in Sources */,
 				F0CD862422423F3500E73581 /* VoyageurSet.swift in Sources */,

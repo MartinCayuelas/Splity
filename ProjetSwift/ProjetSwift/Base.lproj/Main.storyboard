@@ -789,7 +789,7 @@
                                 <rect key="frame" x="0.0" y="421" width="375" height="246"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerBilanCell" id="xGa-DW-wbI" customClass="BilanTableViewCell" customModule="ProjetSwift" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerBilanCell" id="xGa-DW-wbI" customClass="BilanTableViewCell" customModule="ProjetSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xGa-DW-wbI" id="bBP-dY-dYp">
@@ -834,7 +834,7 @@
                                             <outlet property="remboursementsLabel" destination="8BT-xx-PQD" id="wMN-4w-irb"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardBilanCell" id="17i-Wv-KK6" customClass="BilanTableViewCell" customModule="ProjetSwift" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standardBilanCell" id="17i-Wv-KK6" customClass="BilanTableViewCell" customModule="ProjetSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="17i-Wv-KK6" id="EA9-4w-y64">
@@ -1421,6 +1421,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="24k-My-TVr" id="20L-Ue-g26"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1614,6 +1617,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KKW-o8-HA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="24k-My-TVr" userLabel="CreationDepenseTextFieldDelegate" customClass="CreationDepenseTextFieldDelegate" customModule="ProjetSwift" customModuleProvider="target"/>
                 <exit id="ghJ-3p-MwD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4117.6000000000004" y="198.35082458770617"/>

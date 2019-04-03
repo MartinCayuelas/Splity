@@ -171,7 +171,7 @@ class VoyageDAO{
         var voyageursAbsents: [Voyageur]? = []
         
         //on parcourt l'ensemble des voyageurs
-        for case let v as Voyageur in voyageurs {
+        for case let v in voyageurs {
             var trouve: Bool = false
             var i: Int = 0
             //On s'arrête dans l'un de ces 2 cas
