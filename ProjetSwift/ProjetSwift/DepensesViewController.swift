@@ -40,21 +40,16 @@ class DepensesViewController : UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if(self.depenseImpossible!){
-            print("OK")
             //Affichage d'une popup car la dépense n'a pas été créée
             let alert = UIAlertController(title: "La dépense n'a pas pu être créée", message: "Le montant total dépensé doit être même que le montant total à rembourser.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                 switch action.style{
                 case .default:
                     print("default")
-                    
                 case .cancel:
                     print("cancel")
-                    
                 case .destructive:
                     print("destructive")
-                    
-                    
                 }}))
             self.present(alert, animated: true, completion: nil)
             
@@ -72,7 +67,6 @@ class DepensesViewController : UIViewController {
     @IBAction func unwindToDepensesView(segue: UIStoryboardSegue){
         if segue.identifier == "depenseAddedSegue" {
             guard let controller = segue.source as? AjoutDepenseViewController else { return }
-            print(self.depenseImpossible)
             //Si la dépense a des montants non égaux
             
             //Sinon on ajoute la dépense
