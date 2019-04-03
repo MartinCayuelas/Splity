@@ -100,7 +100,7 @@ class DepenseSetViewModel : NSObject {
         /*if let indexPath = self.voyageursFetched.indexPath(forObject: voyageur){
          self.delegate?.voyageurDeleted(at: indexPath)
          }*/
-        var index = self.depensesConcernees.lastIndex(of: depense)
+        let index = self.depensesConcernees.lastIndex(of: depense)
         self.depensesConcernees.remove(at: index!)
         self.delegate?.depenseDeleted(at: IndexPath(row: self.depensesConcernees.count-1, section: 0))
         CoreDataManager.save()

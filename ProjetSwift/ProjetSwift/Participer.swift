@@ -11,7 +11,7 @@ import Foundation
 extension Participer{
     // MARK: -
     /// date d'arrivée du voyageur dans le voyage
-    public var dateArrivee : Date { return self.pDateArrivee as! Date }
+    public var dateArrivee : Date { return self.pDateArrivee! as Date }
     /// date de départ du voyageur dans le voyage
     public var dateDepart  : Date? { return self.pDateDepart as Date? }
     /// Voyage

@@ -22,7 +22,7 @@ class BilanTableViewController : NSObject, UITableViewDataSource {
         self.header = false
         
         //On récupère les voyageurs actifs du voyage (participants ou ayant quittés)
-        var voyageursActifs: [Voyageur] = VoyageDAO.getAllVoyageurs(forVoyage: voyageSelected)
+        let voyageursActifs: [Voyageur] = VoyageDAO.getAllVoyageurs(forVoyage: voyageSelected)
         self.voyageursActifsModel = VoyageurSetViewModel(voyageurs: voyageursActifs)
         
         super.init()

@@ -37,13 +37,7 @@ class DepenseSet : Sequence {
         return self.depenseSet.count
     }
     
-     /// Verifie si le depenseSet est vide
-    ///
-    /// - Parameter dSet: un depenseSet
-    /// - return un booleen: vrai si vide, faux sinon
-    func isEmpty(dSet: DepenseSet) -> Bool {
-        return isEmpty(dSet: dSet)
-    }
+    
     
     /// Ajoute une depense au depenseSet
     ///

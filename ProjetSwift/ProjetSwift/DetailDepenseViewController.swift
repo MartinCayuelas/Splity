@@ -28,7 +28,7 @@ class DetailDepenseViewController : UIViewController {
             self.montantLabel
                 .text = "\(adepense.montant) €"
             
-            let photoDep = UIImage(data: adepense.photo as! Data)
+            let photoDep = UIImage(data: adepense.photo as Data)
             
             
             self.imageViewDepense.image =  photoDep

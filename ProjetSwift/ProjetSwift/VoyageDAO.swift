@@ -135,9 +135,9 @@ class VoyageDAO{
         requestParticiper.predicate = NSPredicate(format: "pVoyage == %@",
                                                   voyage)
         do{
-            var participations = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
+            let participations = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
             var voyageurs: [Voyageur] = []
-            for case let participation as Participer in participations  {
+            for case let participation  in participations  {
                 voyageurs.append(participation.voyageur)
             }
             return voyageurs
@@ -151,9 +151,9 @@ class VoyageDAO{
         let requestParticiper : NSFetchRequest<Participer> = Participer.fetchRequest()
         requestParticiper.predicate = NSPredicate(format: "pVoyage == %@ AND pDateDepart == nil",voyage)
         do{
-            var participations = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
+            let participations = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
             var voyageurs: [Voyageur] = []
-            for case let participation as Participer in participations  {
+            for case let participation in participations  {
                 voyageurs.append(participation.voyageur)
             }
             return voyageurs
@@ -166,7 +166,7 @@ class VoyageDAO{
     static func getAllVoyageursAbsents(forVoyage voyage: Voyage) -> [Voyageur] {
         var voyageursPresents: [Voyageur] = self.getAllVoyageurs(forVoyage: voyage)
         //On ne veut que les voyageurs non archivés
-        var voyageurs: [Voyageur] = VoyageurDAO.getAllVoyageursNonArchives()
+        let voyageurs: [Voyageur] = VoyageurDAO.getAllVoyageursNonArchives()
         
         var voyageursAbsents: [Voyageur]? = []
         
@@ -196,9 +196,9 @@ class VoyageDAO{
         let requestPayer : NSFetchRequest<Payer> = Payer.fetchRequest()
         requestPayer.predicate = NSPredicate(format: "pDepense.pVoyage == %@",voyage)
         do{
-            var paiements = try CoreDataManager.context.fetch(requestPayer) as [Payer]
+            let paiements = try CoreDataManager.context.fetch(requestPayer) as [Payer]
             var montantTotal: Double = 0
-            for case let p as Payer in paiements {
+            for case let p in paiements {
                 montantTotal = montantTotal + p.montant
             }
             return montantTotal
@@ -213,9 +213,9 @@ class VoyageDAO{
         let requestPayer : NSFetchRequest<Payer> = Payer.fetchRequest()
         requestPayer.predicate = NSPredicate(format: "pDepense.pVoyage == %@ AND pVoyageur == %@",voyage,voyageur)
         do{
-            var paiements = try CoreDataManager.context.fetch(requestPayer) as [Payer]
+            let paiements = try CoreDataManager.context.fetch(requestPayer) as [Payer]
             var montantTotal: Double = 0
-            for case let p as Payer in paiements {
+            for case let p in paiements {
                 montantTotal = montantTotal + p.montant
             }
             return montantTotal
@@ -230,9 +230,9 @@ class VoyageDAO{
         let requestRembourser : NSFetchRequest<Rembourser> = Rembourser.fetchRequest()
         requestRembourser.predicate = NSPredicate(format: "pDepense.pVoyage == %@ AND pVoyageur == %@",voyage,voyageur)
         do{
-            var remboursements = try CoreDataManager.context.fetch(requestRembourser) as [Rembourser]
+            let remboursements = try CoreDataManager.context.fetch(requestRembourser) as [Rembourser]
             var montantTotal: Double = 0
-            for case let r as Rembourser in remboursements {
+            for case let r  in remboursements {
                 montantTotal = montantTotal + r.montant
             }
             return montantTotal

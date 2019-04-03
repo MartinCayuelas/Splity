@@ -49,10 +49,10 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
         guard let voyageur = self.voyageurs.get(voyageurAt: indexPath.row) else { return cell }
         //Affichage de la balance pour le voyageur courant et le voyage courant
         
-        var balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: voyageur)
+        let balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: voyageur)
         
         
-        var taille = self.tailleCell(forTailleMaxCell: self.getTailleMaxCell(), andBalanceMax: self.balanceMax, andBalanceCourante: balance)
+        let taille = self.tailleCell(forTailleMaxCell: self.getTailleMaxCell(), andBalanceMax: self.balanceMax, andBalanceCourante: balance)
         
         //Cas de la balance négative
         if balance < 0.0 {
@@ -161,10 +161,10 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
         
         //Calcule la taille de la cell courante
         private func tailleCell(forTailleMaxCell tailleMax: Int, andBalanceMax balanceMax: Double, andBalanceCourante balanceCourante: Double) -> Int{
-            var taille : Int = 0
+           
             //Produit en croix
             
-            var balanceM = Int(balanceMax)
+            let balanceM = Int(balanceMax)
             
             //Eviter la division par 0
             if(balanceM == 0) {

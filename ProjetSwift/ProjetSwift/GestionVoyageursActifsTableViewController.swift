@@ -23,11 +23,11 @@ class GestionVoyageursActifsTableViewController : NSObject, UITableViewDataSourc
         self.voyageursActifsTableView = tableView
         
         //On récupère les voyageurs actifs du voyage (participants ou ayant quittés)
-        var voyageursActifs: [Voyageur] = VoyageDAO.getAllVoyageurs(forVoyage: voyageSelected)
+        let voyageursActifs: [Voyageur] = VoyageDAO.getAllVoyageurs(forVoyage: voyageSelected)
         self.voyageurActifsModel = VoyageurSetViewModel(voyageurs: voyageursActifs)
         
         //On trie ces voyageurs en fonction de ceux qui sont actifs et ceux qui ont quittés
-        for case let v as Voyageur in voyageursActifs  {
+        for case let v  in voyageursActifs  {
             if(VoyageurDAO.isActif(forVoyageur: v, andVoyage: self.voyageSelected!)) {
                 self.voyageursTries[0].append(v)
             }else{
@@ -62,7 +62,7 @@ class GestionVoyageursActifsTableViewController : NSObject, UITableViewDataSourc
         
         
         
-        guard let voyageur = self.voyageurActifsModel.get(voyageurAt: indexPath.row) else { return cell }
+        //guard let voyageur = self.voyageurActifsModel.get(voyageurAt: indexPath.row) else { return cell }
         cell.quitterVoyageBouton.isHidden = true
         cell.nomVoyageur?.text = self.voyageursTries[indexPath.section][indexPath.row].nom
         cell.prenomVoyageur?.text = self.voyageursTries[indexPath.section][indexPath.row].prenom

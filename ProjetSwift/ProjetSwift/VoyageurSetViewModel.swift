@@ -107,7 +107,7 @@ class VoyageurSetViewModel {//: NSObject {
         /*if let indexPath = self.voyageursFetched.indexPath(forObject: voyageur){
             self.delegate?.voyageurDeleted(at: indexPath)
         }*/
-        var index = self.voyageursNonArchives.lastIndex(of: voyageur)
+        let index = self.voyageursNonArchives.lastIndex(of: voyageur)
         self.voyageursNonArchives.remove(at: index!)
         self.delegate?.voyageurDeleted(at: IndexPath(row: self.voyageursNonArchives.count-1, section: 0))
         CoreDataManager.save()

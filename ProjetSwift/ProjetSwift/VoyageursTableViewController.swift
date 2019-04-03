@@ -63,10 +63,8 @@ class VoyageursTableViewController: NSObject, UITableViewDataSource, VoyageurSet
            // VoyageurDAO.delete(voyageur: v)
     
             do {
-                try VoyageurDAO.save()
-            } catch {
-                fatalError("Erreur à la suppression du programme.")
-            }
+               VoyageurDAO.save()
+            } 
             self.voyageursTableView.deleteRows(at: [indexPath], with: .fade)
             self.voyageurs.remove(voyageur: v)
             //voyageurs.remove(at: indexPath.row)

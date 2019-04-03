@@ -45,7 +45,7 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
         
         guard let voyage = self.voyages.get(voyageAt: indexPath.row) else { return cell }
         
-        let photoVoyage = UIImage(data: voyage.photo as! Data)
+        let photoVoyage = UIImage(data: voyage.photo as Data)
         cell.imageVoyage.image = photoVoyage
         
         cell.titreVoyage.text = voyage.titre
@@ -62,9 +62,7 @@ class VoyagesTableViewController: NSObject, UITableViewDataSource, VoyageSetView
             let voyage = self.voyages.get(voyageAt: indexPath.row)
             VoyageurDAO.quitterVoyage(forVoyageur: self.voyageurSelected!, andVoyage: voyage!)
             do {
-                try VoyageurDAO.save()
-            } catch {
-                fatalError("Erreur à la suppression du programme.")
+                VoyageurDAO.save()
             }
             self.tableView.deleteRows(at: [indexPath], with: .fade)
             self.voyages.remove(voyage: voyage!)

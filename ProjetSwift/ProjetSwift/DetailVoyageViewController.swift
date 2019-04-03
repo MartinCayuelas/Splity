@@ -32,7 +32,7 @@ class DetailVoyageViewController: UIViewController{
         
         self.balanceTableViewController = BalanceTableViewController(tableView: balanceTableView, voyageSelected : self.voyageSelected!)
         //Affichage de la balance pour le voyageur courant et le voyage courant
-        var balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!)
+        let balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!)
         labelBalance.text = String(balance) + " €"
         if(balance < 0){
             labelBalance.textColor = UIColor(red:0.99, green:0.00, blue:0.00, alpha:1.0)
@@ -41,14 +41,14 @@ class DetailVoyageViewController: UIViewController{
         }
         
         //Affichage du coût total pour le voyageur courant et le voyage courant
-        var coutTotal = VoyageDAO.getTotalRembourse(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!)
+        let coutTotal = VoyageDAO.getTotalRembourse(forVoyage: self.voyageSelected!, andVoyageur: self.voyageurSelected!)
         labelCoutTotal.text = String(coutTotal) + " €"
         
         if let avoyage = self.voyageSelected {
             self.titreVoyage
                 .text = avoyage.titre
             
-            let photoVoyage = UIImage(data: avoyage.photo as! Data)
+            let photoVoyage = UIImage(data: avoyage.photo as Data)
           
             
          self.imageVoyage.image =  photoVoyage

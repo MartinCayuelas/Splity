@@ -38,15 +38,7 @@ class VoyageSet: Sequence {
         return self.VoyageSet.count
     }
     
-     /// Verifie si le voyageSet est vide
-    ///
-    /// - Parameter vSet: un voyageSet
-    /// - return un booleen: vrai si vide, faux sinon
-    
-    func isEmpty(vSet: VoyageSet) -> Bool {
-        return isEmpty(vSet: vSet)
-    }
-    
+   
     /// Ajoute un voyage au voyageSet
     ///
     /// - Parameter:  v: un voyage

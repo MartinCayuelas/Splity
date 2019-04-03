@@ -71,7 +71,7 @@ class AjoutVoyageViewController: UIViewController {
             
             let voyageImage = self.imageViewVoyage.image
             let imageData = UIImagePNGRepresentation(voyageImage!)
-            self.newVoyage  = Voyage(titre: titreVoyage, photo: imageData as! NSData)
+            self.newVoyage  = Voyage(titre: titreVoyage, photo: imageData! as NSData)
             
             //Pour insérer les instances dans la table 'Participer'
             for v in self.listVoyageurSelectionnes {

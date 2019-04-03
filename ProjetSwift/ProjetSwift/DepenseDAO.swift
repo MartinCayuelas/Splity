@@ -119,11 +119,11 @@ class DepenseDAO{
     }
     
     static func ajouterPaiement(forDepense depense: Depense, andVoyageur voyageur: Voyageur, andMontant montant: Double) {
-        let paiement = Payer(montant: montant, depense: depense, voyageur: voyageur)
+        _ = Payer(montant: montant, depense: depense, voyageur: voyageur)
     }
     
     static func ajouterRemboursement(forDepense depense: Depense, andVoyageur voyageur: Voyageur, andMontant montant: Double) {
-        let remboursement = Rembourser(montant: montant, depense: depense, voyageur: voyageur)
+        _ = Rembourser(montant: montant, depense: depense, voyageur: voyageur)
     }
     
     static func ajouterDepense(fortitre titre: String, andPhoto photo: NSData, andDate date: Date, andVoyage voyage: Voyage) -> Depense{
@@ -135,15 +135,15 @@ class DepenseDAO{
         let requestPayer : NSFetchRequest<Payer> = Payer.fetchRequest()
         requestPayer.predicate = NSPredicate(format: "pDepense == %@", depense)
         do{
-            var payeurs = try CoreDataManager.context.fetch(requestPayer) as [Payer]
+            let payeurs = try CoreDataManager.context.fetch(requestPayer) as [Payer]
             var montantTotal: Double = 0
-            for case let p as Payer in payeurs  {
+            for case let p in payeurs  {
                 montantTotal = montantTotal + p.montant
             }
             
             depense.setValue(montantTotal, forKey: "pMontantDepense")
             do{
-                try CoreDataManager.save()
+                CoreDataManager.save()
             }
         }
         catch{
@@ -159,9 +159,9 @@ class DepenseDAO{
         requestPayer.predicate = NSPredicate(format: "pDepense == %@",
                                                   depense)
         do{
-            var paiements = try CoreDataManager.context.fetch(requestPayer) as [Payer]
+            let paiements = try CoreDataManager.context.fetch(requestPayer) as [Payer]
             var voyageurs: [Voyageur] = []
-            for case let p as Payer in paiements  {
+            for case let p  in paiements  {
                 voyageurs.append(p.voyageur)
             }
             return voyageurs
@@ -208,7 +208,7 @@ class DepenseDAO{
         var max: Double = 0
         var voyageurMax: Voyageur = voyageurs[0]
         for v in voyageurs{
-            var balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
+            let balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
             if balance > max{
                 max = balance
                 voyageurMax = v
@@ -221,7 +221,7 @@ class DepenseDAO{
         let voyageurs = VoyageDAO.getAllVoyageurs(forVoyage: voyage)
         var max : Double = 0
         for v in voyageurs{
-            var balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
+            let balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
             if balance > max{
                 max = balance
             }
@@ -234,7 +234,7 @@ class DepenseDAO{
         var min: Double = 0
         var voyageurMin: Voyageur = voyageurs[0]
         for v in voyageurs{
-            var balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
+            let balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
             if balance < min {
                 min = balance
                 voyageurMin = v
@@ -247,7 +247,7 @@ class DepenseDAO{
         let voyageurs = VoyageDAO.getAllVoyageurs(forVoyage: voyage)
         var min : Double = 0
         for v in voyageurs{
-            var balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
+            let balance = VoyageDAO.getBalance(forVoyage: voyage, andVoyageur: v)
             if balance < min{
                 min = balance
             }

@@ -29,9 +29,7 @@ class GestionVoyageursViewController : UIViewController {
             self.viewDidLoad()
             self.voyageursActifsTableView.reloadData()
             do {
-                try VoyageurDAO.save()
-            } catch {
-                fatalError("Erreur à l'ajout dans le voyage.")
+                VoyageurDAO.save()
             }
             voyageursInactifsTableView.deleteRows(at: [indexPath], with: .fade)
             

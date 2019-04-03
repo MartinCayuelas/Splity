@@ -44,10 +44,7 @@ class DepensesTableViewController : NSObject, UITableViewDataSource, DepenseSetV
         
         guard let depense = self.depensesModel.get(depenseAt: indexPath.row) else { return cell }
         
-        let df = DateFormatter()
-        df.locale = Locale(identifier: "fr_FR")
-        df.dateFormat = "dd/MM/yyyy"
-        let stringDate = df.string(from: depense.date)
+        
         
         cell.textLabel?.text = depense.titre
         cell.detailTextLabel?.text = String(depense.montant)+" €"
@@ -71,13 +68,10 @@ class DepensesTableViewController : NSObject, UITableViewDataSource, DepenseSetV
             DepenseDAO.delete(depense: d)
             
             do {
-                try DepenseDAO.save()
-            } catch {
-                fatalError("Erreur à la suppression du programme.")
+                DepenseDAO.save()
             }
             self.depensesTableView.deleteRows(at: [indexPath], with: .fade)
             self.depensesModel.remove(depense: d)
-            //voyageurs.remove(at: indexPath.row)
             self.depensesTableView.endUpdates()
         }
     }

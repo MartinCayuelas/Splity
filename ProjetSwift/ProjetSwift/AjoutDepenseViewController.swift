@@ -77,7 +77,7 @@ class AjoutDepenseViewController : UIViewController {
                     
                     let voyageurCoche = self.controllerVoyageursPayeursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
                     self.listePayeurs.append(voyageurCoche!)
-                    var montant = cell.montantDepense.text!
+                    let montant = cell.montantDepense.text!
                     self.listePayeursMontant.append(Double(montant)!)
                 }
             }
@@ -89,7 +89,7 @@ class AjoutDepenseViewController : UIViewController {
                     let voyageurCoche = self.controllerVoyageursRembourseursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
                  
                     self.listeRembourseurs.append(voyageurCoche!)
-                    var montant = cell.montantDepense.text!
+                    let montant = cell.montantDepense.text!
                     self.listeRembourseursMontant.append(Double(montant)!)
                 }
             }

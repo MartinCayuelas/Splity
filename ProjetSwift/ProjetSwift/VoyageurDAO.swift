@@ -138,9 +138,9 @@ class VoyageurDAO{
         requestParticiper.predicate = NSPredicate(format: "pVoyageur == %@",
                                                   voyageur)
         do{
-            var participations = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
+            let participations = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
             var voyages: [Voyage] = []
-            for case let participation as Participer in participations  {
+            for case let participation in participations  {
                 voyages.append(participation.voyage)
             }
             return voyages
@@ -166,12 +166,12 @@ class VoyageurDAO{
     static func terminerParticipations(forVoyageur voyageur: Voyageur){
         let participations : [Participer] = getAllParticipations(forVoyageur: voyageur)
         
-        for case let participation as Participer in participations  {
+        for case let participation  in participations  {
             
             let p = participation as NSManagedObject
             p.setValue(Date(), forKey: "pDateDepart")
             do{
-                try CoreDataManager.save()
+                 CoreDataManager.save()
             }
             
         }
@@ -204,7 +204,7 @@ class VoyageurDAO{
             
             result[0].setValue(Date(), forKey: "pDateDepart")
             do{
-                try CoreDataManager.save()
+                 CoreDataManager.save()
             }
         }
         catch{
@@ -213,7 +213,7 @@ class VoyageurDAO{
     }
     
     static func rejoindreVoyage(forVoyageur voyageur: Voyageur, andVoyage voyage: Voyage) {
-        let participation = Participer(dateArrivee: Date(), dateDepart: nil, voyage: voyage, voyageur: voyageur)
+        _ = Participer(dateArrivee: Date(), dateDepart: nil, voyage: voyage, voyageur: voyageur)
     }
     
     static func isActif(forVoyageur voyageur: Voyageur, andVoyage voyage: Voyage) -> Bool {
@@ -239,9 +239,9 @@ class VoyageurDAO{
         requestParticiper.predicate = NSPredicate(format: "pVoyageur == %@ AND pDateDepart == nil",
                                                   voyageur)
         do{
-            var participations = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
+            let participations = try CoreDataManager.context.fetch(requestParticiper) as [Participer]
             var voyages: [Voyage] = []
-            for case let participation as Participer in participations  {
+            for case let participation  in participations  {
                 voyages.append(participation.voyage)
             }
             return voyages

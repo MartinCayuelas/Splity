@@ -19,7 +19,7 @@ class DettesTableViewController : NSObject, UITableViewDataSource {
         self.voyageursActifsTableView = tableView
         
         //On récupère les voyageurs actifs du voyage (participants ou ayant quittés)
-        var voyageursActifs: [Voyageur] = VoyageDAO.getAllVoyageurs(forVoyage: voyageSelected)
+        let voyageursActifs: [Voyageur] = VoyageDAO.getAllVoyageurs(forVoyage: voyageSelected)
         
         super.init()
         self.voyageursActifsTableView.dataSource = self
@@ -68,7 +68,7 @@ class DettesTableViewController : NSObject, UITableViewDataSource {
     //Retourne la balance du voyageur avec la balance la plus faible
     private func getMontantPlusGrosRembourseur(balances : [String : Double]) -> Double {
         var min: Double = 0
-        for (cle, valeur) in balances{
+        for (_, valeur) in balances{
             if valeur < min{
                 min = valeur
             }
@@ -79,7 +79,7 @@ class DettesTableViewController : NSObject, UITableViewDataSource {
     //Retourne la balance du voyageur avec la balance la plus élevée
     private func getMontantPlusGrosPayeur(balances : [String : Double]) -> Double {
         var max: Double = 0
-        for (cle, valeur) in balances{
+        for (_, valeur) in balances{
             if valeur > max{
                 max = valeur
             }
@@ -102,7 +102,7 @@ class DettesTableViewController : NSObject, UITableViewDataSource {
     
     //Retourne true si toutes les dettes ont été équilibrées, false sinon
     private func estEquilibre(balances : [String : Double]) -> Bool {
-        for (cle, valeur) in balances{
+        for (_, valeur) in balances{
             if valeur != 0 {
                 return false
             }
@@ -118,16 +118,15 @@ class DettesTableViewController : NSObject, UITableViewDataSource {
         }
         print(balances)
         
-        var fin: Bool = false
         //Tant que la balance n'est pas équilibrée
         while(!estEquilibre(balances: balances)){
             //On récupère le voyageur ayant le plus de dettes
-            var plusGrosRembourseur = self.getPlusGrosRembourseur(balances: balances)
-            var montantPlusGrosRembourseur = self.getMontantPlusGrosRembourseur(balances: balances)
+            let plusGrosRembourseur = self.getPlusGrosRembourseur(balances: balances)
+            let montantPlusGrosRembourseur = self.getMontantPlusGrosRembourseur(balances: balances)
             
             //On récupère le voyageur ayant le moins de dettes
-            var plusGrosPayeur = self.getPlusGrosPayeur(balances: balances)
-            var montantPlusGrosPayeur = self.getMontantPlusGrosPayeur(balances: balances)
+            let plusGrosPayeur = self.getPlusGrosPayeur(balances: balances)
+            let montantPlusGrosPayeur = self.getMontantPlusGrosPayeur(balances: balances)
             
             var montantDetteCourante: Double = 0
             
