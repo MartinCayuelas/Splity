@@ -44,7 +44,7 @@ Cette application a été créée par **Martin CAYUELAS** et **Nathan GUILLAUD**
     - Ajouter un nouveau participant au voyage
 
 - Comment équilibrer
-    - Visualiser les dettes de chaque voyageur envers les autres afin d'équilibrer la balance
+    - Visualiser les dettes de chaque voyageur envers les autres afin d'équilibrer la balance (algo d'équilibrage)
     - Rembourser une dette d'un voyageur pour un autre
     - Visualiser le bilan de chaque voyageur pour un voyage
         - Dépense totale
