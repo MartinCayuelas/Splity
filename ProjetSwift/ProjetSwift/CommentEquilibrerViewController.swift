@@ -21,7 +21,7 @@ class CommentEquilibrerViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.bilanTableViewController = BilanTableViewController(tableView: self.bilanTableView, voyageSelected: self.voyageSelected!)
-        self.dettesTableViewController = DettesTableViewController(tableView: self.bilanTableView, voyageSelected: self.voyageSelected!)
+        self.dettesTableViewController = DettesTableViewController(tableView: self.dettesTableView, voyageSelected: self.voyageSelected!)
     }
     
 }
