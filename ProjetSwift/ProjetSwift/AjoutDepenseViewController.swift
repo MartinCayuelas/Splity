@@ -103,6 +103,16 @@ class AjoutDepenseViewController : UIViewController {
                 }
             }
             
+            //Deuxième test pour les montants égaux
+            print("PAIEMENTS")
+            print(getTotalPaiements())
+            print("REMBOURSEMENTS")
+            print(getTotalRemboursements())
+            //Si les montants ne sont pas égaux
+            if(getTotalPaiements() - getTotalRemboursements() >= 0.01 || getTotalPaiements() - getTotalRemboursements() <= -0.01) {
+                print("MONTANTS NON EGAUX")
+            }
+            
             //Ajout des paiements dans la table 'Payer'
             for p in self.listePayeurs {
                 let index = self.listePayeurs.firstIndex(of: p)
@@ -140,8 +150,6 @@ class AjoutDepenseViewController : UIViewController {
         }
         self.getRembourseurs()
         self.calculMontantParPersonne(forMotantTotalPaye: self.montantARembourser)
-        print("Montant à diviser : \(self.montantARembourser)")
-        print("Montant par Personne : \(self.montantParPersonne)")
         
         
     }
@@ -156,7 +164,6 @@ class AjoutDepenseViewController : UIViewController {
                 let index = self.listeRembourseursPotentiels.firstIndex(of: v)
                 
                 self.listeRembourseursPotentiels.remove(at: index!)
-                print(self.listeRembourseursPotentiels.count)
             }else{// Ajout dans le tableau
                 
                 self.listeRembourseursPotentiels.append(v)
@@ -206,7 +213,6 @@ class AjoutDepenseViewController : UIViewController {
         var total: Double = 0
         for case let cell as AjoutDepensePayeurCell in self.tableviewPayeurs.visibleCells {
             if(cell.checkButton.isChecked == true){
-                let voyageurCoche = self.controllerVoyageursPayeursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
                 let montant = cell.montantDepense.text!
                 total = total + Double(montant)!
             }
@@ -220,7 +226,6 @@ class AjoutDepenseViewController : UIViewController {
         var total: Double = 0
         for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
             if(cell.checkButton.isChecked == true){
-                let voyageurCoche = self.controllerVoyageursRembourseursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
                 let montant = cell.montantDepense.text!
                 total = total + Double(montant)!
             }
