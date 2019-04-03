@@ -50,22 +50,29 @@ class CommentEquilibrerViewController : UIViewController {
             
             let imageData = UIImagePNGRepresentation(UIImage(named: "cash")!)
             
-            let depense = DepenseDAO.ajouterDepense(fortitre: titre, andPhoto: imageData! as NSData, andDate: Date(), andVoyage: self.voyageSelected!)
             
-            DepenseDAO.ajouterPaiement(forDepense: depense, andVoyageur: donneur![0], andMontant: Double(montantDepense)!)
-            DepenseDAO.ajouterRemboursement(forDepense: depense, andVoyageur: receveur![0], andMontant: Double(montantDepense)!)
             
-            DepenseDAO.insererMontantDepense(forDepense: depense)
-            
-            CoreDataManager.save()
-            
-            //Suppression cellule
-            /*self.dettesTableView.beginUpdates()
-            self.dettesTableView.deleteRows(at: [indexPath], with: .fade)
-            self.dettesTableView.endUpdates()*/
-            
+            //Récupération de la cellule ou se trouve le boutton
+            let buttonPosition:CGPoint = (sender as AnyObject).convert(CGPoint.zero, to:self.dettesTableView)
+            if let indexPath = self.dettesTableView.indexPathForRow(at: buttonPosition){
+                dettesTableView.beginUpdates()
+                //Création d'une dépense
+                let depense = DepenseDAO.ajouterDepense(fortitre: titre, andPhoto: imageData! as NSData, andDate: Date(), andVoyage: self.voyageSelected!)
+                //Création d'un paiement et d'un remboursement
+                DepenseDAO.ajouterPaiement(forDepense: depense, andVoyageur: donneur![0], andMontant: Double(montantDepense)!)
+                DepenseDAO.ajouterRemboursement(forDepense: depense, andVoyageur: receveur![0], andMontant: Double(montantDepense)!)
+                //Insertion du montant de la dépense
+                DepenseDAO.insererMontantDepense(forDepense: depense)
+                
+                CoreDataManager.save()
+                self.viewDidLoad()
+                //Rechargement de la table
+                self.dettesTableView.reloadData()
+                
+                //suppression de la ligne
+                dettesTableView.deleteRows(at: [indexPath], with: .fade)
+                dettesTableView.endUpdates()
+            }
         }
     }
-    
-    
 }
