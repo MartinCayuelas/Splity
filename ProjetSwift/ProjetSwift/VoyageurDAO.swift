@@ -265,4 +265,11 @@ class VoyageurDAO{
         }
     }
     
+    static func searchNomComplet(forNomComplet nomComplet:String)->Voyageur{
+       
+        let result = nomComplet.split(separator: " ")
+        let voyageur = search(forPrenom: String(result[0]), nom: String(result[1]))
+        return voyageur![0]
+    } 
+    
 }
