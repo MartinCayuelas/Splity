@@ -146,7 +146,6 @@ class AjoutDepenseViewController : UIViewController {
         for case let cell as AjoutDepensePayeurCell in self.tableviewPayeurs.visibleCells {
             if(cell.checkButton.isChecked == true){
                 if (cell.montantDepense.text?.isEmpty)!{
-                    print("Nil")
                 }else {
                     self.montantARembourser = self.montantARembourser + Double(cell.montantDepense.text!)!
                 }
@@ -172,7 +171,6 @@ class AjoutDepenseViewController : UIViewController {
             }else{// Ajout dans le tableau
                 
                 self.listeRembourseursPotentiels.append(v)
-                print(self.listeRembourseursPotentiels.count)
             }
             
         }
