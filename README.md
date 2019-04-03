@@ -7,41 +7,43 @@ Cette application a été créée par **Martin CAYUELAS** et **Nathan GUILLAUD**
 ## Fonctionnalités
 
 - Voyageur
-    - Ajout d'un voyageur
-    - Visualisation des voyageurs
-    - Suppression d'un voyageur
+    - Ajouter un voyageur
+    - Visualiser les voyageurs
+    - Supprimer un voyageur
 
 - Voyage
-    - Ajout d'un voyage avec ses voyageurs (participants)
-    - Ajout d'une photo pour un voyage
-    - Depuis la galerie
-    - Depuis l'appareil photo
-    - Visualisation des voyages d'un voyageur
-    - Visualisation du coût total d'un voyage
+    - Ajouter un voyage avec ses voyageurs (participants)
+    - Ajouter une photo pour un voyage
+    -   Depuis la galerie
+    -   Depuis l'appareil photo
+    - Visualiser les voyages d'un voyageur
+    - Visualiser le coût total d'un voyage
     - Quitter un voyage (pour un voyageur)
 
 - Détails d'un voyage
-    - Visualisation des détails d'un voyage (titre, date, photo)
-    - Visualisation de la balance de chaque participant
-    - Visualisation de la balance d'un voyageur pour un voyage
-    - Visualisation du coût total d'un voyageur pour un voyage
+    - Visualiser les détails d'un voyage (titre, date, photo)
+    - Visualiser la balance de chaque participant
+    - Visualiser la balance d'un voyageur pour un voyage
+    - Visualiser le coût total d'un voyageur pour un voyage
 
 - Dépense
-    - Visualisation des dépenses d'un voyage
-    - Ajout d'une dépense pour un voyage
-    - Possibilité d'avoir différents payeurs, pour différents montants
-    - Possibilité d'avoir différents rembourses, pour différents montants
-    - Ajout possible d'une photo pour une dépense
-    - Depuis la galerie
-    - Depuis l'appareil photo
-    - Visualisation des détails d'une dépense
-    - Suppression d'une dépense
+    - Visualiser les dépenses d'un voyage
+    - Ajouter une dépense pour un voyage
+    - Ajouter différents payeurs, pour différents montants
+    - Ajouter différents rembourseurs, pour différents montants
+    - Ajouter une photo pour une dépense
+    -   Depuis la galerie
+    -   Depuis l'appareil photo
+    - Visualiser les détails d'une dépense
+    - Visualiser une dépense
 
 - Gestion des voyageurs
-    - Visualisation des participants (participants actifs, participants ayant quitté)
-    - Visualisation des voyageurs qui ne participent pas au voyage
+    - Visualiser les participants (participants actifs, participants ayant quitté avec la date de départ)
+    - Visualiser les voyageurs qui ne participent pas au voyage
     - Ajouter un nouveau participant au voyage
 
 - Comment équilibrer
-    - Visualisation des dettes de chaque voyageur
-    - Visualisation du bilan de chaque voyageur pour un voyage (dépense totale + coût total pour chaque voyageur)
+    - Visualiser les dettes de chaque voyageur envers les autres afin d'équilibrer la balance
+    - Visualiser le bilan de chaque voyageur pour un voyage
+        - Dépense totale
+        - Coût total
