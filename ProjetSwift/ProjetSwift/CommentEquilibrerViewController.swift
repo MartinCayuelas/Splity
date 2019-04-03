@@ -28,8 +28,8 @@ class CommentEquilibrerViewController : UIViewController {
         let buttonPosition:CGPoint = (sender as AnyObject).convert(CGPoint.zero, to:self.dettesTableView)
         if let indexPath = self.dettesTableView.indexPathForRow(at: buttonPosition){
             
+            //Reuperation de la cellule et du label
             let cell = self.dettesTableView.cellForRow(at: indexPath) as! EquilibreTableViewCell
-            
             
             let result = cell.labelEquilibre.text!.split(separator: " ")
             
@@ -39,9 +39,26 @@ class CommentEquilibrerViewController : UIViewController {
             let nomReceveur = result[7]
             let montantDepense = result[3]
             
-            print(prenomDonneur)
-             print(prenomReceveur)
-             print(montantDepense)
+            
+            //Recherche des donneurs et receveurs
+            let receveur = VoyageurDAO.search(forPrenom: String(prenomReceveur), nom: String(nomReceveur))
+            let donneur = VoyageurDAO.search(forPrenom: String(prenomDonneur), nom: String(nomDonneur))
+            
+            //Creation Depense, Payer et Rembourser
+            let titre = "Remboursement de \(prenomDonneur) \(nomDonneur) à \(prenomReceveur) \(nomReceveur)"
+            
+            
+            let imageData = UIImagePNGRepresentation(UIImage(named: "cash")!)
+            let depense =  DepenseDAO.ajouterDepense(fortitre: titre, andPhoto: imageData! as NSData, andDate: Date(), andVoyage: self.voyageSelected!)
+            
+            
+            DepenseDAO.ajouterPaiement(forDepense: depense, andVoyageur: donneur![0], andMontant: Double(montantDepense)!)
+            DepenseDAO.ajouterRemboursement(forDepense: depense, andVoyageur: receveur![0], andMontant: Double(montantDepense)!)
+            
+            //Suppression cellule
+            self.dettesTableView.beginUpdates()
+            self.dettesTableView.deleteRows(at: [indexPath], with: .fade)
+            self.dettesTableView.endUpdates()
             
         }
     }
