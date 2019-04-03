@@ -38,9 +38,10 @@ class AjoutDepenseViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
         self.controllerVoyageursPayeursTableView = AjoutDepensePayeurTableViewController(tableView: tableviewPayeurs, voyageSelected: self.voyageSelected!)
         self.controllerVoyageursRembourseursTableView = AjoutDepenseRembourseurTableViewController(tableView: tableviewRembourseurs,voyageSelected: self.voyageSelected!)
-        
         self.imageDepenseView.image = UIImage(named: "money") 
     }
     
@@ -136,11 +137,9 @@ class AjoutDepenseViewController : UIViewController {
                     self.montantARembourser = self.montantARembourser + Double(cell.montantDepense.text!)!
                 }
                 
-                
-                
-                
             }
         }
+        self.getRembourseur()
         self.calculMontantParPersonne(forMotantTotalPaye: self.montantARembourser)
         print("Montant à diviser : \(self.montantARembourser)")
         print("Montant par Personne : \(self.montantParPersonne)")
@@ -168,6 +167,20 @@ class AjoutDepenseViewController : UIViewController {
         }
     }
     
+    
+    func getRembourseur(){
+        //Récupération du montant remboursé par chaque rembourseur
+        for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
+            
+            if(cell.checkButton.isChecked == true){
+                let voyageurCoche = self.controllerVoyageursRembourseursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
+                
+                self.listeRembourseursPotentiels.append(voyageurCoche!)
+            }
+        }
+        
+    }
+    
     func calculMontantParPersonne(forMotantTotalPaye montant: Double){
         
         
@@ -181,7 +194,7 @@ class AjoutDepenseViewController : UIViewController {
         for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
             
             if(cell.checkButton.isChecked == true){
-                
+            
                 cell.montantDepense.text = "\(self.montantParPersonne)"
             }
         }
