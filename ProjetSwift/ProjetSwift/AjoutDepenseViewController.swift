@@ -20,6 +20,11 @@ class AjoutDepenseViewController : UIViewController {
     var listeRembourseurs : [Voyageur] = []
     var listeRembourseursMontant : [Double] = []
     
+    var montantParPersonne : Double = 0
+    var montantARembourser : Double = 0
+    
+    var listeRembourseursPotentiels : [Voyageur] = []
+    
      var controllerVoyageursPayeursTableView: AjoutDepensePayeurTableViewController!
     var controllerVoyageursRembourseursTableView : AjoutDepenseRembourseurTableViewController!
     
@@ -118,6 +123,86 @@ class AjoutDepenseViewController : UIViewController {
             DepenseDAO.insererMontantDepense(forDepense: self.newDepense!)
         }
     }
+    
+    
+    func setMontantADiviser(){
+        self.montantARembourser = 0
+        //Récupération du montant payé par chaque payeur
+        for case let cell as AjoutDepensePayeurCell in self.tableviewPayeurs.visibleCells {
+            if(cell.checkButton.isChecked == true){
+                if (cell.montantDepense.text?.isEmpty)!{
+                    print("Nil")
+                }else {
+                    self.montantARembourser = self.montantARembourser + Double(cell.montantDepense.text!)!
+                }
+                
+                
+                
+                
+            }
+        }
+        self.calculMontantParPersonne(forMotantTotalPaye: self.montantARembourser)
+        print("Montant à diviser : \(self.montantARembourser)")
+        print("Montant par Personne : \(self.montantParPersonne)")
+        
+        
+    }
+    
+    
+    @IBAction func ajoutRemourseurToListe(_ sender: ButtonCheckBox) {
+        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableviewRembourseurs)
+        if let indexPath = self.tableviewRembourseurs.indexPathForRow(at: buttonPosition){
+            let v : Voyageur = self.controllerVoyageursRembourseursTableView.voyageurs.get(voyageurAt: indexPath.row)!
+            
+            if self.listeRembourseursPotentiels.contains(v){ // Si deja dans le tableau
+                let index = self.listeRembourseursPotentiels.firstIndex(of: v)
+                
+                self.listeRembourseursPotentiels.remove(at: index!)
+                print(self.listeRembourseursPotentiels.count)
+            }else{// Ajout dans le tableau
+                
+                self.listeRembourseursPotentiels.append(v)
+                print(self.listeRembourseursPotentiels.count)
+            }
+            
+        }
+    }
+    
+    func calculMontantParPersonne(forMotantTotalPaye montant: Double){
+        
+        
+        self.montantParPersonne =  montant / Double(self.listeRembourseursPotentiels.count)
+        
+    }
+    
+    func remplissageRembourseur(){
+        
+        //Récupération du montant remboursé par chaque rembourseur
+        for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
+            
+            if(cell.checkButton.isChecked == true){
+                
+                cell.montantDepense.text = "\(self.montantParPersonne)"
+            }
+        }
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        
+        self.setMontantADiviser()
+        self.remplissageRembourseur()
+        
+        return true
+        
+    }
+    
+    
+    
+    
+    
 }
 
 // MARK: UIImagePickerControllerDelegate and UINavigationControllerDelegate

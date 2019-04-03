@@ -1436,7 +1436,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <outlet property="delegate" destination="24k-My-TVr" id="20L-Ue-g26"/>
+                                                        <outlet property="delegate" destination="iXe-K1-2JQ" id="NCt-Uv-rm5"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -1491,6 +1491,9 @@
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vx-b0-ZsG" customClass="ButtonCheckBox" customModule="ProjetSwift" customModuleProvider="target">
                                                     <rect key="frame" x="322.5" y="17" width="30" height="30"/>
+                                                    <connections>
+                                                        <action selector="ajoutRemourseurToListe:" destination="iXe-K1-2JQ" eventType="touchUpInside" id="GPV-zx-hVL"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
