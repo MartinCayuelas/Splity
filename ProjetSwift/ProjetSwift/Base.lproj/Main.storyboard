@@ -688,9 +688,13 @@
                                     <constraint firstAttribute="height" constant="85" id="eMS-1n-r85"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZD4-bT-oLX">
-                                <rect key="frame" x="251.5" y="263" width="63" height="30"/>
-                                <state key="normal" title="Parcourir"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZD4-bT-oLX">
+                                <rect key="frame" x="270.5" y="263" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="PeL-Az-27F"/>
+                                    <constraint firstAttribute="width" constant="25" id="ela-9X-njF"/>
+                                </constraints>
+                                <state key="normal" image="folder"/>
                                 <connections>
                                     <action selector="librairie:" destination="RZt-NH-3NW" eventType="touchUpInside" id="i29-C0-iq8"/>
                                 </connections>
@@ -706,6 +710,8 @@
                             <constraint firstItem="FtK-FH-wRz" firstAttribute="top" secondItem="U7H-Y6-d6m" secondAttribute="bottom" constant="145" id="BIM-sV-B10"/>
                             <constraint firstItem="dF1-0b-HT8" firstAttribute="top" secondItem="KUU-6n-E6o" secondAttribute="bottom" constant="10" id="K19-KY-m1j"/>
                             <constraint firstItem="KUU-6n-E6o" firstAttribute="top" secondItem="UpG-YA-dub" secondAttribute="bottom" constant="30" id="O6l-kU-DDd"/>
+                            <constraint firstItem="ZD4-bT-oLX" firstAttribute="top" secondItem="Nv1-Hi-qi3" secondAttribute="bottom" constant="25" id="Rfz-E0-MD6"/>
+                            <constraint firstItem="ZD4-bT-oLX" firstAttribute="leading" secondItem="pT9-44-JiO" secondAttribute="trailing" constant="35" id="Rj5-fE-Ed3"/>
                             <constraint firstItem="FtK-FH-wRz" firstAttribute="centerX" secondItem="UpG-YA-dub" secondAttribute="centerX" id="Trc-th-bpN"/>
                             <constraint firstItem="Nv1-Hi-qi3" firstAttribute="centerX" secondItem="z0H-Pe-cfx" secondAttribute="centerX" constant="95" id="W9h-s0-3D5"/>
                             <constraint firstItem="FtK-FH-wRz" firstAttribute="top" secondItem="pT9-44-JiO" secondAttribute="bottom" constant="47" id="WMT-Ar-9Nd"/>
@@ -714,7 +720,6 @@
                             <constraint firstItem="pT9-44-JiO" firstAttribute="top" secondItem="U7H-Y6-d6m" secondAttribute="bottom" constant="13" id="YkR-DM-uJy"/>
                             <constraint firstItem="mD4-lZ-SzO" firstAttribute="leading" secondItem="z0H-Pe-cfx" secondAttribute="leading" id="ZCQ-rZ-A16"/>
                             <constraint firstItem="Nv1-Hi-qi3" firstAttribute="top" secondItem="UpG-YA-dub" secondAttribute="bottom" constant="150" id="ZE7-dZ-vFW"/>
-                            <constraint firstItem="ZD4-bT-oLX" firstAttribute="leading" secondItem="pT9-44-JiO" secondAttribute="trailing" constant="16" id="cIS-Cr-bLR"/>
                             <constraint firstItem="avF-Dd-Zqe" firstAttribute="top" secondItem="FtK-FH-wRz" secondAttribute="bottom" constant="205" id="dHS-5k-6OA"/>
                             <constraint firstItem="Nv1-Hi-qi3" firstAttribute="leading" secondItem="pT9-44-JiO" secondAttribute="trailing" constant="35" id="ert-9h-Kbe"/>
                             <constraint firstItem="U7H-Y6-d6m" firstAttribute="top" secondItem="dF1-0b-HT8" secondAttribute="bottom" constant="20" id="f1w-cl-Lqq"/>
@@ -723,9 +728,7 @@
                             <constraint firstItem="U7H-Y6-d6m" firstAttribute="centerX" secondItem="UpG-YA-dub" secondAttribute="centerX" id="hfU-Yq-pGo"/>
                             <constraint firstItem="KUU-6n-E6o" firstAttribute="centerX" secondItem="UpG-YA-dub" secondAttribute="centerX" id="iDk-Pq-UN9"/>
                             <constraint firstItem="dF1-0b-HT8" firstAttribute="centerX" secondItem="UpG-YA-dub" secondAttribute="centerX" id="mz7-Wc-ch3"/>
-                            <constraint firstItem="ZD4-bT-oLX" firstAttribute="leading" secondItem="pT9-44-JiO" secondAttribute="trailing" constant="16" id="qbz-t1-HCc"/>
                             <constraint firstItem="FtK-FH-wRz" firstAttribute="top" secondItem="U7H-Y6-d6m" secondAttribute="bottom" constant="145" id="rxL-Hf-FWQ"/>
-                            <constraint firstItem="ZD4-bT-oLX" firstAttribute="top" secondItem="Nv1-Hi-qi3" secondAttribute="bottom" constant="25" id="tw2-P4-k5M"/>
                             <constraint firstItem="Mlh-ab-lNw" firstAttribute="top" secondItem="NoJ-E2-A2e" secondAttribute="bottom" constant="20" id="u4G-zv-P4J"/>
                             <constraint firstItem="avF-Dd-Zqe" firstAttribute="top" secondItem="mD4-lZ-SzO" secondAttribute="bottom" constant="16" id="xjP-4C-LOZ"/>
                         </constraints>
@@ -1846,6 +1849,6 @@
         <image name="photo-camera" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cSW-O3-Vgd"/>
+        <segue reference="aA2-IJ-aF1"/>
     </inferredMetricsTieBreakers>
 </document>

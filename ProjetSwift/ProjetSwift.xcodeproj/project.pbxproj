@@ -480,7 +480,7 @@
 				TargetAttributes = {
 					7BCBF9F922369198002AD627 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = KCLVW3VURZ;
+						DevelopmentTeam = TVCV9MTW6Q;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
@@ -760,10 +760,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCLVW3VURZ;
+				DEVELOPMENT_TEAM = TVCV9MTW6Q;
 				INFOPLIST_FILE = ProjetSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -777,10 +777,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KCLVW3VURZ;
+				DEVELOPMENT_TEAM = TVCV9MTW6Q;
 				INFOPLIST_FILE = ProjetSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = NGMCProjetSwift1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
