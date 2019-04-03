@@ -40,14 +40,14 @@ class DettesTableViewController : NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //Cas des données
-        let cell = tableView.dequeueReusableCell(withIdentifier: "standardDetteCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "standardDetteCell", for: indexPath) as! EquilibreTableViewCell
         
         let donneur = self.dettes[0][indexPath.row]
         let receveur = self.dettes[1][indexPath.row]
         let montant = self.dettes[2][indexPath.row]
         
-        cell.textLabel?.text = donneur + " doit " + montant + " € à " + receveur
-        
+        cell.labelEquilibre.text = donneur + " doit " + montant + " € à " + receveur
+       
         return cell
         
     }
