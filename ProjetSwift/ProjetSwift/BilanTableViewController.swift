@@ -52,8 +52,10 @@ class BilanTableViewController : NSObject, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "standardBilanCell", for: indexPath) as! BilanTableViewCell
             
             guard let voyageur = self.voyageursActifsModel.get(voyageurAt: indexPath.row-1) else { return cell }
-            let paiements = VoyageDAO.getTotalPaye(forVoyage: self.voyageSelected!, andVoyageur: voyageur)
-            let remboursements = VoyageDAO.getTotalRembourse(forVoyage: self.voyageSelected!, andVoyageur: voyageur)
+            var paiements = VoyageDAO.getTotalPaye(forVoyage: self.voyageSelected!, andVoyageur: voyageur)
+            paiements = round(100*paiements)/100
+            var remboursements = VoyageDAO.getTotalRembourse(forVoyage: self.voyageSelected!, andVoyageur: voyageur)
+            remboursements = round(100*remboursements)/100
             
             cell.nomCompletLabel.text = voyageur.nomComplet
             cell.paiementsLabel.text = "\(paiements) €"

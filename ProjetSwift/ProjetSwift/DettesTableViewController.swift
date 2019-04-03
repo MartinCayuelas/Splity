@@ -148,6 +148,7 @@ class DettesTableViewController : NSObject, UITableViewDataSource {
             if(montantDetteCourante < 0) {
                 montantDetteCourante = montantDetteCourante * (-1)
             }
+            montantDetteCourante = round(100*montantDetteCourante)/100
             self.dettes[2].append("\(montantDetteCourante)")
             
         }

@@ -49,7 +49,8 @@ class BalanceTableViewController: NSObject, UITableViewDataSource {
         guard let voyageur = self.voyageurs.get(voyageurAt: indexPath.row) else { return cell }
         //Affichage de la balance pour le voyageur courant et le voyage courant
         
-        let balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: voyageur)
+        var balance = VoyageDAO.getBalance(forVoyage: self.voyageSelected!, andVoyageur: voyageur)
+        balance = round(100*balance)/100
         
         
         let taille = self.tailleCell(forTailleMaxCell: self.getTailleMaxCell(), andBalanceMax: self.balanceMax, andBalanceCourante: balance)

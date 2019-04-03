@@ -139,7 +139,7 @@ class AjoutDepenseViewController : UIViewController {
                 
             }
         }
-        self.getRembourseur()
+        self.getRembourseurs()
         self.calculMontantParPersonne(forMotantTotalPaye: self.montantARembourser)
         print("Montant à diviser : \(self.montantARembourser)")
         print("Montant par Personne : \(self.montantParPersonne)")
@@ -168,24 +168,25 @@ class AjoutDepenseViewController : UIViewController {
     }
     
     
-    func getRembourseur(){
+    func getRembourseurs(){
         //Récupération du montant remboursé par chaque rembourseur
         for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
             
             if(cell.checkButton.isChecked == true){
                 let voyageurCoche = self.controllerVoyageursRembourseursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
                 
-                self.listeRembourseursPotentiels.append(voyageurCoche!)
+                //On ajoute le voyageur si il n'est pas déjà dans la liste
+                if (!self.listeRembourseursPotentiels.contains(voyageurCoche!)) {
+                     self.listeRembourseursPotentiels.append(voyageurCoche!)
+                }
+               
             }
         }
         
     }
     
     func calculMontantParPersonne(forMotantTotalPaye montant: Double){
-        
-        
         self.montantParPersonne =  montant / Double(self.listeRembourseursPotentiels.count)
-        
     }
     
     func remplissageRembourseur(){
