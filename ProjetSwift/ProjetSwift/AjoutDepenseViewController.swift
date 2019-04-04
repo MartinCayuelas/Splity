@@ -225,7 +225,7 @@ class AjoutDepenseViewController : UIViewController {
         for case let cell as AjoutDepensePayeurCell in self.tableviewPayeurs.visibleCells {
             if(cell.checkButton.isChecked == true){
                 var montant : String = "0"
-                if(cell.montantDepense.text! == nil){
+                if(cell.montantDepense.text! != ""){
                     montant = cell.montantDepense.text!
                 }
                 total = total + Double(montant)!
@@ -241,8 +241,7 @@ class AjoutDepenseViewController : UIViewController {
         for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
             if(cell.checkButton.isChecked == true){
                 var montant : String = "0"
-                print(cell.montantDepense.text!)
-                if(cell.montantDepense.text! == nil){
+                if(cell.montantDepense.text! != ""){
                     montant = cell.montantDepense.text!
                 }
                 total = total + Double(montant)!
