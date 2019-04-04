@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AjoutVoyageurViewController: UIViewController {
+class AjoutVoyageurViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var boutonValiderDepuisAccueil: UIButton!
     @IBOutlet weak var boutonAnnulerDepuisVoyage: UIButton!
     @IBOutlet weak var boutonValiderDepuisVoyage: UIButton!
@@ -27,9 +27,11 @@ class AjoutVoyageurViewController: UIViewController {
         if(pagePrecedente == "Voyage"){
             self.boutonValiderDepuisAccueil.isHidden = true
             self.boutonAnnulerDepuisAccueil.isHidden = true
+            self.boutonValiderDepuisVoyage.isHidden = true
         }else{
             self.boutonAnnulerDepuisVoyage.isHidden = true
             self.boutonValiderDepuisVoyage.isHidden = true
+            self.boutonValiderDepuisAccueil.isHidden = true
         }
         
        
@@ -45,6 +47,24 @@ class AjoutVoyageurViewController: UIViewController {
             let nomVoyageur : String  = self.textFieldNom.text!
             self.newVoyageur  = Voyageur(nom: nomVoyageur, prenom: prenomVoyageur)
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if((textField.text?.isEmpty)!) {
+            if(pagePrecedente == "Voyage"){
+                self.boutonValiderDepuisVoyage.isHidden = true
+            }else{
+                self.boutonValiderDepuisAccueil.isHidden = true
+            }
+        } else {
+            if(pagePrecedente == "Voyage"){
+                self.boutonValiderDepuisVoyage.isHidden = false
+            }else{
+                self.boutonValiderDepuisAccueil.isHidden = false
+            }
+        }
+        return true
     }
     
 }
