@@ -14,8 +14,8 @@ Cette application a été créée par **Martin CAYUELAS** et **Nathan GUILLAUD**
 - Voyage
     - Ajouter un voyage avec ses voyageurs (participants)
     - Ajouter une photo pour un voyage
-    -   Depuis la galerie
-    -   Depuis l'appareil photo
+        -   Depuis la galerie
+        -   Depuis l'appareil photo
     - Visualiser les voyages d'un voyageur
     - Visualiser le coût total d'un voyage
     - Quitter un voyage (pour un voyageur)
@@ -32,8 +32,8 @@ Cette application a été créée par **Martin CAYUELAS** et **Nathan GUILLAUD**
     - Ajouter différents payeurs, pour différents montants
     - Ajouter différents rembourseurs, pour différents montants
     - Ajouter une photo pour une dépense
-    -   Depuis la galerie
-    -   Depuis l'appareil photo
+        -   Depuis la galerie
+        -   Depuis l'appareil photo
     - Visualiser les détails d'une dépense
     - Visualiser une dépense
     - Empêcher l'ajout de la dépense si les montants payés et à rembourser ne sont pas égaux
@@ -45,7 +45,7 @@ Cette application a été créée par **Martin CAYUELAS** et **Nathan GUILLAUD**
 
 - Comment équilibrer
     - Visualiser les dettes de chaque voyageur envers les autres afin d'équilibrer la balance (algo d'équilibrage)
-    - Rembourser une dette d'un voyageur pour un autre
+    - Rembourser une dette d'un voyageur pour un autre (Payer)
     - Visualiser le bilan de chaque voyageur pour un voyage
         - Dépense totale
         - Coût total
