@@ -180,26 +180,25 @@ class AjoutDepenseViewController : UIViewController {
                 
                 self.listeRembourseursPotentiels.append(v)
             }
-            
         }
     }
     
     
     func getRembourseurs(){
+        //Vider la liste des rembourseurs
+        self.listeRembourseursPotentiels.removeAll()
+        
         //Récupération du montant remboursé par chaque rembourseur
         for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
             
             if(cell.checkButton.isChecked == true){
                 let voyageurCoche = self.controllerVoyageursRembourseursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
                 
-                //On ajoute le voyageur si il n'est pas déjà dans la liste
-                if (!self.listeRembourseursPotentiels.contains(voyageurCoche!)) {
-                     self.listeRembourseursPotentiels.append(voyageurCoche!)
-                }
+                //On ajoute le voyageur dans la liste
+                self.listeRembourseursPotentiels.append(voyageurCoche!)
                
             }
         }
-        
     }
     
     func calculMontantParPersonne(forMotantTotalPaye montant: Double){
@@ -214,6 +213,8 @@ class AjoutDepenseViewController : UIViewController {
             if(cell.checkButton.isChecked == true){
             
                 cell.montantDepense.text = "\(self.montantParPersonne)"
+            } else {
+                cell.montantDepense.text = ""
             }
         }
     }
