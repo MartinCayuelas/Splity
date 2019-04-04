@@ -41,7 +41,7 @@ class DepensesViewController : UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         if(self.depenseImpossible!){
             //Affichage d'une popup car la dépense n'a pas été créée
-            let alert = UIAlertController(title: "La dépense n'a pas pu être créée", message: "Le montant total dépensé doit être même que le montant total à rembourser.", preferredStyle: .alert)
+            let alert = UIAlertController(title: "La dépense n'a pas pu être créée", message: "Le montant total dépensé doit être le même que le montant total à rembourser.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                 switch action.style{
                 case .default:

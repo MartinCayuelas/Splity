@@ -84,8 +84,12 @@ class AjoutDepenseViewController : UIViewController {
                         
                         let voyageurCoche = self.controllerVoyageursPayeursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
                         self.listePayeurs.append(voyageurCoche!)
-                        let montant = cell.montantDepense.text!
+                        var montant = cell.montantDepense.text!
+                        if(montant == "") {
+                            montant = "0"
+                        }
                         self.listePayeursMontant.append(Double(montant)!)
+
                     }
                 }
                 
@@ -96,8 +100,12 @@ class AjoutDepenseViewController : UIViewController {
                         let voyageurCoche = self.controllerVoyageursRembourseursTableView.voyageurs.get(voyageurAt: (cell.indexPath?.row)!)
                         
                         self.listeRembourseurs.append(voyageurCoche!)
-                        let montant = cell.montantDepense.text!
+                        var montant = cell.montantDepense.text!
+                        if(montant == "") {
+                            montant = "0"
+                        }
                         self.listeRembourseursMontant.append(Double(montant)!)
+                        
                     }
                 }
                 
@@ -216,7 +224,10 @@ class AjoutDepenseViewController : UIViewController {
         var total: Double = 0
         for case let cell as AjoutDepensePayeurCell in self.tableviewPayeurs.visibleCells {
             if(cell.checkButton.isChecked == true){
-                let montant = cell.montantDepense.text!
+                var montant : String = "0"
+                if(cell.montantDepense.text! == nil){
+                    montant = cell.montantDepense.text!
+                }
                 total = total + Double(montant)!
             }
         }
@@ -229,7 +240,11 @@ class AjoutDepenseViewController : UIViewController {
         var total: Double = 0
         for case let cell as AjoutDepenseRembourseurCell in self.tableviewRembourseurs.visibleCells {
             if(cell.checkButton.isChecked == true){
-                let montant = cell.montantDepense.text!
+                var montant : String = "0"
+                print(cell.montantDepense.text!)
+                if(cell.montantDepense.text! == nil){
+                    montant = cell.montantDepense.text!
+                }
                 total = total + Double(montant)!
             }
         }
